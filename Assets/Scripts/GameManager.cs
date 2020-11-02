@@ -22,12 +22,21 @@ public class GameManager : MonoBehaviour
         loadPlayerDataFromJson();
 
         SetResources();
+
+        Invoke("AddResources", 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void AddResources()
+    {
+        playerData.acquantFateCount = 50000;
+        playerData.intertwinedFateCount = 50000;
+        SetResources();
     }
 
     [ContextMenu("To Json Data")]
