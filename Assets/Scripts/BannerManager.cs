@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BannerManager : MonoBehaviour
 {
-    public BannerManager instance;
+    public static BannerManager instance;
     public GameObject[] bannerButton;
     public GameObject[] bannerImage;
 
@@ -13,6 +13,11 @@ public class BannerManager : MonoBehaviour
     public Color alpha;
     public float alphaSpeed = 0.001f;
     public int onBannerIndex;
+
+    public Image pickupButton;
+    public Sprite[] buttonImage;
+    public Vector2 buttonSize1 = new Vector2(342, 93);
+    public Vector2 buttonSize2 = new Vector2(342, 76);
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +44,33 @@ public class BannerManager : MonoBehaviour
     {
         onBannerIndex = bannerIndex;
         isBannerChange = true;
+        SoundManager.instance.PlayOneShotEffectSound(0);
+
+        GameManager.instance.SetResources();
+
+        switch (bannerIndex)
+        {
+            case 0:
+                pickupButton.sprite = buttonImage[8];
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize1.x);
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize1.y);
+                break;
+            case 1:
+                pickupButton.sprite = buttonImage[1];
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
+                break;
+            case 2:
+                pickupButton.sprite = buttonImage[1];
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
+                break;
+            case 3:
+                pickupButton.sprite = buttonImage[5];
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
+                break;
+        }
     }
 
     public void OnBanner()
