@@ -24,6 +24,11 @@ public class PlayerData
     public bool isPickUpCharacterAlways;
     public bool isPickUpNormalAlways;
 
+    public bool isPickUpWeapon4Always;
+    public bool isPickUpCharacter4Always;
+
+    public bool hasFirstTimeNoelle;
+
     public List<Item> items;
 
     public List<Item> normalHistory;

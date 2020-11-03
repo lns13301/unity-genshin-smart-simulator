@@ -75,7 +75,7 @@ public class PickUpManager : MonoBehaviour
 
                 for (int i = 0; i < grades.Length; i++)
                 {
-                    result[i] = getRandomItem(grades[i], PickUpType.WEAPON, playerData.isPickUpWeaponAlways);
+                    result[i] = getRandomItem(grades[i], PickUpType.WEAPON, playerData.isPickUpWeaponAlways, playerData.isPickUpWeapon4Always);
                     playerData.weaponHistory.Add(result[i]);
                 }
 
@@ -94,7 +94,7 @@ public class PickUpManager : MonoBehaviour
 
                 for (int i = 0; i < grades.Length; i++)
                 {
-                    result[i] = getRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways);
+                    result[i] = getRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways, playerData.isPickUpCharacter4Always);
                     playerData.normalHistory.Add(result[i]);
                 }
 
@@ -109,11 +109,18 @@ public class PickUpManager : MonoBehaviour
         {
             if (playerData.acquantFateCount > 7)
             {
-                grades = setPlayerDataAfterGacha(true, 10, 8); // 무조건 첫 뽑기 노엘나오게 바꿔야함
+                grades = setPlayerDataAfterGacha(true, 10, 8);
 
                 for (int i = 0; i < grades.Length; i++)
                 {
                     result[i] = getRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways);
+
+                    if (i == 0 && !playerData.hasFirstTimeNoelle && grades[0] != Grade.LEGEND)
+                    {
+                        result[0] = ItemDatabase.instance.findItemByName("노엘");
+                        playerData.hasFirstTimeNoelle = true;
+                    }
+
                     playerData.noelleHistory.Add(result[i]);
                 }
 
@@ -410,7 +417,7 @@ public class PickUpManager : MonoBehaviour
         return grades;
     }
 
-    public Item getRandomItem(Grade grade, PickUpType pickUpType, bool isPickUpAlways = false)
+    public Item getRandomItem(Grade grade, PickUpType pickUpType, bool isPickUpAlways = false, bool isPickUp4Always = false)
     {
         if (grade == Grade.LEGEND)
         {
@@ -487,26 +494,76 @@ public class PickUpManager : MonoBehaviour
             {
                 int r = Random.Range(0, 2);
 
-                if (r == 0)
+                if (r == 0 || isPickUp4Always)
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
+                    playerData.isPickUpWeaponAlways = false;
+
+                    int value = Random.Range(0, 5);
+
+                    switch (value)
+                    {
+                        case 0:
+                            return ItemDatabase.instance.findItemByName("제례검");
+                        case 1:
+                            return ItemDatabase.instance.findItemByName("제례 대검");
+                        case 2:
+                            return ItemDatabase.instance.findItemByName("제례활");
+                        case 3:
+                            return ItemDatabase.instance.findItemByName("제례의 악장");
+                        case 4:
+                            return ItemDatabase.instance.findItemByName("용학살창");
+                    }
                 }
                 else
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(32, 73)];
+                    int range = Random.Range(0, 55); // 무기 + 캐릭터 개수
+
+                    if (range < 14) // 캐릭터 개수
+                    {
+                        return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
+                    }
+                    else
+                    {
+                        playerData.isPickUpWeapon4Always = true;
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 73)];
+                    }
                 }
             }
             if (pickUpType == PickUpType.CHARACTER)
             {
                 int r = Random.Range(0, 2);
 
-                if (r == 0)
+                if (r == 0 || isPickUp4Always)
                 {
+                    playerData.isPickUpCharacterAlways = false;
+
+                    int value = Random.Range(0, 3);
+
+                    switch (value)
+                    {
+                        case 0:
+                            return ItemDatabase.instance.findItemByName("노엘");
+                        case 1:
+                            return ItemDatabase.instance.findItemByName("설탕");
+                        case 2:
+                            return ItemDatabase.instance.findItemByName("행추");
+                    }
+
                     return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
                 }
                 else
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(32, 73)];
+                    int range = Random.Range(0, 55); // 무기 + 캐릭터 개수
+
+                    if (range < 14) // 캐릭터 개수
+                    {
+                        playerData.isPickUpCharacter4Always = true;
+                        return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
+                    }
+                    else
+                    {
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 73)];
+                    }
                 }
             }
         }

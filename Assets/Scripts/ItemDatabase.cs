@@ -54,11 +54,11 @@ public class ItemDatabase : MonoBehaviour
         return -1;
     }
 
-    public Item findItemByName(string name)
+    public Item findItemByName(string ko)
     {
         for (int i = 0; i < itemDB.Count; i++)
         {
-            if (itemDB[i].enName == name)
+            if (itemDB[i].koName == ko)
             {
                 return itemDB[i];
             }
