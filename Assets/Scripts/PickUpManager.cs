@@ -21,6 +21,8 @@ public class PickUpManager : MonoBehaviour
     public GameObject resultImageParent;
     public GameObject skipButton;
 
+    public GameObject stardustPage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,8 @@ public class PickUpManager : MonoBehaviour
 
         hasFiveStar = false;
         result = new Item[10];
+
+        stardustPage.SetActive(false);
     }
 
     // Update is called once per frame
@@ -167,6 +171,9 @@ public class PickUpManager : MonoBehaviour
         videoPanel.gameObject.SetActive(true);
         OnResultDetails();
         OffResultDetailsColor();
+
+        GameManager.instance.SavePlayerDataToJson();
+
         videos[0].Play();
 
         Invoke("OnSkipButton", 2.5f);
@@ -180,7 +187,12 @@ public class PickUpManager : MonoBehaviour
 
     public void ButtonSkip()
     {
-        SoundManager.instance.PlayOneShotEffectSound(1);
+        GameManager.instance.SetNoticeSkip();
+    }
+    
+    public void DoSkip()
+    {
+        GameManager.instance.OffNotice(true);
         OffPanel();
     }
 
@@ -193,22 +205,93 @@ public class PickUpManager : MonoBehaviour
         skipButton.SetActive(false);
 
         resultPage.SetActive(true);
+        SoundManager.instance.PlayOneShotEffectSound(4);
         resultPage.transform.GetChild(1).GetComponent<Animator>().SetBool("isClean", true);
         resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isShow", true);
+
+        GameManager.instance.OffNotice(false);
 
         CancelInvoke("OffPanel");
     }
 
     public void OffResultPage()
     {
-        SoundManager.instance.PlayOneShotEffectSound(0);
         resultPage.transform.GetChild(1).GetComponent<Animator>().SetBool("isClean", false);
         resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isShow", false);
         OffGachaItemImage();
 
+        OnStardustPage(result);
+
         OffResultDetails();
 
         resultPage.SetActive(false);
+    }
+
+    public void OnStardustPage(Item[] items)
+    {
+        SoundManager.instance.PlayOneShotEffectSound(5);
+
+        stardustPage.SetActive(true);
+        stardustPage.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "" + GetStarlightCount(items);
+        stardustPage.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = "" + GetStardustCount(items);
+    }
+
+    public void OffStardustPage()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(2);
+        stardustPage.SetActive(false);
+    }
+
+    public int GetStarlightCount(Item[] items)
+    {
+        int starlightCount = 0;
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].type != ItemType.HERO) // 무기
+            {
+                if (items[i].grade == Grade.LEGEND)
+                {
+                    starlightCount += 10;
+                }
+                else if (items[i].grade == Grade.UNIQUE)
+                {
+                    starlightCount += 2;
+                }
+            }
+            else // 영웅
+            {
+                // 추후에 중복 캐릭터 7개 이후부터는 25, 5개씩 얻도록 해야함
+                if (items[i].grade == Grade.LEGEND)
+                {
+                    starlightCount += 10;
+                }
+                else if (items[i].grade == Grade.UNIQUE)
+                {
+                    starlightCount += 2;
+                }
+            }
+        }
+
+        return starlightCount;
+    }
+
+    public int GetStardustCount(Item[] items)
+    {
+        int stardustCount = 0;
+
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].type != ItemType.HERO) // 무기
+            {
+                if (items[i].grade == Grade.EPIC)
+                {
+                    stardustCount += 15;
+                }
+            }
+        }
+
+        return stardustCount;
     }
 
     public void OffGachaItemImage()
@@ -317,8 +400,13 @@ public class PickUpManager : MonoBehaviour
         }
     }
 
-    public Grade GetRandomGrade(int fourStarCount, int fiveStarCount)
+    public Grade GetRandomGrade(int fourStarCount, int fiveStarCount, bool isWeaponPickUP = false)
     {
+        if (isWeaponPickUP && fiveStarCount >= 79)
+        {
+            return Grade.LEGEND;
+        }
+
         if (fiveStarCount >= 89)
         {
             return Grade.LEGEND;
@@ -398,7 +486,7 @@ public class PickUpManager : MonoBehaviour
             {
                 for (int i = 0; i < repeatTime; i++)
                 {
-                    grades[i] = GetRandomGrade(playerData.weaponFourStarCount++, playerData.weaponFiveStarCount++);
+                    grades[i] = GetRandomGrade(playerData.weaponFourStarCount++, playerData.weaponFiveStarCount++, true);
 
                     if (grades[i] == Grade.LEGEND)
                     {

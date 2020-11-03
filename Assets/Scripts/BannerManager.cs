@@ -31,6 +31,11 @@ public class BannerManager : MonoBehaviour
         {
             bannerImage[i].GetComponent<Animator>().SetBool("isBannerOn", false);
         }
+
+        for (int i = 4; i < 8; i++)
+        {
+            bannerButton[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -48,29 +53,51 @@ public class BannerManager : MonoBehaviour
 
         GameManager.instance.SetResources();
 
+        OffAllBannerButton();
+
         switch (bannerIndex)
         {
             case 0:
+                bannerButton[0].SetActive(false);
+                bannerButton[4].SetActive(true);
                 pickupButton.sprite = buttonImage[8];
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize1.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize1.y);
                 break;
             case 1:
+                bannerButton[1].SetActive(false);
+                bannerButton[5].SetActive(true);
                 pickupButton.sprite = buttonImage[1];
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
             case 2:
+                bannerButton[2].SetActive(false);
+                bannerButton[6].SetActive(true);
                 pickupButton.sprite = buttonImage[1];
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
             case 3:
+                bannerButton[3].SetActive(false);
+                bannerButton[7].SetActive(true);
                 pickupButton.sprite = buttonImage[5];
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
         }
+    }
+
+    public void OffAllBannerButton()
+    {
+        bannerButton[0].SetActive(true);
+        bannerButton[1].SetActive(true);
+        bannerButton[2].SetActive(true);
+        bannerButton[3].SetActive(true);
+        bannerButton[4].SetActive(false);
+        bannerButton[5].SetActive(false);
+        bannerButton[6].SetActive(false);
+        bannerButton[7].SetActive(false);
     }
 
     public void OnBanner()

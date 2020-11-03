@@ -14,16 +14,26 @@ public class GameManager : MonoBehaviour
     public Text intertwinedFateText;
     public Text acquantFateText;
 
+    public GameObject notice;
+    public Text noticeText;
+    public string AD_REWORD_TEXT = "광고시청 보상을 획득하였습니다.\n\n(만남의 인연 500개, 뒤얽힌 인연 500개)";
+    public string LACK_OF_WISH = "보유한 재화가 부족합니다.";
+    public string UPDATE_YET = "아직 구현되지 않은 기능입니다.";
+    public string WANT_SKIP = "건너뛰시겠습니까?";
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
 
-        loadPlayerDataFromJson();
+        LoadPlayerDataFromJson();
 
         SetResources();
 
         Invoke("AddResources", 1f);
+
+        noticeText = notice.transform.GetChild(5).GetComponent<Text>();
+        notice.SetActive(false);
     }
 
     // Update is called once per frame
@@ -40,21 +50,21 @@ public class GameManager : MonoBehaviour
     }
 
     [ContextMenu("To Json Data")]
-    public void savePlayerDataToJson()
+    public void SavePlayerDataToJson()
     {
         Debug.Log("저장 성공");
 
         string jsonData = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(saveOrLoad(isMobile, true, "playerData"), jsonData);
+        File.WriteAllText(SaveOrLoad(isMobile, true, "playerData"), jsonData);
     }
 
     [ContextMenu("From Json Data")]
-    public void loadPlayerDataFromJson()
+    public void LoadPlayerDataFromJson()
     {
         try
         {
             Debug.Log("플레이어 정보 로드 성공");
-            string jsonData = File.ReadAllText(saveOrLoad(isMobile, false, "playerData"));
+            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "playerData"));
             playerData = JsonUtility.FromJson<PlayerData>(jsonData);
 
             // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
@@ -72,12 +82,12 @@ public class GameManager : MonoBehaviour
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
-            File.WriteAllText(saveOrLoad(isMobile, false, "playerData"), jsonData);
-            loadPlayerDataFromJson();
+            File.WriteAllText(SaveOrLoad(isMobile, false, "playerData"), jsonData);
+            LoadPlayerDataFromJson();
         }
     }
 
-    public string saveOrLoad(bool isMobile, bool isSave, string fileName)
+    public string SaveOrLoad(bool isMobile, bool isSave, string fileName)
     {
         if (isSave)
         {
@@ -111,5 +121,37 @@ public class GameManager : MonoBehaviour
     {
         acquantFateText.text = "" + playerData.acquantFateCount;
         intertwinedFateText.text = "" + playerData.intertwinedFateCount;
+    }
+
+    public bool AddWishes(int acquantFateCount, int intertwinedFateCount)
+    {
+        try
+        {
+            playerData.acquantFateCount += acquantFateCount;
+            playerData.intertwinedFateCount += intertwinedFateCount;
+
+            return true;
+        }
+        catch (System.Exception)
+        {
+            return false;
+        }
+    }
+
+    public void OffNotice(bool isSoundPlay)
+    {
+        if (isSoundPlay)
+        {
+            SoundManager.instance.PlayOneShotEffectSound(3);
+        }
+
+        notice.SetActive(false);
+    }
+
+    public void SetNoticeSkip()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        notice.SetActive(true);
+        noticeText.text = WANT_SKIP;
     }
 }
