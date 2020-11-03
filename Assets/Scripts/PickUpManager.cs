@@ -193,6 +193,7 @@ public class PickUpManager : MonoBehaviour
     public void DoSkip()
     {
         GameManager.instance.OffNotice(true);
+        SoundManager.instance.PlayOneShotEffectSound(1);
         OffPanel();
     }
 
@@ -210,6 +211,7 @@ public class PickUpManager : MonoBehaviour
         resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isShow", true);
 
         GameManager.instance.OffNotice(false);
+        SoundManager.instance.StopEffectSound(3);
 
         CancelInvoke("OffPanel");
     }

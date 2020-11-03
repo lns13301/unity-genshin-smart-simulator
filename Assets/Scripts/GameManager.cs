@@ -156,11 +156,7 @@ public class GameManager : MonoBehaviour
 
     public void OffNotice(bool isSoundPlay)
     {
-        if (isSoundPlay)
-        {
-            SoundManager.instance.PlayOneShotEffectSound(3);
-        }
-
+        SoundManager.instance.PlayOneShotEffectSound(3);
         notice.SetActive(false);
     }
 

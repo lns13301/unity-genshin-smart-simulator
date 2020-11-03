@@ -11636,7 +11636,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1447480012}
         m_MethodName: OffNotice
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -13409,7 +13409,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1447480012}
         m_MethodName: OffNotice
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17149,8 +17149,6 @@ MonoBehaviour:
   acquantFateText: {fileID: 685222322}
   notice: {fileID: 110494750}
   noticeText: {fileID: 0}
-  AD_REWORD_TEXT: "\uAD11\uACE0\uC2DC\uCCAD \uBCF4\uC0C1\uC744 \uD68D\uB4DD\uD558\uC600\uC2B5\uB2C8\uB2E4.\n\n(\uB9CC\uB0A8\uC758
-    \uC778\uC5F0 500\uAC1C, \uB4A4\uC5BD\uD78C \uC778\uC5F0 500\uAC1C)"
   LACK_OF_WISH: "\uBCF4\uC720\uD55C \uC7AC\uD654\uAC00 \uBD80\uC871\uD569\uB2C8\uB2E4."
   UPDATE_YET: "\uC544\uC9C1 \uAD6C\uD604\uB418\uC9C0 \uC54A\uC740 \uAE30\uB2A5\uC785\uB2C8\uB2E4."
   WANT_SKIP: "\uAC74\uB108\uB6F0\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
