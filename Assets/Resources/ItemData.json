@@ -9,9 +9,9 @@
             "grade": 4,
             "spritePath": "Images/Character/Diluc",
             "sprite": {
-                "instanceID": 15904
+                "instanceID": 15578
             },
-            "element": 1
+            "element": 0
         },
         {
             "code": 1,
@@ -22,9 +22,9 @@
             "grade": 4,
             "spritePath": "Images/Character/Keqing",
             "sprite": {
-                "instanceID": 16186
+                "instanceID": 16764
             },
-            "element": 4
+            "element": 3
         },
         {
             "code": 2,
@@ -35,9 +35,9 @@
             "grade": 4,
             "spritePath": "Images/Character/QiQi",
             "sprite": {
-                "instanceID": 16004
+                "instanceID": 16026
             },
-            "element": 6
+            "element": 5
         },
         {
             "code": 3,
@@ -48,9 +48,9 @@
             "grade": 4,
             "spritePath": "Images/Character/Jean",
             "sprite": {
-                "instanceID": 15968
+                "instanceID": 15858
             },
-            "element": 3
+            "element": 2
         },
         {
             "code": 4,
@@ -61,9 +61,9 @@
             "grade": 4,
             "spritePath": "Images/Character/Mona",
             "sprite": {
-                "instanceID": 16054
+                "instanceID": 16252
             },
-            "element": 2
+            "element": 1
         },
         {
             "code": 50,
@@ -74,9 +74,9 @@
             "grade": 4,
             "spritePath": "Images/Character/Venti",
             "sprite": {
-                "instanceID": 16028
+                "instanceID": 16134
             },
-            "element": 3
+            "element": 2
         },
         {
             "code": 51,
@@ -87,9 +87,9 @@
             "grade": 4,
             "spritePath": "Images/Character/Klee",
             "sprite": {
-                "instanceID": 16106
+                "instanceID": 16432
             },
-            "element": 1
+            "element": 0
         },
         {
             "code": 52,
@@ -100,9 +100,9 @@
             "grade": 4,
             "spritePath": "Images/Character/Xiao",
             "sprite": {
-                "instanceID": 16258
+                "instanceID": 16970
             },
-            "element": 3
+            "element": 2
         },
         {
             "code": 101,
@@ -113,9 +113,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Fischl",
             "sprite": {
-                "instanceID": 16058
+                "instanceID": 16256
             },
-            "element": 4
+            "element": 3
         },
         {
             "code": 102,
@@ -126,9 +126,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Razor",
             "sprite": {
-                "instanceID": 16234
+                "instanceID": 16930
             },
-            "element": 4
+            "element": 3
         },
         {
             "code": 103,
@@ -139,9 +139,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Xiangling",
             "sprite": {
-                "instanceID": 16110
+                "instanceID": 16464
             },
-            "element": 1
+            "element": 0
         },
         {
             "code": 104,
@@ -152,9 +152,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Barbara",
             "sprite": {
-                "instanceID": 16222
+                "instanceID": 16856
             },
-            "element": 2
+            "element": 1
         },
         {
             "code": 105,
@@ -165,9 +165,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Bennett",
             "sprite": {
-                "instanceID": 16226
+                "instanceID": 16910
             },
-            "element": 1
+            "element": 0
         },
         {
             "code": 106,
@@ -178,9 +178,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Chongyun",
             "sprite": {
-                "instanceID": 15924
+                "instanceID": 15730
             },
-            "element": 6
+            "element": 5
         },
         {
             "code": 107,
@@ -191,9 +191,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Xingqiu",
             "sprite": {
-                "instanceID": 15984
+                "instanceID": 15894
             },
-            "element": 2
+            "element": 1
         },
         {
             "code": 108,
@@ -204,9 +204,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Beidou",
             "sprite": {
-                "instanceID": 16148
+                "instanceID": 16598
             },
-            "element": 4
+            "element": 3
         },
         {
             "code": 109,
@@ -217,9 +217,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Kaeya",
             "sprite": {
-                "instanceID": 16194
+                "instanceID": 16804
             },
-            "element": 6
+            "element": 5
         },
         {
             "code": 110,
@@ -230,9 +230,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Lisa",
             "sprite": {
-                "instanceID": 15980
+                "instanceID": 15886
             },
-            "element": 4
+            "element": 3
         },
         {
             "code": 111,
@@ -243,9 +243,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Ningguang",
             "sprite": {
-                "instanceID": 16282
+                "instanceID": 17038
             },
-            "element": 7
+            "element": 6
         },
         {
             "code": 112,
@@ -256,9 +256,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Noelle",
             "sprite": {
-                "instanceID": 16046
+                "instanceID": 16216
             },
-            "element": 7
+            "element": 6
         },
         {
             "code": 113,
@@ -269,9 +269,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Sucrose",
             "sprite": {
-                "instanceID": 16124
+                "instanceID": 16522
             },
-            "element": 3
+            "element": 2
         },
         {
             "code": 114,
@@ -282,9 +282,9 @@
             "grade": 3,
             "spritePath": "Images/Character/Amber",
             "sprite": {
-                "instanceID": 16098
+                "instanceID": 16408
             },
-            "element": 1
+            "element": 0
         },
         {
             "code": 1000,
@@ -292,12 +292,12 @@
             "koName": "매의 검",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Aquila Favonia",
             "sprite": {
-                "instanceID": 15472
+                "instanceID": 16364
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1001,
@@ -305,12 +305,12 @@
             "koName": "천공의 검",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Skyward Blade",
             "sprite": {
-                "instanceID": 15752
+                "instanceID": 17026
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1100,
@@ -318,12 +318,12 @@
             "koName": "늑대의 말로",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Wolf's Gravestone",
             "sprite": {
                 "instanceID": 0
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1101,
@@ -331,12 +331,12 @@
             "koName": "천공의 대검",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Skyward Pride",
             "sprite": {
-                "instanceID": 15760
+                "instanceID": 16344
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1200,
@@ -344,12 +344,12 @@
             "koName": "아모스의 활",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Amos's Bow",
             "sprite": {
-                "instanceID": 15464
+                "instanceID": 16674
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1201,
@@ -357,12 +357,12 @@
             "koName": "천공의 하프",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Skyward Harp",
             "sprite": {
-                "instanceID": 15756
+                "instanceID": 16368
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1300,
@@ -370,12 +370,12 @@
             "koName": "사풍 원서",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Lost Prayer to the Sacred Winds",
             "sprite": {
-                "instanceID": 15620
+                "instanceID": 16146
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1301,
@@ -383,12 +383,12 @@
             "koName": "천공의 두루마리",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Skyward Atlas",
             "sprite": {
-                "instanceID": 15748
+                "instanceID": 15902
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1400,
@@ -396,12 +396,12 @@
             "koName": "화박연",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Primordial Jade Winged Spear",
             "sprite": {
-                "instanceID": 15648
+                "instanceID": 15634
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 1401,
@@ -409,12 +409,12 @@
             "koName": "천공의 마루",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 4,
             "spritePath": "Images/Weapon/Skyward Spine",
             "sprite": {
-                "instanceID": 15764
+                "instanceID": 17034
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2000,
@@ -422,12 +422,12 @@
             "koName": "흑암 장검",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Blackcliff Longsword",
             "sprite": {
-                "instanceID": 15488
+                "instanceID": 16718
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2001,
@@ -435,12 +435,12 @@
             "koName": "페보니우스 검",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Favonius Sword",
             "sprite": {
-                "instanceID": 15564
+                "instanceID": 15610
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2002,
@@ -448,12 +448,12 @@
             "koName": "강철 벌침",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Iron Sting",
             "sprite": {
-                "instanceID": 15596
+                "instanceID": 16966
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2003,
@@ -461,12 +461,12 @@
             "koName": "용의 포효",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Lion's Roar",
             "sprite": {
                 "instanceID": 0
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2004,
@@ -474,12 +474,12 @@
             "koName": "참암 프로토타입",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Prototype Rancour",
             "sprite": {
-                "instanceID": 15668
+                "instanceID": 16914
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2005,
@@ -487,12 +487,12 @@
             "koName": "왕실의 장검",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Royal Longsword",
             "sprite": {
-                "instanceID": 15700
+                "instanceID": 16440
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2006,
@@ -500,12 +500,12 @@
             "koName": "제례검",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Sword",
             "sprite": {
-                "instanceID": 15720
+                "instanceID": 15846
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2007,
@@ -513,12 +513,12 @@
             "koName": "피리검",
             "count": 1,
             "type": 1,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/The Flute",
             "sprite": {
-                "instanceID": 15792
+                "instanceID": 15946
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2100,
@@ -526,12 +526,12 @@
             "koName": "흑암참도",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Bloodtainted Greatsword",
             "sprite": {
-                "instanceID": 15504
+                "instanceID": 16768
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2101,
@@ -539,12 +539,12 @@
             "koName": "페보니우스 대검",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Favonius Greatsword",
             "sprite": {
-                "instanceID": 15556
+                "instanceID": 15674
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2102,
@@ -552,12 +552,12 @@
             "koName": "고화 프로토타입",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Prototype Aminus",
             "sprite": {
-                "instanceID": 15652
+                "instanceID": 15970
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2103,
@@ -565,12 +565,12 @@
             "koName": "빗물 베기",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Rainslasher",
             "sprite": {
-                "instanceID": 15676
+                "instanceID": 15542
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2104,
@@ -578,12 +578,12 @@
             "koName": "왕실의 대검",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Royal Greatsword",
             "sprite": {
-                "instanceID": 15692
+                "instanceID": 15954
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2105,
@@ -591,12 +591,12 @@
             "koName": "제례 대검",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Greatsword",
             "sprite": {
-                "instanceID": 15716
+                "instanceID": 16348
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2106,
@@ -604,12 +604,12 @@
             "koName": "이무기 검",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Serpent Spine",
             "sprite": {
-                "instanceID": 15728
+                "instanceID": 16094
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2107,
@@ -617,12 +617,12 @@
             "koName": "시간의 검",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/The Bell",
             "sprite": {
-                "instanceID": 15784
+                "instanceID": 17122
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2108,
@@ -630,12 +630,12 @@
             "koName": "백영검",
             "count": 1,
             "type": 2,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Whiteblind",
             "sprite": {
-                "instanceID": 15832
+                "instanceID": 16788
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2200,
@@ -643,12 +643,12 @@
             "koName": "흑암 배틀 보우",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Blackcliff Warbow",
             "sprite": {
-                "instanceID": 15500
+                "instanceID": 16456
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2201,
@@ -656,12 +656,12 @@
             "koName": "강철궁",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Compound Bow",
             "sprite": {
-                "instanceID": 15508
+                "instanceID": 16098
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2202,
@@ -669,12 +669,12 @@
             "koName": "페보니우스 활",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Favonius Warbow",
             "sprite": {
-                "instanceID": 15568
+                "instanceID": 16106
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2203,
@@ -682,12 +682,12 @@
             "koName": "담월 프로토타입",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Prototype Crescent",
             "sprite": {
-                "instanceID": 15656
+                "instanceID": 16878
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2204,
@@ -695,12 +695,12 @@
             "koName": "왕실의 장궁",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Royal Bow",
             "sprite": {
-                "instanceID": 15688
+                "instanceID": 16570
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2205,
@@ -708,12 +708,12 @@
             "koName": "녹슨 활",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Rust",
             "sprite": {
-                "instanceID": 15704
+                "instanceID": 16404
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2206,
@@ -721,12 +721,12 @@
             "koName": "제례활",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Bow",
             "sprite": {
-                "instanceID": 15708
+                "instanceID": 15966
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2207,
@@ -734,12 +734,12 @@
             "koName": "절현",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/The Stringless",
             "sprite": {
-                "instanceID": 15796
+                "instanceID": 16922
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2208,
@@ -747,12 +747,12 @@
             "koName": "청록색 활",
             "count": 1,
             "type": 3,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/The Viridescent Hunt",
             "sprite": {
-                "instanceID": 15800
+                "instanceID": 16732
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2300,
@@ -760,12 +760,12 @@
             "koName": "흑암 홍옥",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Blackcliff Amulet",
             "sprite": {
-                "instanceID": 15484
+                "instanceID": 16050
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2301,
@@ -773,12 +773,12 @@
             "koName": "소심",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Eye of Perception",
             "sprite": {
-                "instanceID": 15548
+                "instanceID": 17082
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2302,
@@ -786,12 +786,12 @@
             "koName": "페보니우스 비전",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Favonius Codex",
             "sprite": {
-                "instanceID": 15552
+                "instanceID": 16420
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2303,
@@ -799,12 +799,12 @@
             "koName": "만국 항해용해도",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Mappa Mare",
             "sprite": {
-                "instanceID": 15628
+                "instanceID": 15526
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2304,
@@ -812,12 +812,12 @@
             "koName": "황금 호박 프로토타입",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Prototype Malice",
             "sprite": {
-                "instanceID": 15664
+                "instanceID": 15418
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2305,
@@ -825,12 +825,12 @@
             "koName": "왕실의 비전록",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Royal Grimoire",
             "sprite": {
-                "instanceID": 15696
+                "instanceID": 15484
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2306,
@@ -838,12 +838,12 @@
             "koName": "제례의 악장",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Fragments",
             "sprite": {
-                "instanceID": 15712
+                "instanceID": 16828
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2307,
@@ -851,12 +851,12 @@
             "koName": "일월의 정수",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Solar Pearl",
             "sprite": {
-                "instanceID": 15772
+                "instanceID": 16304
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2308,
@@ -864,12 +864,12 @@
             "koName": "음유시인의 악장",
             "count": 1,
             "type": 4,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/The Widsith",
             "sprite": {
-                "instanceID": 15804
+                "instanceID": 15782
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2400,
@@ -877,12 +877,12 @@
             "koName": "흑암창",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Blackcliff Pole",
             "sprite": {
-                "instanceID": 15492
+                "instanceID": 16110
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2401,
@@ -890,12 +890,12 @@
             "koName": "유월창",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Crescent Pike",
             "sprite": {
-                "instanceID": 15516
+                "instanceID": 16800
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2402,
@@ -903,12 +903,12 @@
             "koName": "결투의 창",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Deathmatch",
             "sprite": {
-                "instanceID": 15524
+                "instanceID": 15694
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2403,
@@ -916,12 +916,12 @@
             "koName": "용학살창",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Dragon's Bane",
             "sprite": {
-                "instanceID": 0
+                "instanceID": 16248
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2404,
@@ -929,12 +929,12 @@
             "koName": "페보니우스 장창",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Favonius Lance",
             "sprite": {
-                "instanceID": 15560
+                "instanceID": 15788
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 2405,
@@ -942,12 +942,12 @@
             "koName": "별의 낫 프로토타입",
             "count": 1,
             "type": 5,
-            "grade": 2,
+            "grade": 3,
             "spritePath": "Images/Weapon/Prototype Grudge",
             "sprite": {
-                "instanceID": 15660
+                "instanceID": 16906
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3000,
@@ -958,9 +958,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Cool Steel",
             "sprite": {
-                "instanceID": 15512
+                "instanceID": 15926
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3001,
@@ -971,9 +971,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Dark Iron Sword",
             "sprite": {
-                "instanceID": 15520
+                "instanceID": 16312
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3002,
@@ -984,9 +984,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Fillet Blade",
             "sprite": {
-                "instanceID": 15576
+                "instanceID": 16630
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3003,
@@ -997,9 +997,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Harbinger of Dawn",
             "sprite": {
-                "instanceID": 15584
+                "instanceID": 16894
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3004,
@@ -1010,9 +1010,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Skyrider Sword",
             "sprite": {
-                "instanceID": 15744
+                "instanceID": 16154
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3005,
@@ -1023,9 +1023,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Traveler's Handy Sword",
             "sprite": {
-                "instanceID": 0
+                "instanceID": 16484
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3100,
@@ -1036,9 +1036,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Bloodtainted Greatsword",
             "sprite": {
-                "instanceID": 15504
+                "instanceID": 16768
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3101,
@@ -1049,9 +1049,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Debate Club",
             "sprite": {
-                "instanceID": 15528
+                "instanceID": 15504
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3102,
@@ -1062,9 +1062,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Ferrous Shadow",
             "sprite": {
-                "instanceID": 15572
+                "instanceID": 16998
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3103,
@@ -1075,9 +1075,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Skyrider Greatsword",
             "sprite": {
-                "instanceID": 15740
+                "instanceID": 16472
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3104,
@@ -1088,9 +1088,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/White Iron Greatsword",
             "sprite": {
-                "instanceID": 15824
+                "instanceID": 15718
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3200,
@@ -1101,9 +1101,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Messenger",
             "sprite": {
-                "instanceID": 15632
+                "instanceID": 16332
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3201,
@@ -1114,9 +1114,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Raven Bow",
             "sprite": {
-                "instanceID": 15680
+                "instanceID": 16590
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3202,
@@ -1127,9 +1127,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Recurve Bow",
             "sprite": {
-                "instanceID": 15684
+                "instanceID": 16744
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3203,
@@ -1140,9 +1140,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Sharpshooter's Oath",
             "sprite": {
-                "instanceID": 0
+                "instanceID": 16162
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3204,
@@ -1153,9 +1153,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Slingshot",
             "sprite": {
-                "instanceID": 15768
+                "instanceID": 15454
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3205,
@@ -1166,9 +1166,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Messenger",
             "sprite": {
-                "instanceID": 15632
+                "instanceID": 16332
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3300,
@@ -1179,9 +1179,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Emerald Orb",
             "sprite": {
-                "instanceID": 15544
+                "instanceID": 15598
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3301,
@@ -1192,9 +1192,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Magic Guide",
             "sprite": {
-                "instanceID": 15624
+                "instanceID": 16372
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3302,
@@ -1205,9 +1205,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Otherworldly Story",
             "sprite": {
-                "instanceID": 15640
+                "instanceID": 15702
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3303,
@@ -1218,9 +1218,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Thrilling Tales of Dragon Slayers",
             "sprite": {
-                "instanceID": 15808
+                "instanceID": 16554
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3304,
@@ -1231,9 +1231,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Twin Nephrite",
             "sprite": {
-                "instanceID": 15816
+                "instanceID": 15890
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3400,
@@ -1244,9 +1244,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Black Tassel",
             "sprite": {
-                "instanceID": 15480
+                "instanceID": 15658
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3401,
@@ -1257,9 +1257,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Halberd",
             "sprite": {
-                "instanceID": 15580
+                "instanceID": 16272
             },
-            "element": 0
+            "element": -1
         },
         {
             "code": 3402,
@@ -1270,9 +1270,9 @@
             "grade": 2,
             "spritePath": "Images/Weapon/White Tassel",
             "sprite": {
-                "instanceID": 15828
+                "instanceID": 17050
             },
-            "element": 0
+            "element": -1
         }
     ]
 }

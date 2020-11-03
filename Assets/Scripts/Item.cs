@@ -17,7 +17,7 @@ public class Item
 
     public Element element;
 
-    public Item(int code, string enName, string koName, int count, ItemType type, Grade grade, string spritePath, Element element = Element.NONE)
+    public Item(int code, string enName, string koName, int count, ItemType type, Grade grade, string spritePath, Element element = Element.PYRO)
     {
         this.count = count;
         this.code = code;
@@ -70,12 +70,11 @@ public enum Grade
 
 public enum Element
 {
-    NONE,
-    PYRO, // FIRE
-    HYDRO, // WATER
-    ANEMO, // WIND
-    ELECTRO, // LIGHTNING
-    DENDRO, // NATURE
-    CRYO, // FROST
-    GEO // EARTH
+    PYRO = 0, // FIRE
+    HYDRO = 1, // WATER
+    ANEMO = 2, // WIND
+    ELECTRO = 3, // LIGHTNING
+    DENDRO = 4, // NATURE
+    CRYO = 5, // FROST
+    GEO = 6 // EARTH
 }

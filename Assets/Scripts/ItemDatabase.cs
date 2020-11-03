@@ -29,7 +29,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile = new ItemDataFile();
         itemDataFile.itemDatas = new List<Item>();
 
-        //saveItemData();
+        // saveItemData();
         loadItemData();
 
         //spawnItem();
@@ -128,68 +128,68 @@ public class ItemDatabase : MonoBehaviour
                 itemDataFile.itemDatas.Add(new Item(116, "Xinyan", "신염", 1, ItemType.HERO, Grade.UNIQUE, spritePathHero + "Noelle", Element.PYRO));*/
 
 
-        itemDataFile.itemDatas.Add(new Item(1000, "Aquila Favonia", "매의 검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Aquila Favonia"));
-        itemDataFile.itemDatas.Add(new Item(1001, "Skyward Blade", "천공의 검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Skyward Blade"));
+        itemDataFile.itemDatas.Add(new Item(1000, "Aquila Favonia", "매의 검", 1, ItemType.SWORD, Grade.LEGEND, spritePathWeapon + "Aquila Favonia"));
+        itemDataFile.itemDatas.Add(new Item(1001, "Skyward Blade", "천공의 검", 1, ItemType.SWORD, Grade.LEGEND, spritePathWeapon + "Skyward Blade"));
 
-        itemDataFile.itemDatas.Add(new Item(1100, "Wolf's Gravestone", "늑대의 말로", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Wolf's Gravestone"));
-        itemDataFile.itemDatas.Add(new Item(1101, "Skyward Pride", "천공의 대검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Skyward Pride"));
+        itemDataFile.itemDatas.Add(new Item(1100, "Wolf's Gravestone", "늑대의 말로", 1, ItemType.CLAYMORE, Grade.LEGEND, spritePathWeapon + "Wolf's Gravestone"));
+        itemDataFile.itemDatas.Add(new Item(1101, "Skyward Pride", "천공의 대검", 1, ItemType.CLAYMORE, Grade.LEGEND, spritePathWeapon + "Skyward Pride"));
 
-        itemDataFile.itemDatas.Add(new Item(1200, "Amos's Bow", "아모스의 활", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Amos's Bow"));
-        itemDataFile.itemDatas.Add(new Item(1201, "Skyward Harp", "천공의 하프", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Skyward Harp"));
+        itemDataFile.itemDatas.Add(new Item(1200, "Amos's Bow", "아모스의 활", 1, ItemType.BOW, Grade.LEGEND, spritePathWeapon + "Amos's Bow"));
+        itemDataFile.itemDatas.Add(new Item(1201, "Skyward Harp", "천공의 하프", 1, ItemType.BOW, Grade.LEGEND, spritePathWeapon + "Skyward Harp"));
 
-        itemDataFile.itemDatas.Add(new Item(1300, "Lost Prayer to the Sacred Winds", "사풍 원서", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Lost Prayer to the Sacred Winds"));
-        itemDataFile.itemDatas.Add(new Item(1301, "Skyward Atlas", "천공의 두루마리", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Skyward Atlas"));
+        itemDataFile.itemDatas.Add(new Item(1300, "Lost Prayer to the Sacred Winds", "사풍 원서", 1, ItemType.CATALYST, Grade.LEGEND, spritePathWeapon + "Lost Prayer to the Sacred Winds"));
+        itemDataFile.itemDatas.Add(new Item(1301, "Skyward Atlas", "천공의 두루마리", 1, ItemType.CATALYST, Grade.LEGEND, spritePathWeapon + "Skyward Atlas"));
 
-        itemDataFile.itemDatas.Add(new Item(1400, "Primordial Jade Winged Spear", "화박연", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Primordial Jade Winged Spear"));
-        itemDataFile.itemDatas.Add(new Item(1401, "Skyward Spine", "천공의 마루", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Skyward Spine"));        
+        itemDataFile.itemDatas.Add(new Item(1400, "Primordial Jade Winged Spear", "화박연", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Primordial Jade Winged Spear"));
+        itemDataFile.itemDatas.Add(new Item(1401, "Skyward Spine", "천공의 마루", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Skyward Spine"));        
 
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
-        itemDataFile.itemDatas.Add(new Item(2000, "Blackcliff Longsword", "흑암 장검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Blackcliff Longsword"));
-        itemDataFile.itemDatas.Add(new Item(2001, "Favonius Sword", "페보니우스 검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Favonius Sword"));
-        itemDataFile.itemDatas.Add(new Item(2002, "Iron Sting", "강철 벌침", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Iron Sting"));
-        itemDataFile.itemDatas.Add(new Item(2003, "Lion's Roar", "용의 포효", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Lion's Roar"));
-        itemDataFile.itemDatas.Add(new Item(2004, "Prototype Rancour", "참암 프로토타입", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Prototype Rancour"));
-        itemDataFile.itemDatas.Add(new Item(2005, "Royal Longsword", "왕실의 장검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Royal Longsword"));
-        itemDataFile.itemDatas.Add(new Item(2006, "Sacrificial Sword", "제례검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Sacrificial Sword"));
-        itemDataFile.itemDatas.Add(new Item(2007, "The Flute", "피리검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "The Flute"));
+        itemDataFile.itemDatas.Add(new Item(2000, "Blackcliff Longsword", "흑암 장검", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "Blackcliff Longsword"));
+        itemDataFile.itemDatas.Add(new Item(2001, "Favonius Sword", "페보니우스 검", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "Favonius Sword"));
+        itemDataFile.itemDatas.Add(new Item(2002, "Iron Sting", "강철 벌침", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "Iron Sting"));
+        itemDataFile.itemDatas.Add(new Item(2003, "Lion's Roar", "용의 포효", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "Lion's Roar"));
+        itemDataFile.itemDatas.Add(new Item(2004, "Prototype Rancour", "참암 프로토타입", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "Prototype Rancour"));
+        itemDataFile.itemDatas.Add(new Item(2005, "Royal Longsword", "왕실의 장검", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "Royal Longsword"));
+        itemDataFile.itemDatas.Add(new Item(2006, "Sacrificial Sword", "제례검", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "Sacrificial Sword"));
+        itemDataFile.itemDatas.Add(new Item(2007, "The Flute", "피리검", 1, ItemType.SWORD, Grade.UNIQUE, spritePathWeapon + "The Flute"));
 
-        itemDataFile.itemDatas.Add(new Item(2100, "Blackcliff Slasher", "흑암참도", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Bloodtainted Greatsword"));
-        itemDataFile.itemDatas.Add(new Item(2101, "Favonius Greatsword", "페보니우스 대검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Favonius Greatsword"));
-        itemDataFile.itemDatas.Add(new Item(2102, "Prototype Aminus", "고화 프로토타입", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Prototype Aminus"));
-        itemDataFile.itemDatas.Add(new Item(2103, "Rainslasher", "빗물 베기", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Rainslasher"));
-        itemDataFile.itemDatas.Add(new Item(2104, "Royal Greatsword", "왕실의 대검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Royal Greatsword"));
-        itemDataFile.itemDatas.Add(new Item(2105, "Sacrificial Greatsword", "제례 대검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Sacrificial Greatsword"));
-        itemDataFile.itemDatas.Add(new Item(2106, "Serpent Spine", "이무기 검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Serpent Spine"));
-        itemDataFile.itemDatas.Add(new Item(2107, "The Bell", "시간의 검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "The Bell"));
-        itemDataFile.itemDatas.Add(new Item(2108, "Whiteblind", "백영검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Whiteblind"));
+        itemDataFile.itemDatas.Add(new Item(2100, "Blackcliff Slasher", "흑암참도", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Bloodtainted Greatsword"));
+        itemDataFile.itemDatas.Add(new Item(2101, "Favonius Greatsword", "페보니우스 대검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Favonius Greatsword"));
+        itemDataFile.itemDatas.Add(new Item(2102, "Prototype Aminus", "고화 프로토타입", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Prototype Aminus"));
+        itemDataFile.itemDatas.Add(new Item(2103, "Rainslasher", "빗물 베기", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Rainslasher"));
+        itemDataFile.itemDatas.Add(new Item(2104, "Royal Greatsword", "왕실의 대검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Royal Greatsword"));
+        itemDataFile.itemDatas.Add(new Item(2105, "Sacrificial Greatsword", "제례 대검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Sacrificial Greatsword"));
+        itemDataFile.itemDatas.Add(new Item(2106, "Serpent Spine", "이무기 검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Serpent Spine"));
+        itemDataFile.itemDatas.Add(new Item(2107, "The Bell", "시간의 검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "The Bell"));
+        itemDataFile.itemDatas.Add(new Item(2108, "Whiteblind", "백영검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Whiteblind"));
 
-        itemDataFile.itemDatas.Add(new Item(2200, "Blackcliff Warbow", "흑암 배틀 보우", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Blackcliff Warbow"));
-        itemDataFile.itemDatas.Add(new Item(2201, "Compound Bow", "강철궁", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Compound Bow"));
-        itemDataFile.itemDatas.Add(new Item(2202, "Favonius Warbow", "페보니우스 활", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Favonius Warbow"));
-        itemDataFile.itemDatas.Add(new Item(2203, "Prototype Crescent", "담월 프로토타입", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Prototype Crescent"));
-        itemDataFile.itemDatas.Add(new Item(2204, "Royal Bow", "왕실의 장궁", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Royal Bow"));
-        itemDataFile.itemDatas.Add(new Item(2205, "Rust", "녹슨 활", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Rust"));
-        itemDataFile.itemDatas.Add(new Item(2206, "Sacrificial Bow", "제례활", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "Sacrificial Bow"));
-        itemDataFile.itemDatas.Add(new Item(2207, "The Stringless", "절현", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "The Stringless"));
-        itemDataFile.itemDatas.Add(new Item(2208, "The Viridescent Hunt", "청록색 활", 1, ItemType.BOW, Grade.EPIC, spritePathWeapon + "The Viridescent Hunt"));
+        itemDataFile.itemDatas.Add(new Item(2200, "Blackcliff Warbow", "흑암 배틀 보우", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "Blackcliff Warbow"));
+        itemDataFile.itemDatas.Add(new Item(2201, "Compound Bow", "강철궁", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "Compound Bow"));
+        itemDataFile.itemDatas.Add(new Item(2202, "Favonius Warbow", "페보니우스 활", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "Favonius Warbow"));
+        itemDataFile.itemDatas.Add(new Item(2203, "Prototype Crescent", "담월 프로토타입", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "Prototype Crescent"));
+        itemDataFile.itemDatas.Add(new Item(2204, "Royal Bow", "왕실의 장궁", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "Royal Bow"));
+        itemDataFile.itemDatas.Add(new Item(2205, "Rust", "녹슨 활", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "Rust"));
+        itemDataFile.itemDatas.Add(new Item(2206, "Sacrificial Bow", "제례활", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "Sacrificial Bow"));
+        itemDataFile.itemDatas.Add(new Item(2207, "The Stringless", "절현", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "The Stringless"));
+        itemDataFile.itemDatas.Add(new Item(2208, "The Viridescent Hunt", "청록색 활", 1, ItemType.BOW, Grade.UNIQUE, spritePathWeapon + "The Viridescent Hunt"));
 
-        itemDataFile.itemDatas.Add(new Item(2300, "Blackcliff Amulet", "흑암 홍옥", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Blackcliff Amulet"));
-        itemDataFile.itemDatas.Add(new Item(2301, "Eye of Perception", "소심", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Eye of Perception"));
-        itemDataFile.itemDatas.Add(new Item(2302, "Favonius Codex", "페보니우스 비전", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Favonius Codex"));
-        itemDataFile.itemDatas.Add(new Item(2303, "Mappa Mare", "만국 항해용해도", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Mappa Mare"));
-        itemDataFile.itemDatas.Add(new Item(2304, "Prototype Malice", "황금 호박 프로토타입", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Prototype Malice"));
-        itemDataFile.itemDatas.Add(new Item(2305, "Royal Grimoire", "왕실의 비전록", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Royal Grimoire"));
-        itemDataFile.itemDatas.Add(new Item(2306, "Sacrificial Fragments", "제례의 악장", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Sacrificial Fragments"));
-        itemDataFile.itemDatas.Add(new Item(2307, "Solar Pearl", "일월의 정수", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "Solar Pearl"));
-        itemDataFile.itemDatas.Add(new Item(2308, "The Widsith", "음유시인의 악장", 1, ItemType.CATALYST, Grade.EPIC, spritePathWeapon + "The Widsith"));
+        itemDataFile.itemDatas.Add(new Item(2300, "Blackcliff Amulet", "흑암 홍옥", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Blackcliff Amulet"));
+        itemDataFile.itemDatas.Add(new Item(2301, "Eye of Perception", "소심", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Eye of Perception"));
+        itemDataFile.itemDatas.Add(new Item(2302, "Favonius Codex", "페보니우스 비전", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Favonius Codex"));
+        itemDataFile.itemDatas.Add(new Item(2303, "Mappa Mare", "만국 항해용해도", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Mappa Mare"));
+        itemDataFile.itemDatas.Add(new Item(2304, "Prototype Malice", "황금 호박 프로토타입", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Prototype Malice"));
+        itemDataFile.itemDatas.Add(new Item(2305, "Royal Grimoire", "왕실의 비전록", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Royal Grimoire"));
+        itemDataFile.itemDatas.Add(new Item(2306, "Sacrificial Fragments", "제례의 악장", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Sacrificial Fragments"));
+        itemDataFile.itemDatas.Add(new Item(2307, "Solar Pearl", "일월의 정수", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Solar Pearl"));
+        itemDataFile.itemDatas.Add(new Item(2308, "The Widsith", "음유시인의 악장", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "The Widsith"));
 
-        itemDataFile.itemDatas.Add(new Item(2400, "Blackcliff Pole", "흑암창", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Blackcliff Pole"));
-        itemDataFile.itemDatas.Add(new Item(2401, "Crescent Pike", "유월창", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Crescent Pike"));
-        itemDataFile.itemDatas.Add(new Item(2402, "Deathmatch", "결투의 창", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Deathmatch"));
-        itemDataFile.itemDatas.Add(new Item(2403, "Dragon's Bane", "용학살창", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Dragon's Bane"));
-        itemDataFile.itemDatas.Add(new Item(2404, "Favonius Lance", "페보니우스 장창", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Favonius Lance"));
-        itemDataFile.itemDatas.Add(new Item(2405, "Prototype Grudge", "별의 낫 프로토타입", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Prototype Grudge"));
+        itemDataFile.itemDatas.Add(new Item(2400, "Blackcliff Pole", "흑암창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Blackcliff Pole"));
+        itemDataFile.itemDatas.Add(new Item(2401, "Crescent Pike", "유월창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Crescent Pike"));
+        itemDataFile.itemDatas.Add(new Item(2402, "Deathmatch", "결투의 창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Deathmatch"));
+        itemDataFile.itemDatas.Add(new Item(2403, "Dragon's Bane", "용학살창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Dragon's Bane"));
+        itemDataFile.itemDatas.Add(new Item(2404, "Favonius Lance", "페보니우스 장창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Favonius Lance"));
+        itemDataFile.itemDatas.Add(new Item(2405, "Prototype Grudge", "별의 낫 프로토타입", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Prototype Grudge"));
 
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
