@@ -176,7 +176,7 @@ public class PickUpManager : MonoBehaviour
 
         videos[0].Play();
 
-        Invoke("OnSkipButton", 2.5f);
+        Invoke("OnSkipButton", 0.5f);
         Invoke("OffPanel", 6.3f);
     }
 
@@ -417,7 +417,7 @@ public class PickUpManager : MonoBehaviour
             return Grade.UNIQUE;
         }
 
-        int value = (int)((0.6f + (fiveStarCount * 0.02f)) * 100);
+        int value = (int)((0.6f + (fiveStarCount * 0.01f)) * 100);
         int result = Random.Range(0, 10000);
 
         if (value > result)
@@ -584,7 +584,7 @@ public class PickUpManager : MonoBehaviour
 
                 if (r == 0 || isPickUp4Always)
                 {
-                    playerData.isPickUpWeaponAlways = false;
+                    playerData.isPickUpWeapon4Always = false;
 
                     int value = Random.Range(0, 5);
 
@@ -623,7 +623,8 @@ public class PickUpManager : MonoBehaviour
 
                 if (r == 0 || isPickUp4Always)
                 {
-                    playerData.isPickUpCharacterAlways = false;
+                    Debug.Log("나옴");
+                    playerData.isPickUpCharacter4Always = false;
 
                     int value = Random.Range(0, 3);
 

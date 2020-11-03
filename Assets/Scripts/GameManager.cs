@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject notice;
     public Text noticeText;
-    public string AD_REWORD_TEXT = "광고시청 보상을 획득하였습니다.\n\n(만남의 인연 500개, 뒤얽힌 인연 500개)";
     public string LACK_OF_WISH = "보유한 재화가 부족합니다.";
     public string UPDATE_YET = "아직 구현되지 않은 기능입니다.";
     public string WANT_SKIP = "건너뛰시겠습니까?";

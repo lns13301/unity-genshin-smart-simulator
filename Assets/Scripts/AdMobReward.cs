@@ -12,7 +12,9 @@ public class AdMobReward : MonoBehaviour
     private RewardedAd videoAd;
     public static bool ShowAd = false;
     string videoID;
-    public GameObject message;
+
+    public GameObject notice;
+    public Text noticeText;
 
     public void Start()
     {
@@ -22,7 +24,8 @@ public class AdMobReward : MonoBehaviour
         videoAd = new RewardedAd(videoID);
         Handle(videoAd);
         Load();
-        message.gameObject.SetActive(false);
+
+        notice.SetActive(false);
     }
 
     private void Handle(RewardedAd videoAd)
@@ -53,7 +56,9 @@ public class AdMobReward : MonoBehaviour
     //오브젝트 참조해서 불러줄 함수
     public void Show()
     {
+        SoundManager.instance.PlayOneShotEffectSound(1);
         StartCoroutine("ShowRewardAd");
+        notice.SetActive(false);
     }
 
     private IEnumerator ShowRewardAd()
@@ -73,14 +78,14 @@ public class AdMobReward : MonoBehaviour
     //광고 로드에 실패했을 때
     public void HandleOnAdFailedToLoad(object sender, AdErrorEventArgs args)
     {
-        message.gameObject.SetActive(true);
-        message.transform.GetChild(1).GetComponent<Text>().text = "광고 로드에 실패했습니다.";
+        GameManager.instance.notice.SetActive(true);
+        GameManager.instance.noticeText.text = "광고 로드에 실패했습니다.";
     }
     //광고 보여주기를 실패했을 때
     public void HandleOnAdFailedToShow(object sender, AdErrorEventArgs args)
     {
-        message.gameObject.SetActive(true);
-        message.transform.GetChild(1).GetComponent<Text>().text = "광고 보기에 실패했습니다.";
+        GameManager.instance.notice.SetActive(true);
+        GameManager.instance.noticeText.text = "광고 보기에 실패했습니다.";
     }
     //광고가 제대로 실행되었을 때
     public void HandleOnAdOpening(object sender, EventArgs args)
@@ -97,6 +102,33 @@ public class AdMobReward : MonoBehaviour
     public void HandleOnUserEarnedReward(object sender, EventArgs args)
     {
         //보상이 들어갈 곳입니다.
-        GameObject.Find("AdManager").GetComponent<AdManager>().giveReward();
+        GiveReward();
+    }
+
+    public void GiveReward()
+    {
+        if (GameManager.instance.AddWishes(500, 500))
+        {
+            notice.SetActive(true);
+            noticeText.text = "광고시청 보상을 획득하였습니다.\n\n(만남의 인연 500개, 뒤얽힌 인연 500개)";
+            GameManager.instance.SavePlayerDataToJson();
+        }
+        else
+        {
+
+        }
+    }
+
+    public void ButtonAd()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        notice.SetActive(true);
+        noticeText.text = "광고를 시청하고 만남의 인연, 뒤얽힌 인연을 획득하시겠습니까?";
+    }
+
+    public void OffNotice()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        notice.SetActive(false);
     }
 }
