@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public string LACK_OF_WISH = "보유한 재화가 부족합니다.";
     public string UPDATE_YET = "아직 구현되지 않은 기능입니다.";
     public string WANT_SKIP = "건너뛰시겠습니까?";
+    public string END_DATE = "체험 기간이 종료되었습니다.";
 
     // Start is called before the first frame update
     void Start()
@@ -34,12 +35,28 @@ public class GameManager : MonoBehaviour
 
         noticeText = notice.transform.GetChild(5).GetComponent<Text>();
         notice.SetActive(false);
+
+        Invoke("CheckValidTime", 2f);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void CheckValidTime()
+    {
+        if (TimeManager.sharedInstance.GetYear() >= 2020 && TimeManager.sharedInstance.GetMonth() >= 11 && TimeManager.sharedInstance.GetDay() >= 4)
+        {
+            playerData.acquantFateCount = 0;
+            playerData.intertwinedFateCount = 0;
+
+            notice.SetActive(true);
+            noticeText.text = END_DATE;
+
+            GameManager.instance.SavePlayerDataToJson();
+        }
     }
 
     public void AddResources()
