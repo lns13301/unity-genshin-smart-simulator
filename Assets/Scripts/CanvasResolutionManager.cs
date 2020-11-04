@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CanvasResolutionManager : MonoBehaviour
 {
+    public static CanvasResolutionManager instance;
     public RectTransform[] canvas;
 
     public RectTransform[] component;
@@ -14,6 +15,8 @@ public class CanvasResolutionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+
         for (int i = 0; i < canvas.Length; i++)
         {
             canvas[i].SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Screen.width);
@@ -77,5 +80,11 @@ public class CanvasResolutionManager : MonoBehaviour
                     RectTransform.Axis.Vertical, resultButtonInformation.GetChild(j).GetComponent<RectTransform>().rect.height * (Screen.height / 1080));
             }
         }
+    }
+
+    public void SetResolution(RectTransform target)
+    {
+        target.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, target.rect.width * (Screen.width / 1920));
+        target.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, target.rect.height * (Screen.height / 1080));
     }
 }

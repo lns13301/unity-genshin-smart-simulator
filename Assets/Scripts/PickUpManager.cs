@@ -53,6 +53,7 @@ public class PickUpManager : MonoBehaviour
             return;
         }
 
+        GameManager.instance.SetHistoryRecent(); // 90차 이상 제거
 
         int buttonType = BannerManager.instance.onBannerIndex;
 
@@ -153,6 +154,7 @@ public class PickUpManager : MonoBehaviour
 
         sortResultItems();
 
+        // 이미지 등록
         for (int i = 0; i < 10; i++)
         {
             resultImageParent.transform.GetChild(i).GetChild(0).gameObject.GetComponent<Image>().sprite = result[i].sprite;
@@ -191,7 +193,7 @@ public class PickUpManager : MonoBehaviour
 
         videos[0].Play();
 
-        Invoke("OnSkipButton", 0.5f);
+        Invoke("OnSkipButton", 2.5f);
         Invoke("OffPanel", 6.3f);
     }
 
@@ -483,7 +485,7 @@ public class PickUpManager : MonoBehaviour
             if (result[i].type == ItemType.HERO)
             {
                 resultImageParent.transform.GetChild(i).GetChild(4).GetChild((int) result[i].element).gameObject.SetActive(true); // 속성 켜기
-                resultImageParent.transform.GetChild(i).GetChild(0).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 500);
+                resultImageParent.transform.GetChild(i).GetChild(0).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 133.3f);
                 resultImageParent.transform.GetChild(i).GetChild(0).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 306.4f);
             }
             else
@@ -551,7 +553,12 @@ public class PickUpManager : MonoBehaviour
             return Grade.LEGEND;
         }
 
-        value = (int)((5.1f + (fiveStarCount * 0.08f)) * 100);
+        value = 510;
+
+        if (fourStarCount > 4)
+        {
+            value = (int)((5.1f + ((fourStarCount - 4) * 1f)) * 100);
+        }
 
         if (value > result || fourStarCount == 10)
         {
@@ -701,7 +708,7 @@ public class PickUpManager : MonoBehaviour
                 }
                 else
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(32, 59)];
+                    return ItemDatabase.instance.itemDB[Random.Range(32, 51)];
                 }
             }
             if (pickUpType == PickUpType.WEAPON)
@@ -739,7 +746,7 @@ public class PickUpManager : MonoBehaviour
                     else
                     {
                         playerData.isPickUpWeapon4Always = true;
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 59)];
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 51)];
                     }
                 }
             }
@@ -767,7 +774,7 @@ public class PickUpManager : MonoBehaviour
                 }
                 else
                 {
-                    int range = Random.Range(0, 55); // 무기 + 캐릭터 개수
+                    int range = Random.Range(0, 33); // 무기 + 캐릭터 개수
 
                     if (range < 14) // 캐릭터 개수
                     {
@@ -776,13 +783,13 @@ public class PickUpManager : MonoBehaviour
                     }
                     else
                     {
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 59)];
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 51)];
                     }
                 }
             }
         }
 
-        return ItemDatabase.instance.itemDB[Random.Range(73, 84)];
+        return ItemDatabase.instance.itemDB[Random.Range(51, 76)];
     }
 
     public void ButtonShowItemInformation(int index)

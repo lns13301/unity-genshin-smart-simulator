@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public GameObject information;
     public Text informationText;
 
+    public GameObject exitNotice;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +61,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(timeData[0] + "년" + timeData[1] + "월" + timeData[2] + "일" + timeData[3] + "시" + timeData[4] + "분");
 
         if ( ((timeData[0] >= 2020 && timeData[1] >= 11) || timeData[0] > 2020)
-            && ((timeData[2] > 4) || (timeData[2] <= 4 && timeData[3] >= 23 && timeData[4] >= 59))
+            && ((timeData[2] > 5) || (timeData[2] <= 5 && timeData[3] >= 23 && timeData[4] >= 59))
             )
         {
             playerData.acquantFateCount = 0;
@@ -89,7 +91,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("저장 성공");
 
         string jsonData = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(SaveOrLoad(isMobile, true, "playerData"), jsonData);
+        File.WriteAllText(SaveOrLoad(isMobile, true, "PlayerData"), jsonData);
     }
 
     [ContextMenu("From Json Data")]
@@ -98,7 +100,7 @@ public class GameManager : MonoBehaviour
         try
         {
             Debug.Log("플레이어 정보 로드 성공");
-            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "playerData"));
+            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "PlayerData"));
             playerData = JsonUtility.FromJson<PlayerData>(jsonData);
 
             // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
@@ -116,7 +118,7 @@ public class GameManager : MonoBehaviour
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
-            File.WriteAllText(SaveOrLoad(isMobile, false, "playerData"), jsonData);
+            File.WriteAllText(SaveOrLoad(isMobile, false, "PlayerData"), jsonData);
             LoadPlayerDataFromJson();
         }
     }
@@ -234,9 +236,49 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            informationText.text = "뒤얽힌 인연이 " + GetColorText("" + (limit - playerData.acquantFateCount), ORANGE_COLOR) + "개 부족합니다.";
+            informationText.text = "뒤얽힌 인연이 " + GetColorText("" + (limit - playerData.intertwinedFateCount), ORANGE_COLOR) + "개 부족합니다.";
         }
 
         AdMobReward.instance.ButtonAd();
+    }
+
+    public void SetHistoryRecent()
+    {
+        while (playerData.normalHistory.Count > 90)
+        {
+            playerData.normalHistory.RemoveAt(0);
+        }
+
+        while (playerData.characterHistory.Count > 90)
+        {
+            playerData.characterHistory.RemoveAt(0);
+        }
+
+        while (playerData.weaponHistory.Count > 90)
+        {
+            playerData.weaponHistory.RemoveAt(0);
+        }
+
+        while (playerData.noelleHistory.Count > 90)
+        {
+            playerData.noelleHistory.RemoveAt(0);
+        }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void ButtonExit()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        exitNotice.SetActive(true);
+    }
+
+    public void OffExitNotice()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        exitNotice.SetActive(false);
     }
 }
