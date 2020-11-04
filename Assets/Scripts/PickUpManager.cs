@@ -23,6 +23,8 @@ public class PickUpManager : MonoBehaviour
 
     public GameObject stardustPage;
 
+    public GameObject buttonInformation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,13 @@ public class PickUpManager : MonoBehaviour
 
     public void PickUpButton()
     {
+        // 체험 기간 확인 코드
+        if (GameManager.instance.isValidTimeOver())
+        {
+            return;
+        }
+
+
         int buttonType = BannerManager.instance.onBannerIndex;
 
         Grade[] grades;
@@ -67,6 +76,7 @@ public class PickUpManager : MonoBehaviour
             }
             else
             {
+                GameManager.instance.ShowLackOfWish();
                 return;
             }
 
@@ -87,6 +97,7 @@ public class PickUpManager : MonoBehaviour
             }
             else
             {
+                GameManager.instance.ShowLackOfWish();
                 return;
             }
         }
@@ -106,6 +117,7 @@ public class PickUpManager : MonoBehaviour
             }
             else
             {
+                GameManager.instance.ShowLackOfWish(10, true);
                 return;
             }
         }
@@ -132,11 +144,14 @@ public class PickUpManager : MonoBehaviour
             }
             else
             {
+                GameManager.instance.ShowLackOfWish(8, true);
                 return;
             }
 
             playerData.acquantFateTotalTryCount += 10;
         }
+
+        sortResultItems();
 
         for (int i = 0; i < 10; i++)
         {
@@ -180,6 +195,61 @@ public class PickUpManager : MonoBehaviour
         Invoke("OffPanel", 6.3f);
     }
 
+    public void sortResultItems()
+    {
+        List<Item> temp = new List<Item>();
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (result[i].grade == Grade.LEGEND && result[i].type == ItemType.HERO)
+            {
+                temp.Add(result[i]);
+            }
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (result[i].grade == Grade.LEGEND && result[i].type != ItemType.HERO)
+            {
+                temp.Add(result[i]);
+            }
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (result[i].grade == Grade.UNIQUE && result[i].type == ItemType.HERO)
+            {
+                temp.Add(result[i]);
+            }
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (result[i].grade == Grade.UNIQUE && result[i].type != ItemType.HERO)
+            {
+                temp.Add(result[i]);
+            }
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (result[i].grade == Grade.EPIC && result[i].type == ItemType.HERO)
+            {
+                temp.Add(result[i]);
+            }
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (result[i].grade == Grade.EPIC && result[i].type != ItemType.HERO)
+            {
+                temp.Add(result[i]);
+            }
+        }
+
+        result = temp.ToArray();
+    }
+
     public void OnSkipButton()
     {
         skipButton.SetActive(true);
@@ -192,11 +262,12 @@ public class PickUpManager : MonoBehaviour
     
     public void DoSkip()
     {
-        GameManager.instance.OffNotice(true);
+        GameManager.instance.OffNotice();
         SoundManager.instance.PlayOneShotEffectSound(1);
         OffPanel();
     }
 
+    // resultPage On
     public void OffPanel()
     {
         videos[0].Stop();
@@ -210,7 +281,9 @@ public class PickUpManager : MonoBehaviour
         resultPage.transform.GetChild(1).GetComponent<Animator>().SetBool("isClean", true);
         resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isShow", true);
 
-        GameManager.instance.OffNotice(false);
+        SetGachaResultParticles();
+
+        GameManager.instance.OffNotice();
         SoundManager.instance.StopEffectSound(3);
 
         CancelInvoke("OffPanel");
@@ -226,7 +299,52 @@ public class PickUpManager : MonoBehaviour
 
         OffResultDetails();
 
+        OffButtonInformation();
+
         resultPage.SetActive(false);
+    }
+
+    public void SetGachaResultParticles()
+    {
+        Transform parent = resultPage.transform.GetChild(2);
+
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            parent.GetChild(i).GetChild(5).gameObject.SetActive(false);
+            parent.GetChild(i).GetChild(6).gameObject.SetActive(false);
+            parent.GetChild(i).GetChild(7).gameObject.SetActive(false);
+        }
+
+        Invoke("OnGachaResultParticle", 2f);
+    }
+
+    public void OnGachaResultParticle()
+    {
+        Transform parent = resultPage.transform.GetChild(2);
+
+        for (int i = 0; i < parent.childCount; i++)
+        {
+            if (result[i].grade == Grade.LEGEND)
+            {
+                parent.GetChild(i).GetChild(7).gameObject.SetActive(true);
+            }
+            else if (result[i].grade == Grade.UNIQUE)
+            {
+                parent.GetChild(i).GetChild(6).gameObject.SetActive(true);
+            }
+            else
+            {
+                parent.GetChild(i).GetChild(5).gameObject.SetActive(true);
+            }
+        }
+
+        // information buttons
+        buttonInformation.SetActive(true);
+    }
+
+    private void OffButtonInformation()
+    {
+        buttonInformation.SetActive(false);
     }
 
     public void OnStardustPage(Item[] items)
@@ -419,7 +537,13 @@ public class PickUpManager : MonoBehaviour
             return Grade.UNIQUE;
         }
 
-        int value = (int)((0.6f + (fiveStarCount * 0.01f)) * 100);
+        int value = 60;
+
+        if (fiveStarCount > 40)
+        {
+            value = (int)((0.6f + ((fiveStarCount - 40) * 0.02f)) * 100);
+        }
+
         int result = Random.Range(0, 10000);
 
         if (value > result)
@@ -577,7 +701,7 @@ public class PickUpManager : MonoBehaviour
                 }
                 else
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(32, 73)];
+                    return ItemDatabase.instance.itemDB[Random.Range(32, 59)];
                 }
             }
             if (pickUpType == PickUpType.WEAPON)
@@ -615,7 +739,7 @@ public class PickUpManager : MonoBehaviour
                     else
                     {
                         playerData.isPickUpWeapon4Always = true;
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 73)];
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 59)];
                     }
                 }
             }
@@ -625,7 +749,6 @@ public class PickUpManager : MonoBehaviour
 
                 if (r == 0 || isPickUp4Always)
                 {
-                    Debug.Log("나옴");
                     playerData.isPickUpCharacter4Always = false;
 
                     int value = Random.Range(0, 3);
@@ -653,13 +776,19 @@ public class PickUpManager : MonoBehaviour
                     }
                     else
                     {
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 73)];
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 59)];
                     }
                 }
             }
         }
 
-        return ItemDatabase.instance.itemDB[Random.Range(73, 98)];
+        return ItemDatabase.instance.itemDB[Random.Range(73, 84)];
+    }
+
+    public void ButtonShowItemInformation(int index)
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        GameManager.instance.OnItemInformation(result[index]);
     }
 }
 

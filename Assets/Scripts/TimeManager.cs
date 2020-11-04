@@ -95,15 +95,44 @@ public class TimeManager : MonoBehaviour
         return GetYear() + "년 " + GetMonth() + "월 " + GetDay() + "일";
     }
 
-    /*    public string getKoreaCurrentTime()
+    public int[] GetKoreaCurrentTime()
+    {
+        string[] time = _currentTime.Split(':');
+        string[] date = _currentDate.Split('-'); // 월-일-년
+
+        // Debug.Log("진짜시간 : " + time[0]);
+
+        int[] timeValue = new int[3];
+        int[] dateValue = new int[3];
+
+        for (int i = 0; i < 3; i++)
         {
-            string[] time = _currentTime.Split(':');
+            timeValue[i] = int.Parse(time[i]);
+            dateValue[i] = int.Parse(date[i]);
+        }
 
-            int h = int.Parse(time[0]) + 14;
+        timeValue[0] += 14;
 
-            if (h > 24)
-            {
-                h -= 24;
-            }
-        }*/
+        int h = timeValue[0];
+
+        if (h > 24)
+        {
+            h -= 24;
+            timeValue[0] = h;
+            dateValue[1]++;
+        }
+
+        int[] answer = new int[6];
+
+        answer[0] = dateValue[2];
+        answer[1] = dateValue[0];
+        answer[2] = dateValue[1];
+        answer[3] = timeValue[0];
+        answer[4] = timeValue[1];
+        answer[5] = timeValue[2];
+
+        // 달 변경도 추후에 넣어줘야함!
+
+        return answer;
+    }
 }

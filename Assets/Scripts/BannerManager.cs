@@ -67,24 +67,52 @@ public class BannerManager : MonoBehaviour
             case 1:
                 bannerButton[1].SetActive(false);
                 bannerButton[5].SetActive(true);
-                pickupButton.sprite = buttonImage[1];
+                SetPickUPButtonImage();
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
             case 2:
                 bannerButton[2].SetActive(false);
                 bannerButton[6].SetActive(true);
-                pickupButton.sprite = buttonImage[1];
+                SetPickUPButtonImage();
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
             case 3:
                 bannerButton[3].SetActive(false);
                 bannerButton[7].SetActive(true);
-                pickupButton.sprite = buttonImage[5];
+                SetPickUPButtonImage(true);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
+        }
+    }
+
+    public void SetPickUPButtonImage(bool isAcquantFactWish = false)
+    {
+        PlayerData playerData = GameManager.instance.playerData;
+
+        if (isAcquantFactWish)
+        {
+            if (playerData.acquantFateCount < 10)
+            {
+                pickupButton.sprite = buttonImage[7];
+            }
+            else
+            {
+                pickupButton.sprite = buttonImage[5];
+            }
+        }
+        else
+        {
+            if (playerData.intertwinedFateCount < 10)
+            {
+                pickupButton.sprite = buttonImage[3];
+            }
+            else
+            {
+                pickupButton.sprite = buttonImage[1];
+            }
         }
     }
 

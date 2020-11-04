@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class AdMobReward : MonoBehaviour
 {
+    public static AdMobReward instance;
     static bool isAdVideoLoaded = false;
 
     private RewardedAd videoAd;
@@ -18,6 +19,8 @@ public class AdMobReward : MonoBehaviour
 
     public void Start()
     {
+        instance = this;
+
         //Test ID : "ca-app-pub-3940256099942544/5224354917";
         //광고 ID : "ca-app-pub-5596979448837149/3283466862";
         videoID = "ca-app-pub-3940256099942544/5224354917";
@@ -25,6 +28,7 @@ public class AdMobReward : MonoBehaviour
         Handle(videoAd);
         Load();
 
+        noticeText.supportRichText = true;
         notice.SetActive(false);
     }
 
@@ -57,6 +61,16 @@ public class AdMobReward : MonoBehaviour
     public void Show()
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
+
+        if (GameManager.instance.isValidTimeOver())
+        {
+            notice.SetActive(false);
+            return;
+        }
+
+        // PC 체험판 무료지급 코드
+        GiveReward();
+
         StartCoroutine("ShowRewardAd");
         notice.SetActive(false);
     }
@@ -107,10 +121,15 @@ public class AdMobReward : MonoBehaviour
 
     public void GiveReward()
     {
-        if (GameManager.instance.AddWishes(500, 500))
+        int wish1 = UnityEngine.Random.Range(200, 500);
+        int wish2 = UnityEngine.Random.Range(200, 500);
+
+        if (GameManager.instance.AddWishes(wish1, wish2))
         {
-            notice.SetActive(true);
-            noticeText.text = "광고시청 보상을 획득하였습니다.\n\n(만남의 인연 500개, 뒤얽힌 인연 500개)";
+            GameManager.instance.information.SetActive(true);
+            GameManager.instance.informationText.text = "광고시청 보상으로 아이템을 획득하였습니다.\n\n"
+                + "만남의 인연 " + GameManager.instance.GetColorText("" + wish1, "e59e00") + "개, "
+                + "뒤얽힌 인연 " + GameManager.instance.GetColorText("" + wish2, "e59e00") + "개";
             GameManager.instance.SavePlayerDataToJson();
         }
         else

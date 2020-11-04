@@ -17,9 +17,14 @@ public class GameManager : MonoBehaviour
     public GameObject notice;
     public Text noticeText;
     public string LACK_OF_WISH = "보유한 재화가 부족합니다.";
-    public string UPDATE_YET = "아직 구현되지 않은 기능입니다.";
+    public string UPDATE_YET = "아직 추가되지 않은 기능입니다.\n\n추후 업데이트를 기다려주세요!";
     public string WANT_SKIP = "건너뛰시겠습니까?";
     public string END_DATE = "체험 기간이 종료되었습니다.";
+    public string NEW_LINE = "\n";
+    public string ORANGE_COLOR = "e59e00";
+
+    public GameObject information;
+    public Text informationText;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +35,15 @@ public class GameManager : MonoBehaviour
 
         SetResources();
 
-        Invoke("AddResources", 1f);
-
         noticeText = notice.transform.GetChild(5).GetComponent<Text>();
+        noticeText.supportRichText = true;
         notice.SetActive(false);
 
-        Invoke("CheckValidTime", 2f);
+        informationText = information.transform.GetChild(3).GetComponent<Text>();
+        informationText.supportRichText = true;
+        information.SetActive(false);
+
+        Invoke("isValidTimeOver", 1f);
     }
 
     // Update is called once per frame
@@ -44,24 +52,34 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void CheckValidTime()
+    public bool isValidTimeOver()
     {
-        if (TimeManager.sharedInstance.GetYear() >= 2020 && TimeManager.sharedInstance.GetMonth() >= 11 && TimeManager.sharedInstance.GetDay() >= 4)
+        int[] timeData = TimeManager.sharedInstance.GetKoreaCurrentTime();
+
+        Debug.Log(timeData[0] + "년" + timeData[1] + "월" + timeData[2] + "일" + timeData[3] + "시" + timeData[4] + "분");
+
+        if ( ((timeData[0] >= 2020 && timeData[1] >= 11) || timeData[0] > 2020)
+            && ((timeData[2] > 4) || (timeData[2] <= 4 && timeData[3] >= 23 && timeData[4] >= 59))
+            )
         {
             playerData.acquantFateCount = 0;
             playerData.intertwinedFateCount = 0;
 
-            notice.SetActive(true);
-            noticeText.text = END_DATE;
+            information.SetActive(true);
+            informationText.text = END_DATE;
 
-            GameManager.instance.SavePlayerDataToJson();
+            SavePlayerDataToJson();
+
+            return true;
         }
+
+        return false;
     }
 
     public void AddResources()
     {
-        playerData.acquantFateCount = 50000;
-        playerData.intertwinedFateCount = 50000;
+        playerData.acquantFateCount = 500;
+        playerData.intertwinedFateCount = 500;
         SetResources();
     }
 
@@ -93,8 +111,8 @@ public class GameManager : MonoBehaviour
         catch (FileNotFoundException)
         {
             Debug.Log("로드 오류");
-            playerData.acquantFateCount = 100;
-            playerData.intertwinedFateCount = 100;
+            playerData.acquantFateCount = 0;
+            playerData.intertwinedFateCount = 0;
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
@@ -154,7 +172,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void OffNotice(bool isSoundPlay)
+    public void OffNotice()
     {
         SoundManager.instance.PlayOneShotEffectSound(3);
         notice.SetActive(false);
@@ -165,5 +183,60 @@ public class GameManager : MonoBehaviour
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
         noticeText.text = WANT_SKIP;
+    }
+
+    public void OnInformationNotYet()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        information.SetActive(true);
+        informationText.text = UPDATE_YET;
+    }
+
+    public void OffInformation()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        information.SetActive(false);
+    }
+
+    public string GetColorText(string text, string colorValue)
+    {
+        return "<color=#" + colorValue + ">" + text + "</color>";
+    }
+
+    public void OnItemInformation(Item item)
+    {
+        information.SetActive(true);
+
+        informationText.text = item.koName;
+
+        string[] character = new string[2];
+
+        if (item.type == ItemType.HERO)
+        {
+            character = item.GetCharacterNameWithColor();
+            informationText.text += NEW_LINE + NEW_LINE + GetColorText(character[1], character[0]);
+        }
+        else
+        {
+            informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemTypeToKorean(), "37946e");
+        }
+
+        informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToKorean(), "d95763");
+    }
+
+    public void ShowLackOfWish(int limit = 10, bool isAcquantFateWish = false)
+    {
+        information.SetActive(true);
+
+        if (isAcquantFateWish)
+        {
+            informationText.text = "만남의 인연이 " + GetColorText("" + (limit - playerData.acquantFateCount), ORANGE_COLOR) + "개 부족합니다.";
+        }
+        else
+        {
+            informationText.text = "뒤얽힌 인연이 " + GetColorText("" + (limit - playerData.acquantFateCount), ORANGE_COLOR) + "개 부족합니다.";
+        }
+
+        AdMobReward.instance.ButtonAd();
     }
 }

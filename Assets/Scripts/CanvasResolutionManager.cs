@@ -9,6 +9,7 @@ public class CanvasResolutionManager : MonoBehaviour
 
     public RectTransform[] component;
     public GameObject resultImageParent;
+    public Transform resultButtonInformation;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +65,16 @@ public class CanvasResolutionManager : MonoBehaviour
                     RectTransform.Axis.Horizontal, now.GetChild(4).GetChild(j).GetComponent<RectTransform>().rect.width * (Screen.width / 1920));
                 now.GetChild(4).GetChild(j).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(
                     RectTransform.Axis.Vertical, now.GetChild(4).GetChild(j).GetComponent<RectTransform>().rect.height * (Screen.height / 1080));
+            }
+
+            // information button size
+
+            for (int j = 0; j < 10; j++)
+            {
+                resultButtonInformation.GetChild(j).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(
+                    RectTransform.Axis.Horizontal, resultButtonInformation.GetChild(j).GetComponent<RectTransform>().rect.width * (Screen.width / 1920));
+                resultButtonInformation.GetChild(j).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(
+                    RectTransform.Axis.Vertical, resultButtonInformation.GetChild(j).GetComponent<RectTransform>().rect.height * (Screen.height / 1080));
             }
         }
     }
