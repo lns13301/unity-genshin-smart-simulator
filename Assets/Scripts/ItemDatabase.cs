@@ -184,9 +184,9 @@ public class ItemDatabase : MonoBehaviour
         //itemDataFile.itemDatas.Add(new Item(2307, "Prototype Malice", "황금 호박 프로토타입", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Prototype Malice"));
         //itemDataFile.itemDatas.Add(new Item(2308, "Royal Grimoire", "왕실의 비전록", 1, ItemType.CATALYST, Grade.UNIQUE, spritePathWeapon + "Royal Grimoire"));
 
-        itemDataFile.itemDatas.Add(new Item(2400, "Deathmatch", "결투의 창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Deathmatch"));
         itemDataFile.itemDatas.Add(new Item(2401, "Dragon's Bane", "용학살창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Dragon's Bane"));
         itemDataFile.itemDatas.Add(new Item(2402, "Favonius Lance", "페보니우스 장창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Favonius Lance"));
+        //itemDataFile.itemDatas.Add(new Item(2403, "Deathmatch", "결투의 창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Deathmatch"));
         //itemDataFile.itemDatas.Add(new Item(2403, "Crescent Pike", "유월창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Crescent Pike"));
         //itemDataFile.itemDatas.Add(new Item(2404, "Prototype Grudge", "별의 낫 프로토타입", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Prototype Grudge"));
         //itemDataFile.itemDatas.Add(new Item(2405, "Blackcliff Pole", "흑암창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Blackcliff Pole"));

@@ -708,7 +708,7 @@ public class PickUpManager : MonoBehaviour
                 }
                 else
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(32, 51)];
+                    return ItemDatabase.instance.itemDB[Random.Range(32, 50)];
                 }
             }
             if (pickUpType == PickUpType.WEAPON)
@@ -746,7 +746,7 @@ public class PickUpManager : MonoBehaviour
                     else
                     {
                         playerData.isPickUpWeapon4Always = true;
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 51)];
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 50)];
                     }
                 }
             }
@@ -783,13 +783,13 @@ public class PickUpManager : MonoBehaviour
                     }
                     else
                     {
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 51)];
+                        return ItemDatabase.instance.itemDB[Random.Range(32, 50)];
                     }
                 }
             }
         }
 
-        return ItemDatabase.instance.itemDB[Random.Range(51, 76)];
+        return ItemDatabase.instance.itemDB[Random.Range(50, 75)];
     }
 
     public void ButtonShowItemInformation(int index)

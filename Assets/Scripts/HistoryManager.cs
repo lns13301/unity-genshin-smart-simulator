@@ -29,11 +29,23 @@ public class HistoryManager : MonoBehaviour
 
         for (int i = 0; i < target.Count;)
         {
+            Item item = ItemDatabase.instance.findItemByName(target[i].koName);
+
+            if (item == null)
+            {
+                target.RemoveAt(i);
+                continue;
+            }
+
+            if (target[i] == null)
+            {
+                break;
+            }
+
             GameObject go = Instantiate(itemFrame);
 
             go.transform.SetParent(content.transform);
-            go.GetComponent<ItemFrame>().SetItemWithBaseSetting(
-                ItemDatabase.instance.makeItem(ItemDatabase.instance.findItemByName(target[i].koName)), ++i);
+            go.GetComponent<ItemFrame>().SetItemWithBaseSetting(ItemDatabase.instance.makeItem(item), ++i);
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
             CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());

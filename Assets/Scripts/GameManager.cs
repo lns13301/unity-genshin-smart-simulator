@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
 
     public bool isValidTimeOver()
     {
+        return false;
+
         int[] timeData = TimeManager.sharedInstance.GetKoreaCurrentTime();
 
         Debug.Log(timeData[0] + "년" + timeData[1] + "월" + timeData[2] + "일" + timeData[3] + "시" + timeData[4] + "분");
