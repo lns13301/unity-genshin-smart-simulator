@@ -58,14 +58,12 @@ public class GameManager : MonoBehaviour
 
     public bool isValidTimeOver()
     {
-        return false;
-
         int[] timeData = TimeManager.sharedInstance.GetKoreaCurrentTime();
 
         Debug.Log(timeData[0] + "년" + timeData[1] + "월" + timeData[2] + "일" + timeData[3] + "시" + timeData[4] + "분");
 
         if ( ((timeData[0] >= 2020 && timeData[1] >= 11) || timeData[0] > 2020)
-            && ((timeData[2] > 5) || (timeData[2] <= 5 && timeData[3] >= 23 && timeData[4] >= 59))
+            && ((timeData[2] > 6) || (timeData[2] <= 6 && timeData[3] >= 23 && timeData[4] >= 59))
             )
         {
             playerData.acquantFateCount = 0;
@@ -95,7 +93,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("저장 성공");
 
         string jsonData = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(SaveOrLoad(isMobile, true, "PlayerData"), AESCrypto.AESEncrypt128(jsonData));
+        File.WriteAllText(SaveOrLoad(isMobile, true, "GGSData"), AESCrypto.AESEncrypt128(jsonData));
     }
 
     [ContextMenu("From Json Data")]
@@ -104,7 +102,7 @@ public class GameManager : MonoBehaviour
         try
         {
             Debug.Log("플레이어 정보 로드 성공");
-            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "PlayerData"));
+            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "GGSData"));
             playerData = JsonUtility.FromJson<PlayerData>(AESCrypto.AESDecrypt128(jsonData));
 
             // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
@@ -122,7 +120,7 @@ public class GameManager : MonoBehaviour
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
-            File.WriteAllText(SaveOrLoad(isMobile, false, "PlayerData"), AESCrypto.AESEncrypt128(jsonData));
+            File.WriteAllText(SaveOrLoad(isMobile, false, "GGSData"), AESCrypto.AESEncrypt128(jsonData));
             LoadPlayerDataFromJson();
         }
     }
@@ -169,6 +167,8 @@ public class GameManager : MonoBehaviour
         {
             playerData.acquantFateCount += acquantFateCount;
             playerData.intertwinedFateCount += intertwinedFateCount;
+
+            SetResources();
 
             return true;
         }

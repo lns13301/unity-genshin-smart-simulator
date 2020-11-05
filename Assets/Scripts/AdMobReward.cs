@@ -23,7 +23,7 @@ public class AdMobReward : MonoBehaviour
 
         //Test ID : "ca-app-pub-3940256099942544/5224354917";
         //광고 ID : "ca-app-pub-5596979448837149/3283466862";
-        videoID = "ca-app-pub-5596979448837149/3283466862";
+        videoID = "ca-app-pub-3940256099942544/5224354917";
         videoAd = new RewardedAd(videoID);
         Handle(videoAd);
         Load();
@@ -68,6 +68,11 @@ public class AdMobReward : MonoBehaviour
             return;
         }
 
+        // 이벤트 재화 지급
+        GiveReward();
+
+        return;
+
         if (GameManager.instance.GetPlayerData().adCount > 0)
         {
             StartCoroutine("ShowRewardAd");
@@ -93,14 +98,14 @@ public class AdMobReward : MonoBehaviour
     //광고 로드에 실패했을 때
     public void HandleOnAdFailedToLoad(object sender, AdErrorEventArgs args)
     {
-        GameManager.instance.notice.SetActive(true);
-        GameManager.instance.noticeText.text = "광고 로드에 실패했습니다.";
+        GameManager.instance.information.SetActive(true);
+        GameManager.instance.informationText.text = "광고 로드에 실패했습니다.";
     }
     //광고 보여주기를 실패했을 때
     public void HandleOnAdFailedToShow(object sender, AdErrorEventArgs args)
     {
-        GameManager.instance.notice.SetActive(true);
-        GameManager.instance.noticeText.text = "광고 보기에 실패했습니다.";
+        GameManager.instance.information.SetActive(true);
+        GameManager.instance.informationText.text = "광고 보기에 실패했습니다.";
     }
     //광고가 제대로 실행되었을 때
     public void HandleOnAdOpening(object sender, EventArgs args)

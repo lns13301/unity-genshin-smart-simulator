@@ -539,25 +539,43 @@ public class PickUpManager : MonoBehaviour
             return Grade.UNIQUE;
         }
 
-        int value = 60;
+        int value = 600;
 
-        if (fiveStarCount > 40)
+        if (isWeaponPickUP)
         {
-            value = (int)((0.6f + ((fiveStarCount - 40) * 0.02f)) * 100);
+            value = 700;
         }
 
-        int result = Random.Range(0, 10000);
+        if (fiveStarCount > 30 && isWeaponPickUP)
+        {
+            value = (int)((0.7f + ((fiveStarCount - 30) * 0.023f)) * 1000);
+        }
+        if (fiveStarCount > 40 && !isWeaponPickUP)
+        {
+            value = (int)((0.6f + ((fiveStarCount - 40) * 0.02f)) * 1000);
+        }
+
+        int result = Random.Range(0, 100000);
 
         if (value > result)
         {
             return Grade.LEGEND;
         }
 
-        value = 510;
+        value = 5100;
 
-        if (fourStarCount > 4)
+        if (isWeaponPickUP)
         {
-            value = (int)((5.1f + ((fourStarCount - 4) * 1f)) * 100);
+            value = 6000;
+        }
+
+        if (fourStarCount > 4 && isWeaponPickUP)
+        {
+            value = (int)((6f + ((fourStarCount - 4) * 1.7f)) * 1000);
+        }
+        if (fourStarCount > 4 && !isWeaponPickUP)
+        {
+            value = (int)((5.1f + ((fourStarCount - 4) * 1.58f)) * 1000);
         }
 
         if (value > result || fourStarCount == 10)
