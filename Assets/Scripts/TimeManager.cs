@@ -90,6 +90,21 @@ public class TimeManager : MonoBehaviour
         return (getCurrentDateNow() % 10000);
     }
 
+    public int GetHour()
+    {
+        return int.Parse(getCurrentTimeNow().Split(':')[0]);
+    }
+
+    public int GetMinute()
+    {
+        return int.Parse(getCurrentTimeNow().Split(':')[1]);
+    }
+
+    public int GetSecond()
+    {
+        return int.Parse(getCurrentTimeNow().Split(':')[2]);
+    }
+
     public string ShowDate()
     {
         return GetYear() + "년 " + GetMonth() + "월 " + GetDay() + "일";
@@ -134,5 +149,19 @@ public class TimeManager : MonoBehaviour
         // 달 변경도 추후에 넣어줘야함!
 
         return answer;
+    }
+
+    public int CheckAdCooldown()
+    {
+        PlayerData playerData = GameManager.instance.GetPlayerData();
+
+        if ((playerData.adLastDate != GetDay()) || playerData.adLastTime != GetHour())
+        {
+            playerData.adLastDate = GetDay();
+            playerData.adLastTime = GetHour();
+            playerData.adCount = 3;
+        }
+
+        return playerData.adCount;
     }
 }

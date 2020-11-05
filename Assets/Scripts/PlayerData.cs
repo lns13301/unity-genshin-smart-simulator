@@ -35,4 +35,8 @@ public class PlayerData
     public List<Item> weaponHistory;
     public List<Item> characterHistory;
     public List<Item> noelleHistory;
+
+    public int adLastTime;
+    public int adLastDate;
+    public int adCount;
 }

@@ -77,20 +77,21 @@ public class HistoryManager : MonoBehaviour
         historySet.SetActive(true);
 
         int index = BannerManager.instance.onBannerIndex;
+        PlayerData playerData = GameManager.instance.GetPlayerData();
 
         switch (index)
         {
             case 0:
-                SetHistory(GameManager.instance.playerData.noelleHistory);
+                SetHistory(playerData.noelleHistory);
                 break;
             case 1:
-                SetHistory(GameManager.instance.playerData.characterHistory);
+                SetHistory(playerData.characterHistory);
                 break;
             case 2:
-                SetHistory(GameManager.instance.playerData.weaponHistory);
+                SetHistory(playerData.weaponHistory);
                 break;
             case 3:
-                SetHistory(GameManager.instance.playerData.normalHistory);
+                SetHistory(playerData.normalHistory);
                 break;
         }
     }

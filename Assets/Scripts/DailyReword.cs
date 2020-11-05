@@ -7,9 +7,9 @@ using System;
 public class DailyReword : MonoBehaviour
 {
     //UI
-    public Text timeLabel; //only use if your timer uses a label
-    public Button timerButton; //used to disable button when needed
-    public Image _progress;
+    //public Text timeLabel; //only use if your timer uses a label
+    //public Button timerButton; //used to disable button when needed
+    //public Image _progress;
     //TIME ELEMENTS
     public int hours; //to set the hours
     public int minutes; //to set the minutes
@@ -108,10 +108,10 @@ public class DailyReword : MonoBehaviour
     //initializing the value of the timer
     private void setProgressWhereWeLeftOff()
     {
-        float ah = 1f / (float)_endTime.TotalSeconds;
+/*        float ah = 1f / (float)_endTime.TotalSeconds;
         float bh = 1f / (float)_remainingTime.TotalSeconds;
         _value = ah / bh;
-        _progress.fillAmount = _value;
+        _progress.fillAmount = _value;*/
     }
 
 
@@ -119,8 +119,8 @@ public class DailyReword : MonoBehaviour
     //enable button function
     private void enableButton()
     {
-        timerButton.interactable = true;
-        timeLabel.text = "CLAIM REWARD";
+/*        timerButton.interactable = true;
+        timeLabel.text = "CLAIM REWARD";*/
     }
 
 
@@ -128,8 +128,8 @@ public class DailyReword : MonoBehaviour
     //disable button function
     private void disableButton()
     {
-        timerButton.interactable = false;
-        timeLabel.text = "NOT READY";
+/*        timerButton.interactable = false;
+        timeLabel.text = "NOT READY"*/;
     }
 
 
@@ -137,7 +137,7 @@ public class DailyReword : MonoBehaviour
     private IEnumerator CheckTime()
     {
         disableButton();
-        timeLabel.text = "Checking the time";
+/*        timeLabel.text = "Checking the time";*/
         Debug.Log("==> Checking for new time");
         yield return StartCoroutine(
             TimeManager.sharedInstance.getTime()
@@ -167,7 +167,7 @@ public class DailyReword : MonoBehaviour
             if (!_timerComplete && PlayerPrefs.GetString("_timer") != "")
             {
                 _value -= Time.deltaTime * 1f / (float)_endTime.TotalSeconds;
-                _progress.fillAmount = _value;
+/*                _progress.fillAmount = _value;*/
 
                 //this is called once only
                 if (_value <= 0 && !_timerComplete)

@@ -31,7 +31,7 @@ public class PickUpManager : MonoBehaviour
         instance = this;
 
         resultPage.SetActive(false);
-        playerData = GameManager.instance.playerData;
+        playerData = GameManager.instance.GetPlayerData();
 
         hasFiveStar = false;
         result = new Item[10];

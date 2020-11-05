@@ -90,7 +90,7 @@ public class BannerManager : MonoBehaviour
 
     public void SetPickUPButtonImage(bool isAcquantFactWish = false)
     {
-        PlayerData playerData = GameManager.instance.playerData;
+        PlayerData playerData = GameManager.instance.GetPlayerData();
 
         if (isAcquantFactWish)
         {

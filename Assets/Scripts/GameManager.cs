@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public PlayerData playerData;
+
+    [SerializeField]
+    private PlayerData playerData;
 
     public bool isMobile = true;
 
@@ -282,5 +284,10 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(3);
         exitNotice.SetActive(false);
+    }
+
+    public PlayerData GetPlayerData()
+    {
+        return playerData;
     }
 }

@@ -68,10 +68,11 @@ public class AdMobReward : MonoBehaviour
             return;
         }
 
-        // PC 체험판 무료지급 코드
-        GiveReward();
+        if (GameManager.instance.GetPlayerData().adCount > 0)
+        {
+            StartCoroutine("ShowRewardAd");
+        }
 
-        StartCoroutine("ShowRewardAd");
         notice.SetActive(false);
     }
 
@@ -121,11 +122,12 @@ public class AdMobReward : MonoBehaviour
 
     public void GiveReward()
     {
-        int wish1 = UnityEngine.Random.Range(200, 500);
-        int wish2 = UnityEngine.Random.Range(200, 500);
+        int wish1 = UnityEngine.Random.Range(100, 500);
+        int wish2 = UnityEngine.Random.Range(100, 500);
 
         if (GameManager.instance.AddWishes(wish1, wish2))
         {
+            GameManager.instance.GetPlayerData().adCount -= 1;
             GameManager.instance.information.SetActive(true);
             GameManager.instance.informationText.text = "광고시청 보상으로 아이템을 획득하였습니다.\n\n"
                 + "만남의 인연 " + GameManager.instance.GetColorText("" + wish1, "e59e00") + "개, "
@@ -140,9 +142,20 @@ public class AdMobReward : MonoBehaviour
 
     public void ButtonAd()
     {
+        int count = TimeManager.sharedInstance.CheckAdCooldown();
+
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
-        noticeText.text = "광고를 시청하고 만남의 인연, 뒤얽힌 인연을 획득하시겠습니까?";
+
+        if (count > 0)
+        {
+            noticeText.text = "광고를 시청하고 만남의 인연, 뒤얽힌 인연을 획득하시겠습니까?";
+        }
+        else
+        {
+            noticeText.text = "현재 준비된 광고를 모두 시청하였습니다.\n\n" 
+                + GameManager.instance.GetColorText("1", GameManager.instance.ORANGE_COLOR) + " 시간 후에 다시 시도해주세요.";
+        }
     }
 
     public void OffNotice()
