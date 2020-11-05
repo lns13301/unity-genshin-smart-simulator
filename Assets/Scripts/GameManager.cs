@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("저장 성공");
 
         string jsonData = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(SaveOrLoad(isMobile, true, "PlayerData"), jsonData);
+        File.WriteAllText(SaveOrLoad(isMobile, true, "PlayerData"), AESCrypto.AESEncrypt128(jsonData));
     }
 
     [ContextMenu("From Json Data")]
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("플레이어 정보 로드 성공");
             string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "PlayerData"));
-            playerData = JsonUtility.FromJson<PlayerData>(jsonData);
+            playerData = JsonUtility.FromJson<PlayerData>(AESCrypto.AESDecrypt128(jsonData));
 
             // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
             for (int i = 0; i < playerData.items.Count; i++)
@@ -117,12 +117,12 @@ public class GameManager : MonoBehaviour
         catch (FileNotFoundException)
         {
             Debug.Log("로드 오류");
-            playerData.acquantFateCount = 0;
-            playerData.intertwinedFateCount = 0;
+            playerData.acquantFateCount = 10;
+            playerData.intertwinedFateCount = 10;
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
-            File.WriteAllText(SaveOrLoad(isMobile, false, "PlayerData"), jsonData);
+            File.WriteAllText(SaveOrLoad(isMobile, false, "PlayerData"), AESCrypto.AESEncrypt128(jsonData));
             LoadPlayerDataFromJson();
         }
     }
