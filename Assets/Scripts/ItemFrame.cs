@@ -35,7 +35,7 @@ public class ItemFrame : MonoBehaviour
 
         string[] character = new string[2];
 
-        if (item.type == ItemType.HERO)
+        if (item.type == ItemType.CHARACTER)
         {
             character = item.GetCharacterNameWithColor();
             informationText.text += NEW_LINE + NEW_LINE + GetColorText(character[1], character[0]);
@@ -83,7 +83,7 @@ public class ItemFrame : MonoBehaviour
         itemImage.gameObject.SetActive(true);
         itemImage.sprite = item.sprite;
 
-        if (item.type == ItemType.HERO)
+        if (item.type == ItemType.CHARACTER)
         {
             itemImage.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 100);
             itemImage.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 229.8f);
@@ -125,7 +125,7 @@ public class ItemFrame : MonoBehaviour
             transforms[2].gameObject.SetActive(true);
         }
 
-        if (item.type == ItemType.HERO)
+        if (item.type == ItemType.CHARACTER)
         {
             transforms[3].gameObject.SetActive(true); // 속성 켜기
         }
@@ -146,7 +146,7 @@ public class ItemFrame : MonoBehaviour
             transforms[2].gameObject.SetActive(false);
         }
 
-        if (item.type == ItemType.HERO)
+        if (item.type == ItemType.CHARACTER)
         {
             transforms[3].gameObject.SetActive(false);
         }

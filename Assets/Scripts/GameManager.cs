@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
 
     public bool isValidTimeOver()
     {
+        return false;
         int[] timeData = TimeManager.sharedInstance.GetKoreaCurrentTime();
 
         Debug.Log(timeData[0] + "년" + timeData[1] + "월" + timeData[2] + "일" + timeData[3] + "시" + timeData[4] + "분");
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("저장 성공");
 
         string jsonData = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(SaveOrLoad(isMobile, true, "GGSData"), AESCrypto.AESEncrypt128(jsonData));
+        File.WriteAllText(SaveOrLoad(isMobile, true, "ggsdata"), AESCrypto.AESEncrypt128(jsonData));
     }
 
     [ContextMenu("From Json Data")]
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
         try
         {
             Debug.Log("플레이어 정보 로드 성공");
-            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "GGSData"));
+            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "ggsdata"));
             playerData = JsonUtility.FromJson<PlayerData>(AESCrypto.AESDecrypt128(jsonData));
 
             // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
@@ -120,7 +121,7 @@ public class GameManager : MonoBehaviour
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
-            File.WriteAllText(SaveOrLoad(isMobile, false, "GGSData"), AESCrypto.AESEncrypt128(jsonData));
+            File.WriteAllText(SaveOrLoad(isMobile, false, "ggsdata"), AESCrypto.AESEncrypt128(jsonData));
             LoadPlayerDataFromJson();
         }
     }
@@ -153,6 +154,12 @@ public class GameManager : MonoBehaviour
                 return Path.Combine(Application.dataPath, fileName + ".json");
             }
         }
+    }
+
+    public void SaveAndLoad()
+    {
+        SavePlayerDataToJson();
+        LoadPlayerDataFromJson();
     }
 
     public void SetResources()
@@ -217,7 +224,7 @@ public class GameManager : MonoBehaviour
 
         string[] character = new string[2];
 
-        if (item.type == ItemType.HERO)
+        if (item.type == ItemType.CHARACTER)
         {
             character = item.GetCharacterNameWithColor();
             informationText.text += NEW_LINE + NEW_LINE + GetColorText(character[1], character[0]);
@@ -248,22 +255,22 @@ public class GameManager : MonoBehaviour
 
     public void SetHistoryRecent()
     {
-        while (playerData.normalHistory.Count > 90)
+        while (playerData.normalHistory.Count > 190)
         {
             playerData.normalHistory.RemoveAt(0);
         }
 
-        while (playerData.characterHistory.Count > 90)
+        while (playerData.characterHistory.Count > 190)
         {
             playerData.characterHistory.RemoveAt(0);
         }
 
-        while (playerData.weaponHistory.Count > 90)
+        while (playerData.weaponHistory.Count > 190)
         {
             playerData.weaponHistory.RemoveAt(0);
         }
 
-        while (playerData.noelleHistory.Count > 90)
+        while (playerData.noelleHistory.Count > 190)
         {
             playerData.noelleHistory.RemoveAt(0);
         }

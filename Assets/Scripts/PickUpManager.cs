@@ -203,7 +203,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            if (result[i].grade == Grade.LEGEND && result[i].type == ItemType.HERO)
+            if (result[i].grade == Grade.LEGEND && result[i].type == ItemType.CHARACTER)
             {
                 temp.Add(result[i]);
             }
@@ -211,7 +211,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            if (result[i].grade == Grade.LEGEND && result[i].type != ItemType.HERO)
+            if (result[i].grade == Grade.LEGEND && result[i].type != ItemType.CHARACTER)
             {
                 temp.Add(result[i]);
             }
@@ -219,7 +219,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            if (result[i].grade == Grade.UNIQUE && result[i].type == ItemType.HERO)
+            if (result[i].grade == Grade.UNIQUE && result[i].type == ItemType.CHARACTER)
             {
                 temp.Add(result[i]);
             }
@@ -227,7 +227,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            if (result[i].grade == Grade.UNIQUE && result[i].type != ItemType.HERO)
+            if (result[i].grade == Grade.UNIQUE && result[i].type != ItemType.CHARACTER)
             {
                 temp.Add(result[i]);
             }
@@ -235,7 +235,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            if (result[i].grade == Grade.EPIC && result[i].type == ItemType.HERO)
+            if (result[i].grade == Grade.EPIC && result[i].type == ItemType.CHARACTER)
             {
                 temp.Add(result[i]);
             }
@@ -243,7 +243,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            if (result[i].grade == Grade.EPIC && result[i].type != ItemType.HERO)
+            if (result[i].grade == Grade.EPIC && result[i].type != ItemType.CHARACTER)
             {
                 temp.Add(result[i]);
             }
@@ -370,7 +370,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < items.Length; i++)
         {
-            if (items[i].type != ItemType.HERO) // 무기
+            if (items[i].type != ItemType.CHARACTER) // 무기
             {
                 if (items[i].grade == Grade.LEGEND)
                 {
@@ -404,7 +404,7 @@ public class PickUpManager : MonoBehaviour
 
         for (int i = 0; i < items.Length; i++)
         {
-            if (items[i].type != ItemType.HERO) // 무기
+            if (items[i].type != ItemType.CHARACTER) // 무기
             {
                 if (items[i].grade == Grade.EPIC)
                 {
@@ -482,9 +482,9 @@ public class PickUpManager : MonoBehaviour
                 resultImageParent.transform.GetChild(i).GetChild(3).gameObject.SetActive(true);
             }
 
-            if (result[i].type == ItemType.HERO)
+            if (result[i].type == ItemType.CHARACTER)
             {
-                resultImageParent.transform.GetChild(i).GetChild(4).GetChild((int) result[i].element).gameObject.SetActive(true); // 속성 켜기
+                resultImageParent.transform.GetChild(i).GetChild(4).GetChild((int) result[i].character.element).gameObject.SetActive(true); // 속성 켜기
                 resultImageParent.transform.GetChild(i).GetChild(0).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 133.3f);
                 resultImageParent.transform.GetChild(i).GetChild(0).GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 306.4f);
             }
@@ -515,9 +515,9 @@ public class PickUpManager : MonoBehaviour
                 resultImageParent.transform.GetChild(i).GetChild(3).gameObject.SetActive(false);
             }
 
-            if (result[i].type == ItemType.HERO)
+            if (result[i].type == ItemType.CHARACTER)
             {
-                resultImageParent.transform.GetChild(i).GetChild(4).GetChild((int)result[i].element).gameObject.SetActive(false);
+                resultImageParent.transform.GetChild(i).GetChild(4).GetChild((int)result[i].character.element).gameObject.SetActive(false);
             }
         }
     }
@@ -546,13 +546,13 @@ public class PickUpManager : MonoBehaviour
             value = 700;
         }
 
-        if (fiveStarCount > 30 && isWeaponPickUP)
+        if (fiveStarCount > 65 && isWeaponPickUP)
         {
-            value = (int)((0.7f + ((fiveStarCount - 30) * 0.023f)) * 1000);
+            value = 32323;
         }
-        if (fiveStarCount > 40 && !isWeaponPickUP)
+        if (fiveStarCount > 75 && !isWeaponPickUP)
         {
-            value = (int)((0.6f + ((fiveStarCount - 40) * 0.02f)) * 1000);
+            value = 32323;
         }
 
         int result = Random.Range(0, 100000);

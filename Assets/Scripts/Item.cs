@@ -15,9 +15,9 @@ public class Item
 
     public Sprite sprite;
 
-    public Element element;
+    public Character character;
 
-    public Item(int code, string enName, string koName, int count, ItemType type, Grade grade, string spritePath, Element element = Element.PYRO)
+    public Item(int code, string enName, string koName, int count, ItemType type, Grade grade, string spritePath, Character character = null)
     {
         this.count = count;
         this.code = code;
@@ -26,7 +26,7 @@ public class Item
         this.type = type;
         this.spritePath = spritePath;
         this.grade = grade;
-        this.element = element;
+        this.character = character;
 
         sprite = loadSprite(spritePath);
     }
@@ -45,14 +45,14 @@ public class Item
 
     public Item MakeItem(Item item)
     {
-        return new Item(item.code, item.enName, item.koName, item.count, item.type, item.grade, item.spritePath, item.element);
+        return new Item(item.code, item.enName, item.koName, item.count, item.type, item.grade, item.spritePath, item.character);
     }
 
     public string GetItemTypeToKorean()
     {
         switch (type)
         {
-            case ItemType.HERO:
+            case ItemType.CHARACTER:
                 return "캐릭터";
             case ItemType.SWORD:
                 return "한손검";
@@ -73,7 +73,7 @@ public class Item
     {
         string[] answer = new string[2];
 
-        switch (element)
+        switch (character.element)
         {
             case Element.PYRO:
                 answer[0] = "e5660b";
@@ -122,16 +122,28 @@ public class Item
     }
 }
 
+[System.Serializable]
 public enum ItemType
 {
-    HERO,
+    ETC,
+    CHARACTER,
     SWORD,
     CLAYMORE,
     BOW,
     CATALYST,
-    POLEARM
+    POLEARM,
+    FLOWEROFLIFE,
+    PLUMEOFDEATH,
+    SANDSOFEON,
+    GOBLETOFEONOTHEM,
+    CIRCLETOFLOGOS,
+    FOOD,
+    MATERIAL,
+    QUESTITEM,
+    ADVENTUREITEM
 }
 
+[System.Serializable]
 public enum Grade
 {
     NORMAL,
@@ -139,15 +151,4 @@ public enum Grade
     EPIC,
     UNIQUE,
     LEGEND
-}
-
-public enum Element
-{
-    PYRO = 0, // FIRE
-    HYDRO = 1, // WATER
-    ANEMO = 2, // WIND
-    ELECTRO = 3, // LIGHTNING
-    DENDRO = 4, // NATURE
-    CRYO = 5, // FROST
-    GEO = 6 // EARTH
 }

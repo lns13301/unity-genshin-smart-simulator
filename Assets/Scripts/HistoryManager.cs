@@ -101,4 +101,16 @@ public class HistoryManager : MonoBehaviour
         SoundManager.instance.PlayOneShotEffectSound(3);
         historySet.SetActive(false);
     }
+
+    public void ButtonSetUIFirstPosition()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        content.GetComponent<Transform>().position = new Vector2(1500, content.GetComponent<Transform>().position.y);
+    }
+
+    public void ButtonSetUILastPosition()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        content.GetComponent<Transform>().position = new Vector2(-30000, content.GetComponent<Transform>().position.y);
+    }
 }

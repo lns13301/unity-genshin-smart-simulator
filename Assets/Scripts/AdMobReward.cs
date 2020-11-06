@@ -68,11 +68,6 @@ public class AdMobReward : MonoBehaviour
             return;
         }
 
-        // 이벤트 재화 지급
-        GiveReward();
-
-        return;
-
         if (GameManager.instance.GetPlayerData().adCount > 0)
         {
             StartCoroutine("ShowRewardAd");
@@ -159,7 +154,7 @@ public class AdMobReward : MonoBehaviour
         else
         {
             noticeText.text = "현재 준비된 광고를 모두 시청하였습니다.\n\n" 
-                + GameManager.instance.GetColorText("1", GameManager.instance.ORANGE_COLOR) + " 시간 후에 다시 시도해주세요.";
+                + GameManager.instance.GetColorText("1", GameManager.instance.ORANGE_COLOR) + " 시간 후에 다시 시도해주세요. \n\n (매 정시에 초기화 됩니다.)";
         }
     }
 

@@ -39,4 +39,12 @@ public class PlayerData
     public int adLastTime;
     public int adLastDate;
     public int adCount;
+
+    public List<Item> characters;
+    public List<Item> weapons;
+    public List<Item> artifacts;
+    public List<Item> foods;
+    public List<Item> materials;
+    public List<Item> questItems;
+    public List<Item> adventureItems;
 }
