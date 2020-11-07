@@ -24,6 +24,7 @@ public class ItemFrame : MonoBehaviour
 
     public void OnItemInformation()
     {
+        GameManager.instance.OffNoticeAll();
         SoundManager.instance.PlayOneShotEffectSound(1);
 
         GameObject information = GameManager.instance.information;
@@ -112,6 +113,8 @@ public class ItemFrame : MonoBehaviour
 
     public void OnDetails()
     {
+        GameManager.instance.OffNoticeAll();
+
         if (item.grade == Grade.EPIC)
         {
             transforms[0].gameObject.SetActive(true);

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HistoryManager : MonoBehaviour
 {
+    public static HistoryManager instance;
     public GameObject historySet;
     public GameObject itemFrame;
     public GameObject content;
@@ -12,6 +13,7 @@ public class HistoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         historySet.SetActive(false);
     }
 
@@ -73,6 +75,8 @@ public class HistoryManager : MonoBehaviour
 
     public void ButtonHistory()
     {
+        GameManager.instance.OffNoticeAll();
+
         SoundManager.instance.PlayOneShotEffectSound(1);
         historySet.SetActive(true);
 

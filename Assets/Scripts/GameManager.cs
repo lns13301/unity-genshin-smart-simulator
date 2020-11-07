@@ -193,6 +193,8 @@ public class GameManager : MonoBehaviour
 
     public void SetNoticeSkip()
     {
+        OffNoticeAll();
+
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
         noticeText.text = WANT_SKIP;
@@ -200,6 +202,8 @@ public class GameManager : MonoBehaviour
 
     public void OnInformationNotYet()
     {
+        OffNoticeAll();
+
         SoundManager.instance.PlayOneShotEffectSound(1);
         information.SetActive(true);
         informationText.text = UPDATE_YET;
@@ -218,6 +222,8 @@ public class GameManager : MonoBehaviour
 
     public void OnItemInformation(Item item)
     {
+        OffNoticeAll();
+
         information.SetActive(true);
 
         informationText.text = item.koName;
@@ -296,5 +302,14 @@ public class GameManager : MonoBehaviour
     public PlayerData GetPlayerData()
     {
         return playerData;
+    }
+
+    public void OffNoticeAll()
+    {
+        notice.SetActive(false);
+        information.SetActive(false);
+        AdMobReward.instance.notice.SetActive(false);
+        HistoryManager.instance.historySet.SetActive(false);
+        InventoryManager.instance.inventorySet.SetActive(false);
     }
 }

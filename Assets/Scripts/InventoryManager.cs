@@ -295,6 +295,8 @@ public class InventoryManager : MonoBehaviour
     }
     public void ButtonInventory()
     {
+        GameManager.instance.OffNoticeAll();
+
         SoundManager.instance.PlayOneShotEffectSound(1);
         inventorySet.SetActive(true);
     }
