@@ -120,6 +120,11 @@ public class Item
                 return "1성";
         }
     }
+
+    public void SetCount(int count)
+    {
+        this.count = count;
+    }
 }
 
 [System.Serializable]

@@ -7,10 +7,16 @@ public class ItemFrame : MonoBehaviour
 {
     private string NEW_LINE = "\n";
     public Item item;
+    public int slotIndex;
     public Text indexText;
     public Image itemImage;
 
     public GameObject[] transforms; // star count, symbol, particle
+
+    public bool isItemFrame;
+
+    public GameObject information;
+    public Text informationText;
 
     private void Awake()
     {
@@ -27,10 +33,24 @@ public class ItemFrame : MonoBehaviour
         GameManager.instance.OffNoticeAll();
         SoundManager.instance.PlayOneShotEffectSound(1);
 
-        GameObject information = GameManager.instance.information;
-        Text informationText = GameManager.instance.informationText;
+        if (isItemFrame)
+        {
+            information = GameManager.instance.information;
+            informationText = GameManager.instance.informationText;
+        }
+        else
+        {
+            information = InventoryManager.instance.information;
+            informationText = InventoryManager.instance.informationText;
+            InventoryManager.instance.nowInformationSlotIndex = slotIndex; // 나중에 탭단위로하려면 구분해줘야함!
+        }
 
         information.SetActive(true);
+        
+        if (item.type != ItemType.CHARACTER)
+        {
+            information.transform.GetChild(4).gameObject.SetActive(true);
+        }
 
         informationText.text = item.koName;
 
@@ -47,6 +67,11 @@ public class ItemFrame : MonoBehaviour
         }
 
         informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToKorean(), "d95763");
+
+        if (!isItemFrame)
+        {
+            informationText.text += NEW_LINE + NEW_LINE + GetColorText("" + item.count, "e85f37") + " 개";
+        }
     }
 
     public string GetColorText(string text, string colorValue)
@@ -54,13 +79,13 @@ public class ItemFrame : MonoBehaviour
         return "<color=#" + colorValue + ">" + text + "</color>";
     }
 
-    public void SetParticles()
+    public void SetParticles(float particleDelay)
     {
         transforms[4].gameObject.SetActive(false);
         transforms[5].gameObject.SetActive(false);
         transforms[6].gameObject.SetActive(false);
 
-        Invoke("OnParticle", 1f);
+        Invoke("OnParticle", particleDelay);
     }
 
     public void OnParticle()
@@ -98,14 +123,23 @@ public class ItemFrame : MonoBehaviour
 
     public void SetIndex(int index)
     {
-        indexText.text = "최근 " + GetColorText(""+ index, "e59e00") + "번째";
+        slotIndex = index - 1;
+
+        if (isItemFrame) 
+        {
+            indexText.text = "최근 " + GetColorText("" + index, "e59e00") + "번째";
+        }
+        else
+        {
+            indexText.text = GetColorText("" + index, "e59e00");
+        }
     }
 
-    public void SetItemWithBaseSetting(Item item, int index)
+    public void SetItemWithBaseSetting(Item item, int index, float particleDelay)
     {
         SetItem(item);
         SetIndex(index);
-        SetParticles();
+        SetParticles(particleDelay);
         OffDetails();
         OnDetails();
         Invoke("SetImage", 0.1f);

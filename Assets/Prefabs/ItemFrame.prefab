@@ -9968,7 +9968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -237}
+  m_AnchoredPosition: {x: 18, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1746309697479315062
@@ -9992,7 +9992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10080,7 +10080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -237}
+  m_AnchoredPosition: {x: 0, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3415744911744006690
@@ -10104,7 +10104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10154,7 +10154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -237}
+  m_AnchoredPosition: {x: -27, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7063261869573704007
@@ -10178,7 +10178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10228,7 +10228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: -237}
+  m_AnchoredPosition: {x: -18, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4722230249447420920
@@ -10252,7 +10252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10302,7 +10302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: -237}
+  m_AnchoredPosition: {x: -9, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &721220590130451780
@@ -10326,7 +10326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10376,7 +10376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -36, y: -237}
+  m_AnchoredPosition: {x: -36, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4199044261540384691
@@ -10400,7 +10400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -29792,7 +29792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -237}
+  m_AnchoredPosition: {x: 0, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3515581811060758874
@@ -29816,7 +29816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -30107,7 +30107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36, y: -237}
+  m_AnchoredPosition: {x: 36, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8855082590062882047
@@ -30131,7 +30131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -39855,7 +39855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -237}
+  m_AnchoredPosition: {x: 18, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7951970584752163726
@@ -39879,7 +39879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -44892,7 +44892,174 @@ MonoBehaviour:
     grade: 0
     spritePath: 
     sprite: {fileID: 0}
-    element: 0
+    character:
+      code: 0
+      element: 0
+      grade: 0
+      enName: 
+      koName: 
+      phase: 0
+      level: 0
+      levelLimit: 0
+      exp: 0
+      nextExp: 0
+      friendship: 0
+      attribute:
+        hp: 0
+        maxHp: 0
+        atk: 0
+        def: 0
+        elementalMastery: 0
+        maxStamina: 0
+        critRate: 0
+        critDmg: 0
+        healingBonus: 0
+        incomingHealingBonus: 0
+        energyRecharge: 0
+        reduceCd: 0
+        powerfulShield: 0
+        pyroDmgBonus: 0
+        pyroRes: 0
+        hydroDmgBonus: 0
+        hydroRes: 0
+        dendroDmgBonus: 0
+        dendroRes: 0
+        electroDmgBonus: 0
+        electroRes: 0
+        anemoDmgBonus: 0
+        anemoRes: 0
+        cryoDmgBonus: 0
+        cryoRes: 0
+        geoDmgBonus: 0
+        geoRes: 0
+        physicalDmgBonus: 0
+        physicalRes: 0
+      equipedWeapon:
+        code: 0
+        enName: 
+        koName: 
+        count: 0
+        type: 0
+        grade: 0
+        spritePath: 
+        sprite: {fileID: 0}
+        character:
+          code: 0
+          element: 0
+          grade: 0
+          enName: 
+          koName: 
+          phase: 0
+          level: 0
+          levelLimit: 0
+          exp: 0
+          nextExp: 0
+          friendship: 0
+          attribute:
+            hp: 0
+            maxHp: 0
+            atk: 0
+            def: 0
+            elementalMastery: 0
+            maxStamina: 0
+            critRate: 0
+            critDmg: 0
+            healingBonus: 0
+            incomingHealingBonus: 0
+            energyRecharge: 0
+            reduceCd: 0
+            powerfulShield: 0
+            pyroDmgBonus: 0
+            pyroRes: 0
+            hydroDmgBonus: 0
+            hydroRes: 0
+            dendroDmgBonus: 0
+            dendroRes: 0
+            electroDmgBonus: 0
+            electroRes: 0
+            anemoDmgBonus: 0
+            anemoRes: 0
+            cryoDmgBonus: 0
+            cryoRes: 0
+            geoDmgBonus: 0
+            geoRes: 0
+            physicalDmgBonus: 0
+            physicalRes: 0
+          equipedWeapon:
+            code: 0
+            enName: 
+            koName: 
+            count: 0
+            type: 0
+            grade: 0
+            spritePath: 
+            sprite: {fileID: 0}
+            character:
+              code: 0
+              element: 0
+              grade: 0
+              enName: 
+              koName: 
+              phase: 0
+              level: 0
+              levelLimit: 0
+              exp: 0
+              nextExp: 0
+              friendship: 0
+              attribute:
+                hp: 0
+                maxHp: 0
+                atk: 0
+                def: 0
+                elementalMastery: 0
+                maxStamina: 0
+                critRate: 0
+                critDmg: 0
+                healingBonus: 0
+                incomingHealingBonus: 0
+                energyRecharge: 0
+                reduceCd: 0
+                powerfulShield: 0
+                pyroDmgBonus: 0
+                pyroRes: 0
+                hydroDmgBonus: 0
+                hydroRes: 0
+                dendroDmgBonus: 0
+                dendroRes: 0
+                electroDmgBonus: 0
+                electroRes: 0
+                anemoDmgBonus: 0
+                anemoRes: 0
+                cryoDmgBonus: 0
+                cryoRes: 0
+                geoDmgBonus: 0
+                geoRes: 0
+                physicalDmgBonus: 0
+                physicalRes: 0
+              equipedWeapon:
+                code: 0
+                enName: 
+                koName: 
+                count: 0
+                type: 0
+                grade: 0
+                spritePath: 
+                sprite: {fileID: 0}
+                character:
+                  code: 0
+                  element: 0
+                  grade: 0
+                  enName: 
+                  koName: 
+                  phase: 0
+                  level: 0
+                  levelLimit: 0
+                  exp: 0
+                  nextExp: 0
+                  friendship: 0
+              artifacts: []
+          artifacts: []
+      artifacts: []
   indexText: {fileID: 880858066548500486}
   itemImage: {fileID: 234862786882477399}
   transforms:
@@ -44903,6 +45070,7 @@ MonoBehaviour:
   - {fileID: 3355928206317499142}
   - {fileID: 2247331986343714160}
   - {fileID: 6514307030065534167}
+  isItemFrame: 1
 --- !u!1 &6514307030065534167
 GameObject:
   m_ObjectHideFlags: 0
@@ -44975,7 +45143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: -237}
+  m_AnchoredPosition: {x: 9, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1318714308374707566
@@ -44999,7 +45167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -45162,7 +45330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27, y: -237}
+  m_AnchoredPosition: {x: 27, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6379033474917891704
@@ -45186,7 +45354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -45236,7 +45404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18, y: -237}
+  m_AnchoredPosition: {x: -18, y: -175}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8751759385930991301
@@ -45260,7 +45428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

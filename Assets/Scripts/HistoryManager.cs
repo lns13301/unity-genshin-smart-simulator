@@ -47,7 +47,7 @@ public class HistoryManager : MonoBehaviour
             GameObject go = Instantiate(itemFrame);
 
             go.transform.SetParent(content.transform);
-            go.GetComponent<ItemFrame>().SetItemWithBaseSetting(ItemDatabase.instance.makeItem(item), ++i);
+            go.GetComponent<ItemFrame>().SetItemWithBaseSetting(ItemDatabase.instance.makeItem(item), ++i, 0f);
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
             CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());

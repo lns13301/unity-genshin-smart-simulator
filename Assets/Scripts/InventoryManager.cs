@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -23,6 +24,16 @@ public class InventoryManager : MonoBehaviour
     public List<Item> adventureItems;
 
     public int nowTabIndex;
+
+    public GameObject notice;
+    public Text noticeText;
+    public GameObject information;
+    public Text informationText;
+    public int nowInformationSlotIndex;
+
+    public string ARE_YOU_SURE;
+
+    public int noticeState = 0;
 
     private void Awake()
     {
@@ -68,6 +79,17 @@ public class InventoryManager : MonoBehaviour
         onChangeItem += GameManager.instance.SaveAndLoad;
         onChangeItem += Refresh;
 
+        noticeText = notice.transform.GetChild(5).GetComponent<Text>();
+        noticeText.supportRichText = true;
+        notice.SetActive(false);
+
+        informationText = information.transform.GetChild(3).GetComponent<Text>();
+        informationText.supportRichText = true;
+        information.SetActive(false);
+
+        ARE_YOU_SURE = "정말로 하시겠습니까? \n\n 복구가 " + GetColorText("불가능", "d91d2f") + " 합니다.";
+
+        information.transform.GetChild(4).gameObject.SetActive(false);
         inventorySet.SetActive(false);
     }
 
@@ -242,6 +264,8 @@ public class InventoryManager : MonoBehaviour
     {
         SetInventoryDestroy();
 
+        SortItemList(itemLists[nowTabIndex]);
+
         for (int i = 0; i < itemLists[nowTabIndex].Count;)
         {
             Item item = ItemDatabase.instance.findItemByName(itemLists[nowTabIndex][i].koName);
@@ -260,7 +284,7 @@ public class InventoryManager : MonoBehaviour
             GameObject go = Instantiate(itemFrame);
 
             go.transform.SetParent(content.transform);
-            go.GetComponent<ItemFrame>().SetItemWithBaseSetting(ItemDatabase.instance.makeItem(item), ++i);
+            go.GetComponent<ItemFrame>().SetItemWithBaseSetting(ItemDatabase.instance.makeItem(item), ++i, 0);
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
             CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());
@@ -289,9 +313,9 @@ public class InventoryManager : MonoBehaviour
     public void ButtonInventoryTab(int index)
     {
         nowTabIndex = index;
-        PlayerData playerData = GameManager.instance.GetPlayerData();
+        SoundManager.instance.PlayOneShotEffectSound(1);
 
-        SetInventory();
+        SetInventory(); // 탭 바꾸는걸로는 로딩안하도록 변경하려면 사용
     }
     public void ButtonInventory()
     {
@@ -299,11 +323,115 @@ public class InventoryManager : MonoBehaviour
 
         SoundManager.instance.PlayOneShotEffectSound(1);
         inventorySet.SetActive(true);
+
+        SetInventory();
     }
 
     public void OffInventory()
     {
         SoundManager.instance.PlayOneShotEffectSound(3);
         inventorySet.SetActive(false);
+    }
+
+    public void SortItemList(List<Item> items)
+    {
+        items.Sort((a, b) => a.code.CompareTo(b.code));
+    }
+
+    public void ButtonSetUIFirstPosition()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        content.GetComponent<Transform>().position = new Vector2(1500, content.GetComponent<Transform>().position.y);
+    }
+
+    public void ButtonSetUILastPosition()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        content.GetComponent<Transform>().position = new Vector2(-30000, content.GetComponent<Transform>().position.y);
+    }
+
+    public void OnNotice(int textCase = 0)
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        notice.SetActive(true);
+        noticeText.text = ARE_YOU_SURE;
+    }
+    public void OffNotice()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        notice.SetActive(false);
+    }
+
+    public void DoRemove()
+    {
+        GameManager.instance.SaveAndLoad();
+    }
+
+    private string GetColorText(string text, string colorValue)
+    {
+        return "<color=#" + colorValue + ">" + text + "</color>";
+    }
+
+    public void ButtonDoBreak(int itemIndex)
+    {
+        OffInformation();
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        notice.SetActive(true);
+        noticeText.text = "선택된 아이템을 " + GetColorText("파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
+        noticeState = 0; // 선택된 아이템 파괴
+    }
+
+    public void ButtonDoBreakAll(int grade)
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        notice.SetActive(true);
+        noticeText.text = "정말로 " + GetColorText("모두 파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
+        noticeState = grade; // notice state 로 제어
+    }
+
+    public void ButtonYes()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        notice.SetActive(false);
+
+        if (noticeState == 0)
+        {
+            DoBreakWeapon(nowInformationSlotIndex);
+        }
+        else if (noticeState == 3)
+        {
+            DoBreakWeaponAll(Grade.EPIC);
+        }
+        else if (noticeState == 4)
+        {
+            DoBreakWeaponAll(Grade.UNIQUE);
+        }
+
+        Refresh();
+    }
+
+    public void DoBreakWeaponAll(Grade grade)
+    {
+        for (int i = 0; i < weapons.Count;)
+        {
+            if (weapons[i].grade == grade)
+            {
+                weapons.RemoveAt(i);
+                continue;
+            }
+
+            i++;
+        }
+    }
+
+    public void DoBreakWeapon(int slotNumber)
+    {
+        weapons.RemoveAt(slotNumber);
+    }
+    public void OffInformation()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        information.transform.GetChild(4).gameObject.SetActive(false);
+        information.SetActive(false);
     }
 }

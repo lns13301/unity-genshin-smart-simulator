@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public string END_DATE = "체험 기간이 종료되었습니다.";
     public string NEW_LINE = "\n";
     public string ORANGE_COLOR = "e59e00";
+    public string RED_COLOR = "d50707";
+    public string WARNING;
 
     public GameObject information;
     public Text informationText;
@@ -48,6 +50,8 @@ public class GameManager : MonoBehaviour
         information.SetActive(false);
 
         Invoke("isValidTimeOver", 1f);
+
+        WARNING = GetColorText("! 경고 !", RED_COLOR);
     }
 
     // Update is called once per frame
@@ -259,29 +263,6 @@ public class GameManager : MonoBehaviour
         AdMobReward.instance.ButtonAd();
     }
 
-    public void SetHistoryRecent()
-    {
-        while (playerData.normalHistory.Count > 190)
-        {
-            playerData.normalHistory.RemoveAt(0);
-        }
-
-        while (playerData.characterHistory.Count > 190)
-        {
-            playerData.characterHistory.RemoveAt(0);
-        }
-
-        while (playerData.weaponHistory.Count > 190)
-        {
-            playerData.weaponHistory.RemoveAt(0);
-        }
-
-        while (playerData.noelleHistory.Count > 190)
-        {
-            playerData.noelleHistory.RemoveAt(0);
-        }
-    }
-
     public void ExitGame()
     {
         Application.Quit();
@@ -309,7 +290,16 @@ public class GameManager : MonoBehaviour
         notice.SetActive(false);
         information.SetActive(false);
         AdMobReward.instance.notice.SetActive(false);
-        HistoryManager.instance.historySet.SetActive(false);
-        InventoryManager.instance.inventorySet.SetActive(false);
+        // HistoryManager.instance.historySet.SetActive(false);
+        //InventoryManager.instance.inventorySet.SetActive(false);
+    }
+
+    public void OnNoticeWeaponInventoryFull()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        information.SetActive(true);
+        informationText.text = WARNING + "\n\n장비 인벤토리의 최대 보유 수량은 " + GetColorText("300", ORANGE_COLOR) + "개 입니다.\n\n"
+            + "인벤토리 최대수량을 초과하여 장비아이템을 수령할 경우\n일부 장비아이템이 " + GetColorText("사라지게", RED_COLOR) + " 됩니다.\n\n"
+            + "인벤토리의 " + GetColorText("공간을 확보한 후", RED_COLOR) + " 재시도 해주세요.";
     }
 }

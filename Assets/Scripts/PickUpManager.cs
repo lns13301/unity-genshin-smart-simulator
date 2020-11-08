@@ -53,7 +53,12 @@ public class PickUpManager : MonoBehaviour
             return;
         }
 
-        GameManager.instance.SetHistoryRecent(); // 90차 이상 제거
+        // 인벤토리 수령가능 공간 확인
+        if (GameManager.instance.GetPlayerData().weapons.Count > 90)
+        {
+            GameManager.instance.OnNoticeWeaponInventoryFull();
+            return;
+        }
 
         int buttonType = BannerManager.instance.onBannerIndex;
 
@@ -70,7 +75,7 @@ public class PickUpManager : MonoBehaviour
                 for (int i = 0; i < grades.Length; i++)
                 {
                     result[i] = getRandomItem(grades[i], PickUpType.CHARACTER, playerData.isPickUpCharacterAlways);
-                    playerData.characterHistory.Add(result[i]);
+                    playerData.AddItemAndHistory(result[i], buttonType);
                 }
 
                 playerData.characterTotalTryCount += 10;
@@ -91,7 +96,7 @@ public class PickUpManager : MonoBehaviour
                 for (int i = 0; i < grades.Length; i++)
                 {
                     result[i] = getRandomItem(grades[i], PickUpType.WEAPON, playerData.isPickUpWeaponAlways, playerData.isPickUpWeapon4Always);
-                    playerData.weaponHistory.Add(result[i]);
+                    playerData.AddItemAndHistory(result[i], buttonType);
                 }
 
                 playerData.weaponTotalTryCount += 10;
@@ -111,7 +116,7 @@ public class PickUpManager : MonoBehaviour
                 for (int i = 0; i < grades.Length; i++)
                 {
                     result[i] = getRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways, playerData.isPickUpCharacter4Always);
-                    playerData.normalHistory.Add(result[i]);
+                    playerData.AddItemAndHistory(result[i], buttonType);
                 }
 
                 playerData.acquantFateTotalTryCount += 10;
@@ -138,7 +143,7 @@ public class PickUpManager : MonoBehaviour
                         playerData.hasFirstTimeNoelle = true;
                     }
 
-                    playerData.noelleHistory.Add(result[i]);
+                    playerData.AddItemAndHistory(result[i], buttonType);
                 }
 
                 playerData.acquantFateTotalTryCount += 10;
