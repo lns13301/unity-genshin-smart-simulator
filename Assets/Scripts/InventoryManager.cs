@@ -269,6 +269,7 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < itemLists[nowTabIndex].Count;)
         {
             Item item = ItemDatabase.instance.findItemByName(itemLists[nowTabIndex][i].koName);
+            item.count = itemLists[nowTabIndex][i].count;
 
             if (item == null)
             {
@@ -288,6 +289,11 @@ public class InventoryManager : MonoBehaviour
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
             CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());
+
+            if (item.type == ItemType.CHARACTER)
+            {
+                go.transform.GetChild(4).GetChild((int)item.character.element).gameObject.SetActive(true); // 속성 켜기
+            }
         }
     }
 
@@ -335,7 +341,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SortItemList(List<Item> items)
     {
-        items.Sort((a, b) => a.code.CompareTo(b.code));
+        items.Sort((a, b) => b.code.CompareTo(a.code));
     }
 
     public void ButtonSetUIFirstPosition()
@@ -385,7 +391,7 @@ public class InventoryManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
-        noticeText.text = "정말로 " + GetColorText("모두 파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
+        noticeText.text = "정말로 해당등급의 장비아이템을 " + GetColorText("모두 파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
         noticeState = grade; // notice state 로 제어
     }
 

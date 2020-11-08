@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject exitNotice;
 
+    public GameObject detail;
+    public Transform detailContent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,12 +55,82 @@ public class GameManager : MonoBehaviour
         Invoke("isValidTimeOver", 1f);
 
         WARNING = GetColorText("! 경고 !", RED_COLOR);
+
+        SetDetailText();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void SetDetailText()
+    {
+        for (int i = 0; i < detailContent.childCount; i++)
+        {
+            detailContent.GetChild(0).GetComponent<Text>().supportRichText = true;
+        }
+
+        detailContent.GetChild(0).GetComponent<Text>().text = "확률 정보입니다.";
+        detailContent.GetChild(1).GetComponent<Text>().text = 
+            GetColorText("번쩍이는 화염 이벤트 기원", "9958b3") + " : " + GetColorText("75회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR) 
+            + "이후부터 " + GetColorText("32.323%", RED_COLOR) + "확률로 " + GetColorText("5성", ORANGE_COLOR) + "이 등장합니다.\n"
+            + "(기본 " + GetColorText("0.6%", RED_COLOR) + "에서 최대 " + GetColorText("1.6%", RED_COLOR) 
+            + "로 최대 " + GetColorText("90", RED_COLOR) + "회차에 확정적으로 " + GetColorText("5성 획득", ORANGE_COLOR) + "이 가능합니다.)";
+        detailContent.GetChild(2).GetComponent<Text>().text =
+            GetColorText("번쩍이는 화염 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", " 
+            + GetColorText("4회차", RED_COLOR) + " 이후부터 " + GetColorText("1회", RED_COLOR) + "당 " + GetColorText("1.58%", RED_COLOR) + "씩 증가\n" +
+            "(최대 " + GetColorText("13%", RED_COLOR) + " 로 최대 " + GetColorText("10회차", RED_COLOR) + "에 확정적으로 " 
+            + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";
+        detailContent.GetChild(3).GetComponent<Text>().text =
+            "기원에서 " + GetColorText("5성", ORANGE_COLOR) + " 캐릭터를 획득 시 " 
+            + GetColorText("50%", RED_COLOR) + "확률로 " + GetColorText("픽업 캐릭터", ORANGE_COLOR) + "를 획득합니다.\n" +
+            "만약 이벤트에서 획득한 캐릭터가 " + GetColorText("픽업캐릭터가 아닐경우 다음 5성 캐릭터는 무조건 픽업 캐릭터", ORANGE_COLOR) + "입니다.";
+        detailContent.GetChild(4).GetComponent<Text>().text =
+            "기원에서 " + GetColorText("4성", ORANGE_COLOR) + " 캐릭터를 획득 시 "
+            + GetColorText("50%", RED_COLOR) + "확률로 " + GetColorText("픽업 캐릭터", ORANGE_COLOR) + "를 획득합니다.\n" +
+            "만약 이벤트에서 획득한 캐릭터가 " + GetColorText("픽업캐릭터가 아닐경우 다음 4성 캐릭터는 무조건 픽업 캐릭터", ORANGE_COLOR) + "입니다.";
+        detailContent.GetChild(5).GetComponent<Text>().text =
+            GetColorText("신의 주조 이벤트 기원", "51cfcb") + " : " + GetColorText("65회차", RED_COLOR) + "까지 " + GetColorText("0.7%", RED_COLOR)
+            + "이후부터 " + GetColorText("32.323%", RED_COLOR) + "확률로 " + GetColorText("5성", ORANGE_COLOR) + "이 등장합니다.\n"
+            + "(기본 " + GetColorText("0.7%", RED_COLOR) + "에서 최대 " + GetColorText("1.85%", RED_COLOR)
+            + "로 최대 " + GetColorText("80", RED_COLOR) + "회차에 확정적으로 " + GetColorText("5성 획득", ORANGE_COLOR) + "이 가능합니다.)";
+        detailContent.GetChild(6).GetComponent<Text>().text =
+            GetColorText("신의 주조 이벤트 기원", "51cfcb") + " : 기본 " + GetColorText("6%", RED_COLOR) + ", "
+            + GetColorText("4회차", RED_COLOR) + " 이후부터 " + GetColorText("1회", RED_COLOR) + "당 " + GetColorText("1.7%", RED_COLOR) + "씩 증가\n" +
+            "(최대 " + GetColorText("14.5%", RED_COLOR) + " 로 최대 " + GetColorText("10회차", RED_COLOR) + "에 확정적으로 "
+            + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";
+        detailContent.GetChild(7).GetComponent<Text>().text =
+            "기원에서 " + GetColorText("5성", ORANGE_COLOR) + " 무기를 획득 시 "
+            + GetColorText("50%", RED_COLOR) + "확률로 " + GetColorText("픽업 무기", ORANGE_COLOR) + "를 획득합니다.\n" +
+            "만약 이벤트에서 획득한 무기가 " + GetColorText("픽업무기가 아닐경우 다음 5성 무기는 무조건 픽업 무기", ORANGE_COLOR) + "입니다.";
+        detailContent.GetChild(8).GetComponent<Text>().text =
+            "기원에서 " + GetColorText("4성", ORANGE_COLOR) + " 무기를 획득 시 "
+            + GetColorText("50%", RED_COLOR) + "확률로 " + GetColorText("픽업 무기", ORANGE_COLOR) + "를 획득합니다.\n" +
+            "만약 이벤트에서 획득한 무기가 " + GetColorText("픽업무기가 아닐경우 다음 4성 무기는 무조건 픽업 무기", ORANGE_COLOR) + "입니다.";
+        detailContent.GetChild(9).GetComponent<Text>().text =
+            GetColorText("세상 여행 일반 기원", "497a4d") + " : " + GetColorText("75회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
+            + "이후부터 " + GetColorText("32.323%", RED_COLOR) + "확률로 " + GetColorText("5성", ORANGE_COLOR) + "이 등장합니다.\n"
+            + "(기본 " + GetColorText("0.6%", RED_COLOR) + "에서 최대 " + GetColorText("1.6%", RED_COLOR)
+            + "로 최대 " + GetColorText("90", RED_COLOR) + "회차에 확정적으로 " + GetColorText("5성 획득", ORANGE_COLOR) + "이 가능합니다.)";
+        detailContent.GetChild(10).GetComponent<Text>().text =
+            GetColorText("세상 여행 일반 기원", "497a4d") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", "
+            + GetColorText("4회차", RED_COLOR) + " 이후부터 " + GetColorText("1회", RED_COLOR) + "당 " + GetColorText("1.58%", RED_COLOR) + "씩 증가\n" +
+            "(최대 " + GetColorText("13%", RED_COLOR) + " 로 최대 " + GetColorText("10회차", RED_COLOR) + "에 확정적으로 "
+            + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";
+    }
+
+    public void ButtonDetail()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        detail.SetActive(true);
+    }
+
+    public void OffDetail()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        detail.SetActive(false);
     }
 
     public bool isValidTimeOver()

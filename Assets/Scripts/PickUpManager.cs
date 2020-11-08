@@ -6,6 +6,19 @@ using UnityEngine.UI;
 
 public class PickUpManager : MonoBehaviour
 {
+    // MAX 값들은 실제 인덱스에 + 1 해주었음
+    private int MIN_EPIC_WEAPON = 21;
+    private int MAX_EPIC_WEAPON = 45 + 1;
+    private int MIN_UNIQUE_WEAPON = 46;
+    private int MAX_UNIQUE_WEAPON = 63 + 1;
+    private int MIN_LEGEND_WEAPON = 64;
+    private int MAX_LEGEND_WEAPON = 73 + 1;
+
+    private int MIN_UNIQUE_CHARACTER = 0;
+    private int MAX_UNIQUE_CHARACTER = 13 + 1;
+    private int MIN_LEGEND_CHARACTER = 14;
+    private int MAX_LEGEND_CHARACTER = 18 + 1;
+
     public static PickUpManager instance;
     public GameObject panel;
     public RawImage videoPanel;
@@ -54,7 +67,7 @@ public class PickUpManager : MonoBehaviour
         }
 
         // 인벤토리 수령가능 공간 확인
-        if (GameManager.instance.GetPlayerData().weapons.Count > 90)
+        if (GameManager.instance.GetPlayerData().weapons.Count > 290)
         {
             GameManager.instance.OnNoticeWeaponInventoryFull();
             return;
@@ -380,22 +393,26 @@ public class PickUpManager : MonoBehaviour
                 if (items[i].grade == Grade.LEGEND)
                 {
                     starlightCount += 10;
+                    playerData.starLightCount += 10;
                 }
                 else if (items[i].grade == Grade.UNIQUE)
                 {
                     starlightCount += 2;
+                    playerData.starLightCount += 2;
                 }
             }
-            else // 영웅
+            else // 캐릭터
             {
                 // 추후에 중복 캐릭터 7개 이후부터는 25, 5개씩 얻도록 해야함
                 if (items[i].grade == Grade.LEGEND)
                 {
                     starlightCount += 10;
+                    playerData.starLightCount += 10;
                 }
                 else if (items[i].grade == Grade.UNIQUE)
                 {
                     starlightCount += 2;
+                    playerData.starLightCount += 2;
                 }
             }
         }
@@ -414,6 +431,7 @@ public class PickUpManager : MonoBehaviour
                 if (items[i].grade == Grade.EPIC)
                 {
                     stardustCount += 15;
+                    playerData.starDustCount += 15;
                 }
             }
         }
@@ -671,11 +689,11 @@ public class PickUpManager : MonoBehaviour
 
                 if (r == 0)
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(0, 5)];
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_CHARACTER, MAX_LEGEND_CHARACTER)];
                 }
                 else
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(22, 32)];
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_WEAPON, MAX_LEGEND_WEAPON)];
                 }
             }
             if (pickUpType == PickUpType.WEAPON)
@@ -688,17 +706,17 @@ public class PickUpManager : MonoBehaviour
 
                     if (Random.Range(0, 2) == 0)
                     {
-                        return ItemDatabase.instance.itemDB[24];
+                        return ItemDatabase.instance.findItemByName("늑대의 말로");
                     }
                     else
                     {
-                        return ItemDatabase.instance.itemDB[28];
+                        return ItemDatabase.instance.findItemByName("사풍 원서");
                     }
                 }
                 else
                 {
                     playerData.isPickUpWeaponAlways = true;
-                    return ItemDatabase.instance.itemDB[Random.Range(22, 32)];
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_WEAPON, MAX_LEGEND_WEAPON)];
                 }
             }
             if (pickUpType == PickUpType.CHARACTER)
@@ -714,7 +732,7 @@ public class PickUpManager : MonoBehaviour
                 else
                 {
                     playerData.isPickUpCharacterAlways = true;
-                    return ItemDatabase.instance.itemDB[Random.Range(0, 5)];
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_CHARACTER, MAX_LEGEND_CHARACTER)];
                 }
             }
         }
@@ -727,11 +745,11 @@ public class PickUpManager : MonoBehaviour
 
                 if (r == 0)
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
                 }
                 else
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(32, 50)];
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_WEAPON, MAX_UNIQUE_WEAPON)];
                 }
             }
             if (pickUpType == PickUpType.WEAPON)
@@ -764,12 +782,12 @@ public class PickUpManager : MonoBehaviour
 
                     if (range < 14) // 캐릭터 개수
                     {
-                        return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
+                        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
                     }
                     else
                     {
                         playerData.isPickUpWeapon4Always = true;
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 50)];
+                        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_WEAPON, MAX_UNIQUE_WEAPON)];
                     }
                 }
             }
@@ -793,7 +811,7 @@ public class PickUpManager : MonoBehaviour
                             return ItemDatabase.instance.findItemByName("행추");
                     }
 
-                    return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
                 }
                 else
                 {
@@ -802,17 +820,17 @@ public class PickUpManager : MonoBehaviour
                     if (range < 14) // 캐릭터 개수
                     {
                         playerData.isPickUpCharacter4Always = true;
-                        return ItemDatabase.instance.itemDB[Random.Range(8, 22)];
+                        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
                     }
                     else
                     {
-                        return ItemDatabase.instance.itemDB[Random.Range(32, 50)];
+                        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_WEAPON, MAX_UNIQUE_WEAPON)];
                     }
                 }
             }
         }
 
-        return ItemDatabase.instance.itemDB[Random.Range(50, 75)];
+        return ItemDatabase.instance.itemDB[Random.Range(MIN_EPIC_WEAPON, MAX_EPIC_WEAPON)];
     }
 
     public void ButtonShowItemInformation(int index)

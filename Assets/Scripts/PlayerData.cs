@@ -7,6 +7,9 @@ public class PlayerData
 {
     public int acquantFateCount;
     public int intertwinedFateCount;
+    public int starLightCount;
+    public int starDustCount;
+    public int crystalCount;
 
     public int acquantFateTotalTryCount;
     public int acquantFateFourStarCount;
