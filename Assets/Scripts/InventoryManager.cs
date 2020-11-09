@@ -35,6 +35,10 @@ public class InventoryManager : MonoBehaviour
 
     public int noticeState = 0;
 
+    public GameObject stardustPage;
+    public int starlightResult;
+    public int stardustResult;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -91,6 +95,9 @@ public class InventoryManager : MonoBehaviour
 
         information.transform.GetChild(4).gameObject.SetActive(false);
         inventorySet.SetActive(false);
+
+        starlightResult = 0;
+        stardustResult = 0;
     }
 
     public bool AddItem(Item item, int count = 1)
@@ -314,6 +321,7 @@ public class InventoryManager : MonoBehaviour
     {
         SetInventoryDestroy();
         SetInventory();
+        GameManager.instance.SetResources();
     }
 
     public void ButtonInventoryTab(int index)
@@ -399,6 +407,8 @@ public class InventoryManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(false);
+        starlightResult = 0;
+        stardustResult = 0;
 
         if (noticeState == 0)
         {
@@ -413,6 +423,8 @@ public class InventoryManager : MonoBehaviour
             DoBreakWeaponAll(Grade.UNIQUE);
         }
 
+        GameManager.instance.SavePlayerDataToJson();
+        OnStardustPage();
         Refresh();
     }
 
@@ -422,6 +434,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (weapons[i].grade == grade)
             {
+                SetBreskResultStarDustOrStarLight(weapons[i]);
                 weapons.RemoveAt(i);
                 continue;
             }
@@ -432,12 +445,48 @@ public class InventoryManager : MonoBehaviour
 
     public void DoBreakWeapon(int slotNumber)
     {
+        SetBreskResultStarDustOrStarLight(weapons[slotNumber]);
         weapons.RemoveAt(slotNumber);
     }
+
     public void OffInformation()
     {
         SoundManager.instance.PlayOneShotEffectSound(3);
         information.transform.GetChild(4).gameObject.SetActive(false);
         information.SetActive(false);
+    }
+
+    public void OnStardustPage()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(5);
+
+        stardustPage.SetActive(true);
+        stardustPage.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "" + starlightResult;
+        stardustPage.transform.GetChild(2).GetChild(0).GetComponent<Text>().text = "" + stardustResult;
+    }
+
+    public void OffStardustPage()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(2);
+        stardustPage.SetActive(false);
+    }
+
+    public void SetBreskResultStarDustOrStarLight(Item item)
+    {
+        if (item.grade == Grade.EPIC)
+        {
+            stardustResult += 5;
+            playerData.starDustCount += 5;
+        }
+        else if (item.grade == Grade.UNIQUE)
+        {
+            stardustResult += 30;
+            playerData.starDustCount += 30;
+        }
+        else if (item.grade == Grade.LEGEND)
+        {
+            starlightResult += 5;
+            playerData.starLightCount += 5;
+        }
     }
 }

@@ -9,7 +9,8 @@ public class PlayerData
     public int intertwinedFateCount;
     public int starLightCount;
     public int starDustCount;
-    public int crystalCount;
+    public int primogemCount;
+    public int genesisCrystalCount;
 
     public int acquantFateTotalTryCount;
     public int acquantFateFourStarCount;
@@ -51,6 +52,8 @@ public class PlayerData
     public List<Item> materials;
     public List<Item> questItems;
     public List<Item> adventureItems;
+
+    public List<int> usedCoupon;
 
     public bool AddCharacter(Item item)
     {

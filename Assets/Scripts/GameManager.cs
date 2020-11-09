@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     public Text intertwinedFateText;
     public Text acquantFateText;
+    public Text primogemText;
+    public Text starLightText;
+    public Text starDustText;
 
     public GameObject notice;
     public Text noticeText;
@@ -243,6 +246,9 @@ public class GameManager : MonoBehaviour
     {
         acquantFateText.text = "" + playerData.acquantFateCount;
         intertwinedFateText.text = "" + playerData.intertwinedFateCount;
+        starLightText.text = "" + playerData.starLightCount;
+        starDustText.text = "" + playerData.starDustCount;
+        primogemText.text = "" + playerData.primogemCount;
     }
 
     public bool AddWishes(int acquantFateCount, int intertwinedFateCount)
