@@ -69,7 +69,28 @@ public class Item
         }
     }
 
-    public string[] GetCharacterNameWithColor()
+    public string GetItemTypeToEnglish()
+    {
+        switch (type)
+        {
+            case ItemType.CHARACTER:
+                return "Character";
+            case ItemType.SWORD:
+                return "Sword";
+            case ItemType.CLAYMORE:
+                return "Claymore";
+            case ItemType.BOW:
+                return "Bow";
+            case ItemType.CATALYST:
+                return "Catalyst";
+            case ItemType.POLEARM:
+                return "Polearm";
+            default:
+                return "item";
+        }
+    }
+
+    public string[] GetCharacterNameWithColorKorean()
     {
         string[] answer = new string[2];
 
@@ -100,7 +121,46 @@ public class Item
                 answer[1] = "바위";
                 return answer;
             default:
-                return null;
+                answer[0] = "8ab958";
+                answer[1] = "풀";
+                return answer;
+        }
+    }
+
+    public string[] GetCharacterNameWithColorEnglish()
+    {
+        string[] answer = new string[2];
+
+        switch (character.element)
+        {
+            case Element.PYRO:
+                answer[0] = "e5660b";
+                answer[1] = "Pyro";
+                return answer;
+            case Element.HYDRO:
+                answer[0] = "0e8ab3";
+                answer[1] = "Hydro";
+                return answer;
+            case Element.ANEMO:
+                answer[0] = "548a89";
+                answer[1] = "Anemo";
+                return answer;
+            case Element.ELECTRO:
+                answer[0] = "9d6ece";
+                answer[1] = "Electro";
+                return answer;
+            case Element.CRYO:
+                answer[0] = "6d94b4";
+                answer[1] = "Cryo";
+                return answer;
+            case Element.GEO:
+                answer[0] = "f5ab23";
+                answer[1] = "Geo";
+                return answer;
+            default:
+                answer[0] = "8ab958";
+                answer[1] = "Dendro";
+                return answer;
         }
     }
 
@@ -118,6 +178,23 @@ public class Item
                 return "2성";
             default:
                 return "1성";
+        }
+    }
+
+    public string GetItemGradeToEnglish()
+    {
+        switch (grade)
+        {
+            case Grade.LEGEND:
+                return "5-star";
+            case Grade.UNIQUE:
+                return "4-star";
+            case Grade.EPIC:
+                return "3-star";
+            case Grade.RARE:
+                return "2-star";
+            default:
+                return "1-star";
         }
     }
 

@@ -19,6 +19,11 @@ public class BannerManager : MonoBehaviour
     public Vector2 buttonSize1 = new Vector2(342, 93);
     public Vector2 buttonSize2 = new Vector2(342, 76);
 
+    public RectTransform pickupButtonText;
+
+    public GameObject bannerImageParent;
+    public Image[] bannerImages;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +41,15 @@ public class BannerManager : MonoBehaviour
         {
             bannerButton[i].SetActive(false);
         }
+
+        OnBannerFirst();
+
+        bannerImages = new Image[bannerImageParent.transform.childCount];
+
+        for (int i = 0; i < bannerImageParent.transform.childCount; i++)
+        {
+            bannerImages[i] = bannerImageParent.transform.GetChild(i).GetComponent<Image>();
+        }
     }
 
     // Update is called once per frame
@@ -43,6 +57,15 @@ public class BannerManager : MonoBehaviour
     {
         OnBanner();
         OffBanner(onBannerIndex);
+    }
+
+    private void OnBannerFirst()
+    {
+        bannerButton[0].SetActive(false);
+        bannerButton[4].SetActive(true);
+        pickupButton.sprite = buttonImage[8];
+        pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize1.x);
+        pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize1.y);
     }
 
     public void OnBanner(int bannerIndex)
@@ -86,6 +109,9 @@ public class BannerManager : MonoBehaviour
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
         }
+
+        pickupButtonText.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
+        pickupButtonText.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
     }
 
     public void SetPickUPButtonImage(bool isAcquantFactWish = false)
@@ -154,5 +180,23 @@ public class BannerManager : MonoBehaviour
         }
 
         isBannerChange = false;
+    }
+
+    public void SetBannerImageByLanguage(Language language)
+    {
+        if (language == Language.KOREAN)
+        {
+            for (int i = 0; i < bannerImage.Length; i++)
+            {
+                bannerImage[i].GetComponent<Image>().sprite = bannerImages[i + 4].sprite;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < bannerImage.Length; i++)
+            {
+                bannerImage[i].GetComponent<Image>().sprite = bannerImages[i].sprite;
+            }
+        }
     }
 }

@@ -29,7 +29,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile = new ItemDataFile();
         itemDataFile.itemDatas = new List<Item>();
 
-        //saveItemData();
+        // saveItemData();
         loadItemData();
 
         //spawnItem();
@@ -134,12 +134,12 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(1002, "Fillet Blade", "흘호 생선회칼", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Fillet Blade"));
         itemDataFile.itemDatas.Add(new Item(1003, "Harbinger of Dawn", "여명신검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Harbinger of Dawn"));
         itemDataFile.itemDatas.Add(new Item(1004, "Skyrider Sword", "비천어검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Skyrider Sword"));
-        itemDataFile.itemDatas.Add(new Item(1005, "Traveler's Handy Sword", "여행자의 검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Traveler's Handy Sword"));
+        //itemDataFile.itemDatas.Add(new Item(1005, "Traveler's Handy Sword", "여행자의 검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Traveler's Handy Sword"));
 
         itemDataFile.itemDatas.Add(new Item(1100, "Bloodtainted Greatsword", "드래곤 블러드 소드", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Bloodtainted Greatsword"));
         itemDataFile.itemDatas.Add(new Item(1101, "Debate Club", "훌륭한 대화수단", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Debate Club"));
         itemDataFile.itemDatas.Add(new Item(1102, "Ferrous Shadow", "강철의 그림자", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Ferrous Shadow"));
-        itemDataFile.itemDatas.Add(new Item(1103, "Skyrider Greatsword", "비천대어검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Skyrider Greatsword"));
+        //itemDataFile.itemDatas.Add(new Item(1103, "Skyrider Greatsword", "비천대어검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "Skyrider Greatsword"));
         itemDataFile.itemDatas.Add(new Item(1104, "White Iron Greatsword", "백철 대검", 1, ItemType.CLAYMORE, Grade.EPIC, spritePathWeapon + "White Iron Greatsword"));
 
         itemDataFile.itemDatas.Add(new Item(1200, "Black Tassel", "흑술창", 1, ItemType.POLEARM, Grade.EPIC, spritePathWeapon + "Black Tassel"));
@@ -223,6 +223,11 @@ public class ItemDatabase : MonoBehaviour
 
         itemDataFile.itemDatas.Add(new Item(3400, "Amos's Bow", "아모스의 활", 1, ItemType.BOW, Grade.LEGEND, spritePathWeapon + "Amos's Bow"));
         itemDataFile.itemDatas.Add(new Item(3401, "Skyward Harp", "천공의 하프", 1, ItemType.BOW, Grade.LEGEND, spritePathWeapon + "Skyward Harp"));
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+
+        itemDataFile.itemDatas.Add(new Item(4300, "Memory of Dust", "속세의 자물쇠", 1, ItemType.CATALYST, Grade.LEGEND, spritePathWeapon + "Memory of Dust"));
+
 
         string jsonData = JsonUtility.ToJson(itemDataFile, true);
 

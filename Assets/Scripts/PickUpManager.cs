@@ -7,17 +7,20 @@ using UnityEngine.UI;
 public class PickUpManager : MonoBehaviour
 {
     // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private int MIN_EPIC_WEAPON = 23;
-    private int MAX_EPIC_WEAPON = 47 + 1;
-    private int MIN_UNIQUE_WEAPON = 48;
-    private int MAX_UNIQUE_WEAPON = 65 + 1;
-    private int MIN_LEGEND_WEAPON = 66;
-    private int MAX_LEGEND_WEAPON = 75 + 1;
+    private static int MIN_EPIC_WEAPON = 23;
+    private static int MAX_EPIC_WEAPON = 45 + 1;
+    private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
+    private static int MAX_UNIQUE_WEAPON = 63 + 1;
+    private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
+    private static int MAX_LEGEND_WEAPON = 73 + 1;
 
-    private int MIN_UNIQUE_CHARACTER = 0;
-    private int MAX_UNIQUE_CHARACTER = 14 + 1;
-    private int MIN_LEGEND_CHARACTER = 15;
-    private int MAX_LEGEND_CHARACTER = 19 + 1;
+    private static int MIN_UNIQUE_CHARACTER = 0;
+    private static int MAX_UNIQUE_CHARACTER = 14 + 1;
+    private static int MIN_LEGEND_CHARACTER = MAX_UNIQUE_CHARACTER;
+    private static int MAX_LEGEND_CHARACTER = 19 + 1;
+
+    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
+    private static int CHARACTER_COUNT_FOUR_STAR = 14;
 
     public static PickUpManager instance;
     public GameObject panel;
@@ -211,7 +214,7 @@ public class PickUpManager : MonoBehaviour
 
         videos[0].Play();
 
-        Invoke("OnSkipButton", 2.5f);
+        Invoke("OnSkipButton", 1.5f);
         Invoke("OffPanel", 6.3f);
     }
 
@@ -580,6 +583,8 @@ public class PickUpManager : MonoBehaviour
 
         int result = Random.Range(0, 100000);
 
+        // Debug.Log("뽑기 확률 >>  사용자 : " + value + "   결과 값 : " + result);
+
         if (value > result)
         {
             return Grade.LEGEND;
@@ -706,11 +711,11 @@ public class PickUpManager : MonoBehaviour
 
                     if (Random.Range(0, 2) == 0)
                     {
-                        return ItemDatabase.instance.findItemByName("늑대의 말로");
+                        return ItemDatabase.instance.findItemByName("천공의 하프");
                     }
                     else
                     {
-                        return ItemDatabase.instance.findItemByName("사풍 원서");
+                        return ItemDatabase.instance.findItemByName("속세의 자물쇠");
                     }
                 }
                 else
@@ -765,22 +770,22 @@ public class PickUpManager : MonoBehaviour
                     switch (value)
                     {
                         case 0:
-                            return ItemDatabase.instance.findItemByName("제례검");
+                            return ItemDatabase.instance.findItemByName("피리검");
                         case 1:
-                            return ItemDatabase.instance.findItemByName("제례 대검");
+                            return ItemDatabase.instance.findItemByName("빗물 베기");
                         case 2:
-                            return ItemDatabase.instance.findItemByName("제례활");
+                            return ItemDatabase.instance.findItemByName("녹슨 활");
                         case 3:
-                            return ItemDatabase.instance.findItemByName("제례의 악장");
+                            return ItemDatabase.instance.findItemByName("소심");
                         case 4:
-                            return ItemDatabase.instance.findItemByName("용학살창");
+                            return ItemDatabase.instance.findItemByName("페보니우스 장창");
                     }
                 }
                 else
                 {
-                    int range = Random.Range(0, 55); // 무기 + 캐릭터 개수
+                    int range = Random.Range(0, CHARACTER_COUNT_FOUR_STAR + WEAPON_COUNT_UNDER_FOUR_STAR + 1); // 무기 + 캐릭터 개수
 
-                    if (range < 14) // 캐릭터 개수
+                    if (range < CHARACTER_COUNT_FOUR_STAR + 1) // 캐릭터 개수
                     {
                         return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
                     }

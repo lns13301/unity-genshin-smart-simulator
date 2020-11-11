@@ -32,6 +32,7 @@ public class InventoryManager : MonoBehaviour
     public int nowInformationSlotIndex;
 
     public string ARE_YOU_SURE;
+    public string ARE_YOU_SURE_EN;
 
     public int noticeState = 0;
 
@@ -92,6 +93,7 @@ public class InventoryManager : MonoBehaviour
         information.SetActive(false);
 
         ARE_YOU_SURE = "정말로 하시겠습니까? \n\n 복구가 " + GetColorText("불가능", "d91d2f") + " 합니다.";
+        ARE_YOU_SURE_EN = "Are you sure you want to proceed?\n\n Recovery is " + GetColorText("not possible", "d91d2f") + ".";
 
         information.transform.GetChild(4).gameObject.SetActive(false);
         inventorySet.SetActive(false);
@@ -368,7 +370,15 @@ public class InventoryManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
-        noticeText.text = ARE_YOU_SURE;
+
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            noticeText.text = ARE_YOU_SURE;
+        }
+        else
+        {
+            noticeText.text = ARE_YOU_SURE_EN;
+        }
     }
     public void OffNotice()
     {
@@ -391,7 +401,16 @@ public class InventoryManager : MonoBehaviour
         OffInformation();
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
-        noticeText.text = "선택된 아이템을 " + GetColorText("파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
+
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            noticeText.text = "선택된 아이템을 " + GetColorText("파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
+        }
+        else
+        {
+            noticeText.text = "Do you want to " + GetColorText("destroy", GameManager.instance.RED_COLOR) + " selected item.";
+        }
+
         noticeState = 0; // 선택된 아이템 파괴
     }
 
@@ -399,7 +418,16 @@ public class InventoryManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
-        noticeText.text = "정말로 해당등급의 장비아이템을 " + GetColorText("모두 파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
+
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            noticeText.text = "정말로 해당등급의 장비아이템을 " + GetColorText("모두 파괴", GameManager.instance.RED_COLOR) + "하시겠습니까?";
+        }
+        else
+        {
+            noticeText.text = "Do you want to " + GetColorText("destroy all", GameManager.instance.RED_COLOR) + " selected items.";
+        }
+
         noticeState = grade; // notice state 로 제어
     }
 
@@ -410,17 +438,24 @@ public class InventoryManager : MonoBehaviour
         starlightResult = 0;
         stardustResult = 0;
 
+        bool isBreakable = false;
+
         if (noticeState == 0)
         {
-            DoBreakWeapon(nowInformationSlotIndex);
+            isBreakable = DoBreakWeapon(nowInformationSlotIndex);
         }
         else if (noticeState == 3)
         {
-            DoBreakWeaponAll(Grade.EPIC);
+            isBreakable = DoBreakWeaponAll(Grade.EPIC);
         }
         else if (noticeState == 4)
         {
-            DoBreakWeaponAll(Grade.UNIQUE);
+            isBreakable = DoBreakWeaponAll(Grade.UNIQUE);
+        }
+
+        if (!isBreakable)
+        {
+            return;
         }
 
         GameManager.instance.SavePlayerDataToJson();
@@ -428,26 +463,34 @@ public class InventoryManager : MonoBehaviour
         Refresh();
     }
 
-    public void DoBreakWeaponAll(Grade grade)
+    public bool DoBreakWeaponAll(Grade grade)
     {
+        bool isBreakable = false;
+
         for (int i = 0; i < weapons.Count;)
         {
             if (weapons[i].grade == grade)
             {
                 SetBreskResultStarDustOrStarLight(weapons[i]);
                 weapons.RemoveAt(i);
+                isBreakable = true;
+
                 continue;
             }
 
             // Destroy(content.transform.GetChild(i).gameObject);
             i++;
         }
+
+        return isBreakable;
     }
 
-    public void DoBreakWeapon(int slotNumber)
+    public bool DoBreakWeapon(int slotNumber)
     {
         SetBreskResultStarDustOrStarLight(weapons[slotNumber]);
         weapons.RemoveAt(slotNumber);
+
+        return true;
         // Destroy(content.transform.GetChild(slotNumber).gameObject); content 안에 index를 어차피 재정의 해줘야함
     }
 

@@ -38,6 +38,12 @@ public class GameManager : MonoBehaviour
     public GameObject detail;
     public Transform detailContent;
 
+    public string LACK_OF_WISH_EN = "You don't have enough wish.";
+    public string UPDATE_YET_EN = "This feature has not been added yet.\n\nPlease wait for further updates!";
+    private string WANT_SKIP_EN = "Would you like to skip it?";
+    public string END_DATE_EN = "Your trial period has ended.";
+    public string WARNING_EN;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +64,7 @@ public class GameManager : MonoBehaviour
         Invoke("isValidTimeOver", 1f);
 
         WARNING = GetColorText("! 경고 !", RED_COLOR);
+        WARNING_EN = GetColorText("! WARNING !", RED_COLOR);
 
         SetDetailText();
     }
@@ -77,12 +84,12 @@ public class GameManager : MonoBehaviour
 
         detailContent.GetChild(0).GetComponent<Text>().text = "확률 정보입니다.";
         detailContent.GetChild(1).GetComponent<Text>().text = 
-            GetColorText("번쩍이는 화염 이벤트 기원", "9958b3") + " : " + GetColorText("75회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR) 
+            GetColorText("겨울 나라와의 이별 이벤트 기원", "9958b3") + " : " + GetColorText("75회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR) 
             + "이후부터 " + GetColorText("32.323%", RED_COLOR) + "확률로 " + GetColorText("5성", ORANGE_COLOR) + "이 등장합니다.\n"
             + "(기본 " + GetColorText("0.6%", RED_COLOR) + "에서 최대 " + GetColorText("1.6%", RED_COLOR) 
             + "로 최대 " + GetColorText("90", RED_COLOR) + "회차에 확정적으로 " + GetColorText("5성 획득", ORANGE_COLOR) + "이 가능합니다.)";
         detailContent.GetChild(2).GetComponent<Text>().text =
-            GetColorText("번쩍이는 화염 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", " 
+            GetColorText("겨울 나라와의 이별 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", " 
             + GetColorText("4회차", RED_COLOR) + " 이후부터 " + GetColorText("1회", RED_COLOR) + "당 " + GetColorText("1.58%", RED_COLOR) + "씩 증가\n" +
             "(최대 " + GetColorText("13%", RED_COLOR) + " 로 최대 " + GetColorText("10회차", RED_COLOR) + "에 확정적으로 " 
             + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";
@@ -171,7 +178,7 @@ public class GameManager : MonoBehaviour
     [ContextMenu("To Json Data")]
     public void SavePlayerDataToJson()
     {
-        Debug.Log("저장 성공");
+        // Debug.Log("저장 성공");
 
         string jsonData = JsonUtility.ToJson(playerData, true);
         File.WriteAllText(SaveOrLoad(isMobile, true, "ggsdata"), AESCrypto.AESEncrypt128(jsonData));
@@ -280,8 +287,22 @@ public class GameManager : MonoBehaviour
         OffNoticeAll();
 
         SoundManager.instance.PlayOneShotEffectSound(1);
+
+        SetNoticeText();
         notice.SetActive(true);
-        noticeText.text = WANT_SKIP;
+    }
+
+    // 도저히 어디서 건너뛰시겠습니까를 변경시키는지 모르겠음...
+    private void SetNoticeText()
+    {
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            noticeText.text = WANT_SKIP;
+        }
+        else
+        {
+            noticeText.text = WANT_SKIP_EN;
+        }
     }
 
     public void OnInformationNotYet()
@@ -309,22 +330,52 @@ public class GameManager : MonoBehaviour
         OffNoticeAll();
 
         information.SetActive(true);
-
-        informationText.text = item.koName;
+        
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            informationText.text = item.koName;
+        }
+        else
+        {
+            informationText.text = item.enName;
+        }
 
         string[] character = new string[2];
+        Language language = LanguageManager.instance.language;
 
         if (item.type == ItemType.CHARACTER)
         {
-            character = item.GetCharacterNameWithColor();
+            if (language == Language.KOREAN)
+            {
+                character = item.GetCharacterNameWithColorKorean();
+            }
+            else
+            {
+                character = item.GetCharacterNameWithColorEnglish();
+            }
+
             informationText.text += NEW_LINE + NEW_LINE + GetColorText(character[1], character[0]);
         }
         else
         {
-            informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemTypeToKorean(), "37946e");
+            if (language == Language.KOREAN)
+            {
+                informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemTypeToKorean(), "37946e");
+            }
+            else
+            {
+                informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemTypeToEnglish(), "37946e");
+            }
         }
 
-        informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToKorean(), "d95763");
+        if (language == Language.KOREAN)
+        {
+            informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToKorean(), "d95763");
+        }
+        else
+        {
+            informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToEnglish(), "d95763");
+        }
     }
 
     public void ShowLackOfWish(int limit = 10, bool isAcquantFateWish = false)
@@ -333,11 +384,25 @@ public class GameManager : MonoBehaviour
 
         if (isAcquantFateWish)
         {
-            informationText.text = "만남의 인연이 " + GetColorText("" + (limit - playerData.acquantFateCount), ORANGE_COLOR) + "개 부족합니다.";
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                informationText.text = "만남의 인연이 " + GetColorText("" + (limit - playerData.acquantFateCount), ORANGE_COLOR) + "개 부족합니다.";
+            }
+            else
+            {
+                informationText.text = "You need " + GetColorText("" + (limit - playerData.acquantFateCount), ORANGE_COLOR) + " more acquant fate.";
+            }
         }
         else
         {
-            informationText.text = "뒤얽힌 인연이 " + GetColorText("" + (limit - playerData.intertwinedFateCount), ORANGE_COLOR) + "개 부족합니다.";
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                informationText.text = "뒤얽힌 인연이 " + GetColorText("" + (limit - playerData.intertwinedFateCount), ORANGE_COLOR) + "개 부족합니다.";
+            }
+            else
+            {
+                informationText.text = "You need " + GetColorText("" + (limit - playerData.intertwinedFateCount), ORANGE_COLOR) + " more intertwined fate.";
+            }
         }
 
         AdMobReward.instance.ButtonAd();
@@ -378,8 +443,18 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         information.SetActive(true);
-        informationText.text = WARNING + "\n\n장비 인벤토리의 최대 보유 수량은 " + GetColorText("200", ORANGE_COLOR) + "개 입니다.\n\n"
-            + "인벤토리 최대수량을 초과하여 장비아이템을 수령할 경우\n일부 장비아이템이 " + GetColorText("사라지게", RED_COLOR) + " 됩니다.\n\n"
-            + "인벤토리의 " + GetColorText("공간을 확보한 후", RED_COLOR) + " 재시도 해주세요.";
+
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            informationText.text = WARNING + "\n\n장비 인벤토리의 최대 보유 수량은 " + GetColorText("200", ORANGE_COLOR) + "개 입니다.\n\n"
+                + "인벤토리 최대수량을 초과하여 장비아이템을 수령할 경우\n일부 장비아이템이 " + GetColorText("사라지게", RED_COLOR) + " 됩니다.\n\n"
+                + "인벤토리의 " + GetColorText("공간을 확보한 후", RED_COLOR) + " 재시도 해주세요.";
+        }
+        else
+        {
+            informationText.text = WARNING_EN + "\n\nThe maximum quantity of equipment inventory is " + GetColorText("200", ORANGE_COLOR) + ".\n\n"
+                + "Some items that will receive equipment items \nin excess of the maximum quantity of inventory will " + GetColorText("disappear", RED_COLOR) + ".\n\n"
+                + "Please try again " + GetColorText("after securing space in the inventory", RED_COLOR) + ".";
+        }
     }
 }

@@ -55,6 +55,8 @@ public class PlayerData
 
     public List<int> usedCoupon;
 
+    public Language language;
+
     public bool AddCharacter(Item item)
     {
         for (int i = 0; i < characters.Count; i++)

@@ -151,12 +151,27 @@ public class AdMobReward : MonoBehaviour
 
         if (count > 0)
         {
-            noticeText.text = "광고를 시청하고 만남의 인연, 뒤얽힌 인연을 획득하시겠습니까?";
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                noticeText.text = "광고를 시청하고 만남의 인연, 뒤얽힌 인연을 획득하시겠습니까?";
+            }
+            else
+            {
+                noticeText.text = "Would you like to watch the ad and get acquant fate and intertwined fate?";
+            }
         }
         else
         {
-            noticeText.text = "현재 준비된 광고를 모두 시청하였습니다.\n\n" 
-                + GameManager.instance.GetColorText("1", GameManager.instance.ORANGE_COLOR) + " 시간 후에 다시 시도해주세요. \n\n (매 정시에 초기화 됩니다.)";
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                noticeText.text = "현재 준비된 광고를 모두 시청하였습니다.\n\n"
+                    + GameManager.instance.GetColorText("1", GameManager.instance.ORANGE_COLOR) + " 시간 후에 다시 시도해주세요. \n\n (매 정시에 초기화 됩니다.)";
+            }
+            else
+            {
+                 noticeText.text = "You've watched all the advertisements that are currently ready.\n\n" + "Please try again in "
+                    + GameManager.instance.GetColorText("an", GameManager.instance.ORANGE_COLOR) + " hour. \n\n (It will be initialized on time.)";
+            }
         }
     }
 

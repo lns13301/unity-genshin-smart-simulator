@@ -32,6 +32,7 @@ public class ItemFrame : MonoBehaviour
     {
         GameManager.instance.OffNoticeAll();
         SoundManager.instance.PlayOneShotEffectSound(1);
+        Language language = LanguageManager.instance.language;
 
         if (isItemFrame)
         {
@@ -52,25 +53,61 @@ public class ItemFrame : MonoBehaviour
             information.transform.GetChild(4).gameObject.SetActive(true);
         }
 
-        informationText.text = item.koName;
+        if (language == Language.KOREAN)
+        {
+            informationText.text = item.koName;
+        }
+        else
+        {
+            informationText.text = item.enName;
+        }
 
         string[] character = new string[2];
 
         if (item.type == ItemType.CHARACTER)
         {
-            character = item.GetCharacterNameWithColor();
+            if (language == Language.KOREAN)
+            {
+                character = item.GetCharacterNameWithColorKorean();
+            }
+            else
+            {
+                character = item.GetCharacterNameWithColorEnglish();
+            }
+
             informationText.text += NEW_LINE + NEW_LINE + GetColorText(character[1], character[0]);
         }
         else
         {
-            informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemTypeToKorean(), "37946e");
+            if (language == Language.KOREAN)
+            {
+                informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemTypeToKorean(), "37946e");
+            }
+            else
+            {
+                informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemTypeToEnglish(), "37946e");
+            }
         }
 
-        informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToKorean(), "d95763");
+        if (language == Language.KOREAN)
+        {
+            informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToKorean(), "d95763");
+        }
+        else
+        {
+            informationText.text += NEW_LINE + NEW_LINE + GetColorText(item.GetItemGradeToEnglish(), "d95763");
+        }
 
         if (!isItemFrame)
         {
-            informationText.text += NEW_LINE + NEW_LINE + GetColorText("" + item.count, "e85f37") + " 개";
+            if (language == Language.KOREAN)
+            {
+                informationText.text += NEW_LINE + NEW_LINE + GetColorText("" + item.count, "e85f37") + " 개";
+            }
+            else
+            {
+                informationText.text += NEW_LINE + NEW_LINE + GetColorText("" + item.count, "e85f37") + " ea";
+            }
         }
     }
 
@@ -127,7 +164,8 @@ public class ItemFrame : MonoBehaviour
 
         if (isItemFrame) 
         {
-            indexText.text = "최근 " + GetColorText("" + index, "e59e00") + "번째";
+            // indexText.text = "최근 " + GetColorText("" + index, "e59e00") + "번째";
+            indexText.text = GetColorText("" + index, "e59e00");
         }
         else
         {
