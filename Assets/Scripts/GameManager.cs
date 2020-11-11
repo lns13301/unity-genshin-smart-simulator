@@ -196,8 +196,9 @@ public class GameManager : MonoBehaviour
         catch (FileNotFoundException)
         {
             Debug.Log("로드 오류");
-            playerData.acquantFateCount = 10;
-            playerData.intertwinedFateCount = 10;
+
+            playerData.acquantFateCount = 100;
+            playerData.intertwinedFateCount = 100;
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
@@ -377,7 +378,7 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         information.SetActive(true);
-        informationText.text = WARNING + "\n\n장비 인벤토리의 최대 보유 수량은 " + GetColorText("300", ORANGE_COLOR) + "개 입니다.\n\n"
+        informationText.text = WARNING + "\n\n장비 인벤토리의 최대 보유 수량은 " + GetColorText("200", ORANGE_COLOR) + "개 입니다.\n\n"
             + "인벤토리 최대수량을 초과하여 장비아이템을 수령할 경우\n일부 장비아이템이 " + GetColorText("사라지게", RED_COLOR) + " 됩니다.\n\n"
             + "인벤토리의 " + GetColorText("공간을 확보한 후", RED_COLOR) + " 재시도 해주세요.";
     }

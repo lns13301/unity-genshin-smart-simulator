@@ -94,7 +94,7 @@ public class AdMobReward : MonoBehaviour
     public void HandleOnAdFailedToLoad(object sender, AdErrorEventArgs args)
     {
         GameManager.instance.information.SetActive(true);
-        GameManager.instance.informationText.text = "광고 로드에 실패했습니다.";
+        GameManager.instance.informationText.text = "광고 로드에 실패했습니다.\n\n" + args.Message;
     }
     //광고 보여주기를 실패했을 때
     public void HandleOnAdFailedToShow(object sender, AdErrorEventArgs args)

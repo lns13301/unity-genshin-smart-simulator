@@ -47,7 +47,7 @@ public class ItemFrame : MonoBehaviour
 
         information.SetActive(true);
         
-        if (item.type != ItemType.CHARACTER)
+        if (!isItemFrame && item.type != ItemType.CHARACTER)
         {
             information.transform.GetChild(4).gameObject.SetActive(true);
         }

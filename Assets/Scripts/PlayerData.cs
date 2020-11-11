@@ -73,7 +73,7 @@ public class PlayerData
     // 인벤토리 무기 최대 보유 수량 조정
     public bool AddWeapon(Item item)
     {
-        if (weapons.Count > 300)
+        if (weapons.Count > 200)
         {
             return false;
         }
@@ -131,27 +131,27 @@ public class PlayerData
 
     private void SetHistoryRecent()
     {
-        while (normalHistory.Count > 190)
+        while (normalHistory.Count > 100)
         {
             normalHistory.RemoveAt(0);
         }
 
-        while (characterHistory.Count > 190)
+        while (characterHistory.Count > 100)
         {
             characterHistory.RemoveAt(0);
         }
 
-        while (weaponHistory.Count > 190)
+        while (weaponHistory.Count > 100)
         {
             weaponHistory.RemoveAt(0);
         }
 
-        while (noelleHistory.Count > 190)
+        while (noelleHistory.Count > 100)
         {
             noelleHistory.RemoveAt(0);
         }
 
-        while (limitedHistory.Count > 190)
+        while (limitedHistory.Count > 100)
         {
             limitedHistory.RemoveAt(0);
         }

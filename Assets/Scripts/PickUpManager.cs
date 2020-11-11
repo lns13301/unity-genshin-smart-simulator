@@ -7,17 +7,17 @@ using UnityEngine.UI;
 public class PickUpManager : MonoBehaviour
 {
     // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private int MIN_EPIC_WEAPON = 21;
-    private int MAX_EPIC_WEAPON = 45 + 1;
-    private int MIN_UNIQUE_WEAPON = 46;
-    private int MAX_UNIQUE_WEAPON = 63 + 1;
-    private int MIN_LEGEND_WEAPON = 64;
-    private int MAX_LEGEND_WEAPON = 73 + 1;
+    private int MIN_EPIC_WEAPON = 23;
+    private int MAX_EPIC_WEAPON = 47 + 1;
+    private int MIN_UNIQUE_WEAPON = 48;
+    private int MAX_UNIQUE_WEAPON = 65 + 1;
+    private int MIN_LEGEND_WEAPON = 66;
+    private int MAX_LEGEND_WEAPON = 75 + 1;
 
     private int MIN_UNIQUE_CHARACTER = 0;
-    private int MAX_UNIQUE_CHARACTER = 13 + 1;
-    private int MIN_LEGEND_CHARACTER = 14;
-    private int MAX_LEGEND_CHARACTER = 18 + 1;
+    private int MAX_UNIQUE_CHARACTER = 14 + 1;
+    private int MIN_LEGEND_CHARACTER = 15;
+    private int MAX_LEGEND_CHARACTER = 19 + 1;
 
     public static PickUpManager instance;
     public GameObject panel;
@@ -67,7 +67,7 @@ public class PickUpManager : MonoBehaviour
         }
 
         // 인벤토리 수령가능 공간 확인
-        if (GameManager.instance.GetPlayerData().weapons.Count > 290)
+        if (GameManager.instance.GetPlayerData().weapons.Count > 190)
         {
             GameManager.instance.OnNoticeWeaponInventoryFull();
             return;
@@ -87,7 +87,7 @@ public class PickUpManager : MonoBehaviour
 
                 for (int i = 0; i < grades.Length; i++)
                 {
-                    result[i] = getRandomItem(grades[i], PickUpType.CHARACTER, playerData.isPickUpCharacterAlways);
+                    result[i] = GetRandomItem(grades[i], PickUpType.CHARACTER, playerData.isPickUpCharacterAlways, playerData.isPickUpCharacter4Always);
                     playerData.AddItemAndHistory(result[i], buttonType);
                 }
 
@@ -108,7 +108,7 @@ public class PickUpManager : MonoBehaviour
 
                 for (int i = 0; i < grades.Length; i++)
                 {
-                    result[i] = getRandomItem(grades[i], PickUpType.WEAPON, playerData.isPickUpWeaponAlways, playerData.isPickUpWeapon4Always);
+                    result[i] = GetRandomItem(grades[i], PickUpType.WEAPON, playerData.isPickUpWeaponAlways, playerData.isPickUpWeapon4Always);
                     playerData.AddItemAndHistory(result[i], buttonType);
                 }
 
@@ -128,7 +128,7 @@ public class PickUpManager : MonoBehaviour
 
                 for (int i = 0; i < grades.Length; i++)
                 {
-                    result[i] = getRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways, playerData.isPickUpCharacter4Always);
+                    result[i] = GetRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways);
                     playerData.AddItemAndHistory(result[i], buttonType);
                 }
 
@@ -148,7 +148,7 @@ public class PickUpManager : MonoBehaviour
 
                 for (int i = 0; i < grades.Length; i++)
                 {
-                    result[i] = getRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways);
+                    result[i] = GetRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways);
 
                     if (i == 0 && !playerData.hasFirstTimeNoelle && grades[0] != Grade.LEGEND)
                     {
@@ -679,7 +679,7 @@ public class PickUpManager : MonoBehaviour
         return grades;
     }
 
-    public Item getRandomItem(Grade grade, PickUpType pickUpType, bool isPickUpAlways = false, bool isPickUp4Always = false)
+    public Item GetRandomItem(Grade grade, PickUpType pickUpType, bool isPickUpAlways = false, bool isPickUp4Always = false)
     {
         if (grade == Grade.LEGEND)
         {
@@ -727,7 +727,7 @@ public class PickUpManager : MonoBehaviour
                 {
                     playerData.isPickUpCharacterAlways = false;
 
-                    return ItemDatabase.instance.itemDB[6];
+                    return ItemDatabase.instance.findItemByName("타르탈리아");
                 }
                 else
                 {
@@ -804,11 +804,11 @@ public class PickUpManager : MonoBehaviour
                     switch (value)
                     {
                         case 0:
-                            return ItemDatabase.instance.findItemByName("노엘");
+                            return ItemDatabase.instance.findItemByName("북두");
                         case 1:
-                            return ItemDatabase.instance.findItemByName("설탕");
+                            return ItemDatabase.instance.findItemByName("응광");
                         case 2:
-                            return ItemDatabase.instance.findItemByName("행추");
+                            return ItemDatabase.instance.findItemByName("디오나");
                     }
 
                     return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];

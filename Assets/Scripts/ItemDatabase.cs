@@ -29,7 +29,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile = new ItemDataFile();
         itemDataFile.itemDatas = new List<Item>();
 
-        // saveItemData();
+        //saveItemData();
         loadItemData();
 
         //spawnItem();
@@ -100,34 +100,34 @@ public class ItemDatabase : MonoBehaviour
         Debug.Log("저장 성공");
         itemDataFile.itemDatas = new List<Item>();
 
-        itemDataFile.itemDatas.Add(new Item(0, "Amber", "엠버", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Amber", new Character(114, Element.PYRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(1, "Kaeya", "케이야", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Kaeya", new Character(109, Element.CRYO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(2, "Lisa", "리사", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Lisa", new Character(110, Element.ELECTRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(3, "Barbara", "바바라", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Barbara", new Character(104, Element.HYDRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(4, "Xiangling", "향릉", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Xiangling", new Character(103, Element.PYRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(5, "Razor", "레이저", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Razor", new Character(102, Element.ELECTRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(6, "Bennett", "베넷", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Bennett", new Character(105, Element.PYRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(7, "Xingqiu", "행추", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Xingqiu", new Character(107, Element.HYDRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(8, "Beidou", "북두", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Beidou", new Character(108, Element.ELECTRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(9, "Sucrose", "설탕", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Sucrose", new Character(113, Element.ANEMO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(10, "Ningguang", "응광", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Ningguang", new Character(111, Element.GEO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(11, "Noelle", "노엘", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Noelle", new Character(112, Element.GEO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(12, "Fischl", "피슬", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Fischl", new Character(101, Element.ELECTRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(13, "Chongyun", "중운", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Chongyun", new Character(106, Element.CRYO, Grade.UNIQUE)));        
-        /*itemDataFile.itemDatas.Add(new Item(14, "Diona", "디오나", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Noelle", new Character(115, Element.CRYO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(15, "Xinyan", "신염", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Noelle", new Character(116, Element.PYRO, Grade.UNIQUE)));*/
+        itemDataFile.itemDatas.Add(new Item(0, "Amber", "엠버", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Amber", new Character(0, Element.PYRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(1, "Kaeya", "케이야", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Kaeya", new Character(1, Element.CRYO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(2, "Lisa", "리사", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Lisa", new Character(2, Element.ELECTRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(3, "Barbara", "바바라", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Barbara", new Character(3, Element.HYDRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(4, "Xiangling", "향릉", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Xiangling", new Character(4, Element.PYRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(5, "Razor", "레이저", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Razor", new Character(5, Element.ELECTRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(6, "Bennett", "베넷", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Bennett", new Character(6, Element.PYRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(7, "Xingqiu", "행추", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Xingqiu", new Character(7, Element.HYDRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(8, "Beidou", "북두", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Beidou", new Character(8, Element.ELECTRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(9, "Sucrose", "설탕", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Sucrose", new Character(9, Element.ANEMO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(10, "Ningguang", "응광", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Ningguang", new Character(10, Element.GEO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(11, "Noelle", "노엘", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Noelle", new Character(11, Element.GEO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(12, "Fischl", "피슬", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Fischl", new Character(12, Element.ELECTRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(13, "Chongyun", "중운", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Chongyun", new Character(13, Element.CRYO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(14, "Diona", "디오나", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Diona", new Character(14, Element.CRYO, Grade.UNIQUE)));
+        //itemDataFile.itemDatas.Add(new Item(15, "Xinyan", "신염", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "ShinYeom", new Character(15, Element.PYRO, Grade.UNIQUE)));
 
-        itemDataFile.itemDatas.Add(new Item(500, "Diluc", "다이루크", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Diluc", new Character(1, Element.PYRO, Grade.LEGEND)));
-        itemDataFile.itemDatas.Add(new Item(501, "Mona", "모나", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Mona", new Character(5, Element.HYDRO, Grade.LEGEND)));
-        itemDataFile.itemDatas.Add(new Item(502, "Keqing", "각청", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Keqing", new Character(2, Element.ELECTRO, Grade.LEGEND)));
-        itemDataFile.itemDatas.Add(new Item(503, "QiQi", "치치", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "QiQi", new Character(3, Element.CRYO, Grade.LEGEND)));
-        itemDataFile.itemDatas.Add(new Item(504, "Jean", "진", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Jean", new Character(4, Element.ANEMO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(500, "Diluc", "다이루크", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Diluc", new Character(500, Element.PYRO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(501, "Mona", "모나", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Mona", new Character(501, Element.HYDRO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(502, "Keqing", "각청", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Keqing", new Character(502, Element.ELECTRO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(503, "QiQi", "치치", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "QiQi", new Character(503, Element.CRYO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(504, "Jean", "진", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Jean", new Character(504, Element.ANEMO, Grade.LEGEND)));
 
-        itemDataFile.itemDatas.Add(new Item(600, "Venti", "벤티", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Venti", new Character(50, Element.ANEMO, Grade.LEGEND)));
-        itemDataFile.itemDatas.Add(new Item(601, "Klee", "클레", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Klee", new Character(51, Element.PYRO, Grade.LEGEND)));
-        /*itemDataFile.itemDatas.Add(new Item(602, "Zhongli", "종려", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Zhongli", new Character(9, Element.GEO, Grade.LEGEND)));
-        itemDataFile.itemDatas.Add(new Item(603, "Tartaglia", "타르탈리안", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Tartaglia", new Character(10, Element.HYDRO, Grade.LEGEND)));*/
-        //itemDataFile.itemDatas.Add(new Item(604, "Xiao", "소", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Xiao", new Character(52, Element.ANEMO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(700, "Venti", "벤티", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Venti", new Character(700, Element.ANEMO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(701, "Klee", "클레", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Klee", new Character(701, Element.PYRO, Grade.LEGEND)));
+        itemDataFile.itemDatas.Add(new Item(702, "Tartaglia", "타르탈리아", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Tartaglia", new Character(702, Element.HYDRO, Grade.LEGEND)));
+        //itemDataFile.itemDatas.Add(new Item(703, "Zhongli", "종려", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Zhongli", new Character(703, Element.GEO, Grade.LEGEND)));
+        //itemDataFile.itemDatas.Add(new Item(704, "Xiao", "소", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Xiao", new Character(704, Element.ANEMO, Grade.LEGEND)));
 
         itemDataFile.itemDatas.Add(new Item(1000, "Cool Steel", "차가운 칼날", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Cool Steel"));
         itemDataFile.itemDatas.Add(new Item(1001, "Dark Iron Sword", "암철검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Dark Iron Sword"));

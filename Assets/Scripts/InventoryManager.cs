@@ -439,6 +439,7 @@ public class InventoryManager : MonoBehaviour
                 continue;
             }
 
+            // Destroy(content.transform.GetChild(i).gameObject);
             i++;
         }
     }
@@ -447,6 +448,7 @@ public class InventoryManager : MonoBehaviour
     {
         SetBreskResultStarDustOrStarLight(weapons[slotNumber]);
         weapons.RemoveAt(slotNumber);
+        // Destroy(content.transform.GetChild(slotNumber).gameObject); content 안에 index를 어차피 재정의 해줘야함
     }
 
     public void OffInformation()
