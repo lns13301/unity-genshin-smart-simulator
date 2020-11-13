@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -467,5 +467,10 @@ public class GameManager : MonoBehaviour
                 + "Some items that will receive equipment items \nin excess of the maximum quantity of inventory will " + GetColorText("disappear", RED_COLOR) + ".\n\n"
                 + "Please try again " + GetColorText("after securing space in the inventory", RED_COLOR) + ".";
         }
+    }
+
+    public void ChangeScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }

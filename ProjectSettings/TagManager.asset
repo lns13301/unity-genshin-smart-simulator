@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Effect
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,7 @@ TagManager:
     locked: 0
   - name: UIParticle
     uniqueID: 2986039283
+    locked: 0
+  - name: SpriteButton
+    uniqueID: 858273043
     locked: 0

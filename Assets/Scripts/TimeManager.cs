@@ -110,6 +110,26 @@ public class TimeManager : MonoBehaviour
         return GetYear() + "년 " + GetMonth() + "월 " + GetDay() + "일";
     }
 
+    public int[] GetCurrentTime()
+    {
+        string[] time = _currentTime.Split(':');
+        string[] date = _currentDate.Split('-'); // 월-일-년
+
+        int[] answer = new int[3];
+
+        for (int i = 0; i < 3; i++)
+        {
+            answer[i] = int.Parse(time[i]);
+        }
+        
+        for (int i = 0; i < 3; i++)
+        {
+            answer[i + 3] = int.Parse(date[i]);
+        }
+
+        return answer;
+    }
+
     public int[] GetKoreaCurrentTime()
     {
         string[] time = _currentTime.Split(':');
@@ -164,4 +184,155 @@ public class TimeManager : MonoBehaviour
 
         return playerData.adCount;
     }
+
+    // 기기 내의 시간 활용
+
+/*    public bool isExpiredRegenTime(int[] lootedTime, int regenTime)
+    {
+        long year = GetYear();
+        long month = GetMonth();
+        long day = GetDay();
+        long hour = GetHour();
+
+        int lastMonthDayCount = GetDayCount(lootedTime[1]);
+
+        int[] expiredTime = GetAfterTime(lootedTime, regenTime);
+        long coolRegenTimeValue = GetAfterTimeValue(expiredTime);
+        long NowTimeValue = hour + (day * 24) + (month * lastMonthDayCount * 24) + (year * 365 * 24);
+
+        if (NowTimeValue > coolRegenTimeValue)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public int[] GetAfterTime(int[] lootedTime, int regenTime) // 년, 월, 일, 시까지 반환 int[4]
+    {
+        int year = lootedTime[0];
+        int month = lootedTime[1];
+        int day = lootedTime[2];
+        int hour = lootedTime[3] + regenTime;
+        int thisMonthDayCount = GetDayCount(lootedTime[1]);
+
+        while (hour >= 24)
+        {
+            hour -= 24;
+            day++;
+        }
+
+        if (GetDay() > thisMonthDayCount)
+        {
+            Debug.Log(GetDay() + ", " + thisMonthDayCount);
+            day = 1;
+            month++;
+        }
+
+        if (month > 12)
+        {
+            month = 1;
+            year++;
+        }
+
+        int[] answer = new int[4];
+
+        answer[0] = year;
+        answer[1] = month;
+        answer[2] = day;
+        answer[3] = hour;
+
+        return answer;
+    }
+
+
+    public long GetAfterTimeValue(int[] answer)
+    {
+        return answer[3] + (answer[2] * 24) + (answer[1] * GetDayCount(answer[1]) * 24) + (answer[0] * 365 * 24);
+    }
+
+    public int GetDayCount(int month)
+    {
+        if (month != GetMonth())
+        {
+            switch (month)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    month = 31;
+                    break;
+                case 2:
+                    if (GetYear() % 4 == 0)
+                    {
+                        month = 29;
+                    }
+                    else
+                    {
+                        month = 28;
+                    }
+                    break;
+                default:
+                    month = 30;
+                    break;
+            }
+        }
+
+        Debug.Log("리턴값 : " + month);
+
+        return month;
+    }
+
+    public int[] GetIntervalTime(int[] lootedTime, int[] expiredTime)
+    {
+        int[] result = new int[6];
+
+        for (int i = 0; i < lootedTime.Length; i++)
+        {
+            result[i] = expiredTime[i] - lootedTime[i];
+        }
+
+        return result;
+    }*/
 }
+
+
+// 서버 시간 가져오기
+/*public static TimeManager sharedInstance;
+public string url = "http://naver.com";
+
+private void Awake()
+{
+    sharedInstance = this;
+}
+
+IEnumerator WebChk()
+{
+    UnityWebRequest request = new UnityWebRequest();
+    using (request = UnityWebRequest.Get(url))
+    {
+        yield return request.SendWebRequest();
+
+        if (request.isNetworkError)
+        {
+            Debug.Log(request.error);
+        }
+        else
+        {
+            string date = request.GetResponseHeader("date");
+
+            DateTime dateTime = DateTime.Parse(date).ToUniversalTime();
+            TimeSpan timeSpan = dateTime - new DateTime(1970, 1, 1, 0, 0, 0);
+
+            int stopwatch =
+                (int)timeSpan.TotalSeconds - PlayerPrefs.GetInt("net", (int)timeSpan.TotalSeconds);
+
+            Debug.Log(stopwatch + "sec");
+            PlayerPrefs.SetInt("net", (int)timeSpan.TotalSeconds);
+        }
+    }
+}*/
