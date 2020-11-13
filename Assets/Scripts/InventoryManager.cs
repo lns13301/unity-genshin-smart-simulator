@@ -297,7 +297,7 @@ public class InventoryManager : MonoBehaviour
             go.GetComponent<ItemFrame>().SetItemWithBaseSetting(ItemDatabase.instance.makeItem(item), ++i, 0);
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-            CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());
+            // CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());
 
             if (item.type == ItemType.CHARACTER)
             {
@@ -339,6 +339,16 @@ public class InventoryManager : MonoBehaviour
 
         SoundManager.instance.PlayOneShotEffectSound(1);
         inventorySet.SetActive(true);
+
+        if (HistoryManager.instance.historySet.activeSelf)
+        {
+            HistoryManager.instance.historySet.SetActive(false);
+        }
+
+        if (GameManager.instance.detail.activeSelf)
+        {
+            GameManager.instance.detail.SetActive(false);
+        }
 
         SetInventory();
     }

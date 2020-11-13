@@ -134,6 +134,17 @@ public class GameManager : MonoBehaviour
     public void ButtonDetail()
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
+
+        if (HistoryManager.instance.historySet.activeSelf)
+        {
+            HistoryManager.instance.historySet.SetActive(false);
+        }
+
+        if (InventoryManager.instance.inventorySet.activeSelf)
+        {
+            InventoryManager.instance.inventorySet.SetActive(false);
+        }
+
         detail.SetActive(true);
     }
 

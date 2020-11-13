@@ -50,7 +50,7 @@ public class HistoryManager : MonoBehaviour
             go.GetComponent<ItemFrame>().SetItemWithBaseSetting(ItemDatabase.instance.makeItem(item), ++i, 0f);
             go.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-            CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());
+            // CanvasResolutionManager.instance.SetResolution(go.GetComponent<RectTransform>());
 
             // 타이틀 제목
 /*            GameObject title = go.transform.GetChild(0).gameObject;
@@ -76,6 +76,16 @@ public class HistoryManager : MonoBehaviour
     public void ButtonHistory()
     {
         GameManager.instance.OffNoticeAll();
+
+        if (GameManager.instance.detail.activeSelf)
+        {
+            GameManager.instance.detail.SetActive(false);
+        }
+
+        if (InventoryManager.instance.inventorySet.activeSelf)
+        {
+            InventoryManager.instance.inventorySet.SetActive(false);
+        }
 
         SoundManager.instance.PlayOneShotEffectSound(1);
         historySet.SetActive(true);

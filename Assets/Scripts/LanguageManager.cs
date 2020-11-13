@@ -116,7 +116,7 @@ public class LanguageManager : MonoBehaviour
             texts[1].text = "Details";
             texts[2].text = "History";
             texts[3].text = "Inventory";
-            texts[4].text = "Shop";
+            texts[4].text = "GET FATE";
             texts[5].text = "언어";
             texts[6].text = CONFIRM_EN; // details
             texts[7].text = CANCEL_EN; // inventory notice
