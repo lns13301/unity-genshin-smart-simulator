@@ -16,52 +16,52 @@ public class Resource : MonoBehaviour
     public static string SKY_BLUE_COLOR = "4e89f2";
 
     public ResourceData resourceData;
-
-    public bool isLooted;
-    public DateTime expiredTime;
-
-    public SpriteRenderer sprite;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        ShowLeftTime();
+
     }
 
     public void SetLootedTime()
     {
-        if (isLooted)
+        if (resourceData.isLooted)
         {
             return;
         }
 
-        expiredTime = DateTime.Now.AddHours(resourceData.regenTime);
+        resourceData.expiredTime = DateTime.Now.AddSeconds(resourceData.regenTime);
 
-        isLooted = true;
-        sprite.color = new Color(1, 1, 1, 0.4f);
+        resourceData.isLooted = true;
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         ParticleManager.instance.CreateEffect(transform.position, gameObject);
+
+        SaveThisData();
     }
 
     public void CancelLooting()
     {
-        expiredTime = DateTime.Now;
-        isLooted = false;
-        sprite.color = new Color(1, 1, 1, 1);
+        resourceData.expiredTime = DateTime.Now;
+        resourceData.isLooted = false;
+        spriteRenderer.color = new Color(1, 1, 1, 1);
+
+        SaveThisData();
     }
 
     public void ShowRegenTimer()
     {
         // 만료 확인
-        if ((expiredTime - DateTime.Now).TotalSeconds < 0)
+        if ((resourceData.expiredTime - DateTime.Now).TotalSeconds < 0)
         {
-            isLooted = false;
-            sprite.color = new Color(1, 1, 1, 1);
+            resourceData.isLooted = false;
+            spriteRenderer.color = new Color(1, 1, 1, 1);
         }
     }
 
@@ -70,14 +70,14 @@ public class Resource : MonoBehaviour
         ResourceInformation resourceInformation = ResourceInformation.instance;
         Language language = LanguageManager.instance.language;
 
-        if (isLooted)
+        if (resourceData.isLooted)
         {
             resourceInformation.texts[3].text = "리젠 날짜 : "
-                + GetColorText(expiredTime.ToString("MM"), BLUE_COLOR) + "월 " 
-                + GetColorText(expiredTime.ToString("dd"), BLUE_COLOR) + "일 "
-                + GetColorText(expiredTime.ToString("HH"), BLUE_COLOR) + "시 " 
-                + GetColorText(expiredTime.ToString("mm"), BLUE_COLOR) + "분 " 
-                + GetColorText(expiredTime.ToString("ss"), BLUE_COLOR) + "초";
+                + GetColorText(resourceData.expiredTime.ToString("MM"), BLUE_COLOR) + "월 " 
+                + GetColorText(resourceData.expiredTime.ToString("dd"), BLUE_COLOR) + "일 "
+                + GetColorText(resourceData.expiredTime.ToString("HH"), BLUE_COLOR) + "시 " 
+                + GetColorText(resourceData.expiredTime.ToString("mm"), BLUE_COLOR) + "분 " 
+                + GetColorText(resourceData.expiredTime.ToString("ss"), BLUE_COLOR) + "초";
         }
         else
         {
@@ -86,12 +86,14 @@ public class Resource : MonoBehaviour
 
         resourceInformation.texts[0].text = "이름 : " + resourceData.koName;
         resourceInformation.texts[1].text = "분포 개수 : " + GetColorText("" + resourceData.count, PINK_COLOR);
-        resourceInformation.texts[2].text = "리젠 시간 : " + GetColorText("" + resourceData.regenTime, ORANGE_COLOR) + "시간";
+        resourceInformation.texts[2].text = "리젠 시간 : " + GetColorText("" + resourceData.regenTime / 3600, ORANGE_COLOR) + "시간";
+
+        SaveThisData();
     }
 
-    private void ShowLeftTime()
+    public void ShowLeftTime()
     {
-        TimeSpan leftTime = expiredTime - DateTime.Now;
+        TimeSpan leftTime = resourceData.expiredTime - DateTime.Now;
         string timeColor = ORANGE_RED_COLOR;
 
         if (leftTime.TotalSeconds < 21600)
@@ -107,7 +109,12 @@ public class Resource : MonoBehaviour
             timeColor = ORANGE_COLOR;
         }
 
-        if (isLooted)
+        if (resourceData.isLooted && leftTime.TotalSeconds < 0)
+        {
+            CancelLooting(); // 나중에 수확기능으로 변경하던지..
+        }
+
+        if (resourceData.isLooted)
         {
             ResourceInformation.instance.texts[4].text = "남은 시간 : ";
 
@@ -143,5 +150,14 @@ public class Resource : MonoBehaviour
     {
         ResourceInformation.instance.OnInformation(this);
         SetTextAll();
+    }
+
+    public void SaveThisData()
+    {
+        transform.parent.GetComponent<ResourceParent>().resourceSaveDataFile.resourceSaveDatas[resourceData.index] = 
+            new ResourceSaveData(
+                resourceData.enName, resourceData.isLooted, transform.parent.GetComponent<ResourceParent>().SerializeDateTime(resourceData.expiredTime));
+
+        transform.parent.GetComponent<ResourceParent>().SaveResourceDataToJson();
     }
 }

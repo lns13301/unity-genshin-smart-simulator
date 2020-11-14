@@ -29,7 +29,7 @@ public class ResourceInformation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        resource.ShowLeftTime();
     }
 
     public void OnInformation(Resource resource)
@@ -39,8 +39,8 @@ public class ResourceInformation : MonoBehaviour
 
         this.resource = resource;
 
-        ButtonLoot.SetActive(!resource.isLooted);
-        ButtonCancelLoot.SetActive(resource.isLooted);
+        ButtonLoot.SetActive(!resource.resourceData.isLooted);
+        ButtonCancelLoot.SetActive(resource.resourceData.isLooted);
     }
 
     public void OffInformation()
