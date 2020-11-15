@@ -10,11 +10,14 @@ public class ScaleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < transform.GetChild(0).childCount; i++)
+        for (int h = 1; h < transform.childCount - 1; h++)
         {
-            for (int j = 0; j < transform.GetChild(0).GetChild(i).childCount; j++)
+            for (int i = 0; i < transform.GetChild(h).childCount; i++)
             {
-                resources.Add(transform.GetChild(0).GetChild(i).GetChild(j).transform);
+                for (int j = 0; j < transform.GetChild(h).GetChild(i).childCount; j++)
+                {
+                    resources.Add(transform.GetChild(h).GetChild(i).GetChild(j).transform);
+                }
             }
         }
     }

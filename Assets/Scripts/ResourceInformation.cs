@@ -18,8 +18,9 @@ public class ResourceInformation : MonoBehaviour
     {
         instance = this;
 
-        for (int i = 0; i < texts.Length; i++)
+        for (int i = 0; i < 5; i++)
         {
+            texts[i] = transform.GetChild(i).GetComponent<Text>();
             texts[i].supportRichText = true;
         }
 

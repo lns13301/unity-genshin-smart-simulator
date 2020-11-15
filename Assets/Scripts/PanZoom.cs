@@ -5,8 +5,8 @@ using UnityEngine;
 public class PanZoom : MonoBehaviour
 {
     Vector3 touchStart;
-    public float zoomOutMin = 1;
-    public float zoomOutMax = 8;
+    public float zoomOutMin;
+    public float zoomOutMax;
 
     public Vector2 pivot;
 

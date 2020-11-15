@@ -235,7 +235,10 @@ public enum ItemType
     WORLDQUEST,
     ANEMOCULUS,
     GEOCULUS,
-    MONSTER
+    MONSTER,
+    CULUS,
+    TREASURE,
+    EVENT
 }
 
 [System.Serializable]
