@@ -10,10 +10,12 @@ public class PanZoom : MonoBehaviour
 
     public Vector2 pivot;
 
+    public float actionPincTtimer;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && actionPincTtimer <= 0)
         {
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
@@ -31,8 +33,10 @@ public class PanZoom : MonoBehaviour
             float difference = currentMagnitude - prevMagnitude;
 
             zoom(difference * 0.01f);
+
+            actionPincTtimer = 0.5f;
         }
-        else if (Input.GetMouseButton(0))
+        else if (Input.GetMouseButton(0) && actionPincTtimer <= 0)
         {
             Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction;
@@ -40,6 +44,11 @@ public class PanZoom : MonoBehaviour
         zoom(Input.GetAxis("Mouse ScrollWheel"));
 
         FixOverFrontier(pivot);
+
+        if (actionPincTtimer > 0)
+        {
+            actionPincTtimer -= Time.deltaTime;
+        }
     }
 
     void zoom(float increment)

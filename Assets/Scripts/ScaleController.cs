@@ -17,6 +17,11 @@ public class ScaleController : MonoBehaviour
                 for (int j = 0; j < transform.GetChild(h).GetChild(i).childCount; j++)
                 {
                     resources.Add(transform.GetChild(h).GetChild(i).GetChild(j).transform);
+
+                    if (resources[i].GetComponent<Resource>().resourceData.isLooted)
+                    {
+                        resources[i].GetComponent<SpriteRenderer>().sortingOrder = -1;
+                    }
                 }
             }
         }

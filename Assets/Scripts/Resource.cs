@@ -42,6 +42,7 @@ public class Resource : MonoBehaviour
         resourceData.isLooted = true;
         spriteRenderer.color = new Color(1, 1, 1, 0.4f);
         ParticleManager.instance.CreateEffect(transform.position, gameObject);
+        spriteRenderer.sortingOrder = -1;
 
         SaveThisData();
     }
@@ -51,6 +52,7 @@ public class Resource : MonoBehaviour
         resourceData.expiredTime = DateTime.Now;
         resourceData.isLooted = false;
         spriteRenderer.color = new Color(1, 1, 1, 1);
+        spriteRenderer.sortingOrder = 0;
 
         SaveThisData();
     }
