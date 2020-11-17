@@ -88,7 +88,15 @@ public class Resource : MonoBehaviour
 
         resourceInformation.texts[0].text = "이름 : " + resourceData.koName;
         resourceInformation.texts[1].text = "분포 개수 : " + GetColorText("" + resourceData.count, PINK_COLOR);
-        resourceInformation.texts[2].text = "리젠 시간 : " + GetColorText("" + resourceData.regenTime / 3600, ORANGE_COLOR) + "시간";
+
+        if (resourceData.regenTime > 0)
+        {
+            resourceInformation.texts[2].text = "리젠 시간 : " + GetColorText("" + resourceData.regenTime / 3600, ORANGE_COLOR) + "시간";
+        }
+        else
+        {
+            resourceInformation.texts[2].text = "1회성 채집물입니다.";
+        }
 
         SaveThisData();
     }
