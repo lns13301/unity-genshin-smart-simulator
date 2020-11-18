@@ -10,6 +10,10 @@ public class ResourceParent : MonoBehaviour
     public ResourceSaveDataFile resourceSaveDataFile;
     public bool isMobile = true;
 
+    public ResourceData resourceData;
+
+    public int resourceTransformIndex;
+
     // public GameObject resourcePrefab;
 
     // Start is called before the first frame update

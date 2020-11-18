@@ -15,6 +15,11 @@ public class PanZoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ResourceMenuTab.instance.isMenuTabOn)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0) && actionPincTtimer <= 0)
         {
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -72,7 +72,11 @@ public class Resource : MonoBehaviour
         ResourceInformation resourceInformation = ResourceInformation.instance;
         Language language = LanguageManager.instance.language;
 
-        if (resourceData.isLooted)
+        if (resourceData.isLooted && resourceData.regenTime < 0)
+        {
+            resourceInformation.texts[3].text = "";
+        }
+        else if (resourceData.isLooted)
         {
             resourceInformation.texts[3].text = "리젠 날짜 : "
                 + GetColorText(resourceData.expiredTime.ToString("MM"), BLUE_COLOR) + "월 " 
@@ -119,12 +123,12 @@ public class Resource : MonoBehaviour
             timeColor = ORANGE_COLOR;
         }
 
-        if (resourceData.isLooted && leftTime.TotalSeconds < 0)
+        if (resourceData.isLooted && leftTime.TotalSeconds < 0 && resourceData.regenTime > 0)
         {
             CancelLooting(); // 나중에 수확기능으로 변경하던지..
         }
 
-        if (resourceData.isLooted)
+        if (resourceData.isLooted && resourceData.regenTime > 0)
         {
             ResourceInformation.instance.texts[4].text = "남은 시간 : ";
 

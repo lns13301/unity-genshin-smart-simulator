@@ -4,16 +4,38 @@ using UnityEngine;
 
 public class ScaleController : MonoBehaviour
 {
+    public static ScaleController instance;
+
     public Camera camera;
+    public List<GameObject> resourceParents;
     public List<Transform> resources;
 
     // Start is called before the first frame update
     void Start()
     {
+        int totalIndex = 0;
+
+        instance = this;
+
         for (int h = 1; h < transform.childCount; h++)
         {
             for (int i = 0; i < transform.GetChild(h).childCount; i++)
             {
+                try
+                {
+                    transform.GetChild(h).GetChild(i).GetComponent<ResourceParent>().resourceData =
+                        transform.GetChild(h).GetChild(i).GetChild(0).GetComponent<Resource>().resourceData;
+
+                    transform.GetChild(h).GetChild(i).GetComponent<ResourceParent>().resourceTransformIndex = totalIndex++;
+                    transform.GetChild(h).GetChild(i).gameObject.SetActive(false);
+                }
+                catch
+                {
+
+                }
+
+                resourceParents.Add(transform.GetChild(h).GetChild(i).gameObject);
+
                 for (int j = 0; j < transform.GetChild(h).GetChild(i).childCount; j++)
                 {
                     resources.Add(transform.GetChild(h).GetChild(i).GetChild(j).transform);

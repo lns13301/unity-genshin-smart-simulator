@@ -238,7 +238,12 @@ public enum ItemType
     MONSTER,
     CULUS,
     TREASURE,
-    EVENT
+    EVENT,
+    MATERIAL_MINERAL,
+    MATERIAL_FOOD,
+    MATERIAL_MONDSTADT,
+    METERIAL_LIYUE,
+    ARTIFACT
 }
 
 [System.Serializable]
