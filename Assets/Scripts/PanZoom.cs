@@ -10,14 +10,23 @@ public class PanZoom : MonoBehaviour
 
     public Vector2 pivot;
 
+    public Touch touchZero;
+    public Touch touchOne;
+
+    public bool isLastPinchExist;
     public float actionPincTtimer;
 
     // Update is called once per frame
     void Update()
     {
-        if (ResourceMenuTab.instance.isMenuTabOn)
+        if (ResourceMenuTab.instance.isMenuTabOn && Input.mousePosition.x < 600)
         {
             return;
+        }
+
+        if (Input.touchCount == 0)
+        {
+            actionPincTtimer = 0;
         }
 
         if (Input.GetMouseButtonDown(0) && actionPincTtimer <= 0)
@@ -39,7 +48,7 @@ public class PanZoom : MonoBehaviour
 
             zoom(difference * 0.01f);
 
-            actionPincTtimer = 0.5f;
+            actionPincTtimer = 0.3f;
         }
         else if (Input.GetMouseButton(0) && actionPincTtimer <= 0)
         {

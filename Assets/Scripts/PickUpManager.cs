@@ -215,7 +215,7 @@ public class PickUpManager : MonoBehaviour
         videos[0].Play();
 
         Invoke("OnSkipButton", 1.5f);
-        Invoke("OffPanel", 6.3f);
+        Invoke("OffPanel", 6.5f);
     }
 
     public void sortResultItems()
@@ -287,11 +287,55 @@ public class PickUpManager : MonoBehaviour
     {
         GameManager.instance.OffNotice();
         SoundManager.instance.PlayOneShotEffectSound(1);
-        OffPanel();
+
+        CancelInvoke("OffPanel");
+        OffPanelAndSetting();
     }
 
     // resultPage On
     public void OffPanel()
+    {
+        videos[0].Stop();
+
+        StartCoroutine("PlayItemVideo");
+    }
+
+    IEnumerator PlayItemVideo()
+    {
+        bool isPlayVideo = false;
+        for (int i = 0; i < result.Length; i++)
+        {
+            isPlayVideo = true;
+
+            if (result[i].koName == "진")
+            {
+                videos[0].clip = videos[3].clip;
+            }
+            else if (result[i].koName == "타르탈리아")
+            {
+                videos[0].clip = videos[4].clip;
+            }
+            else if (result[i].koName == "속세의 자물쇠")
+            {
+                videos[0].clip = videos[5].clip;
+            }
+            else
+            {
+                isPlayVideo = false;
+            }
+
+            if (isPlayVideo)
+            {
+                videos[0].Play();
+                yield return new WaitForSeconds(3.5f);
+                videos[0].Stop();
+            }
+        }
+
+        OffPanelAndSetting();
+    }
+
+    public void OffPanelAndSetting()
     {
         videos[0].Stop();
 
@@ -572,11 +616,11 @@ public class PickUpManager : MonoBehaviour
             value = 700;
         }
 
-        if (fiveStarCount > 65 && isWeaponPickUP)
+        if (fiveStarCount > 64 && isWeaponPickUP)
         {
             value = 32323;
         }
-        if (fiveStarCount > 75 && !isWeaponPickUP)
+        if (fiveStarCount > 74 && !isWeaponPickUP)
         {
             value = 32323;
         }

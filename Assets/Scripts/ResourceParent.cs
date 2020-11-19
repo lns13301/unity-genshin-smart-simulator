@@ -13,6 +13,7 @@ public class ResourceParent : MonoBehaviour
     public ResourceData resourceData;
 
     public int resourceTransformIndex;
+    public bool isGameObjectOn;
 
     // public GameObject resourcePrefab;
 
@@ -20,6 +21,7 @@ public class ResourceParent : MonoBehaviour
     void Start()
     {
         resourceSaveDataFile = new ResourceSaveDataFile();
+        isGameObjectOn = false;
 
         LoadResourceDataFromJson();
     }

@@ -42,7 +42,14 @@ public class LanguageManager : MonoBehaviour
 
         languageSet.SetActive(false);
 
-        ChangeLanguage();
+        try
+        {
+            ChangeGachaLanguage();
+        }
+        catch
+        {
+            ChangeMainLanguage();
+        }
     }
 
     // Update is called once per frame
@@ -64,7 +71,7 @@ public class LanguageManager : MonoBehaviour
         }
     }
 
-    public void ChangeLanguage()
+    public void ChangeGachaLanguage()
     {
         if (language == Language.KOREAN)
         {
@@ -160,6 +167,31 @@ public class LanguageManager : MonoBehaviour
         GameManager.instance.SavePlayerDataToJson();
     }
 
+    public void ChangeMainLanguage()
+    {
+        if (language == Language.KOREAN)
+        {
+            texts[0].text = "Language";
+            texts[1].text = "기원 페이지\n";
+            texts[2].text = "맵 페이지\n";
+            texts[3].text = "종료하시겠습니까?\n";
+            texts[4].text = " 취 소\n";
+            texts[5].text = " 확 인\n";
+        }
+        else
+        {
+            texts[0].text = "언어";
+            texts[1].text = "Wish Page\n";
+            texts[2].text = "Map Page\n";
+            texts[3].text = "Are you sure you want to exit?\n";
+            texts[4].text = " Cancel\n";
+            texts[5].text = " Confirm\n";
+        }
+
+        GameManager.instance.GetPlayerData().language = language;
+        GameManager.instance.SavePlayerDataToJson();
+    }
+
     public void ButtonLanguage()
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
@@ -171,7 +203,15 @@ public class LanguageManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(3);
 
-        ChangeLanguage();
+        try
+        {
+            ChangeGachaLanguage();
+        }
+        catch
+        {
+            ChangeMainLanguage();
+        }
+
         languageSet.SetActive(false);
     }
 

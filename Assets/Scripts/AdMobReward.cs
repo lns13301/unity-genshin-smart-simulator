@@ -129,9 +129,20 @@ public class AdMobReward : MonoBehaviour
         {
             GameManager.instance.GetPlayerData().adCount -= 1;
             GameManager.instance.information.SetActive(true);
-            GameManager.instance.informationText.text = "광고시청 보상으로 아이템을 획득하였습니다.\n\n"
-                + "만남의 인연 " + GameManager.instance.GetColorText("" + wish1, "e59e00") + "개, "
-                + "뒤얽힌 인연 " + GameManager.instance.GetColorText("" + wish2, "e59e00") + "개";
+
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                GameManager.instance.informationText.text = "광고시청 보상으로 아이템을 획득하였습니다.\n\n"
+                    + "만남의 인연 " + GameManager.instance.GetColorText("" + wish1, "e59e00") + "개, "
+                    + "뒤얽힌 인연 " + GameManager.instance.GetColorText("" + wish2, "e59e00") + "개";
+            }
+            else
+            {
+                GameManager.instance.informationText.text = "You have earned compensation for ads.\n\n"
+                    + "Acquant fate wishes " + GameManager.instance.GetColorText("" + wish1, "e59e00") + "ea, "
+                    + "intertwined fate wishes " + GameManager.instance.GetColorText("" + wish2, "e59e00") + "ea";
+            }
+
             GameManager.instance.SavePlayerDataToJson();
         }
         else

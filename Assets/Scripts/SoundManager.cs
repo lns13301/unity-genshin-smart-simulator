@@ -35,6 +35,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayMusic(int index)
     {
+        StopAllSounds();
         sound[index].PlaySound();
     }
 

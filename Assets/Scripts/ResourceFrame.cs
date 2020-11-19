@@ -16,7 +16,7 @@ public class ResourceFrame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetButtonColor();
     }
 
     // Update is called once per frame
@@ -57,11 +57,28 @@ public class ResourceFrame : MonoBehaviour
         {
             SoundManager.instance.PlayOneShotEffectSound(3);
             ScaleController.instance.resourceParents[resourceTransformIndex].SetActive(false);
+            ScaleController.instance.resourceParents[resourceTransformIndex].GetComponent<ResourceParent>().isGameObjectOn = false;
         }
         else
         {
             SoundManager.instance.PlayOneShotEffectSound(1);
             ScaleController.instance.resourceParents[resourceTransformIndex].SetActive(true);
+            ScaleController.instance.resourceParents[resourceTransformIndex].GetComponent<ResourceParent>().isGameObjectOn = true;
+        }
+
+        SetButtonColor();
+        ResourceMenuTab.instance.ResetItemCount();
+    }
+
+    private void SetButtonColor()
+    {
+        if (ScaleController.instance.resourceParents[resourceTransformIndex].activeSelf)
+        {
+            GetComponent<Image>().color = new Color(1, 1, 1);
+        }
+        else
+        {
+            GetComponent<Image>().color = new Color(0.6f, 0.6f, 0.6f);
         }
     }
 }
