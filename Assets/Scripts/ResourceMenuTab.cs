@@ -23,8 +23,6 @@ public class ResourceMenuTab : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("Canvas").gameObject.SetActive(true);
-
         instance = this;
 
         resourceParents = ScaleController.instance.resourceParents;

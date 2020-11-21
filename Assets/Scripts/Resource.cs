@@ -199,6 +199,12 @@ public class Resource : MonoBehaviour
             resourceInformation.texts[7].transform.parent.gameObject.SetActive(false);
         }
 
+        if (resourceData.isLooted)
+        {
+            resourceInformation.texts[6].transform.parent.gameObject.SetActive(false);
+            resourceInformation.texts[7].transform.parent.gameObject.SetActive(false);
+        }
+
         SaveThisData();
     }
 
