@@ -11,6 +11,8 @@ public class SkillDatabase : MonoBehaviour
     public List<Skill> skillDB;
     public string spritePath = "Images/UI/Stat/";
 
+    public Dictionary<int, Skill> skillDatas = new Dictionary<int, Skill>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,11 @@ public class SkillDatabase : MonoBehaviour
 
         //SaveSkillData();
         LoadSkillData();
+
+        for (int i = 0; i < skillDB.Count; i++)
+        {
+            skillDatas.Add(skillDB[i].skillCode, skillDB[i]);
+        }
     }
 
     // Update is called once per frame
@@ -132,6 +139,11 @@ public class SkillDatabase : MonoBehaviour
     public Sprite LoadSprite(string path)
     {
         return Resources.Load<Sprite>(path);
+    }
+
+    public Skill findSkillByCode(int code)
+    {
+        return skillDatas[code];
     }
 }
 

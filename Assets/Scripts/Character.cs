@@ -8,6 +8,7 @@ public class Character
     public int code;
     public Element element;
     public Grade grade;
+    public int skillStartCode;
     public string enName;
     public string koName;
     public int phase; // 돌파
@@ -25,7 +26,7 @@ public class Character
     public Talent talent;
     public Profile profile;
 
-    public Character(int code, Element element, Grade grade, string enName = null, string koName = null
+    public Character(int code, Element element, Grade grade, int skillStartCode = 1000, string enName = null, string koName = null
         , int phase = 0, AscensionMaterial ascensionMaterial = null
         , int level = 1, int levelLimit = 20, int exp = 0, int nextExp = 0, int friendship = 0
         , Attribute attribute = null, Item equipedWeapon = null, List<Item> artifacts = null
@@ -34,6 +35,7 @@ public class Character
         this.code = code;
         this.element = element;
         this.grade = grade;
+        this.skillStartCode = skillStartCode;
         this.enName = enName;
         this.koName = koName;
         this.phase = phase;

@@ -11,6 +11,7 @@ public class ItemDatabase : MonoBehaviour
     public string spritePathHero = "Images/Character/";
     public string spritePathWeapon = "Images/Weapon/";
     public string effectsPath = "Effects/";
+    public string spritePathTalent = "Images/UI/Stat/";
 
     public Dictionary<int, Item> itemDatas = new Dictionary<int, Item>();
 
@@ -29,7 +30,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile = new ItemDataFile();
         itemDataFile.itemDatas = new List<Item>();
 
-        // saveItemData();
+        //saveItemData();
         loadItemData();
 
         //spawnItem();
@@ -100,15 +101,15 @@ public class ItemDatabase : MonoBehaviour
         Debug.Log("저장 성공");
         itemDataFile.itemDatas = new List<Item>();
 
-        itemDataFile.itemDatas.Add(new Item(0, "Amber", "엠버", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Amber", new Character(0, Element.PYRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(0, "Amber", "엠버", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Amber", new Character(0, Element.PYRO, Grade.UNIQUE, 1000)));
         itemDataFile.itemDatas.Add(new Item(1, "Kaeya", "케이야", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Kaeya", new Character(1, Element.CRYO, Grade.UNIQUE)));
         itemDataFile.itemDatas.Add(new Item(2, "Lisa", "리사", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Lisa", new Character(2, Element.ELECTRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(3, "Barbara", "바바라", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Barbara", new Character(3, Element.HYDRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(3, "Barbara", "바바라", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Barbara", new Character(3, Element.HYDRO, Grade.UNIQUE, 1006)));
         itemDataFile.itemDatas.Add(new Item(4, "Xiangling", "향릉", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Xiangling", new Character(4, Element.PYRO, Grade.UNIQUE)));
         itemDataFile.itemDatas.Add(new Item(5, "Razor", "레이저", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Razor", new Character(5, Element.ELECTRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(6, "Bennett", "베넷", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Bennett", new Character(6, Element.PYRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(6, "Bennett", "베넷", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Bennett", new Character(6, Element.PYRO, Grade.UNIQUE, 1018)));
         itemDataFile.itemDatas.Add(new Item(7, "Xingqiu", "행추", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Xingqiu", new Character(7, Element.HYDRO, Grade.UNIQUE)));
-        itemDataFile.itemDatas.Add(new Item(8, "Beidou", "북두", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Beidou", new Character(8, Element.ELECTRO, Grade.UNIQUE)));
+        itemDataFile.itemDatas.Add(new Item(8, "Beidou", "북두", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Beidou", new Character(8, Element.ELECTRO, Grade.UNIQUE, 1012)));
         itemDataFile.itemDatas.Add(new Item(9, "Sucrose", "설탕", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Sucrose", new Character(9, Element.ANEMO, Grade.UNIQUE)));
         itemDataFile.itemDatas.Add(new Item(10, "Ningguang", "응광", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Ningguang", new Character(10, Element.GEO, Grade.UNIQUE)));
         itemDataFile.itemDatas.Add(new Item(11, "Noelle", "노엘", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Noelle", new Character(11, Element.GEO, Grade.UNIQUE)));
@@ -228,7 +229,74 @@ public class ItemDatabase : MonoBehaviour
 
         itemDataFile.itemDatas.Add(new Item(4300, "Memory of Dust", "속세의 자물쇠", 1, ItemType.CATALYST, Grade.LEGEND, spritePathWeapon + "Memory of Dust"));
 
+        /////////////////////////////////////////////////////////////////////////////////////////////
 
+        itemDataFile.itemDatas.Add(new Item(10000, "Teachings of \"Freedom\"", "\"자유\"의 가르침", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "teaching_of_freedom"));
+        itemDataFile.itemDatas.Add(new Item(10001, "Guide to \"Freedom\"", "\"자유\"의 인도", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "guide_to_freedom"));
+        itemDataFile.itemDatas.Add(new Item(10002, "Philosophies of \"Freedom\"", "\"자유\"의 철학", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "philosophies_of_freedom"));
+        itemDataFile.itemDatas.Add(new Item(10003, "Teachings of \"Resistance\"", "\"투쟁\"의 가르침", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "teaching_of_resistance"));
+        itemDataFile.itemDatas.Add(new Item(10004, "Guide to \"Resistance\"", "\"투쟁\"의 인도", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "guide_to_resistance"));
+        itemDataFile.itemDatas.Add(new Item(10005, "Philosophies of \"Resistance\"", "\"투쟁\"의 철학", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "philosophies_of_resistance"));
+        itemDataFile.itemDatas.Add(new Item(10006, "Teachings of \"Ballad\"", "\"시문\"의 가르침", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "teaching_of_ballad"));
+        itemDataFile.itemDatas.Add(new Item(10007, "Guide to \"Ballad\"", "\"시문\"의 인도", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "guide_to_ballad"));
+        itemDataFile.itemDatas.Add(new Item(10008, "Philosophies of \"Ballad\"", "\"시문\"의 철학", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "philosophies_of_ballad"));
+        itemDataFile.itemDatas.Add(new Item(10009, "Teachings of \"Prosperity\"", "\"번영\"의 가르침", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "teaching_of_prosperity"));
+        itemDataFile.itemDatas.Add(new Item(10010, "Guide to \"Prosperity\"", "\"번영\"의 인도", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "guide_to_prosperity"));
+        itemDataFile.itemDatas.Add(new Item(10011, "Philosophies of \"Prosperity\"", "\"번영\"의 철학", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "philosophies_of_prosperity"));
+        itemDataFile.itemDatas.Add(new Item(10012, "Teachings of \"Diligence\"", "\"근면\"의 가르침", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "teaching_of_diligence"));
+        itemDataFile.itemDatas.Add(new Item(10013, "Guide to \"Diligence\"", "\"근면\"의 인도", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "guide_to_diligence"));
+        itemDataFile.itemDatas.Add(new Item(10014, "Philosophies of \"Diligence\"", "\"근면\"의 철학", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "philosophies_of_diligence"));
+        itemDataFile.itemDatas.Add(new Item(10015, "Teachings of \"Gold\"", "\"황금\"의 가르침", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "teaching_of_gold"));
+        itemDataFile.itemDatas.Add(new Item(10016, "Guide to \"Gold\"", "\"황금\"의 인도", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "guide_to_gold"));
+        itemDataFile.itemDatas.Add(new Item(10017, "Philosophies of \"Gold\"", "\"황금\"의 철학", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "philosophies_of_gold"));
+
+        itemDataFile.itemDatas.Add(new Item(10100, "Agnidus Agate Sliver", "불타오르는 마노 가루", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "agnidus_agate_sliver"));
+        itemDataFile.itemDatas.Add(new Item(10101, "Agnidus Agate Fragment", "불타오르는 마노 조각", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "agnidus_agate_fragment"));
+        itemDataFile.itemDatas.Add(new Item(10102, "Agnidus Agate Chunk", "불타오르는 마노 덩이", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "agnidus_agate_chunk"));
+        itemDataFile.itemDatas.Add(new Item(10103, "Agnidus Agate Gemstone", "불타오르는 마노", 1, ItemType.TALENTMATERIAL, Grade.LEGEND, spritePathTalent + "agnidus_agate_gemstone"));
+        itemDataFile.itemDatas.Add(new Item(10104, "Varunada Lazurite Sliver", "순수한 청금석 가루", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "varunada_lazurite_sliver"));
+        itemDataFile.itemDatas.Add(new Item(10105, "Varunada Lazurite Fragment", "순수한 청금석 조각", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "varunada_lazurite_fragment"));
+        itemDataFile.itemDatas.Add(new Item(10106, "Varunada Lazurite Chunk", "순수한 청금석 덩이", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "varunada_lazurite_chunk"));
+        itemDataFile.itemDatas.Add(new Item(10107, "Varunada Lazurite Gemstone", "순수한 청금석", 1, ItemType.TALENTMATERIAL, Grade.LEGEND, spritePathTalent + "varunada_lazurite_gemstone"));
+        itemDataFile.itemDatas.Add(new Item(10108, "Vajrada Amethyst Sliver", "승리의 자수정 가루", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "vajrada_amethyst_sliver"));
+        itemDataFile.itemDatas.Add(new Item(10109, "Vajrada Amethyst Fragment", "승리의 자수정 조각", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "vajrada_amethyst_fragment"));
+        itemDataFile.itemDatas.Add(new Item(10110, "Vajrada Amethyst Chunk", "승리의 자수정 덩이", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "vajrada_amethyst_chunk"));
+        itemDataFile.itemDatas.Add(new Item(10111, "Vajrada Amethyst Gemstone", "승리의 자수정", 1, ItemType.TALENTMATERIAL, Grade.LEGEND, spritePathTalent + "vajrada_amethyst_gemstone"));
+        itemDataFile.itemDatas.Add(new Item(10112, "Vayuda Turquoise Sliver", "자유로운 터키석 가루", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "vayuda_turquoise_sliver"));
+        itemDataFile.itemDatas.Add(new Item(10113, "Vayuda Turquoise Fragment", "자유로운 터키석 조각", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "vayuda_turquoise_fragment"));
+        itemDataFile.itemDatas.Add(new Item(10114, "Vayuda Turquoise Chunk", "자유로운 터키석 덩이", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "vayuda_turquoise_chunk"));
+        itemDataFile.itemDatas.Add(new Item(10115, "Vayuda Turquoise Gemstone", "자유로운 터키석", 1, ItemType.TALENTMATERIAL, Grade.LEGEND, spritePathTalent + "vayuda_turquoise_gemstone"));
+        itemDataFile.itemDatas.Add(new Item(10116, "Shivada Jade Sliver", "서늘한 빙옥 가루", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "shivada_jade_sliver"));
+        itemDataFile.itemDatas.Add(new Item(10117, "Shivada Jade Fragment", "서늘한 빙옥 조각", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "shivada_jade_fragment"));
+        itemDataFile.itemDatas.Add(new Item(10118, "Shivada Jade Chunk", "서늘한 빙옥 덩이", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "shivada_jade_chunk"));
+        itemDataFile.itemDatas.Add(new Item(10119, "Shivada Jade Gemstone", "서늘한 빙옥", 1, ItemType.TALENTMATERIAL, Grade.LEGEND, spritePathTalent + "shivada_jade_gemstone"));
+        itemDataFile.itemDatas.Add(new Item(10120, "Prithiva Topaz Sliver", "단단한 황옥 가루", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "prithiva_topaz_sliver"));
+        itemDataFile.itemDatas.Add(new Item(10121, "Prithiva Topaz Fragment", "단단한 황옥 조각", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "prithiva_topaz_fragment"));
+        itemDataFile.itemDatas.Add(new Item(10122, "Prithiva Topaz Chunk", "단단한 황옥 덩이", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "prithiva_topaz_chunk"));
+        itemDataFile.itemDatas.Add(new Item(10123, "Prithiva Topaz Gemstone", "단단한 황옥", 1, ItemType.TALENTMATERIAL, Grade.LEGEND, spritePathTalent + "prithiva_topaz_gemstone"));
+        itemDataFile.itemDatas.Add(new Item(10124, "Brilliant Diamond Sliver", "휘황찬란한 다이아몬드 파편", 1, ItemType.TALENTMATERIAL, Grade.RARE, spritePathTalent + "brilliant_diamond_sliver"));
+        itemDataFile.itemDatas.Add(new Item(10125, "Brilliant Diamond Fragment", "휘황찬란한 다이아몬드 단편", 1, ItemType.TALENTMATERIAL, Grade.EPIC, spritePathTalent + "brilliant_diamond_fragment"));
+        itemDataFile.itemDatas.Add(new Item(10126, "Brilliant Diamond Chunk", "휘황찬란한 다이아몬드 덩어리", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "brilliant_diamond_chunk"));
+        itemDataFile.itemDatas.Add(new Item(10127, "Brilliant Diamond Gemstone", "휘황찬란한 다이아몬드", 1, ItemType.TALENTMATERIAL, Grade.LEGEND, spritePathTalent + "brilliant_diamond_gemstone"));
+
+        itemDataFile.itemDatas.Add(new Item(10200, "Everflame Seed", "꺼지지 않는 불씨", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "everflame_seed"));
+        itemDataFile.itemDatas.Add(new Item(10201, "Cleansing Heart", "물처럼 맑은 마음", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "cleansing_heart"));
+        itemDataFile.itemDatas.Add(new Item(10202, "Lightning Prism", "뇌광 프리즘", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "lightning_prism"));
+        itemDataFile.itemDatas.Add(new Item(10203, "Hurricane Seed", "폭풍의 씨앗", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "hurricane_seed"));
+        itemDataFile.itemDatas.Add(new Item(10204, "Hoarfrost Core", "서리의 핵", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "hoarfrost_core"));
+        itemDataFile.itemDatas.Add(new Item(10205, "Basalt Pillar", "현암의 탑", 1, ItemType.TALENTMATERIAL, Grade.UNIQUE, spritePathTalent + "basalt_pillar"));
+
+        itemDataFile.itemDatas.Add(new Item(10300, "Damaged Mask", "부서진 가면", 1, ItemType.MATERIAL, Grade.NORMAL, spritePathTalent + "damaged_mask"));
+        itemDataFile.itemDatas.Add(new Item(10301, "Stained Mask", "오염된 가면", 1, ItemType.MATERIAL, Grade.RARE, spritePathTalent + "stained_mask"));
+        itemDataFile.itemDatas.Add(new Item(10302, "Ominous Mask", "불길한 가면", 1, ItemType.MATERIAL, Grade.EPIC, spritePathTalent + "ominous_mask"));
+        itemDataFile.itemDatas.Add(new Item(10303, "Divining Scroll", "이능 두루마리", 1, ItemType.MATERIAL, Grade.NORMAL, spritePathTalent + "divining_scroll"));
+        itemDataFile.itemDatas.Add(new Item(10304, "Sealed Scroll", "봉마의 두루마리", 1, ItemType.MATERIAL, Grade.RARE, spritePathTalent + "sealed_scroll"));
+        itemDataFile.itemDatas.Add(new Item(10305, "Forbidden Curse Scroll", "금주의 두루마리", 1, ItemType.MATERIAL, Grade.EPIC, spritePathTalent + "forbidden_curse_scroll"));
+        itemDataFile.itemDatas.Add(new Item(10306, "Firm Arrowhead", "견고한 화살촉", 1, ItemType.MATERIAL, Grade.NORMAL, spritePathTalent + "firm_arrowhead"));
+        itemDataFile.itemDatas.Add(new Item(10307, "Sharp Arrowhead", "날카로운 화살촉", 1, ItemType.MATERIAL, Grade.NORMAL, spritePathTalent + "sharp_arrowhead"));
+        itemDataFile.itemDatas.Add(new Item(10308, "Weathered Arrowhead", "역전의 화살촉", 1, ItemType.MATERIAL, Grade.NORMAL, spritePathTalent + "weathered_arrowhead"));
+
+        // 서늘한 빙옥, 자유로운 터키석, 승리의 자수정, 단단한 황옥, 순수한 청금석
         string jsonData = JsonUtility.ToJson(itemDataFile, true);
 
         File.WriteAllText(saveOrLoad(false, true, "ItemData"), jsonData);
@@ -289,9 +357,9 @@ public class ItemDatabase : MonoBehaviour
         }
     }
 
-    public Item makeItem(Item item)
+    public Item makeItem(Item item, int count = 1)
     {
-        return new Item(item.code, item.enName, item.koName, item.count, item.type, item.grade, item.spritePath, item.character);
+        return new Item(item.code, item.enName, item.koName, count, item.type, item.grade, item.spritePath, item.character);
     }
 }
 

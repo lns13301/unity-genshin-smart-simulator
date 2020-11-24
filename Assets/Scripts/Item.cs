@@ -243,7 +243,8 @@ public enum ItemType
     MATERIAL_FOOD,
     MATERIAL_MONDSTADT,
     MATERIAL_LIYUE,
-    ARTIFACT
+    ARTIFACT,
+    TALENTMATERIAL
 }
 
 [System.Serializable]
