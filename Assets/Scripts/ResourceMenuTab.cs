@@ -189,7 +189,10 @@ public class ResourceMenuTab : MonoBehaviour
             {
                 for (int j = 0; j < resourceParents[i].transform.childCount; j++)
                 {
-                    resourceParents[i].transform.GetChild(j).gameObject.SetActive(true);
+                    Resource resource = resourceParents[i].transform.GetChild(j).GetComponent<Resource>();
+
+                    resource.gameObject.SetActive(true);
+                    resource.ShowRegenTimer();
                 }
             }
         }

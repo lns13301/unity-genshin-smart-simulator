@@ -7,7 +7,7 @@ using UnityEngine;
 public class AESCrypto : MonoBehaviour
 {
     // 키로 사용하기 위한 암호 정의
-    private static readonly string PASSWORD = "3ds1s334e4dcc7c4yz4554e732983h"; // 빌드 시 암호코드 입력하기
+    private static readonly string PASSWORD = "SECRET_CODE"; // 빌드 시 암호코드 입력하기
 
     // 인증키 정의
     private static readonly string KEY = PASSWORD.Substring(0, 128 / 8);

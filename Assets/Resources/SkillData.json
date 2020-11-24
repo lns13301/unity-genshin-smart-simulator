@@ -2,6 +2,8 @@
     "skillDatas": [
         {
             "skillCode": 1000,
+			"name_ko": "일반 공격 - 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
             "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
             "sprite": {
                 "instanceID": 0
@@ -261,6 +263,8 @@
         },
         {
             "skillCode": 1001,
+			"name_ko": "폭탄 인형",
+			"name_en": "Explosive Puppet",
             "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
             "sprite": {
                 "instanceID": 0
@@ -330,7 +334,7 @@
 						277.2,
 						292.6
                     ],
-                    "floatCount": 2
+                    "floatCount": 1
                 },
                 {
                     "name_ko": "재사용 대기시간",
@@ -359,6 +363,2243 @@
         },
         {
             "skillCode": 1002,
+			"name_ko": "화살비",
+			"name_en": "Fiery Rain",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "",
+                    "title_en": "Normal Attack",
+                    "content_ko": "전방에 화염 화살비를 쏴 적에게 불 원소 범위 피해를 계속 준다.",
+                    "content_en": "Fires off shower of arrows, dealing continuous AoE Pyro DMG."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "화살비 단일 피해",
+                    "name_en": "Fiery Rain DMG Per Wave",
+                    "unit": "%",
+                    "values": [
+                        28.08,
+						30.19,
+						32.29,
+						35.1,
+						37.21,
+						39.31,
+						42.12,
+						43.93,
+						47.74,
+						50.54,
+						53.35,
+						56.16,
+						59.67,
+						63.18,
+						66.69
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "화살비 총 피해",
+                    "name_en": "Total Fiery Rain DMG",
+                    "unit": "%",
+                    "values": [
+                        505.44,
+						543.35,
+						581.26,
+						631.8,
+						669.71,
+						707.62,
+						758.16,
+						808.7,
+						859.25,
+						909.79,
+						960.34,
+						1010.88,
+						1074.06,
+						1137.24,
+						1200.42
+                    ],
+                    "floatCount": 1
+                },
+                {
+                    "name_ko": "지속 시간",
+                    "name_en": "Duration",
+                    "unit": "s",
+                    "values": [
+                        2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2,
+						2
+                    ],
+                    "floatCount": 1
+                },
+                {
+                    "name_ko": "재사용 대기시간",
+                    "name_en": "CD",
+                    "unit": "s",
+                    "values": [
+                        12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12,
+						12
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "원소 에너지",
+                    "name_en": "Energy Cost",
+                    "unit": "%",
+                    "values": [
+                        40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40,
+						40
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1006,
+			"name_ko": "일반 공격 - 물의 노래",
+			"name_en": "Normal Attack - Whisper of Water",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "물보라로 최대 4번 공격해 물 원소 피해를 준다.",
+                    "content_en": "Perform up to 4 water splash attacks that deal Hydro DMG."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "일정 스태미나를 소모해, 짧은 영창 후 물 원소 범위 피해를 준다.",
+                    "content_en": "Consume a certain amount of Stamina to deal AoE Hydro DMG after a short casting time."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 물의 힘을 모은 후 지면을 강타해 경로상의 적을 공격하고 땅에 닿으면 물 원소 범위 피해를 준다.",
+                    "content_en": "Gathering the might of Hydro, Barbara plunges toward the ground from mid-air, damaging all enemies in her path. Deals AoE Hydro DMG upon impact with the ground."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        37.84,
+						40.68,
+						43.52,
+						47.3,
+						50.14,
+						52.98,
+						56.76,
+						60.54,
+						64.33,
+						68.11,
+						72.05,
+						77.19,
+						82.34,
+						87.49,
+						92.63
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        35.52,
+						38.18,
+						40.85,
+						44.4,
+						47.06,
+						49.73,
+						53.28,
+						56.83,
+						60.38,
+						63.94,
+						67.63,
+						72.46,
+						77.29,
+						82.12,
+						86.95
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        41.04,
+						44.12,
+						47.2,
+						51.3,
+						54.38,
+						57.46,
+						61.56,
+						65.66,
+						69.77,
+						73.87,
+						78.14,
+						83.72,
+						89.3,
+						94.88,
+						100.47
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        55.2,
+						59.34,
+						63.48,
+						69,
+						73.14,
+						77.28,
+						82.8,
+						88.32,
+						93.84,
+						99.36,
+						105.1,
+						112.61,
+						120.12,
+						127.62,
+						135.13
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "강공격 피해",
+                    "name_en": "Charged Attack DMG",
+                    "unit": "%",
+                    "values": [
+                        166.24,
+						178.71,
+						191.18,
+						207.8,
+						220.27,
+						232.74,
+						249.36,
+						265.98,
+						282.61,
+						299.23,
+						316.52,
+						339.13,
+						361.74,
+						384.35,
+						406.96
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "강공격 스태미나 소모",
+                    "name_en": "Charged Attack Stamina Cost",
+                    "unit": "%",
+                    "values": [
+                        50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50,
+						50
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        56.83,
+						61.45,
+						66.08,
+						72.69,
+						77.31,
+						82.6,
+						89.87,
+						97.14,
+						104.41,
+						112.34,
+						120.27,
+						128.2,
+						136.12,
+						144.05,
+						151.98
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        113.63,
+						122.88,
+						132.13,
+						145.35,
+						154.59,
+						165.17,
+						179.7,
+						194.23,
+						208.77,
+						224.62,
+						240.48,
+						256.34,
+						272.19,
+						288.05,
+						303.9
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        141.93,
+						153.49,
+						165.04,
+						181.54,
+						193.1,
+						206.3,
+						224.45,
+						242.61,
+						260.76,
+						280.57,
+						330.37,
+						320.18,
+						339.98,
+						359.79,
+						379.59
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1007,
+			"name_ko": "공연, 시작",
+			"name_en": "Let the Show Begin",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "",
+                    "title_en": "",
+                    "content_ko": "노랫소리처럼 통통 튀는 물방울을 소환해 노래의 고리를 생성해 주변의 적에게 물 원소 피해를 주고 습기 효과를 부여한다.",
+                    "content_en": "Summons water droplets resembling musical that form a Melody Loop, dealing Hydro DMG to surrounding enemies and afflicting them with the Wet status."
+                },
+                {
+                    "title_ko": "노래의 고리",
+                    "title_en": "Melody Loop",
+                    "content_ko": "바바라의 일반 공격 명중 시 자신의 파티 내 모든 캐릭터 및 근처 아군 캐릭터의 HP를 회복한다. 회복량은 바바라의 HP 최대치의 영향을 받는다. 강공격 명중 시 회복량이 4배가 된다. 일정 시간이 지날 때마다 현재 필드 위 자신의 캐릭터의 HP를 회복한다.",
+                    "content_en": "Barbara's Normal Attacks heal all party members and nearby allied characters for a certain amount of HP, which scales with Barbara's Max HP. Her Charged Attack generates 4 times the amount of healing. Regenerates a certain amount of the current character's HP at regular intervlas. Applies the Wet status to the character and enemies who come in contact with them."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "명중 치유량 (최대 체력 비율)",
+                    "name_en": "HP Regeneration Per Hit (Max HP %)",
+                    "unit": "%",
+                    "values": [
+                        0.75,
+						0.81,
+						0.86,
+						0.94,
+						0.99,
+						1.05,
+						1.13,
+						1.2,
+						1.28,
+						1.35,
+						1.43,
+						1.5,
+						1.59,
+						1.69,
+						1.78
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "명중 치유량 (고정 보너스)",
+                    "name_en": "HP Regeneration Per Hit (Flat Bonus)",
+                    "unit": " ",
+                    "values": [
+                        72.22,
+						79.45,
+						87.27,
+						95.7,
+						104.73,
+						114.36,
+						124.59,
+						135.43,
+						146.86,
+						158.9,
+						171.54,
+						184.79,
+						198.63,
+						213.08,
+						228.13
+                    ],
+                    "floatCount": 2
+                },
+				{
+                    "name_ko": "지속 치유량 (최대 체력 비율)",
+                    "name_en": "Continuous Regeneration (Max HP %)",
+                    "unit": "%",
+                    "values": [
+                        4,
+						4.3,
+						4.6,
+						5,
+						5.3,
+						5.6,
+						6,
+						6.4,
+						6.8,
+						7.2,
+						7.6,
+						8,
+						8.5,
+						9,
+						9.5
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "지속 치유량 (고정 보너스)",
+                    "name_en": "Continuous Regeneration (Flat Bonus)",
+                    "unit": " ",
+                    "values": [
+                        385.19,
+						423.71,
+						465.45,
+						510.39,
+						558.55,
+						609.91,
+						664.49,
+						722.27,
+						783.27,
+						847.48,
+						914.89,
+						985.52,
+						1059.36,
+						1136.41,
+						1216.67
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "물방울 피해",
+                    "name_en": "Droplet DMG",
+                    "unit": "%",
+                    "values": [
+                        58.4,
+						62.78,
+						67.16,
+						73,
+						77.38,
+						81.76,
+						87.6,
+						93.44,
+						99.28,
+						105.12,
+						110.96,
+						116.8,
+						124.1,
+						131.4,
+						138.7
+                    ],
+                    "floatCount": 1
+                },
+                {
+                    "name_ko": "지속 시간",
+                    "name_en": "Duration",
+                    "unit": "s",
+                    "values": [
+                        15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15
+                    ],
+                    "floatCount": 1
+                },
+                {
+                    "name_ko": "재사용 대기시간",
+                    "name_en": "CD",
+                    "unit": "s",
+                    "values": [
+                        32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32,
+						32
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1008,
+			"name_ko": "빛나는 기적",
+			"name_en": "Shining Miracles",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "",
+                    "title_en": "",
+                    "content_ko": "근처 아군 캐릭터와 자신의 파티 내 모든 캐릭터의 HP를 대량 회복한다. 회복량은 바라라의 HP 최대치의 영향을 받는다.",
+                    "content_en": "Heals friendly forces and all parties for a large amount of HP that scales with Barbara's Max HP."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "치유량 (최대 체력 비율)",
+                    "name_en": "Regeneration (Max HP %)",
+                    "unit": "%",
+                    "values": [
+                        17.6,
+						18.92,
+						20.24,
+						22,
+						23.32,
+						24.64,
+						26.4,
+						28.16,
+						29.92,
+						31.68,
+						33.44,
+						35.2,
+						37.4,
+						39.6,
+						41.8
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "치유량 (고정 보너스)",
+                    "name_en": "Regeneration (Flat Bonus)",
+                    "unit": " ",
+                    "values": [
+                        1694.28,
+						1863.73,
+						2047.31,
+						2245,
+						2456.81,
+						2682.75,
+						2922.81,
+						3176.98,
+						3445.28,
+						3727.7,
+						4024.24,
+						4334.9,
+						4659.69,
+						4998.59,
+						5351.62
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "재사용 대기시간",
+                    "name_en": "CD",
+                    "unit": "%",
+                    "values": [
+                        20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "원소 에너지",
+                    "name_en": "Energy",
+                    "unit": "%",
+                    "values": [
+                        80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1011,
+			"name_ko": "일반 공격 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "활로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 consecutive shots with a bow."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "피해가 더크고 정확한 조준사격을 한다. 조준시 뜨거운 화염이 화살 촉에 계속해서 모인다.",
+                    "content_en": "Perform a more precise Aimed Shot with increased DMG. While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 화살비를 쏜 후 빠른 속도로 땅에 착지한다. 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "조준 사격",
+                    "name_en": "Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "풀 차지 조준 사격",
+                    "name_en": "Fully-Charged Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1002,
+			"name_ko": "일반 공격 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "활로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 consecutive shots with a bow."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "피해가 더크고 정확한 조준사격을 한다. 조준시 뜨거운 화염이 화살 촉에 계속해서 모인다.",
+                    "content_en": "Perform a more precise Aimed Shot with increased DMG. While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 화살비를 쏜 후 빠른 속도로 땅에 착지한다. 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "조준 사격",
+                    "name_en": "Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "풀 차지 조준 사격",
+                    "name_en": "Fully-Charged Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1002,
+			"name_ko": "일반 공격 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "활로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 consecutive shots with a bow."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "피해가 더크고 정확한 조준사격을 한다. 조준시 뜨거운 화염이 화살 촉에 계속해서 모인다.",
+                    "content_en": "Perform a more precise Aimed Shot with increased DMG. While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 화살비를 쏜 후 빠른 속도로 땅에 착지한다. 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "조준 사격",
+                    "name_en": "Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "풀 차지 조준 사격",
+                    "name_en": "Fully-Charged Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1002,
+			"name_ko": "일반 공격 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "활로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 consecutive shots with a bow."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "피해가 더크고 정확한 조준사격을 한다. 조준시 뜨거운 화염이 화살 촉에 계속해서 모인다.",
+                    "content_en": "Perform a more precise Aimed Shot with increased DMG. While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 화살비를 쏜 후 빠른 속도로 땅에 착지한다. 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "조준 사격",
+                    "name_en": "Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "풀 차지 조준 사격",
+                    "name_en": "Fully-Charged Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1002,
+			"name_ko": "일반 공격 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "활로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 consecutive shots with a bow."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "피해가 더크고 정확한 조준사격을 한다. 조준시 뜨거운 화염이 화살 촉에 계속해서 모인다.",
+                    "content_en": "Perform a more precise Aimed Shot with increased DMG. While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 화살비를 쏜 후 빠른 속도로 땅에 착지한다. 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "조준 사격",
+                    "name_en": "Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "풀 차지 조준 사격",
+                    "name_en": "Fully-Charged Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1002,
+			"name_ko": "일반 공격 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
+            "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "활로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 consecutive shots with a bow."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "피해가 더크고 정확한 조준사격을 한다. 조준시 뜨거운 화염이 화살 촉에 계속해서 모인다.",
+                    "content_en": "Perform a more precise Aimed Shot with increased DMG. While aiming, flames will accumulate on the arrowhead. A fully charged flaming arrow will deal Pyro DMG."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 화살비를 쏜 후 빠른 속도로 땅에 착지한다. 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "조준 사격",
+                    "name_en": "Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "풀 차지 조준 사격",
+                    "name_en": "Fully-Charged Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        ,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						,
+						
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1002,
+			"name_ko": "일반 공격 신궁",
+			"name_en": "Normal Attack - Sharpshooter",
             "spritePath": "Images/UI/Stat/Amber/normal_atack_sharpshooter",
             "sprite": {
                 "instanceID": 0

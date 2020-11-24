@@ -6,6 +6,10 @@ using UnityEngine;
 public class Skill
 {
     public int skillCode;
+
+    public string name_ko;
+    public string name_en;
+
     public string spritePath;
 
     public Sprite sprite;
@@ -13,9 +17,12 @@ public class Skill
     public List<SkillInformation> informations;
     public List<SkillAbility> abilities;
 
-    public Skill(int skillCode, string spritePath, List<SkillInformation> informations, List<SkillAbility> abilities)
+    public Skill(int skillCode, string name_ko, string name_en, string spritePath, List<SkillInformation> informations, List<SkillAbility> abilities)
     {
         this.skillCode = skillCode;
+        this.name_ko = name_ko;
+        this.name_en = name_en;
+
         this.spritePath = spritePath;
 
         this.informations = informations;

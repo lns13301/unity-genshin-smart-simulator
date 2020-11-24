@@ -66,8 +66,7 @@ public class SkillDatabase : MonoBehaviour
         abilities.Add(new SkillAbility("저공 추락 충격 피해", "Low Plunge DMG", "%", value1));
         abilities.Add(new SkillAbility("고공 추락 충격 피해", "High Plunge DMG", "%", value1));
 
-        skillDataFile.skillDatas.Add(new Skill(1000, spritePath + "Amber/normal_atack_sharpshooter", skillInformations, abilities));
-        skillDataFile.skillDatas.Add(new Skill(1001, spritePath + "Amber/normal_atack_sharpshooter", skillInformations, abilities));
+        skillDataFile.skillDatas.Add(new Skill(1000, "일반 공격 - 신궁", "Normal Attack - Sharpshooter", spritePath + "Amber/normal_atack_sharpshooter", skillInformations, abilities));
 
         string jsonData = JsonUtility.ToJson(skillDataFile, true);
 
