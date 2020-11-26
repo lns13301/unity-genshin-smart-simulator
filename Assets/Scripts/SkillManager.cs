@@ -15,6 +15,18 @@ public class SkillManager : MonoBehaviour
     public GameObject skillFrame;
     public GameObject content;
 
+    public GameObject informationSet;
+    public GameObject informationPanel;
+    public Image informationSkillImage;
+    public Text informationSkillTitle;
+    public int skillLevel;
+    public GameObject informationContent;
+    public Text informationContentText;
+
+    public Skill skill;
+
+    public string skillText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +35,11 @@ public class SkillManager : MonoBehaviour
         animator = statSet.GetComponent<Animator>();
 
         statSet.SetActive(false);
+        informationSet.SetActive(false);
+        informationPanel = informationSet.transform.GetChild(6).gameObject;
+        informationSkillImage = informationPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>();
+        informationSkillTitle = informationPanel.transform.GetChild(0).GetChild(1).GetComponent<Text>();
+        skillLevel = 0;
     }
 
     // Update is called once per frame
@@ -87,4 +104,122 @@ public class SkillManager : MonoBehaviour
         statSet.SetActive(false);
     }
 
+    public void OnInformation(Skill skill)
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        informationSet.SetActive(true);
+        this.skill = skill;
+        skillText = "";
+
+        informationSkillImage.sprite = skill.sprite;
+        skillLevel = 0;
+
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            for (int i = 0; i < skill.informations.Count; i++)
+            {
+                skillText += GetColorText(skill.informations[i].title_ko, "B34AE3") + "\n\n" + skill.informations[i].content_ko + "\n\n\n";
+            }
+
+            SetSkillAbilityText();
+        }
+        else
+        {
+            for (int i = 0; i < skill.informations.Count; i++)
+            {
+                skillText += GetColorText(skill.informations[i].title_en, "B34AE3") + "\n\n" + skill.informations[i].content_en + "\n\n\n";
+            }
+
+            SetSkillAbilityText();
+        }
+    }
+
+    public void SetSkillAbilityText()
+    {
+        informationContentText.text = skillText;
+
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            informationSkillTitle.text = skill.name_ko + "\nLv " + (skillLevel + 1);
+
+            for (int i = 0; i < skill.abilities.Count; i++)
+            {
+                /*                informationContentText.text += skill.abilities[i].name_ko + "  " + MakeSpace(i, false)
+                                    + GetColorText(skill.abilities[i].values[skillLevel] + skill.abilities[i].unit + "\n", "e59e00");*/
+                informationContentText.text += skill.abilities[i].name_ko + "\n"
+                + GetColorText(skill.abilities[i].values[skillLevel] + skill.abilities[i].unit + "\n", "e59e00") + "\n";
+            }
+        }
+        else
+        {
+            informationSkillTitle.text = skill.name_en + "\nLv " + (skillLevel + 1);
+
+            for (int i = 0; i < skill.abilities.Count; i++)
+            {
+                /*                informationContentText.text += skill.abilities[i].name_en + "  " + MakeSpace(i, false)
+                                    + GetColorText(skill.abilities[i].values[skillLevel] + skill.abilities[i].unit + "\n", "e59e00");*/
+                informationContentText.text += skill.abilities[i].name_en + "\n"
+                + GetColorText(skill.abilities[i].values[skillLevel] + skill.abilities[i].unit + "\n", "e59e00") + "\n";
+            }
+        }
+    }
+
+    public string MakeSpace(int index, bool isEnglish = true)
+    {
+        string space = "";
+
+        if (!isEnglish)
+        {
+            for (int i = 0; i < 50 - (skill.abilities[index].name_ko.Length * 3); i++)
+            {
+                space += " ";
+            }
+        }
+        else
+        {
+            for (int i = 0; i < 25 - (skill.abilities[index].name_en.Length * 1.5); i++)
+            {
+                space += " ";
+            }
+        }
+
+        return space;
+    }
+
+    public void OffInformation()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        informationSet.SetActive(false);
+    }
+
+    public string GetColorText(string text, string colorValue)
+    {
+        return "<color=#" + colorValue + ">" + text + "</color>";
+    }
+
+    public void SetSkillLevelUP()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(2);
+
+        if (skillLevel == 14)
+        {
+            return;
+        }
+
+        skillLevel++;
+        SetSkillAbilityText();
+    }
+
+    public void SetSkillLevelDown()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(2);
+
+        if (skillLevel == 0)
+        {
+            return;
+        }
+
+        skillLevel--;
+        SetSkillAbilityText();
+    }
 }

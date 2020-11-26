@@ -37,4 +37,9 @@ public class SkillFrame : MonoBehaviour
             nameText.text = skill.name_en;
         }
     }
+
+    public void OnSkillInformation()
+    {
+        SkillManager.instance.OnInformation(skill);
+    }
 }
