@@ -985,7 +985,7 @@
                 {
                     "name_ko": "재사용 대기시간",
                     "name_en": "CD",
-                    "unit": "%",
+                    "unit": "s",
                     "values": [
                         20,
 						20,
@@ -1958,8 +1958,8 @@
                     "content_en": "A single, swift flame strike that deals Pyro DMG."
                 },
                 {
-                    "title_ko": "Hold",
-                    "title_en": "Plunging Attack",
+                    "title_ko": "홀드",
+                    "title_en": "Hold",
                     "content_ko": "길게 차지하며 차지 단수에 시간에 따라 다른 효과가 발동된다.\n1단 차지: 2단 공격을 발동해 불 원소 피해를 가하고 적을 공중에 띄운다.\n2단 차지: 3단 공격을 발동해 대량의 불 원소 피해를 준다. 최후의 일격은 폭발을 일으키며 베넷과 적을 동시에 공중에 띄운다. 이때 베넷은 피해를 받지 않는다.",
                     "content_en": "Charges up, resulting in different effects when unleashed based on the Charge Level.\nLevel 1: Strikes twice, dealing Pyro DMG and launching enemies. \nLevel 2: Unleashes 3 consecutive attacks that deal impressive Pyro DMG, but the last attack triggers an explosion that launches both Bennett and the enemy. Bennett takes no damage from being launched."
                 }
@@ -2315,7 +2315,7 @@
                 {
                     "name_ko": "재사용 대기시간",
                     "name_en": "CD",
-                    "unit": "%",
+                    "unit": "s",
                     "values": [
                         15,
 						15,
@@ -2360,7 +2360,7 @@
                 }
             ]
         },
-        {
+		{
             "skillCode": 1024,
 			"name_ko": "일반 공격 : 악멸의 사식",
 			"name_en": "Normal Attack : Demonbane",
@@ -2372,14 +2372,14 @@
                 {
                     "title_ko": "일반공격",
                     "title_en": "Normal Attack",
-                    "content_ko": "검으로 최대 5번 공격한다.",
+                    "content_ko": "검으로 최대 4번 공격한다.",
                     "content_en": "Perform up to 4 consecutive strikes."
                 },
                 {
                     "title_ko": "강공격",
                     "title_en": "Charged Attack",
-                    "content_ko": "스태미나를 지속해서 소모해 빠른 속도로 연속 베기를 발동한다. 강공격 종료 시 추가로 한 번 더 강력하게 휘두른다.",
-                    "content_en": "Drains Stamina over time to perform continuous slashes. At end of the sequence, perform a more powerful slash."
+                    "content_ko": "스태미나를 지속해서 소모해 검을 휘두르며 주변의 적을 공격한다. 회전 종료 시 추가로 한 번 더 강력하게 휘두른다.",
+                    "content_en": "Drains Stamina over time to perform continuous spinning attacks against all nearby enemies. At end of the sequence, perform a more powerful slash."
                 },
                 {
                     "title_ko": "낙하공격",
@@ -2756,7 +2756,7 @@
             ]
         },
         {
-            "skillCode": 1014,
+            "skillCode": 1026,
 			"name_ko": "영도 : 떨어지는 별",
 			"name_en": "Spirit Blade : Cloud-parting Star",
             "spritePath": "Images/UI/Stat/Beidou/stormbreaker",
@@ -2855,7 +2855,7 @@
                 {
                     "title_ko": "일반공격",
                     "title_en": "Normal Attack",
-                    "content_ko": "검으로 최대 5번 공격한다.",
+                    "content_ko": "검으로 최대 4번 공격한다.",
                     "content_en": "Perform up to 4 consecutive strikes."
                 },
                 {
@@ -2877,7 +2877,7 @@
                     "name_en": "1-Hit DMG",
                     "unit": "%",
                     "values": [
-                        89.7,
+						89.7,
 						97,
 						104.3,
 						114.73,
@@ -2923,7 +2923,7 @@
                     "name_en": "3-Hit DMG",
                     "unit": "%",
                     "values": [
-                        98.81
+                        98.81,
 						106.86,
 						114.9,
 						126.39,
@@ -2969,8 +2969,8 @@
                     "name_en": "Charged Attack Spinning DMG",
                     "unit": "%",
                     "values": [
-                        68.8
-						74.4
+                        68.8,
+						74.4,
 						80,
 						88,
 						93.6,
@@ -3061,21 +3061,21 @@
                     "name_en": "Plunge DMG",
                     "unit": "%",
                     "values": [
-						89.51,
-						96.79,
-						104.08,
-						114.48,
-						121.77,
-						130.1,
-						141.54,
-						152.99,
-						164.44,
-						176.93,
-						189.42,
-						201.91,
-						214.4,
-						226.89,
-						239.37
+                        74.59,
+						80.66,
+						86.73,
+						95.4,
+						101.47,
+						108.41,
+						117.95,
+						127.49,
+						137.03,
+						147.44,
+						157.85,
+						168.26,
+						178.66,
+						189.07,
+						199.48
                     ],
                     "floatCount": 2
                 },
@@ -3084,21 +3084,21 @@
                     "name_en": "Low Plunge DMG",
                     "unit": "%",
                     "values": [
-						178.97,
-						193.54,
-						208.11,
-						228.92,
-						243.49,
-						260.13,
-						283.03,
-						305.92,
-						328.81,
-						353.78,
-						378.76,
-						403.73,
-						428.7,
-						453.68,
-						478.65
+                        149.14,
+						161.28,
+						173.42,
+						190.77,
+						202.91,
+						216.78,
+						235.86,
+						254.93,
+						274.01,
+						294.82,
+						315.63,
+						336.44,
+						357.22,
+						378.06,
+						398.87
                     ],
                     "floatCount": 2
                 },
@@ -3107,21 +3107,21 @@
                     "name_en": "High Plunge DMG",
                     "unit": "%",
                     "values": [
-						223.55,
-						241.74,
-						259.94,
-						285.93,
-						304.13,
-						324.92,
-						353.52,
-						382.11,
-						410.7,
-						441.89,
-						473.09,
-						504.28,
-						535.47,
-						566.66,
-						597.86
+                        186.29,
+						201.45,
+						216.62,
+						238.28,
+						253.44,
+						270.77,
+						294.6,
+						318.42,
+						342.25,
+						368.25,
+						394.24,
+						420.23,
+						446.23,
+						472.22,
+						498.21
                     ],
                     "floatCount": 2
                 }
@@ -3396,6 +3396,1059 @@
 						40,
 						40,
 						40
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+		{
+            "skillCode": 1036,
+			"name_ko": "일반 공격 : 죄멸의 화살",
+			"name_en": "Normal Attack : Sharpshooter",
+            "spritePath": "Images/UI/Stat/Fischl/normal_atack_bolts_of_downfall",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "활로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 consecutive shots with a bow."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "피해가 더 크고 정확한 조준 사격을 한다. 조준 시 유야정토의 검은 번개 정령이 황녀의 명령을 받아 그녀의 뇌영 화살에 깃든다. 단죄의 번개의 힘이 가득 찬 마법 화살은 강력한 번개 원소 피해를 준다.",
+                    "content_en": "Perform a more precise Aimed Shot with increased DMG. While aiming, the dark lightning spirits of Immernachtreich shall heed the call of their Prinzessin and indwell the enchanted arrowhead. When fully indwelt, the Rachsiichtig Blitz shall deal immense Electro DMG. Plunging Attack Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 화살비를 쏜 후 빠른 속도로 땅에 착지한다. 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Fires off a shower of arrows in mid-air before falling and striking the ground, dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        44.12,
+						47.71,
+						51.3,
+						56.43,
+						60.02,
+						64.13,
+						69.77,
+						75.41,
+						81.05,
+						87.21,
+						93.37,
+						99.52,
+						105.68,
+						111.83,
+						117.99
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        46.78,
+						50.59,
+						54.4,
+						59.84,
+						63.65,
+						68,
+						73.98,
+						79.97,
+						85.95,
+						92.48,
+						99.01,
+						105.54,
+						112.06,
+						118.59,
+						125.12
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        58.14,
+						62.87,
+						67.6,
+						74.36,
+						79.09,
+						84.5,
+						91.94,
+						99.37,
+						106.81,
+						114.92,
+						123.03,
+						131.14,
+						139.26,
+						147.37,
+						155.48
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        57.71,
+						62.4,
+						67.1,
+						73.81,
+						78.51,
+						83.88,
+						91.26,
+						98.64,
+						106.02,
+						114.07,
+						122.12,
+						130.17,
+						138.23,
+						146.28,
+						154.33
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        72.07,
+						77.93,
+						83.8,
+						92.18,
+						98.05,
+						104.75,
+						113.97,
+						123.19,
+						132.4,
+						142.46,
+						152.52,
+						162.57,
+						172.63,
+						182.68,
+						192.74
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "조준 사격",
+                    "name_en": "Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        43.86,
+						47.43,
+						51,
+						56.1,
+						59.67,
+						63.75,
+						69.36,
+						74.97,
+						80.85,
+						86.7,
+						92.82,
+						98.94,
+						105.06,
+						111.18,
+						117.3
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "풀 차지 조준 사격",
+                    "name_en": "Fully-Charged Aimed Shot",
+                    "unit": "%",
+                    "values": [
+                        124,
+						133.3,
+						142.6,
+						155,
+						164.3,
+						173.6,
+						186,
+						198.4,
+						210.8,
+						223.2,
+						235.6,
+						248,
+						263.5,
+						279,
+						294.5
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        56.83,
+						61.45,
+						66.08,
+						72.69,
+						77.31,
+						82.6,
+						89.87,
+						97.14,
+						104.41,
+						112.34,
+						120.27,
+						128.2,
+						136.12,
+						144.05,
+						151.98
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        113.63,
+						122.88,
+						132.13,
+						145.35,
+						154.59,
+						165.17,
+						179.7,
+						194.23,
+						208.77,
+						224.62,
+						240.48,
+						256.34,
+						272.19,
+						288.05,
+						303.9
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        141.93,
+						153.49,
+						165.04,
+						181.54,
+						193.1,
+						206.3,
+						224.45,
+						242.61,
+						260.76,
+						280.57,
+						300.37,
+						320.18,
+						339.98,
+						359.79,
+						379.59
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1037,
+			"name_ko": "밤을 순찰하는 그림자 날개",
+			"name_en": "Nightrider",
+            "spritePath": "Images/UI/Stat/Fischl/nightrider",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "",
+                    "title_en": "",
+                    "content_ko": "오즈를 소환한다. 암영과 뇌전으로 구성된 레이븐이 속세에 강림할 때 작은 범위 내의 적에게 번개 원소 피해를 준다. 오즈는 존재하는 동안 번개 에너지 탄을 발사하여 주변의 적을 공격한다.",
+                    "content_en": "Summons Oz. The night raven forged of darkness and lightning descends upon the land, dealing Electro DMG in a small AoE. For the ability's duration, Oz will continuously attack nearby enemies with Freikugel."
+                },
+                {
+                    "title_ko": "",
+                    "title_en": "Baron Bunny",
+                    "content_ko": "홀드하여 오즈의 위치를 조정할 수 있다. 오즈가 존재하는 동안 다시 한 번 짧게 누르면 오즈를 자신의 주변으로 소환할 수 있다.",
+                    "content_en": "Hold to adjust the location Oz will be summoned to. Press again any time during the ability's duration to once again summon him to Fischl's side."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "오즈 공격 피해",
+                    "name_en": "Oz's ATK DMG",
+                    "unit": "%",
+                    "values": [
+                        88.8,
+						95.46,
+						102.12,
+						111,
+						117.66,
+						124.32,
+						133.2,
+						142.08,
+						150.96,
+						159.84,
+						168.72,
+						177.6,
+						188.7,
+						199.8,
+						210.9
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "소환 피해",
+                    "name_en": "Summoning DMG",
+                    "unit": "%",
+                    "values": [
+                        115.44,
+						124.1,
+						132.76,
+						144.3,
+						152.96,
+						161.62,
+						173.16,
+						184.7,
+						196.25,
+						207.79,
+						219.34,
+						230.88,
+						245.31,
+						259.74,
+						274.17
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "오즈 존재 시간",
+                    "name_en": "Oz's Duration",
+                    "unit": "s",
+                    "values": [
+                        10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10,
+						10
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "재사용 대기시간",
+                    "name_en": "CD",
+                    "unit": "s",
+                    "values": [
+                        25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25,
+						25
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1038,
+			"name_ko": "암야의 환상",
+			"name_en": "Midnight Phantasmagoria",
+            "spritePath": "Images/UI/Stat/Fischl/midnight_phantasmagoria",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "",
+                    "title_en": "Normal Attack",
+                    "content_ko": "오즈를 소환해 칠흑으로 엮은 두 날개로 피슬을 보호한다. 지속하는 동안 아래의 효과를 가진다:\n- 오즈의 형태로 변해 고속 이동한다.\n주변의 적에게 번개를 떨어트려 번개 원소 피해를 준다. 적 1명마다 낙뢰 피해를 1번만 받는다.\n- 효과 종료 시 오즈는 필드에 머물러 황녀의 적을 공격한다. 만약 오즈가 필드에 있으면 오즈의 존재 시간이 초기화 된다.",
+                    "content_en": "Summons Oz to spread his twin wings of twilight and defend Fischl. Has the following properties during the ability's duration:\n- Fischl takes on Oz's form, greatly increasing her Movement Speed.\n- Strikes nearby enemies with lightning, dealing Electro DMG to enemies she comes into contact with. Each enemy can only be struck once.\n- Once this ability's effects end, Oz will remain on the battlefield and attack his Prinzessin's foes. If Oz is already on the field, then this will reset the duration of his presence"
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "낙뢰 피해",
+                    "name_en": "Falling Thunder DMG",
+                    "unit": "%",
+                    "values": [
+                        208,
+						223.6,
+						239.2,
+						260,
+						275.6,
+						291.2,
+						312,
+						332.8,
+						353.6,
+						374.4,
+						395.2,
+						416,
+						442,
+						468,
+						494
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "재사용 대기시간",
+                    "name_en": "CD",
+                    "unit": "s",
+                    "values": [
+                        15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15,
+						15
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "원소 에너지",
+                    "name_en": "Energy Cost",
+                    "unit": "pt",
+                    "values": [
+                        60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60,
+						60
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1042,
+			"name_ko": "일반 공격 : 페보니우스 검술",
+			"name_en": "Normal Attack : Favonius Bladework",
+            "spritePath": "Images/UI/Stat/Jean/normal_attack_favonius_bladework",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "일반공격",
+                    "title_en": "Normal Attack",
+                    "content_ko": "검으로 최대 5번 공격한다.",
+                    "content_en": "Perform up to 5 rapid strikes."
+                },
+                {
+                    "title_ko": "강공격",
+                    "title_en": "Charged Attack",
+                    "content_ko": "일정 스태미나를 소모해 바람 원소의 힘이 깃들어있는 올려베기를 발동한다.\n날아간 적은 짧은 시간 내에 천천히 추락한다.",
+                    "content_en": "Consumes a certain amount of Stamina to launch an enemy using the power of wind.\nLaunched enemies will slowly fall to the ground."
+                },
+                {
+                    "title_ko": "낙하공격",
+                    "title_en": "Plunging Attack",
+                    "content_ko": "공중에서 땅을 내려찍어 경로상의 적을 공격하고 땅에 닿으면 범위 피해를 준다.",
+                    "content_en": "Plunges from mid-air to strike the ground below, damaging enemies along the path and dealing AoE DMG upon impact."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "1단 공격 피해",
+                    "name_en": "1-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        48.33,
+						52.27,
+						56.2,
+						61.82,
+						65.75,
+						70.25,
+						76.43,
+						82.61,
+						88.8,
+						95.54,
+						103.27,
+						112.36,
+						121.44,
+						130.53,
+						140.44
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "2단 공격 피해",
+                    "name_en": "2-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        45.58,
+						49.29,
+						53,
+						58.3,
+						62.01,
+						66.25,
+						72.08,
+						77.91,
+						83.74,
+						90.1,
+						97.39,
+						105.96,
+						114.53,
+						123.1,
+						132.45
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "3단 공격 피해",
+                    "name_en": "3-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        60.29,
+						65.19,
+						70.1,
+						77.11,
+						82.02,
+						87.63,
+						95.34,
+						103.05,
+						110.76,
+						119.17,
+						128.81,
+						140.14,
+						151.48,
+						162.81,
+						175.18
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "4단 공격 피해",
+                    "name_en": "4-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        65.88,
+						71.24,
+						76.6,
+						84.26,
+						89.62,
+						95.75,
+						104.18,
+						112.6,
+						121.03,
+						130.22,
+						140.75,
+						153.14,
+						165.52,
+						177.91,
+						191.42
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "5단 공격 피해",
+                    "name_en": "5-Hit DMG",
+                    "unit": "%",
+                    "values": [
+                        79.21,
+						85.65,
+						92.1,
+						101.31,
+						107.76,
+						115.13,
+						125.26,
+						135.39,
+						145.52,
+						156.57,
+						169.23,
+						184.13,
+						199.02,
+						213.91,
+						230.16
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "강공격 피해",
+                    "name_en": "Charged Attack DMG",
+                    "unit": "%",
+                    "values": [
+                        162.02,
+						175.21,
+						188.4,
+						207.24,
+						220.43,
+						235.5,
+						256.22,
+						276.95,
+						297.67,
+						320.28,
+						346.19,
+						376.65,
+						407.11,
+						437.58,
+						470.81
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "강공격 스태미나 소모",
+                    "name_en": "Charged Attack Stamina Cost",
+                    "unit": "pt",
+                    "values": [
+                        20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "낙하 기간 피해",
+                    "name_en": "Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        63.93,
+						69.14,
+						74.34,
+						81.77,
+						86.98,
+						92.93,
+						101.1,
+						109.28,
+						117.46,
+						126.38,
+						135.3,
+						144.22,
+						153.14,
+						162.06,
+						170.98
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "저공 추락 충격 피해",
+                    "name_en": "Low Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        127.84,
+						138.24,
+						148.65,
+						163.41,
+						173.92,
+						185.81,
+						202.16,
+						218.51,
+						234.86,
+						252.7,
+						270.54,
+						288.38,
+						306.22,
+						324.05,
+						341.89
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "고공 추락 충격 피해",
+                    "name_en": "High Plunge DMG",
+                    "unit": "%",
+                    "values": [
+                        159.68,
+						172.67,
+						185.67,
+						204.24,
+						217.23,
+						232.09,
+						252.51,
+						272.93,
+						293.36,
+						315.64,
+						337.92,
+						360.2,
+						382.48,
+						404.76,
+						427.04
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1043,
+			"name_ko": "풍압검",
+			"name_en": "Gale Blade",
+            "spritePath": "Images/UI/Stat/Jean/gale_blade",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "",
+                    "title_en": "",
+                    "content_ko": "형체가 없는 바람의 힘을 검에 모아 작은 폭풍을 만들어낸 후 적을 향해 날려 대량의 바람 원소 피해를 준다.",
+                    "content_en": "Focusing the might of the formless wind around her blade, Jean releases a miniature storm, launching enemies in the direction she aims at, dealing massive Anemo."
+                },
+                {
+                    "title_ko": "홀드",
+                    "title_en": "Hold",
+                    "content_ko": "지속해서 스태미나를 소모하여 주변의 적과 물체를 앞으로 끌어당긴다.\n방향을 조절할 수 있다.\n스킬을 시전하는 동안 이동할 수 없다.",
+                    "content_en": "At the cost of continued stamina consumption, Jean can command the whirlwind to pull surrounding enemies towards her front.\nDirection can be adjusted.\nCharacter is immobile during skill duration."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "스킬 피해",
+                    "name_en": "Skill DMG",
+                    "unit": "%",
+                    "values": [
+                        292,
+						313.9,
+						335.8,
+						365,
+						386.9,
+						408.8,
+						438,
+						467.2,
+						496.4,
+						525.6,
+						554.8,
+						584,
+						620.5,
+						657,
+						693.5
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "스태미나 소모",
+                    "name_en": "Stamina Consumption",
+                    "unit": "pt/s",
+                    "values": [
+                        20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "최대 지속 시간",
+                    "name_en": "Max Duration",
+                    "unit": "s",
+                    "values": [
+                        5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5,
+						5
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "재사용 대기시간 2",
+                    "name_en": "CD 2",
+                    "unit": "s",
+                    "values": [
+                        6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6,
+						6
+                    ],
+                    "floatCount": 2
+                }
+            ]
+        },
+        {
+            "skillCode": 1044,
+			"name_ko": "민들레 바람",
+			"name_en": "Dandelion Breeze",
+            "spritePath": "Images/UI/Stat/Jean/dandelion_breeze",
+            "sprite": {
+                "instanceID": 0
+            },
+            "informations": [
+                {
+                    "title_ko": "",
+                    "title_en": "",
+                    "content_ko": "바람의 가호를 소환해 천풍이 세차게 부는 민들레 영역을 만들어내 적을 넉백시키고 주변의 적에게 바람 원소 피해를 준다.\n또한 파티내 모든 캐릭터의 HP를 대량 회복하고 회복량은 진의 공격력의 영향을 받는다.",
+                    "content_en": "Focusing the might of the formless wind around her blade, Jean releases a miniature storm, launching enemies in the direction she aims at, dealing massive Anemo DMG."
+                },
+                {
+                    "title_ko": "민들레 영역",
+                    "title_en": "Dandelion Field",
+                    "content_ko": "- 영역 안의 캐릭터의 HP를 지속해서 회복한다.\n- 영역 안의 캐릭터는 지속해서 바람 원소의 영향을 받는다.\n- 영역을 출입하는 적에게 바람 원소 피해를 준다.",
+                    "content_en": "- At the cost of continued stamina consumption, Jean can command the whirlwind to pull surrounding enemies towards her front.\n- Direction can be adjusted.\n- Character is immobile during skill duration."
+                }
+            ],
+            "abilities": [
+                {
+                    "name_ko": "버스트 피해",
+                    "name_en": "Elemental Burst DMG",
+                    "unit": "%",
+                    "values": [
+                        424.8,
+						456.66,
+						488.52,
+						531,
+						562.86,
+						594.72,
+						637.2,
+						679.68,
+						722.16,
+						764.64,
+						807.12,
+						849.6,
+						902.7,
+						955.8,
+						1008.9
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "영역 출입 피해",
+                    "name_en": "Field Entering/Exiting DMG",
+                    "unit": "%",
+                    "values": [
+                        78.4,
+						84.28,
+						90.16,
+						98,
+						103.88,
+						109.76,
+						117.6,
+						125.44,
+						133.28,
+						141.12,
+						148.96,
+						156.8,
+						166.6,
+						176.4,
+						186.2
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "영역 발동 치유량 (최대 공격력 비율)",
+                    "name_en": "Field Activation Healing (Max ATK %)",
+                    "unit": "%",
+                    "values": [
+                        251.2,
+						270.04,
+						288.88,
+						314,
+						332.84,
+						351.68,
+						376.8,
+						401.92,
+						427.04,
+						452.16,
+						477.28,
+						502.4,
+						533.8,
+						565.2,
+						596.6
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "영역 발동 치유량 (고정 보너스)",
+                    "name_en": "Field Activation Healing (Flat Bonus)",
+                    "unit": " ",
+                    "values": [
+                        1540,
+						1694,
+						1861,
+						2041,
+						2234,
+						2439,
+						2657,
+						2888,
+						3132,
+						3389,
+						3659,
+						3941,
+						4236,
+						4544,
+						4865
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "지속 치유 (초당 최대 공격력 비율)",
+                    "name_en": "Continuous Regeneration (Max ATK %/s)",
+                    "unit": "%",
+                    "values": [
+                        25.12,
+						27,
+						28.89,
+						31.4,
+						33.28,
+						35.17,
+						37.68,
+						40.19,
+						42.7,
+						45.22,
+						47.73,
+						50.24,
+						53.38,
+						56.52,
+						59.66
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "지속 치유 (고정 보너스)",
+                    "name_en": "Continuous Regeneration (Flat Bonus)",
+                    "unit": " ",
+                    "values": [
+                        154,
+						169,
+						186,
+						204,
+						223,
+						244,
+						266,
+						289,
+						313,
+						339,
+						366,
+						394,
+						424,
+						454,
+						487
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "재사용 대기시간",
+                    "name_en": "CD",
+                    "unit": "s",
+                    "values": [
+                        20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20,
+						20
+                    ],
+                    "floatCount": 2
+                },
+                {
+                    "name_ko": "원소 에너지",
+                    "name_en": "Energy",
+                    "unit": "pt",
+                    "values": [
+                        80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80,
+						80
                     ],
                     "floatCount": 2
                 }
