@@ -288,6 +288,7 @@ public class PickUpManager : MonoBehaviour
         GameManager.instance.OffNotice();
         SoundManager.instance.PlayOneShotEffectSound(1);
 
+        StopCoroutine("PlayItemVideo");
         CancelInvoke("OffPanel");
         OffPanelAndSetting();
     }

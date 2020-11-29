@@ -11,6 +11,7 @@ public class SkillManager : MonoBehaviour
     public Animator animator;
     public Image illust;
     public Text nameText;
+    public Text countText;
 
     public GameObject skillFrame;
     public GameObject content;
@@ -63,10 +64,14 @@ public class SkillManager : MonoBehaviour
         if (language == Language.KOREAN)
         {
             nameText.text = item.koName;
+            countText.text = item.count + "개";
+            // countText.text = GetColorText("" + item.count, "e59e00") + "개";
         }
         else
         {
             nameText.text = item.enName;
+            countText.text = item.count + "EA";
+            // countText.text = GetColorText("" + item.count, "e59e00") + "EA";
         }
 
         if (item.type == ItemType.CHARACTER)
@@ -108,6 +113,8 @@ public class SkillManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         informationSet.SetActive(true);
+        ResetContentPosition();
+
         this.skill = skill;
         skillText = "";
 
@@ -221,5 +228,10 @@ public class SkillManager : MonoBehaviour
 
         skillLevel--;
         SetSkillAbilityText();
+    }
+
+    public void ResetContentPosition()
+    {
+        informationContent.GetComponent<RectTransform>().position = new Vector2(informationContent.GetComponent<RectTransform>().position.x, 0);
     }
 }
