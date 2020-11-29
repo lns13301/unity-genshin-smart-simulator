@@ -19,7 +19,9 @@ public class SkillDatabase : MonoBehaviour
         instance = this;
 
         //SaveSkillData();
-        LoadSkillData();
+        //LoadSkillData();
+        //SaveSkillDataAESC();
+        LoadSkillDataAESC();
 
         for (int i = 0; i < skillDB.Count; i++)
         {
@@ -80,6 +82,15 @@ public class SkillDatabase : MonoBehaviour
         File.WriteAllText(SaveOrLoad(false, true, "SkillData"), jsonData);
     }
 
+    [ContextMenu("To Json Data")]
+    public void SaveSkillDataAESC()
+    {
+        Debug.Log("저장 성공");
+
+        string jsonData = JsonUtility.ToJson(skillDataFile, true);
+        File.WriteAllText(SaveOrLoad(false, true, "ggsextra"), AESCrypto.AESEncrypt128(jsonData));
+    }
+
     [ContextMenu("From Json Data")]
     public void LoadSkillData()
     {
@@ -102,6 +113,33 @@ public class SkillDatabase : MonoBehaviour
 
             File.WriteAllText(SaveOrLoad(false, false, "SkillData"), jsonData);
             LoadSkillData();
+        }
+    }
+
+    [ContextMenu("From Json Data")]
+    public void LoadSkillDataAESC()
+    {
+        try
+        {
+            Debug.Log("스킬 정보 로드 성공");
+            string jsonData = Resources.Load<TextAsset>("ggsextra").ToString();
+            skillDataFile = JsonUtility.FromJson<SkillDataFile>(AESCrypto.AESDecrypt128(jsonData));
+
+            // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
+            for (int i = 0; i < skillDataFile.skillDatas.Count; i++)
+            {
+                skillDataFile.skillDatas[i].sprite = LoadSprite(skillDataFile.skillDatas[i].spritePath);
+                skillDB.Add(skillDataFile.skillDatas[i]);
+            }
+        }
+        catch (FileNotFoundException)
+        {
+            Debug.Log("로드 오류");
+
+            string jsonData = JsonUtility.ToJson(skillDataFile, true);
+
+            File.WriteAllText(SaveOrLoad(false, false, "ggsextra"), jsonData);
+            LoadSkillDataAESC();
         }
     }
 

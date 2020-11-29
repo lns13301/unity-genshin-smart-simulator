@@ -26,6 +26,11 @@ public class MainPage : MonoBehaviour
 
     public void ChangeScene(int sceneIndex)
     {
+        if (GameManager.instance.isValidTimeOver())
+        {
+            return;
+        }
+
         SoundManager.instance.PlayOneShotEffectSound(2);
         SceneManager.LoadScene(sceneIndex);
     }

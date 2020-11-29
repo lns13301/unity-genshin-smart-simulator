@@ -441,6 +441,7 @@ public class InventoryManager : MonoBehaviour
         noticeState = grade; // notice state 로 제어
     }
 
+
     public void ButtonYes()
     {
         SoundManager.instance.PlayOneShotEffectSound(1);

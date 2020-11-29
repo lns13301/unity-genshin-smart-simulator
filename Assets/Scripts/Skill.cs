@@ -78,4 +78,10 @@ public class SkillAbility
     {
         //레벨 로딩
     }
+
+    [ContextMenu("From Json Data")]
+    public Sprite loadSprite(string path)
+    {
+        return Resources.Load<Sprite>(path);
+    }
 }

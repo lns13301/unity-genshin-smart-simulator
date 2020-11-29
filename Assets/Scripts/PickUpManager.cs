@@ -17,7 +17,7 @@ public class PickUpManager : MonoBehaviour
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = 14 + 1;
     private static int MIN_LEGEND_CHARACTER = MAX_UNIQUE_CHARACTER;
-    private static int MAX_LEGEND_CHARACTER = 19 + 1;
+    private static int MAX_LEGEND_CHARACTER = 21 + 1;
 
     private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
     private static int CHARACTER_COUNT_FOUR_STAR = 14;
@@ -214,7 +214,7 @@ public class PickUpManager : MonoBehaviour
 
         videos[0].Play();
 
-        Invoke("OnSkipButton", 1.5f);
+        Invoke("OnSkipButton", 1.0f);
         Invoke("OffPanel", 6.5f);
     }
 

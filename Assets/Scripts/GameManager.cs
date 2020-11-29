@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public string LACK_OF_WISH = "보유한 재화가 부족합니다.";
     public string UPDATE_YET = "아직 추가되지 않은 기능입니다.\n\n추후 업데이트를 기다려주세요!";
     public string WANT_SKIP = "건너뛰시겠습니까?";
-    public string END_DATE = "체험 기간이 종료되었습니다.";
+    public string END_DATE = "테스트 기간이 종료되었습니다.";
     public string NEW_LINE = "\n";
     public string ORANGE_COLOR = "e59e00";
     public string RED_COLOR = "d50707";
@@ -44,10 +44,15 @@ public class GameManager : MonoBehaviour
     public string END_DATE_EN = "Your trial period has ended.";
     public string WARNING_EN;
 
+    public bool isTestVersion;
+    /* 1. isTestVersion 값 바꾸기, 2. ggsdatat로 세이브파일 바꾸기, 3. 광고보기를 초기화로 바꾸기*/
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
+
+        isTestVersion = false; // 게임이 테스트 버전인지 설정하기, 플레이어 데이터 로드에서 생성하는 부분도 수정하기
 
         LoadPlayerDataFromJson();
 
@@ -72,7 +77,18 @@ public class GameManager : MonoBehaviour
         }
         catch
         {
+            Invoke("isValidTimeOver", 1f);
 
+            WARNING = GetColorText("! 경고 !", RED_COLOR);
+            WARNING_EN = GetColorText("! WARNING !", RED_COLOR);
+        }
+
+        if (!isTestVersion && playerData.isTestVersion)
+        {
+            playerData.acquantFateCount = -10000;
+            playerData.intertwinedFateCount = -10000;
+            playerData.starDustCount = -100000;
+            playerData.starLightCount = -100000;
         }
     }
 
@@ -223,16 +239,19 @@ public class GameManager : MonoBehaviour
     public bool isValidTimeOver()
     {
         return false;
+
         int[] timeData = TimeManager.sharedInstance.GetKoreaCurrentTime();
 
         Debug.Log(timeData[0] + "년" + timeData[1] + "월" + timeData[2] + "일" + timeData[3] + "시" + timeData[4] + "분");
 
-        if ( ((timeData[0] >= 2020 && timeData[1] >= 11) || timeData[0] > 2020)
+        if ( ((timeData[0] >= 2020 && timeData[1] >= 12) || timeData[0] > 2020)
             && ((timeData[2] > 6) || (timeData[2] <= 6 && timeData[3] >= 23 && timeData[4] >= 59))
             )
         {
             playerData.acquantFateCount = 0;
             playerData.intertwinedFateCount = 0;
+            playerData.starLightCount = 0;
+            playerData.starDustCount = 0;
 
             information.SetActive(true);
             informationText.text = END_DATE;
@@ -279,12 +298,24 @@ public class GameManager : MonoBehaviour
         }
         catch (FileNotFoundException)
         {
-            Debug.Log("로드 오류");
+            Debug.Log("플레이어 세이브파일 로드 오류");
 
-            playerData.acquantFateCount = 100;
-            playerData.intertwinedFateCount = 100;
-            playerData.starDustCount = 300;
-            playerData.starLightCount = 10;
+            if (isTestVersion)
+            {
+                playerData.acquantFateCount = 3000;
+                playerData.intertwinedFateCount = 3000;
+                playerData.starDustCount = 1000;
+                playerData.starLightCount = 100;
+            }
+            else
+            {
+                playerData.acquantFateCount = 100;
+                playerData.intertwinedFateCount = 100;
+                playerData.starDustCount = 300;
+                playerData.starLightCount = 10;
+            }
+
+            playerData.isTestVersion = this.isTestVersion;
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
@@ -329,6 +360,7 @@ public class GameManager : MonoBehaviour
         LoadPlayerDataFromJson();
     }
 
+    // refresh
     public void SetResources()
     {
         acquantFateText.text = "" + playerData.acquantFateCount;
@@ -535,5 +567,34 @@ public class GameManager : MonoBehaviour
     public void ChangeScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void ResetPlayerData()
+    {
+        PlayerData playerData = new PlayerData();
+
+        if (isTestVersion)
+        {
+            playerData.acquantFateCount = 3000;
+            playerData.intertwinedFateCount = 3000;
+            playerData.starDustCount = 1000;
+            playerData.starLightCount = 100;
+        }
+        else
+        {
+            playerData.acquantFateCount = 100;
+            playerData.intertwinedFateCount = 100;
+            playerData.starDustCount = 300;
+            playerData.starLightCount = 10;
+        }
+
+        playerData.isTestVersion = this.isTestVersion;
+
+        string jsonData = JsonUtility.ToJson(playerData, true);
+
+        File.WriteAllText(SaveOrLoad(isMobile, false, "ggsdatat"), AESCrypto.AESEncrypt128(jsonData));
+        LoadPlayerDataFromJson();
+        SetResources();
+        ChangeScene(0);
     }
 }
