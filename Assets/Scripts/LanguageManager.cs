@@ -116,6 +116,8 @@ public class LanguageManager : MonoBehaviour
             texts[38].text = "추가 획득";
             texts[39].text = "아무 키나 눌러 계속하기";
             texts[40].text = "파괴";
+            texts[41].text = "스킬 레벨 UP";
+            texts[42].text = "스킬 레벨 Down";
         }
         else
         {
@@ -160,6 +162,8 @@ public class LanguageManager : MonoBehaviour
             texts[38].text = "Extra";
             texts[39].text = "Click anywhere in the blank area to continue";
             texts[40].text = "Destroy";
+            texts[41].text = "Skill Lv UP";
+            texts[42].text = "Skill Lv Down";
         }
 
         BannerManager.instance.SetBannerImageByLanguage(language);

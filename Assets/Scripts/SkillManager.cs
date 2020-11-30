@@ -15,6 +15,8 @@ public class SkillManager : MonoBehaviour
 
     public GameObject skillFrame;
     public GameObject content;
+    public GameObject skillPanel;
+    public GameObject ascensionPanel;
 
     public GameObject informationSet;
     public GameObject informationPanel;
@@ -41,6 +43,8 @@ public class SkillManager : MonoBehaviour
         informationSkillImage = informationPanel.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>();
         informationSkillTitle = informationPanel.transform.GetChild(0).GetChild(1).GetComponent<Text>();
         skillLevel = 0;
+
+        OffPanelAll();
     }
 
     // Update is called once per frame
@@ -52,6 +56,7 @@ public class SkillManager : MonoBehaviour
     public void OnStatUI(Item item)
     {
         SetSkillDestroy();
+        OffPanelAll();
 
         Language language = LanguageManager.instance.language;
         SoundManager.instance.PlayOneShotEffectSound(1);
@@ -233,5 +238,28 @@ public class SkillManager : MonoBehaviour
     public void ResetContentPosition()
     {
         informationContent.GetComponent<RectTransform>().position = new Vector2(informationContent.GetComponent<RectTransform>().position.x, 0);
+    }
+    
+    public void OnSkillPanel()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(2);
+
+        skillPanel.SetActive(true);
+        ascensionPanel.SetActive(false);
+    }
+
+    public void OnAscensionPanel()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(2);
+
+        ascensionPanel.SetActive(true);
+        skillPanel.SetActive(false);
+    }
+
+    public void OffPanelAll()
+    {
+        skillPanel.SetActive(false);
+        ascensionPanel.SetActive(false);
+        informationSet.SetActive(false);
     }
 }
