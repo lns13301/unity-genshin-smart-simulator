@@ -26,8 +26,11 @@ public class Character
     public Talent talent;
     public Profile profile;
 
-    public Character(int code, Element element, Grade grade, int skillStartCode = 1000, string enName = null, string koName = null
-        , int phase = 0, AscensionMaterial ascensionMaterial = null
+    public int ascensionItemCode;
+    public int ascensionMobItemCode;
+
+    public Character(int code, Element element, Grade grade, int skillStartCode = 1000, int ascensionItemCode = 10300, int ascensionMobItemCode = 10300
+        , string enName = null, string koName = null, int phase = 0, AscensionMaterial ascensionMaterial = null
         , int level = 1, int levelLimit = 20, int exp = 0, int nextExp = 0, int friendship = 0
         , Attribute attribute = null, Item equipedWeapon = null, List<Item> artifacts = null
         , Constellation constellation = null, Talent talent = null, Profile profile = null)
@@ -36,6 +39,8 @@ public class Character
         this.element = element;
         this.grade = grade;
         this.skillStartCode = skillStartCode;
+        this.ascensionItemCode = ascensionItemCode;
+        this.ascensionMobItemCode = ascensionMobItemCode;
         this.enName = enName;
         this.koName = koName;
         this.phase = phase;
