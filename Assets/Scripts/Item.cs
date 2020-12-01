@@ -38,6 +38,12 @@ public class Item
     }
 
     [ContextMenu("From Json Data")]
+    public Sprite loadSprite()
+    {
+        return Resources.Load<Sprite>(spritePath);
+    }
+
+    [ContextMenu("From Json Data")]
     public Animator loadAnimator(string path)
     {
         return Resources.Load<Animator>(path);
@@ -201,6 +207,48 @@ public class Item
     public void SetCount(int count)
     {
         this.count = count;
+    }
+
+    public int GetElementAscensionJewelItemCode()
+    {
+        switch (character.element)
+        {
+            case Element.PYRO:
+                return 10100;
+            case Element.HYDRO:
+                return 10104;
+            case Element.ELECTRO:
+                return 10108;
+            case Element.ANEMO:
+                return 10112;
+            case Element.CRYO:
+                return 10116;
+            case Element.GEO:
+                return 10120;
+            default:
+                return 10124;
+        }
+    }
+
+    public int GetElementAscensionItemCode()
+    {
+        switch (character.element)
+        {
+            case Element.PYRO:
+                return 10200;
+            case Element.HYDRO:
+                return 10201;
+            case Element.ELECTRO:
+                return 10202;
+            case Element.ANEMO:
+                return 10203;
+            case Element.CRYO:
+                return 10204;
+            case Element.GEO:
+                return 10205;
+            default:
+                return -1;
+        }
     }
 }
 

@@ -5383,7 +5383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25d2ffe9d8fedd443a6f0a0d700fdbb4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a997701ef2d3c854790b352a6da84a99, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6525,7 +6525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22beed932fd6b5849b133fd209bb664e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 877313b925d049c488f534cad69d5a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7643,7 +7643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6f804e1f9150e564183901752c49a276, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 193fda035fdb07d42bfc618f76de11f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9355,7 +9355,6 @@ MonoBehaviour:
     adventureItems: []
     usedCoupon: 
     language: 0
-    isTestVersion: 0
   isMobile: 1
   intertwinedFateText: {fileID: 2891412917456369134}
   acquantFateText: {fileID: 1668328092998123332}

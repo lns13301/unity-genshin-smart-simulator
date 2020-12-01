@@ -7,20 +7,22 @@ using UnityEngine.UI;
 public class PickUpManager : MonoBehaviour
 {
     // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private static int MIN_EPIC_WEAPON = 23;
-    private static int MAX_EPIC_WEAPON = 45 + 1;
+    private static int MIN_EPIC_WEAPON = 25;
+    private static int MAX_EPIC_WEAPON = 47 + 1;
     private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
-    private static int MAX_UNIQUE_WEAPON = 63 + 1;
+    private static int MAX_UNIQUE_WEAPON = 65 + 1;
     private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
-    private static int MAX_LEGEND_WEAPON = 73 + 1;
+    private static int MAX_LEGEND_WEAPON = 76 + 1;
 
     private static int MIN_UNIQUE_CHARACTER = 0;
-    private static int MAX_UNIQUE_CHARACTER = 14 + 1;
-    private static int MIN_LEGEND_CHARACTER = MAX_UNIQUE_CHARACTER;
-    private static int MAX_LEGEND_CHARACTER = 21 + 1;
+    private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
+    private static int MIN_LEGEND_CHARACTER = 16; // 다이루크 시작 코드
+    private static int MAX_LEGEND_CHARACTER = 23 + 1;
 
     private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
-    private static int CHARACTER_COUNT_FOUR_STAR = 14;
+    private static int CHARACTER_COUNT_FOUR_STAR = 14; // 픽업 4성은 제외 했음
+
+    private static int CHARACTER_AND_WEAPON_FOUR_STAR_TOTAL = CHARACTER_COUNT_FOUR_STAR + MAX_EPIC_WEAPON - MIN_EPIC_WEAPON;
 
     public static PickUpManager instance;
     public GameObject panel;
@@ -319,6 +321,10 @@ public class PickUpManager : MonoBehaviour
             else if (result[i].koName == "속세의 자물쇠")
             {
                 videos[0].clip = videos[5].clip;
+            }
+            else if (result[i].koName == "종려")
+            {
+                videos[0].clip = videos[6].clip;
             }
             else
             {
@@ -748,19 +754,19 @@ public class PickUpManager : MonoBehaviour
             }
             if (pickUpType == PickUpType.WEAPON)
             {
-                int r = Random.Range(0, 2);
+                int r = Random.Range(0, 75);
 
-                if (r == 0 || isPickUpAlways)
+                if (r < 75 || isPickUpAlways)
                 {
                     playerData.isPickUpWeaponAlways = false;
 
                     if (Random.Range(0, 2) == 0)
                     {
-                        return ItemDatabase.instance.findItemByName("천공의 하프");
+                        return ItemDatabase.instance.findItemByName("무공의 검");
                     }
                     else
                     {
-                        return ItemDatabase.instance.findItemByName("속세의 자물쇠");
+                        return ItemDatabase.instance.findItemByName("관홍의 창");
                     }
                 }
                 else
@@ -777,7 +783,7 @@ public class PickUpManager : MonoBehaviour
                 {
                     playerData.isPickUpCharacterAlways = false;
 
-                    return ItemDatabase.instance.findItemByName("타르탈리아");
+                    return ItemDatabase.instance.findItemByName("종려");
                 }
                 else
                 {
@@ -815,15 +821,15 @@ public class PickUpManager : MonoBehaviour
                     switch (value)
                     {
                         case 0:
-                            return ItemDatabase.instance.findItemByName("피리검");
+                            return ItemDatabase.instance.findItemByName("용의 포효");
                         case 1:
-                            return ItemDatabase.instance.findItemByName("빗물 베기");
+                            return ItemDatabase.instance.findItemByName("시간의 검");
                         case 2:
-                            return ItemDatabase.instance.findItemByName("녹슨 활");
+                            return ItemDatabase.instance.findItemByName("페보니우스 활");
                         case 3:
-                            return ItemDatabase.instance.findItemByName("소심");
+                            return ItemDatabase.instance.findItemByName("페보니우스 비전");
                         case 4:
-                            return ItemDatabase.instance.findItemByName("페보니우스 장창");
+                            return ItemDatabase.instance.findItemByName("용학살창");
                     }
                 }
                 else
@@ -854,20 +860,20 @@ public class PickUpManager : MonoBehaviour
                     switch (value)
                     {
                         case 0:
-                            return ItemDatabase.instance.findItemByName("북두");
+                            return ItemDatabase.instance.findItemByName("신염");
                         case 1:
-                            return ItemDatabase.instance.findItemByName("응광");
+                            return ItemDatabase.instance.findItemByName("중운");
                         case 2:
-                            return ItemDatabase.instance.findItemByName("디오나");
+                            return ItemDatabase.instance.findItemByName("레이저");
                     }
 
                     return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
                 }
                 else
                 {
-                    int range = Random.Range(0, 33); // 무기 + 캐릭터 개수
+                    int range = Random.Range(0, CHARACTER_AND_WEAPON_FOUR_STAR_TOTAL); // 무기 + 캐릭터 개수
 
-                    if (range < 14) // 캐릭터 개수
+                    if (range < MAX_UNIQUE_CHARACTER) // 캐릭터 개수
                     {
                         playerData.isPickUpCharacter4Always = true;
                         return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];

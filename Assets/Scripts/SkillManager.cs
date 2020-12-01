@@ -17,6 +17,7 @@ public class SkillManager : MonoBehaviour
     public GameObject content;
     public GameObject skillPanel;
     public GameObject ascensionPanel;
+    public GameObject ascensionContent;
 
     public GameObject informationSet;
     public GameObject informationPanel;
@@ -29,6 +30,8 @@ public class SkillManager : MonoBehaviour
     public Skill skill;
 
     public string skillText;
+
+    public Item item;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +58,8 @@ public class SkillManager : MonoBehaviour
 
     public void OnStatUI(Item item)
     {
+        this.item = item;
+
         SetSkillDestroy();
         OffPanelAll();
 
@@ -254,6 +259,24 @@ public class SkillManager : MonoBehaviour
 
         ascensionPanel.SetActive(true);
         skillPanel.SetActive(false);
+
+        try
+        {
+            for (int i = 0; i < ascensionContent.transform.childCount; i++)
+            {
+                ascensionContent.transform.GetChild(i).GetComponent<AscensionFrame>().SetAscensionData(item);
+            }
+        }
+        catch
+        {
+            Invoke("OnAscensionPanelErrorCatch", 0.1f);
+        }
+    }
+
+    public void OnAscensionPanelErrorCatch()
+    {
+        OnAscensionPanel();
+        CancelInvoke("OnAscensionPanelErrorCatch");
     }
 
     public void OffPanelAll()

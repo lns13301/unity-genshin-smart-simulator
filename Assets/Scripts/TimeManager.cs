@@ -179,7 +179,7 @@ public class TimeManager : MonoBehaviour
         {
             playerData.adLastDate = GetDay();
             playerData.adLastTime = GetHour();
-            playerData.adCount = 10; // 광고 횟수 제한
+            playerData.adCount = 50; // 광고 횟수 제한
         }
 
         return playerData.adCount;

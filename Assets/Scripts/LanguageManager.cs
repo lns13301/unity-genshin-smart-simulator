@@ -118,6 +118,9 @@ public class LanguageManager : MonoBehaviour
             texts[40].text = "파괴";
             texts[41].text = "스킬 레벨 UP";
             texts[42].text = "스킬 레벨 Down";
+            texts[43].text = "돌파 재료";
+            texts[44].text = "스킬 정보";
+            texts[45].text = "운명의 자리";
         }
         else
         {
@@ -164,6 +167,9 @@ public class LanguageManager : MonoBehaviour
             texts[40].text = "Destroy";
             texts[41].text = "Skill Lv UP";
             texts[42].text = "Skill Lv Down";
+            texts[43].text = "Required Material";
+            texts[44].text = "Talents";
+            texts[45].text = "Constellation";
         }
 
         BannerManager.instance.SetBannerImageByLanguage(language);

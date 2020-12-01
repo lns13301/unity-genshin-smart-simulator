@@ -83,13 +83,13 @@ public class GameManager : MonoBehaviour
             WARNING_EN = GetColorText("! WARNING !", RED_COLOR);
         }
 
-        if (!isTestVersion && playerData.isTestVersion)
+/*        if (!isTestVersion && playerData.isTestVersion)
         {
             playerData.acquantFateCount = -10000;
             playerData.intertwinedFateCount = -10000;
             playerData.starDustCount = -100000;
             playerData.starLightCount = -100000;
-        }
+        }*/
     }
 
     // Update is called once per frame
@@ -109,12 +109,12 @@ public class GameManager : MonoBehaviour
         {
             detailContent.GetChild(0).GetComponent<Text>().text = "확률 정보입니다.";
             detailContent.GetChild(1).GetComponent<Text>().text =
-                GetColorText("겨울 나라와의 이별 이벤트 기원", "9958b3") + " : " + GetColorText("74회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
+                GetColorText("산야의 시조 이벤트 기원", "9958b3") + " : " + GetColorText("74회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
                 + "이후부터 " + GetColorText("32.323%", RED_COLOR) + "확률로 " + GetColorText("5성", ORANGE_COLOR) + "이 등장합니다.\n"
                 + "(기본 " + GetColorText("0.6%", RED_COLOR) + "에서 최대 " + GetColorText("1.6%", RED_COLOR)
                 + "로 최대 " + GetColorText("90", RED_COLOR) + "회차에 확정적으로 " + GetColorText("5성 획득", ORANGE_COLOR) + "이 가능합니다.)";
             detailContent.GetChild(2).GetComponent<Text>().text =
-                GetColorText("겨울 나라와의 이별 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", "
+                GetColorText("산야의 시조 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", "
                 + GetColorText("4회차", RED_COLOR) + " 이후부터 " + GetColorText("1회", RED_COLOR) + "당 " + GetColorText("1.58%", RED_COLOR) + "씩 증가\n" +
                 "(최대 " + GetColorText("13%", RED_COLOR) + " 로 최대 " + GetColorText("10회차", RED_COLOR) + "에 확정적으로 "
                 + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";
@@ -138,11 +138,11 @@ public class GameManager : MonoBehaviour
                 + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";
             detailContent.GetChild(7).GetComponent<Text>().text =
                 "기원에서 " + GetColorText("5성", ORANGE_COLOR) + " 무기를 획득 시 "
-                + GetColorText("50%", RED_COLOR) + "확률로 " + GetColorText("픽업 무기", ORANGE_COLOR) + "를 획득합니다.\n" +
+                + GetColorText("75%", RED_COLOR) + "확률로 " + GetColorText("픽업 무기", ORANGE_COLOR) + "를 획득합니다.\n" +
                 "만약 이벤트에서 획득한 무기가 " + GetColorText("픽업무기가 아닐경우 다음 5성 무기는 무조건 픽업 무기", ORANGE_COLOR) + "입니다.";
             detailContent.GetChild(8).GetComponent<Text>().text =
                 "기원에서 " + GetColorText("4성", ORANGE_COLOR) + " 무기를 획득 시 "
-                + GetColorText("50%", RED_COLOR) + "확률로 " + GetColorText("픽업 무기", ORANGE_COLOR) + "를 획득합니다.\n" +
+                + GetColorText("75%", RED_COLOR) + "확률로 " + GetColorText("픽업 무기", ORANGE_COLOR) + "를 획득합니다.\n" +
                 "만약 이벤트에서 획득한 무기가 " + GetColorText("픽업무기가 아닐경우 다음 4성 무기는 무조건 픽업 무기", ORANGE_COLOR) + "입니다.";
             detailContent.GetChild(9).GetComponent<Text>().text =
                 GetColorText("세상 여행 일반 기원", "497a4d") + " : " + GetColorText("74회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
@@ -159,13 +159,13 @@ public class GameManager : MonoBehaviour
         {
             detailContent.GetChild(0).GetComponent<Text>().text = "Probability Information";
             detailContent.GetChild(1).GetComponent<Text>().text =
-                GetColorText("Event Wish \"Farewell of Snezhnaya\"", "9958b3") + " : " + "It has a " + GetColorText("0.6%", RED_COLOR) + " probability up to " + GetColorText("74 times", RED_COLOR) + "."
+                GetColorText("Event Wish \"Gentry of Hermitage\"", "9958b3") + " : " + "It has a " + GetColorText("0.6%", RED_COLOR) + " probability up to " + GetColorText("74 times", RED_COLOR) + "."
                 + "Since then, " + GetColorText("5-star", ORANGE_COLOR) + " appear with a " + GetColorText("32.323%", RED_COLOR) + " probability" + ".\n"
                 + "(Base probability of winning " + GetColorText("5-star item", ORANGE_COLOR) + " = " + GetColorText("0.6%", RED_COLOR) + ", consolidated probability of winning " 
                 + GetColorText("5-star item", ORANGE_COLOR) + " = " + GetColorText("1.6%", RED_COLOR)
                 + "guaranteed to win " + GetColorText("5-star item", ORANGE_COLOR) + "at least once per " + GetColorText("90", RED_COLOR) + " attempts";
             detailContent.GetChild(2).GetComponent<Text>().text =
-            GetColorText("Event Wish \"Farewell of Snezhnaya\"", "9958b3") + " : " + "It has a " + GetColorText("5.1%", RED_COLOR) + " probability up to " + GetColorText("4 times", RED_COLOR) + "."
+            GetColorText("Event Wish \"Gentry of Hermitage\"", "9958b3") + " : " + "It has a " + GetColorText("5.1%", RED_COLOR) + " probability up to " + GetColorText("4 times", RED_COLOR) + "."
                 + "Since then, " + GetColorText("4-star", ORANGE_COLOR) + " increases by " + GetColorText("1.58%", RED_COLOR) + " each time." + ".\n"
                 + "(Base probability of winning " + GetColorText("4-star item", ORANGE_COLOR) + " = " + GetColorText("5.1%", RED_COLOR) + ", consolidated probability of winning "
                 + GetColorText("4-star item", ORANGE_COLOR) + " = " + GetColorText("13%", RED_COLOR)
@@ -192,11 +192,11 @@ public class GameManager : MonoBehaviour
                 + "guaranteed to win " + GetColorText("4-star item", ORANGE_COLOR) + "at least once per " + GetColorText("10", RED_COLOR) + " attempts";
             detailContent.GetChild(7).GetComponent<Text>().text =
                 "The first time you win a " + GetColorText("5-star item", ORANGE_COLOR) + " in this event wish, there is a "
-                + GetColorText("50% chance", RED_COLOR) + " it will be the " + GetColorText("promotional weapon", ORANGE_COLOR) + ".\n" +
+                + GetColorText("75% chance", RED_COLOR) + " it will be the " + GetColorText("promotional weapon", ORANGE_COLOR) + ".\n" +
                 "If the first 5-star weapon you win in this event wish is not " + GetColorText("the promotional weapon, then the next 5-star weapon you win is guaranteed to be the promotional weapon", ORANGE_COLOR) + ".";
             detailContent.GetChild(8).GetComponent<Text>().text =
                 "The first time you win a " + GetColorText("4-star item", ORANGE_COLOR) + " in this event wish, there is a "
-                + GetColorText("50% chance", RED_COLOR) + " it will be the " + GetColorText("promotional weapon", ORANGE_COLOR) + ".\n" +
+                + GetColorText("75% chance", RED_COLOR) + " it will be the " + GetColorText("promotional weapon", ORANGE_COLOR) + ".\n" +
                 "If the first 4-star weapon you win in this event wish is not " + GetColorText("the promotional weapon, then the next 4-star weapon you win is guaranteed to be the promotional weapon", ORANGE_COLOR) + ".";
             detailContent.GetChild(9).GetComponent<Text>().text =
             GetColorText("Standard Wish \"Wanderlust Invocation\"", "497a4d") + " : " + "It has a " + GetColorText("0.6%", RED_COLOR) + " probability up to " + GetColorText("74 times", RED_COLOR) + "."
@@ -302,8 +302,8 @@ public class GameManager : MonoBehaviour
 
             if (isTestVersion)
             {
-                playerData.acquantFateCount = 3000;
-                playerData.intertwinedFateCount = 3000;
+                playerData.acquantFateCount = 2000;
+                playerData.intertwinedFateCount = 2000;
                 playerData.starDustCount = 1000;
                 playerData.starLightCount = 100;
             }
@@ -315,7 +315,7 @@ public class GameManager : MonoBehaviour
                 playerData.starLightCount = 10;
             }
 
-            playerData.isTestVersion = this.isTestVersion;
+            // playerData.isTestVersion = isTestVersion;
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
@@ -588,7 +588,7 @@ public class GameManager : MonoBehaviour
             playerData.starLightCount = 10;
         }
 
-        playerData.isTestVersion = this.isTestVersion;
+        // playerData.isTestVersion = isTestVersion;
 
         string jsonData = JsonUtility.ToJson(playerData, true);
 

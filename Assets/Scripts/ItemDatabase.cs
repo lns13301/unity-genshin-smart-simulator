@@ -8,10 +8,10 @@ public class ItemDatabase : MonoBehaviour
     public static ItemDatabase instance;
     public ItemDataFile itemDataFile;
 
-    public string spritePathHero = "Images/Character/";
-    public string spritePathWeapon = "Images/Weapon/";
-    public string effectsPath = "Effects/";
-    public string spritePathTalent = "Images/UI/Stat/";
+    private string spritePathHero = "Images/Character/";
+    private string spritePathWeapon = "Images/Weapon/";
+    private string effectsPath = "Effects/";
+    private string spritePathTalent = "Images/UI/Stat/TalentItem/";
 
     public Dictionary<int, Item> itemDatas = new Dictionary<int, Item>();
 
@@ -228,6 +228,8 @@ public class ItemDatabase : MonoBehaviour
         /////////////////////////////////////////////////////////////////////////////////////////////
 
         itemDataFile.itemDatas.Add(new Item(4300, "Memory of Dust", "속세의 자물쇠", 1, ItemType.CATALYST, Grade.LEGEND, spritePathWeapon + "Memory of Dust"));
+        itemDataFile.itemDatas.Add(new Item(4100, "The Unforged", "무공의 검", 1, ItemType.CLAYMORE, Grade.LEGEND, spritePathWeapon + "The Unforged"));
+        itemDataFile.itemDatas.Add(new Item(4200, "Vortex Vanquisher", "관홍의 창", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Vortex Vanquisher"));
 
         /////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -57,8 +57,6 @@ public class PlayerData
 
     public Language language;
 
-    public bool isTestVersion;
-
     public bool AddCharacter(Item item)
     {
         for (int i = 0; i < characters.Count; i++)
