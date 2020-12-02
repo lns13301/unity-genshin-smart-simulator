@@ -12,7 +12,8 @@
 - 자원 체킹 맵
 <img src="img/map_page.gif">
 
-## 설치 링크
+## Download Link
 
-PC : https://drive.google.com/file/d/1FyQ2_yeqEuzRNWYStPlLFnSMRXjaOq8j/view?usp=sharing
-Android : https://play.google.com/store/apps/details?id=com.EnotSCompany.GenshinGachaSimulator
+- PC : https://drive.google.com/file/d/1FyQ2_yeqEuzRNWYStPlLFnSMRXjaOq8j/view?usp=sharing
+
+- Android : https://play.google.com/store/apps/details?id=com.EnotSCompany.GenshinGachaSimulator
