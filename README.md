@@ -3,13 +3,13 @@
 
 Information
 기원
-<img src="imgs/zhongli_pickup.gif">
+<img src="img/zhongli_pickup.gif">
 
 캐릭터 조회
-<img src="imgs/skill_page.gif">
+<img src="img/skill_page.gif">
 
 자원 체킹 맵
-<img src="imgs/map_page.gif">
+<img src="img/map_page.gif">
 
 Download Link
 PC : https://drive.google.com/file/d/1FyQ2_yeqEuzRNWYStPlLFnSMRXjaOq8j/view?usp=sharing
