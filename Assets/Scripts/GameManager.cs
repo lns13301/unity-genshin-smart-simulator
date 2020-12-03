@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public string LACK_OF_WISH = "보유한 재화가 부족합니다.";
     public string UPDATE_YET = "아직 추가되지 않은 기능입니다.\n\n추후 업데이트를 기다려주세요!";
     public string WANT_SKIP = "건너뛰시겠습니까?";
-    public string END_DATE = "테스트 기간이 종료되었습니다.";
+    public string END_DATE = "픽업 기간이 종료되었습니다.\n새 버전을 설치해주세요.";
     public string NEW_LINE = "\n";
     public string ORANGE_COLOR = "e59e00";
     public string RED_COLOR = "d50707";
@@ -41,10 +41,12 @@ public class GameManager : MonoBehaviour
     public string LACK_OF_WISH_EN = "You don't have enough wish.";
     public string UPDATE_YET_EN = "This feature has not been added yet.\n\nPlease wait for further updates!";
     private string WANT_SKIP_EN = "Would you like to skip it?";
-    public string END_DATE_EN = "Your trial period has ended.";
+    public string END_DATE_EN = "Your trial period has ended.\nDownload new version.";
     public string WARNING_EN;
 
+    public Language previousLanguage;
     public bool isTestVersion;
+    private string saveFileName = "ggsdata";
     /* 1. isTestVersion 값 바꾸기, 2. ggsdatat로 세이브파일 바꾸기, 3. 광고보기를 초기화로 바꾸기*/
 
     // Start is called before the first frame update
@@ -245,7 +247,7 @@ public class GameManager : MonoBehaviour
         Debug.Log(timeData[0] + "년" + timeData[1] + "월" + timeData[2] + "일" + timeData[3] + "시" + timeData[4] + "분");
 
         if ( ((timeData[0] >= 2020 && timeData[1] >= 12) || timeData[0] > 2020)
-            && ((timeData[2] > 6) || (timeData[2] <= 6 && timeData[3] >= 23 && timeData[4] >= 59))
+            && ((timeData[2] > 24) || (timeData[2] <= 24 && timeData[3] >= 23 && timeData[4] >= 59))
             )
         {
             playerData.acquantFateCount = 0;
@@ -277,7 +279,7 @@ public class GameManager : MonoBehaviour
         // Debug.Log("저장 성공");
 
         string jsonData = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(SaveOrLoad(isMobile, true, "ggsdata"), AESCrypto.AESEncrypt128(jsonData));
+        File.WriteAllText(SaveOrLoad(isMobile, true, saveFileName), AESCrypto.AESEncrypt128(jsonData));
     }
 
     [ContextMenu("From Json Data")]
@@ -286,7 +288,7 @@ public class GameManager : MonoBehaviour
         try
         {
             Debug.Log("플레이어 정보 로드 성공");
-            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, "ggsdata"));
+            string jsonData = File.ReadAllText(SaveOrLoad(isMobile, false, saveFileName));
             playerData = JsonUtility.FromJson<PlayerData>(AESCrypto.AESDecrypt128(jsonData));
 
             // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
@@ -302,8 +304,8 @@ public class GameManager : MonoBehaviour
 
             if (isTestVersion)
             {
-                playerData.acquantFateCount = 2000;
-                playerData.intertwinedFateCount = 2000;
+                playerData.acquantFateCount = 1500;
+                playerData.intertwinedFateCount = 1500;
                 playerData.starDustCount = 1000;
                 playerData.starLightCount = 100;
             }
@@ -319,7 +321,7 @@ public class GameManager : MonoBehaviour
 
             string jsonData = JsonUtility.ToJson(playerData, true);
 
-            File.WriteAllText(SaveOrLoad(isMobile, false, "ggsdata"), AESCrypto.AESEncrypt128(jsonData));
+            File.WriteAllText(SaveOrLoad(isMobile, false, saveFileName), AESCrypto.AESEncrypt128(jsonData));
             LoadPlayerDataFromJson();
         }
     }
@@ -571,12 +573,19 @@ public class GameManager : MonoBehaviour
 
     public void ResetPlayerData()
     {
+        previousLanguage = GetPlayerData().language;
+
+        if (!isTestVersion)
+        {
+            return;
+        }
+
         PlayerData playerData = new PlayerData();
 
         if (isTestVersion)
         {
-            playerData.acquantFateCount = 3000;
-            playerData.intertwinedFateCount = 3000;
+            playerData.acquantFateCount = 1500;
+            playerData.intertwinedFateCount = 1500;
             playerData.starDustCount = 1000;
             playerData.starLightCount = 100;
         }
@@ -587,6 +596,8 @@ public class GameManager : MonoBehaviour
             playerData.starDustCount = 300;
             playerData.starLightCount = 10;
         }
+
+        playerData.language = previousLanguage;
 
         // playerData.isTestVersion = isTestVersion;
 

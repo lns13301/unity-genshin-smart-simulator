@@ -121,6 +121,7 @@ public class LanguageManager : MonoBehaviour
             texts[43].text = "돌파 재료";
             texts[44].text = "스킬 정보";
             texts[45].text = "운명의 자리";
+            texts[46].text = "초기화";
         }
         else
         {
@@ -170,6 +171,7 @@ public class LanguageManager : MonoBehaviour
             texts[43].text = "Required Material";
             texts[44].text = "Talents";
             texts[45].text = "Constellation";
+            texts[46].text = "Reset";
         }
 
         BannerManager.instance.SetBannerImageByLanguage(language);

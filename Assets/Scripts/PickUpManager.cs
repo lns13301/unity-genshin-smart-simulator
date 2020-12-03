@@ -17,7 +17,7 @@ public class PickUpManager : MonoBehaviour
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
     private static int MIN_LEGEND_CHARACTER = 16; // 다이루크 시작 코드
-    private static int MAX_LEGEND_CHARACTER = 23 + 1;
+    private static int MAX_LEGEND_CHARACTER = 20 + 1;
 
     private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
     private static int CHARACTER_COUNT_FOUR_STAR = 14; // 픽업 4성은 제외 했음
