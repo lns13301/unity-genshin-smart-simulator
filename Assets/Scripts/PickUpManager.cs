@@ -84,7 +84,7 @@ public class PickUpManager : MonoBehaviour
 
         SoundManager.instance.PlayOneShotEffectSound(1);
 
-        if (buttonType == 1)
+        if (buttonType == 1 || buttonType == 4) // 픽업, 지나간 픽업 처리
         {
             if (playerData.intertwinedFateCount > 9)
             {
@@ -694,7 +694,7 @@ public class PickUpManager : MonoBehaviour
         {
             playerData.intertwinedFateCount -= removeCount;
 
-            if (BannerManager.instance.onBannerIndex == 1)
+            if (BannerManager.instance.onBannerIndex == 1 || BannerManager.instance.onBannerIndex == 4)
             {
                 for (int i = 0; i < repeatTime; i++)
                 {
@@ -777,18 +777,24 @@ public class PickUpManager : MonoBehaviour
             }
             if (pickUpType == PickUpType.CHARACTER)
             {
-                int r = Random.Range(0, 2);
-
-                if (r == 0 || isPickUpAlways)
+                // 현재 픽업중인 캐릭터
+                if (BannerManager.instance.onBannerIndex == 1)
                 {
-                    playerData.isPickUpCharacterAlways = false;
-
-                    return ItemDatabase.instance.findItemByName("종려");
+                    return GetPickUpResultLegendGrade("종려", isPickUpAlways);
                 }
-                else
+
+                if (BannerManager.instance.onBannerIndex == 4)
                 {
-                    playerData.isPickUpCharacterAlways = true;
-                    return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_CHARACTER, MAX_LEGEND_CHARACTER)];
+                    // 지나간 픽업 캐릭터
+                    switch (BannerManager.instance.bannerButtonCharacter)
+                    {
+                        case BannerButtonCharacter.VENTI:
+                            return GetPickUpResultLegendGrade("벤티", isPickUpAlways);
+                        case BannerButtonCharacter.KLEE:
+                            return GetPickUpResultLegendGrade("클레", isPickUpAlways);
+                        case BannerButtonCharacter.TARTAGLIA:
+                            return GetPickUpResultLegendGrade("타르탈리아", isPickUpAlways);
+                    }
                 }
             }
         }
@@ -850,24 +856,38 @@ public class PickUpManager : MonoBehaviour
             if (pickUpType == PickUpType.CHARACTER)
             {
                 int r = Random.Range(0, 2);
+                string[] names = new string[3];
 
                 if (r == 0 || isPickUp4Always)
                 {
-                    playerData.isPickUpCharacter4Always = false;
-
-                    int value = Random.Range(0, 3);
-
-                    switch (value)
+                    if (BannerManager.instance.onBannerIndex == 1)
                     {
-                        case 0:
-                            return ItemDatabase.instance.findItemByName("신염");
-                        case 1:
-                            return ItemDatabase.instance.findItemByName("중운");
-                        case 2:
-                            return ItemDatabase.instance.findItemByName("레이저");
+                        names[0] = "신염";
+                        names[1] = "중운";
+                        names[2] = "레이저";
+                        return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                     }
-
-                    return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
+                    else if(BannerManager.instance.onBannerIndex == 4)
+                    {
+                        switch (BannerManager.instance.bannerButtonCharacter)
+                        {
+                            case BannerButtonCharacter.VENTI:
+                                names[0] = "향릉";
+                                names[1] = "피슬";
+                                names[2] = "바바라";
+                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                            case BannerButtonCharacter.KLEE:
+                                names[0] = "행추";
+                                names[1] = "설탕";
+                                names[2] = "노엘";
+                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                            case BannerButtonCharacter.TARTAGLIA:
+                                names[0] = "응광";
+                                names[1] = "북두";
+                                names[2] = "디오나";
+                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                        }
+                    }
                 }
                 else
                 {
@@ -893,6 +913,42 @@ public class PickUpManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
         GameManager.instance.OnItemInformation(result[index]);
+    }
+
+    private Item GetPickUpResultLegendGrade(string pickUpCharacterKoName, bool isPickUpAlways)
+    {
+        int r = Random.Range(0, 2);
+
+        if (r == 0 || isPickUpAlways)
+        {
+            playerData.isPickUpCharacterAlways = false;
+
+            return ItemDatabase.instance.findItemByName(pickUpCharacterKoName);
+        }
+        else
+        {
+            playerData.isPickUpCharacterAlways = true;
+            return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_CHARACTER, MAX_LEGEND_CHARACTER)];
+        }
+    }
+
+    private Item GetPickUpResultUniqueGrade(string[] pickUpCharacterKoNames, bool isPickUpAlways)
+    {
+        playerData.isPickUpCharacter4Always = false;
+
+        int value = Random.Range(0, 3);
+
+        switch (value)
+        {
+            case 0:
+                return ItemDatabase.instance.findItemByName(pickUpCharacterKoNames[0]);
+            case 1:
+                return ItemDatabase.instance.findItemByName(pickUpCharacterKoNames[1]);
+            case 2:
+                return ItemDatabase.instance.findItemByName(pickUpCharacterKoNames[2]);
+        }
+
+        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
     }
 }
 

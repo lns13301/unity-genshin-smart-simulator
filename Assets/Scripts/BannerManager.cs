@@ -22,13 +22,17 @@ public class BannerManager : MonoBehaviour
     public RectTransform pickupButtonText;
 
     public GameObject bannerImageParent;
-    public Image[] bannerImages;
+    public Image[] extraBannerImages;
+    public Image[] extraBannerButtonImage;
+
+    public BannerButtonCharacter bannerButtonCharacter;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         isBannerChange = false;
+        bannerButtonCharacter = BannerButtonCharacter.VENTI;
 
         bannerImage[0].GetComponent<Animator>().SetBool("isBannerOn", true);
 
@@ -37,18 +41,18 @@ public class BannerManager : MonoBehaviour
             bannerImage[i].GetComponent<Animator>().SetBool("isBannerOn", false);
         }
 
-        for (int i = 4; i < 8; i++)
+        for (int i = 5; i < 10; i++)
         {
             bannerButton[i].SetActive(false);
         }
 
         OnBannerFirst();
 
-        bannerImages = new Image[bannerImageParent.transform.childCount];
+        extraBannerImages = new Image[bannerImageParent.transform.childCount];
 
         for (int i = 0; i < bannerImageParent.transform.childCount; i++)
         {
-            bannerImages[i] = bannerImageParent.transform.GetChild(i).GetComponent<Image>();
+            extraBannerImages[i] = bannerImageParent.transform.GetChild(i).GetComponent<Image>();
         }
     }
 
@@ -62,7 +66,7 @@ public class BannerManager : MonoBehaviour
     private void OnBannerFirst()
     {
         bannerButton[0].SetActive(false);
-        bannerButton[4].SetActive(true);
+        bannerButton[5].SetActive(true);
         pickupButton.sprite = buttonImage[8];
         pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize1.x);
         pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize1.y);
@@ -70,6 +74,14 @@ public class BannerManager : MonoBehaviour
 
     public void OnBanner(int bannerIndex)
     {
+        bool isLastBannerIndexExtraPickUp = false;
+
+        // 지나간 픽업을 이전에 선택한 상태면 다음 픽업으로 변경
+        if (bannerIndex == 4 && onBannerIndex == 4)
+        {
+            isLastBannerIndexExtraPickUp = true;
+        }
+
         onBannerIndex = bannerIndex;
         isBannerChange = true;
         SoundManager.instance.PlayOneShotEffectSound(0);
@@ -82,31 +94,55 @@ public class BannerManager : MonoBehaviour
         {
             case 0:
                 bannerButton[0].SetActive(false);
-                bannerButton[4].SetActive(true);
+                bannerButton[5].SetActive(true);
                 pickupButton.sprite = buttonImage[8];
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize1.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize1.y);
                 break;
             case 1:
                 bannerButton[1].SetActive(false);
-                bannerButton[5].SetActive(true);
+                bannerButton[6].SetActive(true);
                 SetPickUPButtonImage();
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
             case 2:
                 bannerButton[2].SetActive(false);
-                bannerButton[6].SetActive(true);
+                bannerButton[7].SetActive(true);
                 SetPickUPButtonImage();
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
                 break;
             case 3:
                 bannerButton[3].SetActive(false);
-                bannerButton[7].SetActive(true);
+                bannerButton[8].SetActive(true);
                 SetPickUPButtonImage(true);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
+                break;
+            case 4:
+                bannerButton[4].SetActive(false);
+                bannerButton[9].SetActive(true);
+                SetPickUPButtonImage();
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
+                pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
+
+                if (isLastBannerIndexExtraPickUp)
+                {
+                    bannerButtonCharacter = GetNextBannerButtonCharacter(bannerButtonCharacter);
+                    bannerButton[4].GetComponent<Image>().sprite = extraBannerButtonImage[GetBannerButtonCharacterIndex(bannerButtonCharacter)].sprite;
+                    bannerButton[9].GetComponent<Image>().sprite = extraBannerButtonImage[GetBannerButtonCharacterIndex(bannerButtonCharacter) + 1].sprite;
+
+                    if (LanguageManager.instance.language == Language.KOREAN)
+                    {
+                        bannerImage[4].GetComponent<Image>().sprite = extraBannerImages[GetBannerButtonCharacterIndex(bannerButtonCharacter) + 9].sprite;
+                    }
+                    else
+                    {
+                        bannerImage[4].GetComponent<Image>().sprite = extraBannerImages[GetBannerButtonCharacterIndex(bannerButtonCharacter) + 8].sprite;
+                    }
+                }
+
                 break;
         }
 
@@ -122,11 +158,11 @@ public class BannerManager : MonoBehaviour
         {
             if (playerData.acquantFateCount < 10)
             {
-                pickupButton.sprite = buttonImage[7];
+                pickupButton.sprite = buttonImage[8];
             }
             else
             {
-                pickupButton.sprite = buttonImage[5];
+                pickupButton.sprite = buttonImage[6];
             }
         }
         else
@@ -148,10 +184,12 @@ public class BannerManager : MonoBehaviour
         bannerButton[1].SetActive(true);
         bannerButton[2].SetActive(true);
         bannerButton[3].SetActive(true);
-        bannerButton[4].SetActive(false);
+        bannerButton[4].SetActive(true);
         bannerButton[5].SetActive(false);
         bannerButton[6].SetActive(false);
         bannerButton[7].SetActive(false);
+        bannerButton[8].SetActive(false);
+        bannerButton[9].SetActive(false);
     }
 
     public void OnBanner()
@@ -188,15 +226,52 @@ public class BannerManager : MonoBehaviour
         {
             for (int i = 0; i < bannerImage.Length; i++)
             {
-                bannerImage[i].GetComponent<Image>().sprite = bannerImages[i + 4].sprite;
+                bannerImage[i].GetComponent<Image>().sprite = extraBannerImages[i + 4].sprite;
             }
         }
         else
         {
             for (int i = 0; i < bannerImage.Length; i++)
             {
-                bannerImage[i].GetComponent<Image>().sprite = bannerImages[i].sprite;
+                bannerImage[i].GetComponent<Image>().sprite = extraBannerImages[i].sprite;
             }
         }
     }
+
+    public BannerButtonCharacter GetNextBannerButtonCharacter(BannerButtonCharacter bbc)
+    {
+        switch (bbc)
+        {
+            case BannerButtonCharacter.VENTI:
+                return BannerButtonCharacter.KLEE;
+            case BannerButtonCharacter.KLEE:
+                return BannerButtonCharacter.TARTAGLIA;
+            case BannerButtonCharacter.TARTAGLIA:
+                return BannerButtonCharacter.VENTI;
+        }
+
+        return BannerButtonCharacter.VENTI;
+    }
+
+    public int GetBannerButtonCharacterIndex(BannerButtonCharacter bbc)
+    {
+        switch (bbc)
+        {
+            case BannerButtonCharacter.VENTI:
+                return 0;
+            case BannerButtonCharacter.KLEE:
+                return 2;
+            case BannerButtonCharacter.TARTAGLIA:
+                return 4;
+            default:
+                return 0;
+        }
+    }
+}
+
+public enum BannerButtonCharacter
+{
+    VENTI,
+    KLEE,
+    TARTAGLIA
 }
