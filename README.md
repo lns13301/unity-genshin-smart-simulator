@@ -1,5 +1,8 @@
-# unity-genshin-pickup-simulator
-- 원신 뽑기 시뮬레이터를 관리하기 위한 저장소
+# unity-genshin-smart-simulator
+- 원신 스마트 시뮬레이터를 관리하기 위한 저장소
+  - 기원 체험
+  - 자원 지도
+  - 캐릭터 스킬, 돌파 재료 
 
 ## Information
 
