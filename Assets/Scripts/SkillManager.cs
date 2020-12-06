@@ -18,6 +18,8 @@ public class SkillManager : MonoBehaviour
     public GameObject skillPanel;
     public GameObject ascensionPanel;
     public GameObject ascensionContent;
+    public GameObject ascensionWeaponPanel;
+    public GameObject ascensionWeaponContent;
 
     public GameObject informationSet;
     public GameObject informationPanel;
@@ -58,7 +60,18 @@ public class SkillManager : MonoBehaviour
 
     public void OnStatUI(Item item)
     {
-        this.item = item;
+        this.item = ItemDatabase.instance.findItemByCode(item.code);
+
+        if (item.type == ItemType.CHARACTER)
+        {
+            statSet.transform.GetChild(2).gameObject.SetActive(true);
+            statSet.transform.GetChild(3).gameObject.SetActive(true);
+        }
+        else
+        {
+            statSet.transform.GetChild(2).gameObject.SetActive(false);
+            statSet.transform.GetChild(3).gameObject.SetActive(false);
+        }
 
         SetSkillDestroy();
         OffPanelAll();
@@ -257,19 +270,41 @@ public class SkillManager : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(2);
 
-        ascensionPanel.SetActive(true);
-        skillPanel.SetActive(false);
-
-        try
+        if (item.type == ItemType.CHARACTER)
         {
-            for (int i = 0; i < ascensionContent.transform.childCount; i++)
+            ascensionPanel.SetActive(true);
+            skillPanel.SetActive(false);
+            ascensionWeaponPanel.SetActive(false);
+
+            try
             {
-                ascensionContent.transform.GetChild(i).GetComponent<AscensionFrame>().SetAscensionData(item);
+                for (int i = 0; i < ascensionContent.transform.childCount; i++)
+                {
+                    ascensionContent.transform.GetChild(i).GetComponent<AscensionFrame>().SetAscensionData(item);
+                }
+            }
+            catch
+            {
+                Invoke("OnAscensionPanelErrorCatch", 0.1f);
             }
         }
-        catch
+        else
         {
-            Invoke("OnAscensionPanelErrorCatch", 0.1f);
+            ascensionPanel.SetActive(false);
+            skillPanel.SetActive(false);
+            ascensionWeaponPanel.SetActive(true);
+
+            try
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    ascensionWeaponContent.transform.GetChild(i).GetComponent<AscensionWeaponFrame>().SetAscensionData(item);
+                }
+            }
+            catch
+            {
+                Invoke("OnAscensionWeaponPanelErrorCatch", 0.1f);
+            }
         }
     }
 
@@ -279,10 +314,17 @@ public class SkillManager : MonoBehaviour
         CancelInvoke("OnAscensionPanelErrorCatch");
     }
 
+    public void OnAscensionWeaponPanelErrorCatch()
+    {
+        OnAscensionPanel();
+        CancelInvoke("OnAscensionWeaponPanelErrorCatch");
+    }
+
     public void OffPanelAll()
     {
         skillPanel.SetActive(false);
         ascensionPanel.SetActive(false);
         informationSet.SetActive(false);
+        ascensionWeaponPanel.SetActive(false);
     }
 }

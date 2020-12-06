@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class AscensionFrame : MonoBehaviour
 {
     public string[][] ascensionMaterialCount;
-    private int materialCount = 5;
 
     public Item item;
 

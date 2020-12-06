@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
     private string saveFileName = "ggsdata";
     /* 1. isTestVersion 값 바꾸기, 2. ggsdatat로 세이브파일 바꾸기, 3. 광고보기를 초기화로 바꾸기*/
 
+    public bool isRefreshed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,13 +87,15 @@ public class GameManager : MonoBehaviour
             WARNING_EN = GetColorText("! WARNING !", RED_COLOR);
         }
 
-/*        if (!isTestVersion && playerData.isTestVersion)
-        {
-            playerData.acquantFateCount = -10000;
-            playerData.intertwinedFateCount = -10000;
-            playerData.starDustCount = -100000;
-            playerData.starLightCount = -100000;
-        }*/
+        /*        if (!isTestVersion && playerData.isTestVersion)
+                {
+                    playerData.acquantFateCount = -10000;
+                    playerData.intertwinedFateCount = -10000;
+                    playerData.starDustCount = -100000;
+                    playerData.starLightCount = -100000;
+                }*/
+
+        isRefreshed = false;
     }
 
     // Update is called once per frame
@@ -297,6 +301,8 @@ public class GameManager : MonoBehaviour
                 playerData.items[i].spritePath = ItemDatabase.instance.findItemByCode(playerData.items[i].code).spritePath;
                 playerData.items[i].sprite = playerData.items[i].loadSprite(playerData.items[i].spritePath);
             }
+
+            RefreshRemovedItemData();
         }
         catch (FileNotFoundException)
         {
@@ -607,5 +613,21 @@ public class GameManager : MonoBehaviour
         LoadPlayerDataFromJson();
         SetResources();
         ChangeScene(0);
+    }
+
+    public void RefreshRemovedItemData()
+    {
+        if (!isRefreshed)
+        {
+            isRefreshed = true;
+
+            for (int i = 0; i < GetPlayerData().weapons.Count; i++)
+            {
+                if (GetPlayerData().weapons[i].code == 1405)
+                {
+                    GetPlayerData().RemoveWeapon(i);
+                }
+            }
+        }
     }
 }

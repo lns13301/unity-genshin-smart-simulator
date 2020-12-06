@@ -158,11 +158,11 @@ public class BannerManager : MonoBehaviour
         {
             if (playerData.acquantFateCount < 10)
             {
-                pickupButton.sprite = buttonImage[8];
+                pickupButton.sprite = buttonImage[7];
             }
             else
             {
-                pickupButton.sprite = buttonImage[6];
+                pickupButton.sprite = buttonImage[5];
             }
         }
         else
@@ -228,6 +228,8 @@ public class BannerManager : MonoBehaviour
             {
                 bannerImage[i].GetComponent<Image>().sprite = extraBannerImages[i + 4].sprite;
             }
+
+            bannerImage[4].GetComponent<Image>().sprite = extraBannerImages[9].sprite;
         }
         else
         {
@@ -235,6 +237,8 @@ public class BannerManager : MonoBehaviour
             {
                 bannerImage[i].GetComponent<Image>().sprite = extraBannerImages[i].sprite;
             }
+
+            bannerImage[4].GetComponent<Image>().sprite = extraBannerImages[8].sprite;
         }
     }
 

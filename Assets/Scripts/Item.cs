@@ -16,8 +16,9 @@ public class Item
     public Sprite sprite;
 
     public Character character;
+    public Weapon weapon;
 
-    public Item(int code, string enName, string koName, int count, ItemType type, Grade grade, string spritePath, Character character = null)
+    public Item(int code, string enName, string koName, int count, ItemType type, Grade grade, string spritePath, Character character = null, Weapon weapon = null)
     {
         this.count = count;
         this.code = code;
@@ -27,6 +28,7 @@ public class Item
         this.spritePath = spritePath;
         this.grade = grade;
         this.character = character;
+        this.weapon = weapon;
 
         sprite = loadSprite(spritePath);
     }

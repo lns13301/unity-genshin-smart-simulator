@@ -31,14 +31,16 @@ public class ItemFrame : MonoBehaviour
     // 기존 아이템 정보 보는 탭
     public void OnItemInformation()
     {
-        if (item.type == ItemType.CHARACTER)
+        SkillManager.instance.OnStatUI(item);
+
+/*        if (item.type == ItemType.CHARACTER)
         {
-            SkillManager.instance.OnStatUI(item);
+
 
             return;
-        }
+        }*/
 
-        GameManager.instance.OffNoticeAll();
+/*        GameManager.instance.OffNoticeAll();
         SoundManager.instance.PlayOneShotEffectSound(1);
         Language language = LanguageManager.instance.language;
 
@@ -116,7 +118,7 @@ public class ItemFrame : MonoBehaviour
             {
                 informationText.text += NEW_LINE + NEW_LINE + GetColorText("" + item.count, "e85f37") + " ea";
             }
-        }
+        }*/
     }
 
     public string GetColorText(string text, string colorValue)
