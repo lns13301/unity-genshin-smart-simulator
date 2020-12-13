@@ -285,7 +285,7 @@ public class SkillManager : MonoBehaviour
             }
             catch
             {
-                Invoke("OnAscensionPanelErrorCatch", 0.1f);
+                Invoke("OnAscensionPanelErrorCatch", 0.2f);
             }
         }
         else

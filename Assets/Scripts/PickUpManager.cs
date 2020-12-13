@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class PickUpManager : MonoBehaviour
 {
+    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
+    private static int CHARACTER_COUNT_FOUR_STAR = 13; // 픽업 4성은 제외 했음
+
     // MAX 값들은 실제 인덱스에 + 1 해주었음
     private static int MIN_EPIC_WEAPON = 25;
     private static int MAX_EPIC_WEAPON = 46 + 1;
@@ -18,9 +21,6 @@ public class PickUpManager : MonoBehaviour
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
     private static int MIN_LEGEND_CHARACTER = 16; // 다이루크 시작 코드
     private static int MAX_LEGEND_CHARACTER = 20 + 1;
-
-    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
-    private static int CHARACTER_COUNT_FOUR_STAR = 14; // 픽업 4성은 제외 했음
 
     private static int CHARACTER_AND_WEAPON_FOUR_STAR_TOTAL = CHARACTER_COUNT_FOUR_STAR + MAX_EPIC_WEAPON - MIN_EPIC_WEAPON;
 
@@ -55,6 +55,8 @@ public class PickUpManager : MonoBehaviour
         result = new Item[10];
 
         stardustPage.SetActive(false);
+
+        InitializeVideo();
     }
 
     // Update is called once per frame
@@ -88,7 +90,7 @@ public class PickUpManager : MonoBehaviour
         {
             if (playerData.intertwinedFateCount > 9)
             {
-                grades = setPlayerDataAfterGacha(false);
+                grades = SetPlayerDataAfterGacha(false);
 
                 for (int i = 0; i < grades.Length; i++)
                 {
@@ -109,7 +111,7 @@ public class PickUpManager : MonoBehaviour
         {
             if (playerData.intertwinedFateCount > 9)
             {
-                grades = setPlayerDataAfterGacha(false);
+                grades = SetPlayerDataAfterGacha(false);
 
                 for (int i = 0; i < grades.Length; i++)
                 {
@@ -129,7 +131,7 @@ public class PickUpManager : MonoBehaviour
         {
             if (playerData.acquantFateCount > 9)
             {
-                grades = setPlayerDataAfterGacha();
+                grades = SetPlayerDataAfterGacha();
 
                 for (int i = 0; i < grades.Length; i++)
                 {
@@ -149,7 +151,7 @@ public class PickUpManager : MonoBehaviour
         {
             if (playerData.acquantFateCount > 7)
             {
-                grades = setPlayerDataAfterGacha(true, 10, 8);
+                grades = SetPlayerDataAfterGacha(true, 10, 8);
 
                 for (int i = 0; i < grades.Length; i++)
                 {
@@ -301,45 +303,6 @@ public class PickUpManager : MonoBehaviour
         videos[0].Stop();
 
         StartCoroutine("PlayItemVideo");
-    }
-
-    IEnumerator PlayItemVideo()
-    {
-        bool isPlayVideo = false;
-        for (int i = 0; i < result.Length; i++)
-        {
-            isPlayVideo = true;
-
-            if (result[i].koName == "진")
-            {
-                videos[0].clip = videos[3].clip;
-            }
-            else if (result[i].koName == "타르탈리아")
-            {
-                videos[0].clip = videos[4].clip;
-            }
-            else if (result[i].koName == "속세의 자물쇠")
-            {
-                videos[0].clip = videos[5].clip;
-            }
-            else if (result[i].koName == "종려")
-            {
-                videos[0].clip = videos[6].clip;
-            }
-            else
-            {
-                isPlayVideo = false;
-            }
-
-            if (isPlayVideo)
-            {
-                videos[0].Play();
-                yield return new WaitForSeconds(3.5f);
-                videos[0].Stop();
-            }
-        }
-
-        OffPanelAndSetting();
     }
 
     public void OffPanelAndSetting()
@@ -665,7 +628,7 @@ public class PickUpManager : MonoBehaviour
         return Grade.EPIC;
     }
 
-    public Grade[] setPlayerDataAfterGacha(bool isAcquantFate = true, int repeatTime = 10, int removeCount = 10)
+    public Grade[] SetPlayerDataAfterGacha(bool isAcquantFate = true, int repeatTime = 10, int removeCount = 10)
     {
         Grade[] grades = new Grade[10];
         hasFiveStar = false;
@@ -807,7 +770,9 @@ public class PickUpManager : MonoBehaviour
 
                 if (r == 0)
                 {
-                    return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
+                    int value = Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER);
+                    Debug.Log("랜덤 값 : " + MIN_UNIQUE_CHARACTER + ", : " + MAX_UNIQUE_CHARACTER);
+                    return ItemDatabase.instance.itemDB[value];
                 }
                 else
                 {
@@ -949,6 +914,148 @@ public class PickUpManager : MonoBehaviour
         }
 
         return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
+    }
+
+    private void InitializeVideo()
+    {
+        videos = new VideoPlayer[transform.childCount];
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            videos[i] = transform.GetChild(i).GetComponent<VideoPlayer>();
+        }
+    }
+
+    IEnumerator PlayItemVideo()
+    {
+        bool isPlayVideo = false;
+        bool isFiveStar = false;
+
+        for (int i = 0; i < result.Length; i++)
+        {
+            isPlayVideo = true;
+
+            switch(result[i].koName)
+            {
+                case "진":
+                    videos[0].clip = videos[3].clip;
+                    isFiveStar = true;
+                    break;
+                case "타르탈리아":
+                    videos[0].clip = videos[4].clip;
+                    isFiveStar = true;
+                    break;
+                case "속세의 자물쇠":
+                    videos[0].clip = videos[5].clip;
+                    isFiveStar = true;
+                    break;
+                case "종려":
+                    videos[0].clip = videos[6].clip;
+                    isFiveStar = true;
+                    break;
+                case "북두":
+                    videos[0].clip = videos[7].clip;
+                    break;
+                case "중운":
+                    videos[0].clip = videos[8].clip;
+                    break;
+                case "디오나":
+                    videos[0].clip = videos[9].clip;
+                    break;
+                case "리사":
+                    videos[0].clip = videos[10].clip;
+                    break;
+                case "노엘":
+                    videos[0].clip = videos[11].clip;
+                    break;
+                case "레이저":
+                    videos[0].clip = videos[12].clip;
+                    break;
+                case "설탕":
+                    videos[0].clip = videos[13].clip;
+                    break;
+                case "향릉":
+                    videos[0].clip = videos[14].clip;
+                    break;
+                case "신염":
+                    videos[0].clip = videos[15].clip;
+                    break;
+                case "용학살창":
+                    videos[0].clip = videos[16].clip;
+                    break;
+                case "소심":
+                    videos[0].clip = videos[17].clip;
+                    break;
+                case "페보니우스 비전":
+                    videos[0].clip = videos[18].clip;
+                    break;
+                case "페보니우스 대검":
+                    videos[0].clip = videos[19].clip;
+                    break;
+                case "페보니우스 장창":
+                    videos[0].clip = videos[20].clip;
+                    break;
+                case "페보니우스 활":
+                    videos[0].clip = videos[21].clip;
+                    break;
+                case "용의 포효":
+                    videos[0].clip = videos[22].clip;
+                    break;
+                case "빗물베기":
+                    videos[0].clip = videos[23].clip;
+                    break;
+                case "제례의 악장":
+                    videos[0].clip = videos[24].clip;
+                    break;
+                case "제례 대검":
+                    videos[0].clip = videos[25].clip;
+                    break;
+                case "음유시인의 악장":
+                    videos[0].clip = videos[26].clip;
+                    break;
+                case "응광":
+                    videos[0].clip = videos[27].clip;
+                    break;
+                case "엠버":
+                    videos[0].clip = videos[28].clip;
+                    break;
+                case "바바라":
+                    videos[0].clip = videos[29].clip;
+                    break;
+                case "페보니우스 검":
+                    videos[0].clip = videos[30].clip;
+                    break;
+                case "절현":
+                    videos[0].clip = videos[31].clip;
+                    break;
+                case "제례활":
+                    videos[0].clip = videos[32].clip;
+                    break;
+                default:
+                    isPlayVideo = false;
+                    break;
+            }
+
+            if (isPlayVideo)
+            {
+                videos[0].Play();
+
+                if (isFiveStar)
+                {
+                    yield return new WaitForSeconds(3.6f);
+                }
+                else
+                {
+                    yield return new WaitForSeconds(3.0f);
+                }
+
+                isFiveStar = false;
+
+                videos[0].Stop();
+            }
+        }
+
+        OffPanelAndSetting();
     }
 }
 
