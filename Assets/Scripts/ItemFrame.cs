@@ -18,6 +18,8 @@ public class ItemFrame : MonoBehaviour
     public GameObject information;
     public Text informationText;
 
+    public Text countText;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -180,6 +182,7 @@ public class ItemFrame : MonoBehaviour
         else
         {
             indexText.text = GetColorText("" + index, "e59e00");
+            countText.text = GetColorText("" + item.count, "e06356");
         }
     }
 

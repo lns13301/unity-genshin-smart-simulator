@@ -284,7 +284,11 @@ public class PickUpManager : MonoBehaviour
 
     public void ButtonSkip()
     {
-        GameManager.instance.SetNoticeSkip();
+        SoundManager.instance.PlayOneShotEffectSound(1);
+
+        DoSkip();
+
+        //GameManager.instance.SetNoticeSkip();
     }
     
     public void DoSkip()
@@ -1031,6 +1035,12 @@ public class PickUpManager : MonoBehaviour
                 case "제례활":
                     videos[0].clip = videos[32].clip;
                     break;
+                case "제례검":
+                    videos[0].clip = videos[33].clip;
+                    break;
+                case "천공의 마루":
+                    videos[0].clip = videos[34].clip;
+                    break;
                 default:
                     isPlayVideo = false;
                     break;
@@ -1042,11 +1052,11 @@ public class PickUpManager : MonoBehaviour
 
                 if (isFiveStar)
                 {
-                    yield return new WaitForSeconds(3.6f);
+                    yield return new WaitForSeconds(3.8f);
                 }
                 else
                 {
-                    yield return new WaitForSeconds(3.0f);
+                    yield return new WaitForSeconds(3.5f);
                 }
 
                 isFiveStar = false;
