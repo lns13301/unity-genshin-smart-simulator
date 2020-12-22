@@ -252,6 +252,27 @@ public class Item
                 return -1;
         }
     }
+
+    public int GetElementIndex()
+    {
+        switch (character.element)
+        {
+            case Element.PYRO:
+                return 0;
+            case Element.HYDRO:
+                return 1;
+            case Element.ELECTRO:
+                return 2;
+            case Element.ANEMO:
+                return 3;
+            case Element.CRYO:
+                return 4;
+            case Element.GEO:
+                return 5;
+            default:
+                return -1;
+        }
+    }
 }
 
 [System.Serializable]

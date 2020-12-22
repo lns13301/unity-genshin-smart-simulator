@@ -22,6 +22,7 @@ public class BannerManager : MonoBehaviour
     public RectTransform pickupButtonText;
 
     public GameObject bannerImageParent;
+    public GameObject bannerButtonImageParent;
     public Image[] extraBannerImages;
     public Image[] extraBannerButtonImage;
 
@@ -53,6 +54,13 @@ public class BannerManager : MonoBehaviour
         for (int i = 0; i < bannerImageParent.transform.childCount; i++)
         {
             extraBannerImages[i] = bannerImageParent.transform.GetChild(i).GetComponent<Image>();
+        }
+
+        extraBannerButtonImage = new Image[bannerButtonImageParent.transform.childCount];
+
+        for (int i = 0; i < bannerButtonImageParent.transform.childCount; i++)
+        {
+            extraBannerButtonImage[i] = bannerButtonImageParent.transform.GetChild(i).GetComponent<Image>();
         }
     }
 
@@ -251,6 +259,8 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.KLEE:
                 return BannerButtonCharacter.TARTAGLIA;
             case BannerButtonCharacter.TARTAGLIA:
+                return BannerButtonCharacter.ZHONGLI;
+            case BannerButtonCharacter.ZHONGLI:
                 return BannerButtonCharacter.VENTI;
         }
 
@@ -267,6 +277,8 @@ public class BannerManager : MonoBehaviour
                 return 2;
             case BannerButtonCharacter.TARTAGLIA:
                 return 4;
+            case BannerButtonCharacter.ZHONGLI:
+                return 6;
             default:
                 return 0;
         }

@@ -66,11 +66,29 @@ public class SkillManager : MonoBehaviour
         {
             statSet.transform.GetChild(2).gameObject.SetActive(true);
             statSet.transform.GetChild(3).gameObject.SetActive(true);
+
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                statSet.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = "운명의 자리";
+            }
+            else
+            {
+                statSet.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = "Constellation";
+            }
         }
         else
         {
             statSet.transform.GetChild(2).gameObject.SetActive(false);
-            statSet.transform.GetChild(3).gameObject.SetActive(false);
+            statSet.transform.GetChild(3).gameObject.SetActive(true);
+
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                statSet.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = "파괴";
+            }
+            else
+            {
+                statSet.transform.GetChild(3).GetChild(0).GetComponent<Text>().text = "Destroy";
+            }
         }
 
         SetSkillDestroy();

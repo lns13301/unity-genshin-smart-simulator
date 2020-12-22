@@ -408,8 +408,13 @@ public class InventoryManager : MonoBehaviour
 
     public void ButtonDoBreak(int itemIndex)
     {
+        if (SkillManager.instance.item.type == ItemType.CHARACTER)
+        {
+            return;
+        }
+
         OffInformation();
-        SoundManager.instance.PlayOneShotEffectSound(1);
+        // SoundManager.instance.PlayOneShotEffectSound(1);
         notice.SetActive(true);
 
         if (LanguageManager.instance.language == Language.KOREAN)
@@ -471,6 +476,7 @@ public class InventoryManager : MonoBehaviour
 
         GameManager.instance.SavePlayerDataToJson();
         OnStardustPage();
+        SkillManager.instance.OffStatUI();
         Refresh();
     }
 

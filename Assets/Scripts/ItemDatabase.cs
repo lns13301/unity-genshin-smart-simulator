@@ -31,7 +31,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile = new ItemDataFile();
         itemDataFile.itemDatas = new List<Item>();
 
-        saveItemData();
+        //saveItemData();
         loadItemData();
 
         //spawnItem();
@@ -129,8 +129,8 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(701, "Klee", "클레", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Klee", new Character(701, Element.PYRO, Grade.LEGEND, 1060, 10406, 10305)));
         itemDataFile.itemDatas.Add(new Item(702, "Tartaglia", "타르탈리아", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Tartaglia", new Character(702, Element.HYDRO, Grade.LEGEND, 1126, 10414, 10330)));
         itemDataFile.itemDatas.Add(new Item(703, "Zhongli", "종려", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Zhongli", new Character(703, Element.GEO, Grade.LEGEND, 1144, 10402, 10315)));
-        itemDataFile.itemDatas.Add(new Item(704, "Albedo", "알베도", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Albedo", new Character(703, Element.GEO, Grade.LEGEND, 1144, 10401, 10305)));
-        //itemDataFile.itemDatas.Add(new Item(705, "Xiao", "소", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Xiao", new Character(704, Element.ANEMO, Grade.LEGEND, 1150, 10415, 10310)));
+        itemDataFile.itemDatas.Add(new Item(704, "Albedo", "알베도", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Albedo", new Character(704, Element.GEO, Grade.LEGEND, 1150, 10401, 10305)));
+        //itemDataFile.itemDatas.Add(new Item(706, "Xiao", "소", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Xiao", new Character(706, Element.ANEMO, Grade.LEGEND, 1150, 10415, 10310)));
 
         itemDataFile.itemDatas.Add(new Item(1000, "Cool Steel", "차가운 칼날", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Cool Steel", null, new Weapon(10500, 10620, 10310)));
         itemDataFile.itemDatas.Add(new Item(1001, "Dark Iron Sword", "암철검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Dark Iron Sword", null, new Weapon(10512, 10608, 10300)));

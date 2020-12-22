@@ -1100,7 +1100,8 @@ public class PickUpManager : MonoBehaviour
         gachaIllustSet.GetComponent<Animator>().SetTrigger("doIllustOn");
 
         gachaIllust.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Character/Illust/" + item.enName);
-        // gameObject.transform.GetChild(0).GetComponent<Image>().sprite = item.GetElementAscensionItemCode;
+        gachaIllust.transform.GetChild(0).GetComponent<Image>().sprite = 
+            gachaIllustSet.transform.GetChild(6).GetChild(item.GetElementIndex()).GetComponent<Image>().sprite;
 
         if (LanguageManager.instance.language == Language.KOREAN)
         {
@@ -1115,6 +1116,7 @@ public class PickUpManager : MonoBehaviour
 
         if (item.grade == Grade.LEGEND)
         {
+            gachaIllust.transform.GetChild(0).GetChild(5).gameObject.SetActive(true);
             gachaIllustSet.transform.GetChild(3).gameObject.SetActive(false);
             gachaIllustSet.transform.GetChild(4).gameObject.SetActive(true);
             gachaIllustSet.transform.GetChild(4).GetComponent<ParticleSystem>().Play();
@@ -1123,6 +1125,7 @@ public class PickUpManager : MonoBehaviour
         }
         else
         {
+            gachaIllust.transform.GetChild(0).GetChild(5).gameObject.SetActive(false);
             gachaIllustSet.transform.GetChild(3).gameObject.SetActive(true);
             gachaIllustSet.transform.GetChild(4).gameObject.SetActive(false);
             gachaIllustSet.transform.GetChild(3).GetComponent<ParticleSystem>().Play();
