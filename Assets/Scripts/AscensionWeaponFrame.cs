@@ -86,11 +86,11 @@ public class AscensionWeaponFrame : MonoBehaviour
         Debug.Log(item.weapon.ascensionItemCode);
 
         transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).loadSprite();
+            ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).LoadSprite();
         transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).loadSprite();
+            ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).LoadSprite();
         transform.GetChild(3).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).loadSprite();
+            ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).LoadSprite();
 
         if (LanguageManager.instance.language == Language.KOREAN)
         {

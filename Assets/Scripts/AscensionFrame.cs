@@ -46,9 +46,9 @@ public class AscensionFrame : MonoBehaviour
         {
             case 0:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode()).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode()).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
@@ -68,9 +68,9 @@ public class AscensionFrame : MonoBehaviour
                 break;
             case 1:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
@@ -89,9 +89,9 @@ public class AscensionFrame : MonoBehaviour
                 break;
             case 2:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
@@ -110,9 +110,9 @@ public class AscensionFrame : MonoBehaviour
                 break;
             case 3:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
@@ -131,9 +131,9 @@ public class AscensionFrame : MonoBehaviour
                 break;
             case 4:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
@@ -152,9 +152,9 @@ public class AscensionFrame : MonoBehaviour
                 break;
             case 5:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 3).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 3).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).loadSprite();
+                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
@@ -174,9 +174,9 @@ public class AscensionFrame : MonoBehaviour
         }
 
         transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.GetElementAscensionItemCode()).loadSprite();
+            ItemDatabase.instance.findItemByCode(item.GetElementAscensionItemCode()).LoadSprite();
         transform.GetChild(3).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.character.ascensionItemCode).loadSprite();
+            ItemDatabase.instance.findItemByCode(item.character.ascensionItemCode).LoadSprite();
 
         if (LanguageManager.instance.language == Language.KOREAN)
         {

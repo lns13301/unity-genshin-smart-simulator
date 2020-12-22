@@ -298,8 +298,9 @@ public class GameManager : MonoBehaviour
             // 버전 변경 시 스프라이트 이미지 코드가 변경되는 현상 막기
             for (int i = 0; i < playerData.items.Count; i++)
             {
-                playerData.items[i].spritePath = ItemDatabase.instance.findItemByCode(playerData.items[i].code).spritePath;
-                playerData.items[i].sprite = playerData.items[i].loadSprite(playerData.items[i].spritePath);
+                playerData.items[i] = ItemDatabase.instance.makeItem(ItemDatabase.instance.findItemByCode(playerData.items[i].code), playerData.items[i].count);
+                //playerData.items[i].spritePath = ItemDatabase.instance.findItemByCode(playerData.items[i].code).spritePath;
+                //playerData.items[i].sprite = playerData.items[i].LoadSprite(playerData.items[i].spritePath);
             }
 
             RefreshRemovedItemData();

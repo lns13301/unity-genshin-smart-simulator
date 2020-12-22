@@ -277,5 +277,6 @@ public enum BannerButtonCharacter
 {
     VENTI,
     KLEE,
-    TARTAGLIA
+    TARTAGLIA,
+    ZHONGLI
 }

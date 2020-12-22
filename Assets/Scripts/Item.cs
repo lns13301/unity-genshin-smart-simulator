@@ -30,23 +30,23 @@ public class Item
         this.character = character;
         this.weapon = weapon;
 
-        sprite = loadSprite(spritePath);
+        sprite = LoadSprite(spritePath);
     }
 
     [ContextMenu("From Json Data")]
-    public Sprite loadSprite(string path)
+    public Sprite LoadSprite(string path)
     {
         return Resources.Load<Sprite>(path);
     }
 
     [ContextMenu("From Json Data")]
-    public Sprite loadSprite()
+    public Sprite LoadSprite()
     {
         return Resources.Load<Sprite>(spritePath);
     }
 
     [ContextMenu("From Json Data")]
-    public Animator loadAnimator(string path)
+    public Animator LoadAnimator(string path)
     {
         return Resources.Load<Animator>(path);
     }
