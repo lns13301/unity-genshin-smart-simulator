@@ -10,12 +10,12 @@ public class PickUpManager : MonoBehaviour
     private static int CHARACTER_COUNT_FOUR_STAR = 13; // 픽업 4성은 제외 했음
 
     // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private static int MIN_EPIC_WEAPON = 26;
-    private static int MAX_EPIC_WEAPON = 47 + 1;
+    private static int MIN_EPIC_WEAPON = 27;
+    private static int MAX_EPIC_WEAPON = 48 + 1;
     private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
-    private static int MAX_UNIQUE_WEAPON = 65 + 1;
+    private static int MAX_UNIQUE_WEAPON = 66 + 1;
     private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
-    private static int MAX_LEGEND_WEAPON = 76 + 1;
+    private static int MAX_LEGEND_WEAPON = 77 + 1;
 
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
@@ -735,7 +735,7 @@ public class PickUpManager : MonoBehaviour
 
                     if (Random.Range(0, 2) == 0)
                     {
-                        return ItemDatabase.instance.findItemByName("무공의 검");
+                        return ItemDatabase.instance.findItemByName("참봉의 칼날");
                     }
                     else
                     {
@@ -1054,6 +1054,27 @@ public class PickUpManager : MonoBehaviour
                 case "천공의 마루":
                     videos[0].clip = videos[34].clip;
                     break;
+                case "베넷":
+                    videos[0].clip = videos[35].clip;
+                    break;
+                case "피슬":
+                    videos[0].clip = videos[36].clip;
+                    break;
+                case "케이아":
+                    videos[0].clip = videos[37].clip;
+                    break;
+                case "천공의 날개":
+                    videos[0].clip = videos[38].clip;
+                    break;
+                case "천공의 검":
+                    videos[0].clip = videos[39].clip;
+                    break;
+                case "피리검":
+                    videos[0].clip = videos[40].clip;
+                    break;
+                case "늑대의 말로":
+                    videos[0].clip = videos[41].clip;
+                    break;
                 default:
                     isPlayVideo = false;
 
@@ -1097,7 +1118,7 @@ public class PickUpManager : MonoBehaviour
 
     private void SetCachaIllust(Item item)
     {
-        gachaIllustSet.GetComponent<Animator>().SetTrigger("doIllustOn");
+        //gachaIllustSet.GetComponent<Animator>().SetTrigger("doIllustOn");
 
         gachaIllust.transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Character/Illust/" + item.enName);
         gachaIllust.transform.GetChild(0).GetComponent<Image>().sprite = 

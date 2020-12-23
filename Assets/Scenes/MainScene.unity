@@ -5383,7 +5383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a997701ef2d3c854790b352a6da84a99, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6a08b91ad0d9a62439d4ec34ca82eaa0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6525,7 +6525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 877313b925d049c488f534cad69d5a8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ef772f85e4ef6345bd60304fdb15aa2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7643,7 +7643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 193fda035fdb07d42bfc618f76de11f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 803b46b7bb54dac45aa599031db0dab7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9383,7 +9383,9 @@ MonoBehaviour:
     \uC5C5\uB370\uC774\uD2B8\uB97C \uAE30\uB2E4\uB824\uC8FC\uC138\uC694!"
   END_DATE_EN: "\uCCB4\uD5D8 \uAE30\uAC04\uC774 \uC885\uB8CC\uB418\uC5C8\uC2B5\uB2C8\uB2E4."
   WARNING_EN: 
+  previousLanguage: 0
   isTestVersion: 0
+  isRefreshed: 0
 --- !u!1 &4643178756593736630
 GameObject:
   m_ObjectHideFlags: 0

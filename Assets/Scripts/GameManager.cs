@@ -115,12 +115,12 @@ public class GameManager : MonoBehaviour
         {
             detailContent.GetChild(0).GetComponent<Text>().text = "확률 정보입니다.";
             detailContent.GetChild(1).GetComponent<Text>().text =
-                GetColorText("산야의 시조 이벤트 기원", "9958b3") + " : " + GetColorText("74회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
+                GetColorText("심비의 숨결 이벤트 기원", "9958b3") + " : " + GetColorText("74회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
                 + "이후부터 " + GetColorText("32.323%", RED_COLOR) + "확률로 " + GetColorText("5성", ORANGE_COLOR) + "이 등장합니다.\n"
                 + "(기본 " + GetColorText("0.6%", RED_COLOR) + "에서 최대 " + GetColorText("1.6%", RED_COLOR)
                 + "로 최대 " + GetColorText("90", RED_COLOR) + "회차에 확정적으로 " + GetColorText("5성 획득", ORANGE_COLOR) + "이 가능합니다.)";
             detailContent.GetChild(2).GetComponent<Text>().text =
-                GetColorText("산야의 시조 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", "
+                GetColorText("심비의 숨결 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", "
                 + GetColorText("4회차", RED_COLOR) + " 이후부터 " + GetColorText("1회", RED_COLOR) + "당 " + GetColorText("1.58%", RED_COLOR) + "씩 증가\n" +
                 "(최대 " + GetColorText("13%", RED_COLOR) + " 로 최대 " + GetColorText("10회차", RED_COLOR) + "에 확정적으로 "
                 + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";

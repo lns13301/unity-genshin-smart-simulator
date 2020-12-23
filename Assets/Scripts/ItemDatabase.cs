@@ -224,13 +224,14 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(3301, "Skyward Atlas", "천공의 두루마리", 1, ItemType.CATALYST, Grade.LEGEND, spritePathWeapon + "Skyward Atlas", null, new Weapon(10504, 10600, 10310)));
 
         itemDataFile.itemDatas.Add(new Item(3400, "Amos's Bow", "아모스의 활", 1, ItemType.BOW, Grade.LEGEND, spritePathWeapon + "Amos's Bow", null, new Weapon(10508, 10616, 10315)));
-        itemDataFile.itemDatas.Add(new Item(3401, "Skyward Harp", "천공의 하프", 1, ItemType.BOW, Grade.LEGEND, spritePathWeapon + "Skyward Harp", null, new Weapon(10504, 10600, 10310)));
+        itemDataFile.itemDatas.Add(new Item(3401, "Skyward Harp", "천공의 날개", 1, ItemType.BOW, Grade.LEGEND, spritePathWeapon + "Skyward Harp", null, new Weapon(10504, 10600, 10310)));
 
         /////////////////////////////////////////////////////////////////////////////////////////////
 
         itemDataFile.itemDatas.Add(new Item(4300, "Memory of Dust", "속세의 자물쇠", 1, ItemType.CATALYST, Grade.LEGEND, spritePathWeapon + "Memory of Dust", null, new Weapon(10520, 10604, 10300)));
         itemDataFile.itemDatas.Add(new Item(4100, "The Unforged", "무공의 검", 1, ItemType.CLAYMORE, Grade.LEGEND, spritePathWeapon + "The Unforged", null, new Weapon(10516, 10612, 10325)));
         itemDataFile.itemDatas.Add(new Item(4200, "Vortex Vanquisher", "관홍의 창", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Vortex Vanquisher", null, new Weapon(10520, 10604, 10330)));
+        itemDataFile.itemDatas.Add(new Item(4000, "Summit Shaper", "참봉의 칼날", 1, ItemType.SWORD, Grade.LEGEND, spritePathWeapon + "Summit Shaper", null, new Weapon(10512, 10608, 10300)));
 
         /////////////////////////////////////////////////////////////////////////////////////////////
 
