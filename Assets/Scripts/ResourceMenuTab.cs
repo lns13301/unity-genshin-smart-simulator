@@ -191,8 +191,18 @@ public class ResourceMenuTab : MonoBehaviour
                 {
                     Resource resource = resourceParents[i].transform.GetChild(j).GetComponent<Resource>();
 
-                    resource.gameObject.SetActive(true);
-                    resource.ShowRegenTimer();
+                    try
+                    {
+                        if (!resource.resourceData.isLooted || resource.resourceData.regenTime >= 0)
+                        {
+                            resource.gameObject.SetActive(true);
+                            resource.ShowRegenTimer();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
                 }
             }
         }
