@@ -1053,6 +1053,7 @@ public class PickUpManager : MonoBehaviour
                     break;
                 case "천공의 마루":
                     videos[0].clip = videos[34].clip;
+                    isFiveStar = true;
                     break;
                 case "베넷":
                     videos[0].clip = videos[35].clip;
@@ -1063,17 +1064,28 @@ public class PickUpManager : MonoBehaviour
                 case "케이아":
                     videos[0].clip = videos[37].clip;
                     break;
-                case "천공의 날개":
-                    videos[0].clip = videos[38].clip;
-                    break;
                 case "천공의 검":
+                    videos[0].clip = videos[38].clip;
+                    isFiveStar = true;
+                    break;
+                case "천공의 날개":
                     videos[0].clip = videos[39].clip;
+                    isFiveStar = true;
                     break;
                 case "피리검":
                     videos[0].clip = videos[40].clip;
                     break;
                 case "늑대의 말로":
                     videos[0].clip = videos[41].clip;
+                    isFiveStar = true;
+                    break;
+                case "다이루크":
+                    videos[0].clip = videos[42].clip;
+                    isFiveStar = true;
+                    break;
+                case "알베도":
+                    videos[0].clip = videos[43].clip;
+                    isFiveStar = true;
                     break;
                 default:
                     isPlayVideo = false;
@@ -1095,11 +1107,11 @@ public class PickUpManager : MonoBehaviour
 
                 if (isFiveStar)
                 {
-                    yield return new WaitForSeconds(3.8f);
+                    yield return new WaitForSeconds(4.0f);
                 }
                 else
                 {
-                    yield return new WaitForSeconds(3.5f);
+                    yield return new WaitForSeconds(3.6f);
                 }
 
                 isFiveStar = false;
