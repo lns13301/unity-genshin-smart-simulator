@@ -68,19 +68,19 @@ public class ItemDatabase : MonoBehaviour
         return null;
     }
 
-    /*    public Item findItemByCode(int code)
-        {
-            for (int i = 0; i < itemDB.Count; i++)
-            {
-                if (itemDB[i].code == code)
-                {
-                    return itemDB[i];
-                }
-            }
-            return null;
-        }*/
-
     public Item findItemByCode(int code)
+    {
+        for (int i = 0; i < itemDB.Count; i++)
+        {
+            if (itemDB[i].code == code)
+            {
+                return itemDB[i];
+            }
+        }
+        return null;
+    }
+
+    public Item findItemByIndex(int code)
     {
         return itemDatas[code];
     }
@@ -103,7 +103,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas = new List<Item>();
 
         itemDataFile.itemDatas.Add(new Item(0, "Amber", "엠버", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Amber", new Character(0, Element.PYRO, Grade.UNIQUE, 1000, 10408, 10310)));
-        itemDataFile.itemDatas.Add(new Item(1, "Kaeya", "케이야", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Kaeya", new Character(1, Element.CRYO, Grade.UNIQUE, 1048, 10400, 10325)));
+        itemDataFile.itemDatas.Add(new Item(1, "Kaeya", "케이아", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Kaeya", new Character(1, Element.CRYO, Grade.UNIQUE, 1048, 10400, 10325)));
         itemDataFile.itemDatas.Add(new Item(2, "Lisa", "리사", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Lisa", new Character(2, Element.ELECTRO, Grade.UNIQUE, 1066, 10409, 10315)));
         itemDataFile.itemDatas.Add(new Item(3, "Barbara", "바바라", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Barbara", new Character(3, Element.HYDRO, Grade.UNIQUE, 1006, 10406, 10305)));
         itemDataFile.itemDatas.Add(new Item(4, "Xiangling", "향릉", 1, ItemType.CHARACTER, Grade.UNIQUE, spritePathHero + "Xiangling", new Character(4, Element.PYRO, Grade.UNIQUE, 1114, 10404, 10315)));

@@ -277,7 +277,7 @@ public class InventoryManager : MonoBehaviour
 
         for (int i = 0; i < itemLists[nowTabIndex].Count;)
         {
-            Item item = ItemDatabase.instance.findItemByName(itemLists[nowTabIndex][i].koName);
+            Item item = ItemDatabase.instance.findItemByCode(itemLists[nowTabIndex][i].code);
             item.count = itemLists[nowTabIndex][i].count;
 
             if (item == null)

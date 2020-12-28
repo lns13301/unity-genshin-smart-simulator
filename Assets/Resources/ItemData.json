@@ -9,7 +9,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Amber",
             "sprite": {
-                "instanceID": 24804
+                "instanceID": 69642
             },
             "character": {
                 "code": 0,
@@ -243,13 +243,13 @@
         {
             "code": 1,
             "enName": "Kaeya",
-            "koName": "케이야",
+            "koName": "케이아",
             "count": 1,
             "type": 1,
             "grade": 3,
             "spritePath": "Images/Character/Kaeya",
             "sprite": {
-                "instanceID": 24822
+                "instanceID": 70274
             },
             "character": {
                 "code": 1,
@@ -489,7 +489,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Lisa",
             "sprite": {
-                "instanceID": 24826
+                "instanceID": 68890
             },
             "character": {
                 "code": 2,
@@ -729,7 +729,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Barbara",
             "sprite": {
-                "instanceID": 24806
+                "instanceID": 70382
             },
             "character": {
                 "code": 3,
@@ -969,7 +969,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Xiangling",
             "sprite": {
-                "instanceID": 24844
+                "instanceID": 69720
             },
             "character": {
                 "code": 4,
@@ -1209,7 +1209,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Razor",
             "sprite": {
-                "instanceID": 24836
+                "instanceID": 70522
             },
             "character": {
                 "code": 5,
@@ -1449,7 +1449,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Bennett",
             "sprite": {
-                "instanceID": 24810
+                "instanceID": 70482
             },
             "character": {
                 "code": 6,
@@ -1689,7 +1689,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Xingqiu",
             "sprite": {
-                "instanceID": 24848
+                "instanceID": 68896
             },
             "character": {
                 "code": 7,
@@ -1929,7 +1929,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Beidou",
             "sprite": {
-                "instanceID": 24808
+                "instanceID": 69940
             },
             "character": {
                 "code": 8,
@@ -2169,7 +2169,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Sucrose",
             "sprite": {
-                "instanceID": 24838
+                "instanceID": 69826
             },
             "character": {
                 "code": 9,
@@ -2409,7 +2409,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Ningguang",
             "sprite": {
-                "instanceID": 24830
+                "instanceID": 70630
             },
             "character": {
                 "code": 10,
@@ -2649,7 +2649,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Noelle",
             "sprite": {
-                "instanceID": 24832
+                "instanceID": 69338
             },
             "character": {
                 "code": 11,
@@ -2889,7 +2889,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Fischl",
             "sprite": {
-                "instanceID": 24818
+                "instanceID": 69378
             },
             "character": {
                 "code": 12,
@@ -3129,7 +3129,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Chongyun",
             "sprite": {
-                "instanceID": 24812
+                "instanceID": 68658
             },
             "character": {
                 "code": 13,
@@ -3369,7 +3369,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Diona",
             "sprite": {
-                "instanceID": 24816
+                "instanceID": 69788
             },
             "character": {
                 "code": 14,
@@ -3609,7 +3609,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Xinyan",
             "sprite": {
-                "instanceID": 24850
+                "instanceID": 70452
             },
             "character": {
                 "code": 15,
@@ -3849,7 +3849,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Diluc",
             "sprite": {
-                "instanceID": 24814
+                "instanceID": 68398
             },
             "character": {
                 "code": 500,
@@ -4089,7 +4089,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Mona",
             "sprite": {
-                "instanceID": 24828
+                "instanceID": 69376
             },
             "character": {
                 "code": 501,
@@ -4329,7 +4329,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Keqing",
             "sprite": {
-                "instanceID": 24824
+                "instanceID": 70220
             },
             "character": {
                 "code": 502,
@@ -4569,7 +4569,7 @@
             "grade": 4,
             "spritePath": "Images/Character/QiQi",
             "sprite": {
-                "instanceID": 24834
+                "instanceID": 69062
             },
             "character": {
                 "code": 503,
@@ -4809,7 +4809,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Jean",
             "sprite": {
-                "instanceID": 24820
+                "instanceID": 68852
             },
             "character": {
                 "code": 504,
@@ -5049,7 +5049,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Venti",
             "sprite": {
-                "instanceID": 24842
+                "instanceID": 69220
             },
             "character": {
                 "code": 700,
@@ -5289,7 +5289,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Klee",
             "sprite": {
-                "instanceID": 23300
+                "instanceID": 67274
             },
             "character": {
                 "code": 701,
@@ -5529,7 +5529,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Tartaglia",
             "sprite": {
-                "instanceID": 24840
+                "instanceID": 68780
             },
             "character": {
                 "code": 702,
@@ -5769,7 +5769,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Zhongli",
             "sprite": {
-                "instanceID": 24852
+                "instanceID": 69738
             },
             "character": {
                 "code": 703,
@@ -6009,7 +6009,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Albedo",
             "sprite": {
-                "instanceID": 24802
+                "instanceID": 69584
             },
             "character": {
                 "code": 704,
@@ -6249,7 +6249,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Cool Steel",
             "sprite": {
-                "instanceID": 25378
+                "instanceID": 68968
             },
             "character": {
                 "code": 0,
@@ -6489,7 +6489,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Dark Iron Sword",
             "sprite": {
-                "instanceID": 25386
+                "instanceID": 69476
             },
             "character": {
                 "code": 0,
@@ -6729,7 +6729,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Fillet Blade",
             "sprite": {
-                "instanceID": 25442
+                "instanceID": 70020
             },
             "character": {
                 "code": 0,
@@ -6969,7 +6969,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Harbinger of Dawn",
             "sprite": {
-                "instanceID": 25450
+                "instanceID": 70426
             },
             "character": {
                 "code": 0,
@@ -7209,7 +7209,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Skyrider Sword",
             "sprite": {
-                "instanceID": 25618
+                "instanceID": 69232
             },
             "character": {
                 "code": 0,
@@ -7449,7 +7449,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Bloodtainted Greatsword",
             "sprite": {
-                "instanceID": 25370
+                "instanceID": 70224
             },
             "character": {
                 "code": 0,
@@ -7689,7 +7689,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Debate Club",
             "sprite": {
-                "instanceID": 25394
+                "instanceID": 68288
             },
             "character": {
                 "code": 0,
@@ -7929,7 +7929,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Ferrous Shadow",
             "sprite": {
-                "instanceID": 25438
+                "instanceID": 70600
             },
             "character": {
                 "code": 0,
@@ -8169,7 +8169,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/White Iron Greatsword",
             "sprite": {
-                "instanceID": 25706
+                "instanceID": 68652
             },
             "character": {
                 "code": 0,
@@ -8409,7 +8409,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Black Tassel",
             "sprite": {
-                "instanceID": 25346
+                "instanceID": 68550
             },
             "character": {
                 "code": 0,
@@ -8649,7 +8649,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Halberd",
             "sprite": {
-                "instanceID": 25446
+                "instanceID": 69412
             },
             "character": {
                 "code": 0,
@@ -8889,7 +8889,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/White Tassel",
             "sprite": {
-                "instanceID": 25710
+                "instanceID": 70658
             },
             "character": {
                 "code": 0,
@@ -9129,7 +9129,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Emerald Orb",
             "sprite": {
-                "instanceID": 25410
+                "instanceID": 68424
             },
             "character": {
                 "code": 0,
@@ -9369,7 +9369,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Magic Guide",
             "sprite": {
-                "instanceID": 25494
+                "instanceID": 69600
             },
             "character": {
                 "code": 0,
@@ -9609,7 +9609,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Otherworldly Story",
             "sprite": {
-                "instanceID": 25514
+                "instanceID": 68632
             },
             "character": {
                 "code": 0,
@@ -9849,7 +9849,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Thrilling Tales of Dragon Slayers",
             "sprite": {
-                "instanceID": 25686
+                "instanceID": 69874
             },
             "character": {
                 "code": 0,
@@ -10089,7 +10089,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Twin Nephrite",
             "sprite": {
-                "instanceID": 25694
+                "instanceID": 68894
             },
             "character": {
                 "code": 0,
@@ -10329,7 +10329,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Messenger",
             "sprite": {
-                "instanceID": 25506
+                "instanceID": 69504
             },
             "character": {
                 "code": 0,
@@ -10569,7 +10569,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Raven Bow",
             "sprite": {
-                "instanceID": 25554
+                "instanceID": 69910
             },
             "character": {
                 "code": 0,
@@ -10809,7 +10809,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Recurve Bow",
             "sprite": {
-                "instanceID": 25558
+                "instanceID": 70202
             },
             "character": {
                 "code": 0,
@@ -11049,7 +11049,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Sharpshooter's Oath",
             "sprite": {
-                "instanceID": 25606
+                "instanceID": 69248
             },
             "character": {
                 "code": 0,
@@ -11289,7 +11289,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Slingshot",
             "sprite": {
-                "instanceID": 25642
+                "instanceID": 68230
             },
             "character": {
                 "code": 0,
@@ -11529,7 +11529,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Sword",
             "sprite": {
-                "instanceID": 25430
+                "instanceID": 68452
             },
             "character": {
                 "code": 0,
@@ -11769,7 +11769,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Sword",
             "sprite": {
-                "instanceID": 25594
+                "instanceID": 68836
             },
             "character": {
                 "code": 0,
@@ -12009,7 +12009,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Lion's Roar",
             "sprite": {
-                "instanceID": 25474
+                "instanceID": 68498
             },
             "character": {
                 "code": 0,
@@ -12249,7 +12249,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Flute",
             "sprite": {
-                "instanceID": 25666
+                "instanceID": 68980
             },
             "character": {
                 "code": 0,
@@ -12489,7 +12489,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Greatsword",
             "sprite": {
-                "instanceID": 25422
+                "instanceID": 68566
             },
             "character": {
                 "code": 0,
@@ -12729,7 +12729,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Greatsword",
             "sprite": {
-                "instanceID": 25590
+                "instanceID": 69552
             },
             "character": {
                 "code": 0,
@@ -12969,7 +12969,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Rainslasher",
             "sprite": {
-                "instanceID": 25550
+                "instanceID": 68352
             },
             "character": {
                 "code": 0,
@@ -13209,7 +13209,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Bell",
             "sprite": {
-                "instanceID": 25658
+                "instanceID": 70780
             },
             "character": {
                 "code": 0,
@@ -13449,7 +13449,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Lance",
             "sprite": {
-                "instanceID": 25426
+                "instanceID": 68750
             },
             "character": {
                 "code": 0,
@@ -13689,7 +13689,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Dragon's Bane",
             "sprite": {
-                "instanceID": 25398
+                "instanceID": 69374
             },
             "character": {
                 "code": 0,
@@ -13929,7 +13929,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Codex",
             "sprite": {
-                "instanceID": 25418
+                "instanceID": 69646
             },
             "character": {
                 "code": 0,
@@ -14169,7 +14169,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Fragments",
             "sprite": {
-                "instanceID": 25586
+                "instanceID": 70330
             },
             "character": {
                 "code": 0,
@@ -14409,7 +14409,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Eye of Perception",
             "sprite": {
-                "instanceID": 25414
+                "instanceID": 70724
             },
             "character": {
                 "code": 0,
@@ -14649,7 +14649,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Widsith",
             "sprite": {
-                "instanceID": 25682
+                "instanceID": 68746
             },
             "character": {
                 "code": 0,
@@ -14889,7 +14889,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Warbow",
             "sprite": {
-                "instanceID": 25434
+                "instanceID": 69142
             },
             "character": {
                 "code": 0,
@@ -15129,7 +15129,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Bow",
             "sprite": {
-                "instanceID": 25582
+                "instanceID": 69012
             },
             "character": {
                 "code": 0,
@@ -15369,7 +15369,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Rust",
             "sprite": {
-                "instanceID": 25578
+                "instanceID": 69640
             },
             "character": {
                 "code": 0,
@@ -15609,7 +15609,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Stringless",
             "sprite": {
-                "instanceID": 25670
+                "instanceID": 70512
             },
             "character": {
                 "code": 0,
@@ -15849,7 +15849,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Aquila Favonia",
             "sprite": {
-                "instanceID": 25338
+                "instanceID": 69588
             },
             "character": {
                 "code": 0,
@@ -16089,7 +16089,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Blade",
             "sprite": {
-                "instanceID": 25626
+                "instanceID": 70620
             },
             "character": {
                 "code": 0,
@@ -16329,7 +16329,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Wolf's Gravestone",
             "sprite": {
-                "instanceID": 25722
+                "instanceID": 68372
             },
             "character": {
                 "code": 0,
@@ -16569,7 +16569,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Pride",
             "sprite": {
-                "instanceID": 25634
+                "instanceID": 69548
             },
             "character": {
                 "code": 0,
@@ -16809,7 +16809,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Primordial Jade Winged Spear",
             "sprite": {
-                "instanceID": 25522
+                "instanceID": 68506
             },
             "character": {
                 "code": 0,
@@ -17049,7 +17049,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Spine",
             "sprite": {
-                "instanceID": 25638
+                "instanceID": 70628
             },
             "character": {
                 "code": 0,
@@ -17289,7 +17289,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Lost Prayer to the Sacred Winds",
             "sprite": {
-                "instanceID": 25490
+                "instanceID": 69228
             },
             "character": {
                 "code": 0,
@@ -17529,7 +17529,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Atlas",
             "sprite": {
-                "instanceID": 25622
+                "instanceID": 68916
             },
             "character": {
                 "code": 0,
@@ -17769,7 +17769,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Amos's Bow",
             "sprite": {
-                "instanceID": 25330
+                "instanceID": 70048
             },
             "character": {
                 "code": 0,
@@ -18009,7 +18009,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Harp",
             "sprite": {
-                "instanceID": 25630
+                "instanceID": 69592
             },
             "character": {
                 "code": 0,
@@ -18249,7 +18249,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Memory of Dust",
             "sprite": {
-                "instanceID": 25502
+                "instanceID": 70184
             },
             "character": {
                 "code": 0,
@@ -18489,7 +18489,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/The Unforged",
             "sprite": {
-                "instanceID": 25674
+                "instanceID": 70068
             },
             "character": {
                 "code": 0,
@@ -18729,7 +18729,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Vortex Vanquisher",
             "sprite": {
-                "instanceID": 25698
+                "instanceID": 69268
             },
             "character": {
                 "code": 0,
@@ -18969,7 +18969,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Summit Shaper",
             "sprite": {
-                "instanceID": 0
+                "instanceID": 70148
             },
             "character": {
                 "code": 0,
@@ -19209,7 +19209,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_freedom",
             "sprite": {
-                "instanceID": 27464
+                "instanceID": 68328
             },
             "character": {
                 "code": 0,
@@ -19449,7 +19449,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_freedom",
             "sprite": {
-                "instanceID": 27308
+                "instanceID": 68456
             },
             "character": {
                 "code": 0,
@@ -19689,7 +19689,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_freedom",
             "sprite": {
-                "instanceID": 27364
+                "instanceID": 70394
             },
             "character": {
                 "code": 0,
@@ -19929,7 +19929,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_resistance",
             "sprite": {
-                "instanceID": 27476
+                "instanceID": 68912
             },
             "character": {
                 "code": 0,
@@ -20169,7 +20169,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_resistance",
             "sprite": {
-                "instanceID": 27320
+                "instanceID": 69968
             },
             "character": {
                 "code": 0,
@@ -20409,7 +20409,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_resistance",
             "sprite": {
-                "instanceID": 27376
+                "instanceID": 68406
             },
             "character": {
                 "code": 0,
@@ -20649,7 +20649,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_ballad",
             "sprite": {
-                "instanceID": 27456
+                "instanceID": 70430
             },
             "character": {
                 "code": 0,
@@ -20889,7 +20889,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_ballad",
             "sprite": {
-                "instanceID": 27300
+                "instanceID": 70772
             },
             "character": {
                 "code": 0,
@@ -21129,7 +21129,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_ballad",
             "sprite": {
-                "instanceID": 27356
+                "instanceID": 70616
             },
             "character": {
                 "code": 0,
@@ -21369,7 +21369,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_prosperity",
             "sprite": {
-                "instanceID": 27472
+                "instanceID": 68324
             },
             "character": {
                 "code": 0,
@@ -21609,7 +21609,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_prosperity",
             "sprite": {
-                "instanceID": 27316
+                "instanceID": 69560
             },
             "character": {
                 "code": 0,
@@ -21849,7 +21849,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_prosperity",
             "sprite": {
-                "instanceID": 27372
+                "instanceID": 69952
             },
             "character": {
                 "code": 0,
@@ -22089,7 +22089,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_diligence",
             "sprite": {
-                "instanceID": 27460
+                "instanceID": 69926
             },
             "character": {
                 "code": 0,
@@ -22329,7 +22329,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_diligence",
             "sprite": {
-                "instanceID": 27304
+                "instanceID": 69786
             },
             "character": {
                 "code": 0,
@@ -22569,7 +22569,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_diligence",
             "sprite": {
-                "instanceID": 27360
+                "instanceID": 69608
             },
             "character": {
                 "code": 0,
@@ -22809,7 +22809,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_gold",
             "sprite": {
-                "instanceID": 27468
+                "instanceID": 68490
             },
             "character": {
                 "code": 0,
@@ -23049,7 +23049,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_gold",
             "sprite": {
-                "instanceID": 27312
+                "instanceID": 68604
             },
             "character": {
                 "code": 0,
@@ -23289,7 +23289,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_gold",
             "sprite": {
-                "instanceID": 27368
+                "instanceID": 68534
             },
             "character": {
                 "code": 0,
@@ -23529,7 +23529,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_sliver",
             "sprite": {
-                "instanceID": 27216
+                "instanceID": 68258
             },
             "character": {
                 "code": 0,
@@ -23769,7 +23769,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_fragment",
             "sprite": {
-                "instanceID": 27208
+                "instanceID": 68284
             },
             "character": {
                 "code": 0,
@@ -24009,7 +24009,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_chunk",
             "sprite": {
-                "instanceID": 27204
+                "instanceID": 68864
             },
             "character": {
                 "code": 0,
@@ -24249,7 +24249,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_gemstone",
             "sprite": {
-                "instanceID": 27212
+                "instanceID": 69370
             },
             "character": {
                 "code": 0,
@@ -24489,7 +24489,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_sliver",
             "sprite": {
-                "instanceID": 27516
+                "instanceID": 70666
             },
             "character": {
                 "code": 0,
@@ -24729,7 +24729,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_fragment",
             "sprite": {
-                "instanceID": 27508
+                "instanceID": 69578
             },
             "character": {
                 "code": 0,
@@ -24969,7 +24969,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_chunk",
             "sprite": {
-                "instanceID": 27504
+                "instanceID": 69500
             },
             "character": {
                 "code": 0,
@@ -25209,7 +25209,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_gemstone",
             "sprite": {
-                "instanceID": 27512
+                "instanceID": 69620
             },
             "character": {
                 "code": 0,
@@ -25449,7 +25449,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_sliver",
             "sprite": {
-                "instanceID": 27496
+                "instanceID": 69898
             },
             "character": {
                 "code": 0,
@@ -25689,7 +25689,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_fragment",
             "sprite": {
-                "instanceID": 27488
+                "instanceID": 69154
             },
             "character": {
                 "code": 0,
@@ -25929,7 +25929,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_chunk",
             "sprite": {
-                "instanceID": 27484
+                "instanceID": 68758
             },
             "character": {
                 "code": 0,
@@ -26169,7 +26169,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_gemstone",
             "sprite": {
-                "instanceID": 27492
+                "instanceID": 69236
             },
             "character": {
                 "code": 0,
@@ -26409,7 +26409,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_sliver",
             "sprite": {
-                "instanceID": 27532
+                "instanceID": 68304
             },
             "character": {
                 "code": 0,
@@ -26649,7 +26649,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_fragment",
             "sprite": {
-                "instanceID": 27524
+                "instanceID": 70680
             },
             "character": {
                 "code": 0,
@@ -26889,7 +26889,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_chunk",
             "sprite": {
-                "instanceID": 27520
+                "instanceID": 69044
             },
             "character": {
                 "code": 0,
@@ -27129,7 +27129,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_gemstone",
             "sprite": {
-                "instanceID": 27528
+                "instanceID": 70464
             },
             "character": {
                 "code": 0,
@@ -27369,7 +27369,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_sliver",
             "sprite": {
-                "instanceID": 27424
+                "instanceID": 68388
             },
             "character": {
                 "code": 0,
@@ -27609,7 +27609,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_fragment",
             "sprite": {
-                "instanceID": 27416
+                "instanceID": 69272
             },
             "character": {
                 "code": 0,
@@ -27849,7 +27849,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_chunk",
             "sprite": {
-                "instanceID": 27412
+                "instanceID": 68788
             },
             "character": {
                 "code": 0,
@@ -28089,7 +28089,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_gemstone",
             "sprite": {
-                "instanceID": 27420
+                "instanceID": 69572
             },
             "character": {
                 "code": 0,
@@ -28329,7 +28329,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_sliver",
             "sprite": {
-                "instanceID": 23412
+                "instanceID": 67396
             },
             "character": {
                 "code": 0,
@@ -28569,7 +28569,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_fragment",
             "sprite": {
-                "instanceID": 23178
+                "instanceID": 67154
             },
             "character": {
                 "code": 0,
@@ -28809,7 +28809,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_chunk",
             "sprite": {
-                "instanceID": 23242
+                "instanceID": 67216
             },
             "character": {
                 "code": 0,
@@ -29049,7 +29049,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_gemstone",
             "sprite": {
-                "instanceID": 23262
+                "instanceID": 67234
             },
             "character": {
                 "code": 0,
@@ -29289,7 +29289,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_sliver",
             "sprite": {
-                "instanceID": 27232
+                "instanceID": 69150
             },
             "character": {
                 "code": 0,
@@ -29529,7 +29529,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_fragment",
             "sprite": {
-                "instanceID": 27224
+                "instanceID": 69098
             },
             "character": {
                 "code": 0,
@@ -29769,7 +29769,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_chunk",
             "sprite": {
-                "instanceID": 27220
+                "instanceID": 69056
             },
             "character": {
                 "code": 0,
@@ -30009,7 +30009,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_gemstone",
             "sprite": {
-                "instanceID": 27228
+                "instanceID": 70422
             },
             "character": {
                 "code": 0,
@@ -30249,7 +30249,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/everflame_seed",
             "sprite": {
-                "instanceID": 27280
+                "instanceID": 70136
             },
             "character": {
                 "code": 0,
@@ -30489,7 +30489,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/cleansing_heart",
             "sprite": {
-                "instanceID": 27244
+                "instanceID": 69060
             },
             "character": {
                 "code": 0,
@@ -30729,7 +30729,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/lightning_prism",
             "sprite": {
-                "instanceID": 27340
+                "instanceID": 68312
             },
             "character": {
                 "code": 0,
@@ -30969,7 +30969,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/hurricane_seed",
             "sprite": {
-                "instanceID": 27328
+                "instanceID": 69922
             },
             "character": {
                 "code": 0,
@@ -31209,7 +31209,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/hoarfrost_core",
             "sprite": {
-                "instanceID": 27324
+                "instanceID": 70756
             },
             "character": {
                 "code": 0,
@@ -31449,7 +31449,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/basalt_pillar",
             "sprite": {
-                "instanceID": 23184
+                "instanceID": 67160
             },
             "character": {
                 "code": 0,
@@ -31689,7 +31689,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/damaged_mask",
             "sprite": {
-                "instanceID": 27252
+                "instanceID": 68964
             },
             "character": {
                 "code": 0,
@@ -31929,7 +31929,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/stained_mask",
             "sprite": {
-                "instanceID": 27444
+                "instanceID": 68468
             },
             "character": {
                 "code": 0,
@@ -32169,7 +32169,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/ominous_mask",
             "sprite": {
-                "instanceID": 27348
+                "instanceID": 69918
             },
             "character": {
                 "code": 0,
@@ -32409,7 +32409,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/divining_scroll",
             "sprite": {
-                "instanceID": 27260
+                "instanceID": 68316
             },
             "character": {
                 "code": 0,
@@ -32649,7 +32649,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/sealed_scroll",
             "sprite": {
-                "instanceID": 27392
+                "instanceID": 69316
             },
             "character": {
                 "code": 0,
@@ -32889,7 +32889,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/forbidden_curse_scroll",
             "sprite": {
-                "instanceID": 27288
+                "instanceID": 70346
             },
             "character": {
                 "code": 0,
@@ -33129,7 +33129,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/firm_arrowhead",
             "sprite": {
-                "instanceID": 27284
+                "instanceID": 69276
             },
             "character": {
                 "code": 0,
@@ -33369,7 +33369,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/sharp_arrowhead",
             "sprite": {
-                "instanceID": 27404
+                "instanceID": 68988
             },
             "character": {
                 "code": 0,
@@ -33609,7 +33609,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/weathered_arrowhead",
             "sprite": {
-                "instanceID": 27540
+                "instanceID": 68592
             },
             "character": {
                 "code": 0,
@@ -33849,7 +33849,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/slime_condensate",
             "sprite": {
-                "instanceID": 23338
+                "instanceID": 67312
             },
             "character": {
                 "code": 0,
@@ -34089,7 +34089,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/slime_secretions",
             "sprite": {
-                "instanceID": 23204
+                "instanceID": 67178
             },
             "character": {
                 "code": 0,
@@ -34329,7 +34329,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/slime_concentrate",
             "sprite": {
-                "instanceID": 23282
+                "instanceID": 67258
             },
             "character": {
                 "code": 0,
@@ -34569,7 +34569,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/whopperflower_nectar",
             "sprite": {
-                "instanceID": 27544
+                "instanceID": 68432
             },
             "character": {
                 "code": 0,
@@ -34809,7 +34809,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/shimmering_nectar",
             "sprite": {
-                "instanceID": 27408
+                "instanceID": 69524
             },
             "character": {
                 "code": 0,
@@ -35049,7 +35049,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/energy_nectar",
             "sprite": {
-                "instanceID": 27276
+                "instanceID": 69210
             },
             "character": {
                 "code": 0,
@@ -35289,7 +35289,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/treasure_hoarder_insignia",
             "sprite": {
-                "instanceID": 27480
+                "instanceID": 68246
             },
             "character": {
                 "code": 0,
@@ -35529,7 +35529,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/silver_raven_insignia",
             "sprite": {
-                "instanceID": 27432
+                "instanceID": 69616
             },
             "character": {
                 "code": 0,
@@ -35769,7 +35769,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/golden_raven_insignia",
             "sprite": {
-                "instanceID": 27296
+                "instanceID": 69008
             },
             "character": {
                 "code": 0,
@@ -36009,7 +36009,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/recruits_insignia",
             "sprite": {
-                "instanceID": 27384
+                "instanceID": 69066
             },
             "character": {
                 "code": 0,
@@ -36249,7 +36249,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/sergeants_insignia",
             "sprite": {
-                "instanceID": 27396
+                "instanceID": 70088
             },
             "character": {
                 "code": 0,
@@ -36489,7 +36489,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/lieutenants_insignia",
             "sprite": {
-                "instanceID": 27336
+                "instanceID": 69842
             },
             "character": {
                 "code": 0,
@@ -36729,7 +36729,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/calla_lily",
             "sprite": {
-                "instanceID": 27236
+                "instanceID": 69388
             },
             "character": {
                 "code": 0,
@@ -36969,7 +36969,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/cecilia",
             "sprite": {
-                "instanceID": 27240
+                "instanceID": 70092
             },
             "character": {
                 "code": 0,
@@ -37209,7 +37209,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/cor_lapis",
             "sprite": {
-                "instanceID": 23216
+                "instanceID": 67192
             },
             "character": {
                 "code": 0,
@@ -37449,7 +37449,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/glaze_lily",
             "sprite": {
-                "instanceID": 27292
+                "instanceID": 70156
             },
             "character": {
                 "code": 0,
@@ -37689,7 +37689,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/jueyun_chili",
             "sprite": {
-                "instanceID": 27332
+                "instanceID": 69972
             },
             "character": {
                 "code": 0,
@@ -37929,7 +37929,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/noctilous_jade",
             "sprite": {
-                "instanceID": 27344
+                "instanceID": 68712
             },
             "character": {
                 "code": 0,
@@ -38169,7 +38169,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/philanemo_mushroom",
             "sprite": {
-                "instanceID": 27352
+                "instanceID": 70044
             },
             "character": {
                 "code": 0,
@@ -38409,7 +38409,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/silk_flower",
             "sprite": {
-                "instanceID": 27428
+                "instanceID": 68448
             },
             "character": {
                 "code": 0,
@@ -38649,7 +38649,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/small_lamp_grass",
             "sprite": {
-                "instanceID": 27436
+                "instanceID": 70516
             },
             "character": {
                 "code": 0,
@@ -38889,7 +38889,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/valberry",
             "sprite": {
-                "instanceID": 27500
+                "instanceID": 68368
             },
             "character": {
                 "code": 0,
@@ -39129,7 +39129,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/violetgrass",
             "sprite": {
-                "instanceID": 27536
+                "instanceID": 69948
             },
             "character": {
                 "code": 0,
@@ -39369,7 +39369,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/windwheel_aster",
             "sprite": {
-                "instanceID": 27548
+                "instanceID": 68276
             },
             "character": {
                 "code": 0,
@@ -39609,7 +39609,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/wolfhook",
             "sprite": {
-                "instanceID": 27552
+                "instanceID": 69432
             },
             "character": {
                 "code": 0,
@@ -39849,7 +39849,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/dandelion_seed",
             "sprite": {
-                "instanceID": 27256
+                "instanceID": 69792
             },
             "character": {
                 "code": 0,
@@ -40089,7 +40089,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/starconch",
             "sprite": {
-                "instanceID": 27448
+                "instanceID": 69750
             },
             "character": {
                 "code": 0,
@@ -40329,7 +40329,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/qingxin",
             "sprite": {
-                "instanceID": 27380
+                "instanceID": 70294
             },
             "character": {
                 "code": 0,
@@ -40569,7 +40569,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/tile_of_decarabians_tower",
             "sprite": {
-                "instanceID": 27856
+                "instanceID": 68472
             },
             "character": {
                 "code": 0,
@@ -40809,7 +40809,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/debris_of_decarabians_city",
             "sprite": {
-                "instanceID": 27752
+                "instanceID": 68182
             },
             "character": {
                 "code": 0,
@@ -41049,7 +41049,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/fragment_of_decarabians_epic",
             "sprite": {
-                "instanceID": 27776
+                "instanceID": 68242
             },
             "character": {
                 "code": 0,
@@ -41289,7 +41289,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/scattered_piece_of_decarabianss_dream",
             "sprite": {
-                "instanceID": 27844
+                "instanceID": 69362
             },
             "character": {
                 "code": 0,
@@ -41529,7 +41529,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_milk_tooth",
             "sprite": {
-                "instanceID": 27716
+                "instanceID": 70268
             },
             "character": {
                 "code": 0,
@@ -41769,7 +41769,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_cracked_tooth",
             "sprite": {
-                "instanceID": 27712
+                "instanceID": 70438
             },
             "character": {
                 "code": 0,
@@ -42009,7 +42009,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_broken_fang",
             "sprite": {
-                "instanceID": 27708
+                "instanceID": 68300
             },
             "character": {
                 "code": 0,
@@ -42249,7 +42249,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_nostalgia",
             "sprite": {
-                "instanceID": 27720
+                "instanceID": 70634
             },
             "character": {
                 "code": 0,
@@ -42489,7 +42489,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/fetters_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 27764
+                "instanceID": 69130
             },
             "character": {
                 "code": 0,
@@ -42729,7 +42729,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/chains_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 27724
+                "instanceID": 70286
             },
             "character": {
                 "code": 0,
@@ -42969,7 +42969,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/shackles_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 27848
+                "instanceID": 68268
             },
             "character": {
                 "code": 0,
@@ -43209,7 +43209,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/dream_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 27760
+                "instanceID": 69040
             },
             "character": {
                 "code": 0,
@@ -43449,7 +43449,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/luminous_sands_from_guyun",
             "sprite": {
-                "instanceID": 27800
+                "instanceID": 69512
             },
             "character": {
                 "code": 0,
@@ -43689,7 +43689,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/lustrous_stone_from_guyun",
             "sprite": {
-                "instanceID": 27804
+                "instanceID": 70164
             },
             "character": {
                 "code": 0,
@@ -43929,7 +43929,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/relic_from_guyun",
             "sprite": {
-                "instanceID": 27840
+                "instanceID": 68726
             },
             "character": {
                 "code": 0,
@@ -44169,7 +44169,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/divine_body_from_guyun",
             "sprite": {
-                "instanceID": 27756
+                "instanceID": 68206
             },
             "character": {
                 "code": 0,
@@ -44409,7 +44409,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_lead_elixir",
             "sprite": {
-                "instanceID": 27824
+                "instanceID": 70180
             },
             "character": {
                 "code": 0,
@@ -44649,7 +44649,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_mercury_elixir",
             "sprite": {
-                "instanceID": 27828
+                "instanceID": 68530
             },
             "character": {
                 "code": 0,
@@ -44889,7 +44889,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_gold_elixir",
             "sprite": {
-                "instanceID": 27820
+                "instanceID": 69812
             },
             "character": {
                 "code": 0,
@@ -45129,7 +45129,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_primo_elixir",
             "sprite": {
-                "instanceID": 27832
+                "instanceID": 69654
             },
             "character": {
                 "code": 0,
@@ -45369,7 +45369,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/grain_of_aerosiderite",
             "sprite": {
-                "instanceID": 27780
+                "instanceID": 68542
             },
             "character": {
                 "code": 0,
@@ -45609,7 +45609,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/piece_of_aerosiderite",
             "sprite": {
-                "instanceID": 27836
+                "instanceID": 69288
             },
             "character": {
                 "code": 0,
@@ -45849,7 +45849,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/bit_of_aerosiderite",
             "sprite": {
-                "instanceID": 27696
+                "instanceID": 70208
             },
             "character": {
                 "code": 0,
@@ -46089,7 +46089,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/chunk_of_aerosiderite",
             "sprite": {
-                "instanceID": 27740
+                "instanceID": 68884
             },
             "character": {
                 "code": 0,
@@ -46329,7 +46329,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/dead_ley_line_branch",
             "sprite": {
-                "instanceID": 27744
+                "instanceID": 68792
             },
             "character": {
                 "code": 0,
@@ -46569,7 +46569,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/dead_ley_line_leaves",
             "sprite": {
-                "instanceID": 27748
+                "instanceID": 69484
             },
             "character": {
                 "code": 0,
@@ -46809,7 +46809,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/ley_line_sprout",
             "sprite": {
-                "instanceID": 27796
+                "instanceID": 70084
             },
             "character": {
                 "code": 0,
@@ -47049,7 +47049,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/fragile_bone_shard",
             "sprite": {
-                "instanceID": 27772
+                "instanceID": 68392
             },
             "character": {
                 "code": 0,
@@ -47289,7 +47289,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/sturdy_bone_shard",
             "sprite": {
-                "instanceID": 27852
+                "instanceID": 70376
             },
             "character": {
                 "code": 0,
@@ -47529,7 +47529,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/fossilized_bone_shard",
             "sprite": {
-                "instanceID": 27768
+                "instanceID": 70476
             },
             "character": {
                 "code": 0,
@@ -47769,7 +47769,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/hunters_sacrificial_knife",
             "sprite": {
-                "instanceID": 27788
+                "instanceID": 68272
             },
             "character": {
                 "code": 0,
@@ -48009,7 +48009,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/agents_sacrificial_knife",
             "sprite": {
-                "instanceID": 27692
+                "instanceID": 68356
             },
             "character": {
                 "code": 0,
@@ -48249,7 +48249,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/inspectors_sacrificial_knife",
             "sprite": {
-                "instanceID": 27792
+                "instanceID": 69996
             },
             "character": {
                 "code": 0,
@@ -48489,7 +48489,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_grass_pollen",
             "sprite": {
-                "instanceID": 27812
+                "instanceID": 68620
             },
             "character": {
                 "code": 0,
@@ -48729,7 +48729,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_grass",
             "sprite": {
-                "instanceID": 27808
+                "instanceID": 69332
             },
             "character": {
                 "code": 0,
@@ -48969,7 +48969,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_grass_wick",
             "sprite": {
-                "instanceID": 27816
+                "instanceID": 69604
             },
             "character": {
                 "code": 0,
@@ -49209,7 +49209,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/chaos_device",
             "sprite": {
-                "instanceID": 27736
+                "instanceID": 69382
             },
             "character": {
                 "code": 0,
@@ -49449,7 +49449,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/chaos_circuit",
             "sprite": {
-                "instanceID": 27728
+                "instanceID": 69758
             },
             "character": {
                 "code": 0,
@@ -49689,7 +49689,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/chaos_core",
             "sprite": {
-                "instanceID": 27732
+                "instanceID": 70418
             },
             "character": {
                 "code": 0,
@@ -49929,7 +49929,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/heavy_horn",
             "sprite": {
-                "instanceID": 27784
+                "instanceID": 68676
             },
             "character": {
                 "code": 0,
@@ -50169,7 +50169,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/black_bronze_horn",
             "sprite": {
-                "instanceID": 27700
+                "instanceID": 69956
             },
             "character": {
                 "code": 0,
@@ -50409,7 +50409,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/black_crystal_horn",
             "sprite": {
-                "instanceID": 27704
+                "instanceID": 69824
             },
             "character": {
                 "code": 0,

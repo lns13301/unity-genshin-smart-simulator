@@ -86,40 +86,40 @@ public class AscensionWeaponFrame : MonoBehaviour
         Debug.Log(item.weapon.ascensionItemCode);
 
         transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).LoadSprite();
+            ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).LoadSprite();
         transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).LoadSprite();
+            ItemDatabase.instance.findItemByIndex(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).LoadSprite();
         transform.GetChild(3).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).LoadSprite();
+            ItemDatabase.instance.findItemByIndex(item.weapon.ascensionMobItemCode + mobItemIndex).LoadSprite();
 
         if (LanguageManager.instance.language == Language.KOREAN)
         {
             if (item.grade == Grade.EPIC)
             {
                 transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).koName + " x " + ascensionMaterialCountEpic[0][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).koName + " x " + ascensionMaterialCountEpic[0][frameIndex];
                 transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).koName + " x " + ascensionMaterialCountEpic[1][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).koName + " x " + ascensionMaterialCountEpic[1][frameIndex];
                 transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).koName + " x " + ascensionMaterialCountEpic[2][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionMobItemCode + mobItemIndex).koName + " x " + ascensionMaterialCountEpic[2][frameIndex];
             }
             else if (item.grade == Grade.UNIQUE)
             {
                 transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).koName + " x " + ascensionMaterialCountUnique[0][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).koName + " x " + ascensionMaterialCountUnique[0][frameIndex];
                 transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).koName + " x " + ascensionMaterialCountUnique[1][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).koName + " x " + ascensionMaterialCountUnique[1][frameIndex];
                 transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).koName + " x " + ascensionMaterialCountUnique[2][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionMobItemCode + mobItemIndex).koName + " x " + ascensionMaterialCountUnique[2][frameIndex];
             }
             else
             {
                 transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).koName + " x " + ascensionMaterialCountLegend[0][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).koName + " x " + ascensionMaterialCountLegend[0][frameIndex];
                 transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).koName + " x " + ascensionMaterialCountLegend[1][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).koName + " x " + ascensionMaterialCountLegend[1][frameIndex];
                 transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).koName + " x " + ascensionMaterialCountLegend[2][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionMobItemCode + mobItemIndex).koName + " x " + ascensionMaterialCountLegend[2][frameIndex];
             }
         }
         else
@@ -127,29 +127,29 @@ public class AscensionWeaponFrame : MonoBehaviour
             if (item.grade == Grade.EPIC)
             {
                 transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).enName + " x " + ascensionMaterialCountEpic[0][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).enName + " x " + ascensionMaterialCountEpic[0][frameIndex];
                 transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).enName + " x " + ascensionMaterialCountEpic[1][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).enName + " x " + ascensionMaterialCountEpic[1][frameIndex];
                 transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).enName + " x " + ascensionMaterialCountEpic[2][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionMobItemCode + mobItemIndex).enName + " x " + ascensionMaterialCountEpic[2][frameIndex];
             }
             else if (item.grade == Grade.UNIQUE)
             {
                 transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).enName + " x " + ascensionMaterialCountUnique[0][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).enName + " x " + ascensionMaterialCountUnique[0][frameIndex];
                 transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).enName + " x " + ascensionMaterialCountUnique[1][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).enName + " x " + ascensionMaterialCountUnique[1][frameIndex];
                 transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).enName + " x " + ascensionMaterialCountUnique[2][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionMobItemCode + mobItemIndex).enName + " x " + ascensionMaterialCountUnique[2][frameIndex];
             }
             else
             {
                 transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionItemCode + itemIndex).enName + " x " + ascensionMaterialCountLegend[0][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).enName + " x " + ascensionMaterialCountLegend[0][frameIndex];
                 transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).enName + " x " + ascensionMaterialCountLegend[1][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionEliteMobItemCode + eliteItemIndex).enName + " x " + ascensionMaterialCountLegend[1][frameIndex];
                 transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                    ItemDatabase.instance.findItemByCode(item.weapon.ascensionMobItemCode + mobItemIndex).enName + " x " + ascensionMaterialCountLegend[2][frameIndex];
+                    ItemDatabase.instance.findItemByIndex(item.weapon.ascensionMobItemCode + mobItemIndex).enName + " x " + ascensionMaterialCountLegend[2][frameIndex];
             }
         }
     }

@@ -46,151 +46,151 @@ public class AscensionFrame : MonoBehaviour
         {
             case 0:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode()).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode()).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode()).koName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode()).koName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).koName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode).koName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 else
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode()).enName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode()).enName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).enName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode).enName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
 
                 break;
             case 1:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 1).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).koName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 1).koName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).koName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode).koName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 else
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).enName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 1).enName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode).enName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode).enName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 break;
             case 2:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 1).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 1).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).koName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 1).koName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).koName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 1).koName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 else
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 1).enName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 1).enName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).enName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 1).enName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 break;
             case 3:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 2).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 1).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).koName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 2).koName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).koName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 1).koName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 else
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).enName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 2).enName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 1).enName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 1).enName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 break;
             case 4:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 2).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 2).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).koName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 2).koName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).koName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 2).koName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 else
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 2).enName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 2).enName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).enName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 2).enName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 break;
             case 5:
                 transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 3).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 3).LoadSprite();
                 transform.GetChild(4).GetChild(0).GetComponent<Image>().sprite =
-                    ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).LoadSprite();
+                    ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 2).LoadSprite();
 
                 if (LanguageManager.instance.language == Language.KOREAN)
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 3).koName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 3).koName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).koName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 2).koName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 else
                 {
                     transform.GetChild(1).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.GetElementAscensionJewelItemCode() + 3).enName + " x " + ascensionMaterialCount[0][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.GetElementAscensionJewelItemCode() + 3).enName + " x " + ascensionMaterialCount[0][frameIndex];
                     transform.GetChild(4).GetChild(1).GetComponent<Text>().text =
-                        ItemDatabase.instance.findItemByCode(item.character.ascensionMobItemCode + 2).enName + " x " + ascensionMaterialCount[3][frameIndex];
+                        ItemDatabase.instance.findItemByIndex(item.character.ascensionMobItemCode + 2).enName + " x " + ascensionMaterialCount[3][frameIndex];
                 }
                 break;
         }
 
         transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.GetElementAscensionItemCode()).LoadSprite();
+            ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).LoadSprite();
         transform.GetChild(3).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByCode(item.character.ascensionItemCode).LoadSprite();
+            ItemDatabase.instance.findItemByIndex(item.character.ascensionItemCode).LoadSprite();
 
         if (LanguageManager.instance.language == Language.KOREAN)
         {
             transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                ItemDatabase.instance.findItemByCode(item.GetElementAscensionItemCode()).koName + " x " + ascensionMaterialCount[1][frameIndex];
+                ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).koName + " x " + ascensionMaterialCount[1][frameIndex];
             transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                ItemDatabase.instance.findItemByCode(item.character.ascensionItemCode).koName + " x " + ascensionMaterialCount[2][frameIndex];
+                ItemDatabase.instance.findItemByIndex(item.character.ascensionItemCode).koName + " x " + ascensionMaterialCount[2][frameIndex];
         }
         else
         {
             transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                ItemDatabase.instance.findItemByCode(item.GetElementAscensionItemCode()).enName + " x " + ascensionMaterialCount[1][frameIndex];
+                ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).enName + " x " + ascensionMaterialCount[1][frameIndex];
             transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
-                ItemDatabase.instance.findItemByCode(item.character.ascensionItemCode).enName + " x " + ascensionMaterialCount[2][frameIndex];
+                ItemDatabase.instance.findItemByIndex(item.character.ascensionItemCode).enName + " x " + ascensionMaterialCount[2][frameIndex];
         }
     }
 
