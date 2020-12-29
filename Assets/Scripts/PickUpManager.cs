@@ -183,7 +183,7 @@ public class PickUpManager : MonoBehaviour
             playerData.acquantFateTotalTryCount += 10;
         }
 
-        sortResultItems();
+        SortResultItems();
 
         // 이미지 등록
         for (int i = 0; i < 10; i++)
@@ -228,7 +228,7 @@ public class PickUpManager : MonoBehaviour
         Invoke("OffPanel", 6.5f);
     }
 
-    public void sortResultItems()
+    public void SortResultItems()
     {
         List<Item> temp = new List<Item>();
 

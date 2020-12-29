@@ -165,13 +165,13 @@ public class GameManager : MonoBehaviour
         {
             detailContent.GetChild(0).GetComponent<Text>().text = "Probability Information";
             detailContent.GetChild(1).GetComponent<Text>().text =
-                GetColorText("Event Wish \"Gentry of Hermitage\"", "9958b3") + " : " + "It has a " + GetColorText("0.6%", RED_COLOR) + " probability up to " + GetColorText("74 times", RED_COLOR) + "."
+                GetColorText("Event Wish \"Secretum Secretorum\"", "9958b3") + " : " + "It has a " + GetColorText("0.6%", RED_COLOR) + " probability up to " + GetColorText("74 times", RED_COLOR) + "."
                 + "Since then, " + GetColorText("5-star", ORANGE_COLOR) + " appear with a " + GetColorText("32.323%", RED_COLOR) + " probability" + ".\n"
                 + "(Base probability of winning " + GetColorText("5-star item", ORANGE_COLOR) + " = " + GetColorText("0.6%", RED_COLOR) + ", consolidated probability of winning " 
                 + GetColorText("5-star item", ORANGE_COLOR) + " = " + GetColorText("1.6%", RED_COLOR)
                 + "guaranteed to win " + GetColorText("5-star item", ORANGE_COLOR) + "at least once per " + GetColorText("90", RED_COLOR) + " attempts";
             detailContent.GetChild(2).GetComponent<Text>().text =
-            GetColorText("Event Wish \"Gentry of Hermitage\"", "9958b3") + " : " + "It has a " + GetColorText("5.1%", RED_COLOR) + " probability up to " + GetColorText("4 times", RED_COLOR) + "."
+            GetColorText("Event Wish \"Secretum Secretorum\"", "9958b3") + " : " + "It has a " + GetColorText("5.1%", RED_COLOR) + " probability up to " + GetColorText("4 times", RED_COLOR) + "."
                 + "Since then, " + GetColorText("4-star", ORANGE_COLOR) + " increases by " + GetColorText("1.58%", RED_COLOR) + " each time." + ".\n"
                 + "(Base probability of winning " + GetColorText("4-star item", ORANGE_COLOR) + " = " + GetColorText("5.1%", RED_COLOR) + ", consolidated probability of winning "
                 + GetColorText("4-star item", ORANGE_COLOR) + " = " + GetColorText("13%", RED_COLOR)

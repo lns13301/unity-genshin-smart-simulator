@@ -75,14 +75,26 @@ public class PlayerData
     // 인벤토리 무기 최대 보유 수량 조정
     public bool AddWeapon(Item item)
     {
-        if (weapons.Count > 200)
+        for (int i = 0; i < weapons.Count; i++)
+        {
+            if (weapons[i].code == item.code)
+            {
+                weapons[i].SetCount(weapons[i].count + 1);
+                return true;
+            }
+        }
+        weapons.Add(item);
+
+        return true;
+
+/*        if (weapons.Count > 200)
         {
             return false;
         }
 
         weapons.Add(item);
 
-        return true;
+        return true;*/
     }
 
     public void RemoveWeapon(int index)
