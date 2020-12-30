@@ -35,6 +35,9 @@ public class SkillManager : MonoBehaviour
 
     public Item item;
 
+    public Image skillBookItemImage;
+    public Image skillLegendItemImage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +64,8 @@ public class SkillManager : MonoBehaviour
     public void OnStatUI(Item item)
     {
         this.item = ItemDatabase.instance.findItemByCode(item.code);
+        skillBookItemImage.sprite = ItemDatabase.instance.findItemByCode(item.character.skillBookItemCode + 2).LoadSprite();
+        skillLegendItemImage.sprite = ItemDatabase.instance.findItemByCode(item.character.skillLegendItemCode).LoadSprite();
 
         if (item.type == ItemType.CHARACTER)
         {
