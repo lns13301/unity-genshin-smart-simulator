@@ -122,8 +122,8 @@ public class AdMobReward : MonoBehaviour
 
     public void GiveReward()
     {
-        int wish1 = UnityEngine.Random.Range(100, 500);
-        int wish2 = UnityEngine.Random.Range(100, 500);
+        int wish1 = UnityEngine.Random.Range(100, 350);
+        int wish2 = UnityEngine.Random.Range(100, 350);
 
         if (GameManager.instance.AddWishes(wish1, wish2))
         {

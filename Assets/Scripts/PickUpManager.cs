@@ -10,12 +10,12 @@ public class PickUpManager : MonoBehaviour
     private static int CHARACTER_COUNT_FOUR_STAR = 13; // 픽업 4성은 제외 했음
 
     // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private static int MIN_EPIC_WEAPON = 27;
-    private static int MAX_EPIC_WEAPON = 48 + 1;
+    private static int MIN_EPIC_WEAPON = 26;
+    private static int MAX_EPIC_WEAPON = 47 + 1;
     private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
-    private static int MAX_UNIQUE_WEAPON = 66 + 1;
+    private static int MAX_UNIQUE_WEAPON = 65 + 1;
     private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
-    private static int MAX_LEGEND_WEAPON = 77 + 1;
+    private static int MAX_LEGEND_WEAPON = 76 + 1;
 
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
@@ -782,9 +782,9 @@ public class PickUpManager : MonoBehaviour
 
                 if (r == 0)
                 {
-                    int value = Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER);
-                    Debug.Log("랜덤 값 : " + MIN_UNIQUE_CHARACTER + ", : " + MAX_UNIQUE_CHARACTER);
-                    return ItemDatabase.instance.itemDB[value];
+/*                    int value = Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER);
+                    Debug.Log("랜덤 값 : " + MIN_UNIQUE_CHARACTER + ", : " + MAX_UNIQUE_CHARACTER);*/
+                    return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
                 }
                 else
                 {
