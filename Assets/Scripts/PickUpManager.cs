@@ -203,6 +203,109 @@ public class PickUpManager : MonoBehaviour
         GameManager.instance.SetResources();
     }
 
+    public void PickUpButtonOne()
+    {
+        // 체험 기간 확인 코드
+        if (GameManager.instance.isValidTimeOver())
+        {
+            return;
+        }
+
+        // 인벤토리 수령가능 공간 확인
+        if (GameManager.instance.GetPlayerData().weapons.Count > 190)
+        {
+            GameManager.instance.OnNoticeWeaponInventoryFull();
+            return;
+        }
+
+        int buttonType = BannerManager.instance.onBannerIndex;
+
+        Grade[] grades;
+
+        SoundManager.instance.PlayOneShotEffectSound(1);
+
+        if (buttonType == 1 || buttonType == 4) // 픽업, 지나간 픽업 처리
+        {
+            if (playerData.intertwinedFateCount > 0)
+            {
+                grades = SetPlayerDataAfterGacha(false);
+
+                for (int i = 0; i < grades.Length; i++)
+                {
+                    result[i] = GetRandomItem(grades[i], PickUpType.CHARACTER, playerData.isPickUpCharacterAlways, playerData.isPickUpCharacter4Always);
+                    playerData.AddItemAndHistory(result[i], buttonType);
+                }
+
+                playerData.characterTotalTryCount += 1;
+            }
+            else
+            {
+                GameManager.instance.ShowLackOfWish();
+                return;
+            }
+
+        }
+        if (buttonType == 2)
+        {
+            if (playerData.intertwinedFateCount > 0)
+            {
+                grades = SetPlayerDataAfterGacha(false);
+
+                for (int i = 0; i < grades.Length; i++)
+                {
+                    result[i] = GetRandomItem(grades[i], PickUpType.WEAPON, playerData.isPickUpWeaponAlways, playerData.isPickUpWeapon4Always);
+                    playerData.AddItemAndHistory(result[i], buttonType);
+                }
+
+                playerData.weaponTotalTryCount += 1;
+            }
+            else
+            {
+                GameManager.instance.ShowLackOfWish();
+                return;
+            }
+        }
+        if (buttonType == 3)
+        {
+            if (playerData.acquantFateCount > 0)
+            {
+                grades = SetPlayerDataAfterGacha();
+
+                for (int i = 0; i < grades.Length; i++)
+                {
+                    result[i] = GetRandomItem(grades[i], PickUpType.NORMAL, playerData.isPickUpNormalAlways);
+                    playerData.AddItemAndHistory(result[i], buttonType);
+                }
+
+                playerData.acquantFateTotalTryCount += 1;
+            }
+            else
+            {
+                GameManager.instance.ShowLackOfWish(10, true);
+                return;
+            }
+        }
+
+        SortResultItems();
+
+        // 이미지 등록
+        for (int i = 0; i < 10; i++)
+        {
+            resultImageParent.transform.GetChild(i).GetChild(0).gameObject.GetComponent<Image>().sprite = result[i].sprite;
+        }
+
+        if (hasFiveStar)
+        {
+            PlayPickUpVideo(5);
+        }
+        else
+        {
+            PlayPickUpVideo(4);
+        }
+
+        GameManager.instance.SetResources();
+    }
+
     public void PlayPickUpVideo(int star = 4, int wishCount = 10)
     {
         panel.SetActive(true);

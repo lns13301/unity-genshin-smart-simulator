@@ -122,6 +122,7 @@ public class LanguageManager : MonoBehaviour
             texts[44].text = "스킬 정보";
             texts[45].text = "운명의 자리";
             texts[46].text = "초기화";
+            texts[47].text = "기원 1회";
         }
         else
         {
@@ -172,6 +173,7 @@ public class LanguageManager : MonoBehaviour
             texts[44].text = "Talents";
             texts[45].text = "Constellation";
             texts[46].text = "Reset";
+            texts[47].text = "Wish X 1";
         }
 
         BannerManager.instance.SetBannerImageByLanguage(language);

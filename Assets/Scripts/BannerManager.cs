@@ -15,11 +15,13 @@ public class BannerManager : MonoBehaviour
     public int onBannerIndex;
 
     public Image pickupButton;
+    public Image pickupButtonOne;
     public Sprite[] buttonImage;
     public Vector2 buttonSize1 = new Vector2(342, 93);
     public Vector2 buttonSize2 = new Vector2(342, 76);
 
     public RectTransform pickupButtonText;
+    public RectTransform pickupButtonOneText;
 
     public GameObject bannerImageParent;
     public GameObject bannerButtonImageParent;
@@ -75,9 +77,15 @@ public class BannerManager : MonoBehaviour
     {
         bannerButton[0].SetActive(false);
         bannerButton[5].SetActive(true);
+
         pickupButton.sprite = buttonImage[8];
+        pickupButtonOne.gameObject.SetActive(false);
+        pickupButtonOneText.gameObject.SetActive(false);
+
         pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize1.x);
         pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize1.y);
+        pickupButtonOne.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
+        pickupButtonOne.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
     }
 
     public void OnBanner(int bannerIndex)
@@ -97,6 +105,8 @@ public class BannerManager : MonoBehaviour
         GameManager.instance.SetResources();
 
         OffAllBannerButton();
+        pickupButtonOne.gameObject.SetActive(true);
+        pickupButtonOneText.gameObject.SetActive(true);
 
         switch (bannerIndex)
         {
@@ -104,6 +114,8 @@ public class BannerManager : MonoBehaviour
                 bannerButton[0].SetActive(false);
                 bannerButton[5].SetActive(true);
                 pickupButton.sprite = buttonImage[8];
+                pickupButtonOne.gameObject.SetActive(false);
+                pickupButtonOneText.gameObject.SetActive(false);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize1.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize1.y);
                 break;
@@ -156,6 +168,9 @@ public class BannerManager : MonoBehaviour
 
         pickupButtonText.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
         pickupButtonText.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
+
+        pickupButtonOneText.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
+        pickupButtonOneText.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);
     }
 
     public void SetPickUPButtonImage(bool isAcquantFactWish = false)
@@ -172,6 +187,15 @@ public class BannerManager : MonoBehaviour
             {
                 pickupButton.sprite = buttonImage[5];
             }
+
+            if (playerData.acquantFateCount < 1)
+            {
+                pickupButtonOne.sprite = buttonImage[6];
+            }
+            else
+            {
+                pickupButtonOne.sprite = buttonImage[4];
+            }
         }
         else
         {
@@ -182,6 +206,15 @@ public class BannerManager : MonoBehaviour
             else
             {
                 pickupButton.sprite = buttonImage[1];
+            }
+
+            if (playerData.intertwinedFateCount < 1)
+            {
+                pickupButtonOne.sprite = buttonImage[2];
+            }
+            else
+            {
+                pickupButtonOne.sprite = buttonImage[0];
             }
         }
     }
