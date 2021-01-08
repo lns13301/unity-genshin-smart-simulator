@@ -46,6 +46,9 @@ public class PickUpManager : MonoBehaviour
     public GameObject gachaIllustSet;
     public GameObject gachaIllust;
 
+    public VideoClip whiteVideoClip;
+    public GameObject whitePanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -407,7 +410,7 @@ public class PickUpManager : MonoBehaviour
 
         StopCoroutine("PlayItemVideo");
         CancelInvoke("OffPanel");
-        OffPanelAndSetting();
+        StartCoroutine("OffPanelAndSetting");
     }
 
     // resultPage On
@@ -418,9 +421,16 @@ public class PickUpManager : MonoBehaviour
         StartCoroutine("PlayItemVideo");
     }
 
-    public void OffPanelAndSetting()
+    IEnumerator OffPanelAndSetting()
     {
+        whitePanel.SetActive(true);
+        videos[0].clip = whiteVideoClip;
+        videos[0].Play();
+
+        yield return new WaitForSeconds(0.5f);
+
         videos[0].Stop();
+        whitePanel.SetActive(false);
 
         panel.SetActive(false);
         videoPanel.gameObject.SetActive(false);
@@ -437,6 +447,8 @@ public class PickUpManager : MonoBehaviour
         SoundManager.instance.StopEffectSound(3);
 
         CancelInvoke("OffPanel");
+
+        yield return null;
     }
 
     public void OffResultPage()
@@ -1190,6 +1202,10 @@ public class PickUpManager : MonoBehaviour
                     videos[0].clip = videos[43].clip;
                     isFiveStar = true;
                     break;
+                case "매의 검":
+                    videos[0].clip = videos[44].clip;
+                    isFiveStar = true;
+                    break;
                 default:
                     isPlayVideo = false;
 
@@ -1228,7 +1244,7 @@ public class PickUpManager : MonoBehaviour
             }
         }
 
-        OffPanelAndSetting();
+        StartCoroutine("OffPanelAndSetting");
     }
 
     private void SetCachaIllust(Item item)

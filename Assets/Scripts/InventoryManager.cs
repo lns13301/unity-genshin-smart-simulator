@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
 
         if (instance != null)
         {
