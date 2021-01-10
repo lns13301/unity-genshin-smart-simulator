@@ -294,6 +294,8 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.TARTAGLIA:
                 return BannerButtonCharacter.ZHONGLI;
             case BannerButtonCharacter.ZHONGLI:
+                return BannerButtonCharacter.ALBEDO;
+            case BannerButtonCharacter.ALBEDO:
                 return BannerButtonCharacter.VENTI;
         }
 
@@ -312,6 +314,8 @@ public class BannerManager : MonoBehaviour
                 return 4;
             case BannerButtonCharacter.ZHONGLI:
                 return 6;
+            case BannerButtonCharacter.ALBEDO:
+                return 8;
             default:
                 return 0;
         }
@@ -323,5 +327,9 @@ public enum BannerButtonCharacter
     VENTI,
     KLEE,
     TARTAGLIA,
-    ZHONGLI
+    ZHONGLI,
+    ALBEDO,
+    GANYU,
+    XIAO,
+    HUTAO
 }

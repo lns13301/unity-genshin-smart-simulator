@@ -6,16 +6,20 @@ using UnityEngine.UI;
 
 public class PickUpManager : MonoBehaviour
 {
+    private static Vector2 DEFAULT_ILLUST_SIZE = new Vector2(1638.4f, 1004);
+    private static Vector2 XIAO_ILLUST_SIZE = new Vector2(1583.4f, 1326); // 1218, 1020
+    private static Vector2 GANYU_ILLUST_SIZE = new Vector2(1586.2f, 1330); // 1133, 950
+
     private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
     private static int CHARACTER_COUNT_FOUR_STAR = 13; // 픽업 4성은 제외 했음
 
     // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private static int MIN_EPIC_WEAPON = 26;
-    private static int MAX_EPIC_WEAPON = 47 + 1;
+    private static int MIN_EPIC_WEAPON = 28;
+    private static int MAX_EPIC_WEAPON = 49 + 1;
     private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
-    private static int MAX_UNIQUE_WEAPON = 65 + 1;
+    private static int MAX_UNIQUE_WEAPON = 67 + 1;
     private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
-    private static int MAX_LEGEND_WEAPON = 76 + 1;
+    private static int MAX_LEGEND_WEAPON = 78 + 1;
 
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
@@ -353,7 +357,7 @@ public class PickUpManager : MonoBehaviour
         videos[0].Play();
 
         Invoke("OnSkipButton", 1.0f);
-        Invoke("OffPanel", 6.5f);
+        Invoke("OffPanel", 7.0f);
     }
 
     public void SortResultItems(int itemCount)
@@ -460,8 +464,8 @@ public class PickUpManager : MonoBehaviour
 
         resultPage.SetActive(true);
         SoundManager.instance.PlayOneShotEffectSound(4);
-        resultPage.transform.GetChild(1).GetComponent<Animator>().SetBool("isClean", true);
-        resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isShow", true);
+        resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isClean", true);
+        resultPage.transform.GetChild(3).GetComponent<Animator>().SetBool("isShow", true);
 
         // 기원 개수에 맞게 애니메이션에 등장하는 슬롯 조정
         if (result.Length == 1)
@@ -493,8 +497,8 @@ public class PickUpManager : MonoBehaviour
 
     public void OffResultPage()
     {
-        resultPage.transform.GetChild(1).GetComponent<Animator>().SetBool("isClean", false);
-        resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isShow", false);
+        resultPage.transform.GetChild(2).GetComponent<Animator>().SetBool("isClean", false);
+        resultPage.transform.GetChild(3).GetComponent<Animator>().SetBool("isShow", false);
         OffGachaItemImage();
 
         OnStardustPage(result);
@@ -508,7 +512,7 @@ public class PickUpManager : MonoBehaviour
 
     public void SetGachaResultParticles()
     {
-        Transform parent = resultPage.transform.GetChild(2);
+        Transform parent = resultPage.transform.GetChild(3);
 
         for (int i = 0; i < parent.childCount; i++)
         {
@@ -522,7 +526,7 @@ public class PickUpManager : MonoBehaviour
 
     public void OnGachaResultParticle()
     {
-        Transform parent = resultPage.transform.GetChild(2);
+        Transform parent = resultPage.transform.GetChild(3);
 
         for (int i = 0; i < result.Length; i++)
         {
@@ -623,7 +627,7 @@ public class PickUpManager : MonoBehaviour
 
     public void OffGachaItemImage()
     {
-        Transform parent = resultPage.transform.GetChild(2);
+        Transform parent = resultPage.transform.GetChild(3);
 
         for (int i = 0; i < parent.childCount; i++)
         {
@@ -795,6 +799,11 @@ public class PickUpManager : MonoBehaviour
 
     public Grade[] SetPlayerDataAfterGacha(bool isAcquantFate = true, int repeatTime = 10, int removeCount = 10)
     {
+        if (GameManager.instance.isTestVersion)
+        {
+            removeCount = 0;
+        }
+
         Grade[] grades = new Grade[repeatTime];
         hasFiveStar = false;
 
@@ -890,11 +899,11 @@ public class PickUpManager : MonoBehaviour
 
                     if (Random.Range(0, 2) == 0)
                     {
-                        return ItemDatabase.instance.findItemByName("참봉의 칼날");
+                        return ItemDatabase.instance.findItemByName("아모스의 활");
                     }
                     else
                     {
-                        return ItemDatabase.instance.findItemByName("천공의 두루마리");
+                        return ItemDatabase.instance.findItemByName("천공의 긍지");
                     }
                 }
                 else
@@ -908,7 +917,7 @@ public class PickUpManager : MonoBehaviour
                 // 현재 픽업중인 캐릭터
                 if (BannerManager.instance.onBannerIndex == 1)
                 {
-                    return GetPickUpResultLegendGrade("알베도", isPickUpAlways);
+                    return GetPickUpResultLegendGrade("감우", isPickUpAlways);
                 }
 
                 if (BannerManager.instance.onBannerIndex == 4)
@@ -924,6 +933,14 @@ public class PickUpManager : MonoBehaviour
                             return GetPickUpResultLegendGrade("타르탈리아", isPickUpAlways);
                         case BannerButtonCharacter.ZHONGLI:
                             return GetPickUpResultLegendGrade("종려", isPickUpAlways);
+                        case BannerButtonCharacter.ALBEDO:
+                            return GetPickUpResultLegendGrade("알베도", isPickUpAlways);
+                        case BannerButtonCharacter.GANYU:
+                            return GetPickUpResultLegendGrade("감우", isPickUpAlways);
+                        case BannerButtonCharacter.XIAO:
+                            return GetPickUpResultLegendGrade("소", isPickUpAlways);
+                        case BannerButtonCharacter.HUTAO:
+                            return GetPickUpResultLegendGrade("호두", isPickUpAlways);
                     }
                 }
             }
@@ -959,15 +976,15 @@ public class PickUpManager : MonoBehaviour
                     switch (value)
                     {
                         case 0:
-                            return ItemDatabase.instance.findItemByName("페보니우스 검");
+                            return ItemDatabase.instance.findItemByName("제례검");
                         case 1:
-                            return ItemDatabase.instance.findItemByName("페보니우스 장창");
+                            return ItemDatabase.instance.findItemByName("시간의 검");
                         case 2:
-                            return ItemDatabase.instance.findItemByName("페보니우스 대검");
+                            return ItemDatabase.instance.findItemByName("용학살창");
                         case 3:
-                            return ItemDatabase.instance.findItemByName("절현");
+                            return ItemDatabase.instance.findItemByName("페보니우스 활");
                         case 4:
-                            return ItemDatabase.instance.findItemByName("제례의 악장");
+                            return ItemDatabase.instance.findItemByName("소심");
                     }
                 }
                 else
@@ -994,9 +1011,9 @@ public class PickUpManager : MonoBehaviour
                 {
                     if (BannerManager.instance.onBannerIndex == 1)
                     {
-                        names[0] = "피슬";
-                        names[1] = "설탕";
-                        names[2] = "베넷";
+                        names[0] = "노엘";
+                        names[1] = "행추";
+                        names[2] = "향릉";
                         return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                     }
                     else if(BannerManager.instance.onBannerIndex == 4)
@@ -1022,6 +1039,11 @@ public class PickUpManager : MonoBehaviour
                                 names[0] = "신염";
                                 names[1] = "중운";
                                 names[2] = "레이저";
+                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                            case BannerButtonCharacter.ALBEDO:
+                                names[0] = "피슬";
+                                names[1] = "설탕";
+                                names[2] = "베넷";
                                 return GetPickUpResultUniqueGrade(names, isPickUpAlways);
                         }
                     }
@@ -1107,7 +1129,7 @@ public class PickUpManager : MonoBehaviour
         {
             isPlayVideo = true;
 
-            switch(result[i].koName)
+            switch (result[i].koName)
             {
                 case "진":
                     videos[0].clip = videos[3].clip;
@@ -1246,8 +1268,35 @@ public class PickUpManager : MonoBehaviour
                     videos[0].clip = videos[44].clip;
                     isFiveStar = true;
                     break;
-                    // index 45, 46, 47 은 단일 기원뽑기임 48 부터 ㄱㄱ
+                // index 45, 46, 47 은 단일 기원뽑기임 48 부터 ㄱㄱ
+                case "소":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = XIAO_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
+                case "감우":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = GANYU_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
                 default:
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = DEFAULT_ILLUST_SIZE;
                     isPlayVideo = false;
 
                     if (result[i].type != ItemType.CHARACTER)

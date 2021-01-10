@@ -72,6 +72,13 @@ public class ResourceInformation : MonoBehaviour
             return;
         }
 
+        if (GameManager.instance.GetPlayerData().starLightCount < resource.resourceData.count)
+        {
+            OnLackOfResource(true);
+
+            return;
+        }
+
         SoundManager.instance.PlayOneShotEffectSound(5);
         resource.SetLootedTime();
 
@@ -89,9 +96,25 @@ public class ResourceInformation : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void OnLackOfResource()
+    public void OnLackOfResource(bool isStarLight = false)
     {
         SoundManager.instance.PlayOneShotEffectSound(1);
+
+        if (isStarLight)
+        {
+            if (LanguageManager.instance.language == Language.KOREAN)
+            {
+                noticeText.text = "보유한 스타라이트의 수량이 부족합니다.\n\n기원 뽑기를 통해 스타라이트를 획득하러 가시겠습니까?";
+            }
+            else
+            {
+                noticeText.text = "The number of starlight you have is not enough.\n\nDo you want to play a gacha and go get some starlight?";
+            }
+
+            notice.SetActive(true);
+
+            return;
+        }
 
         if (LanguageManager.instance.language == Language.KOREAN)
         {

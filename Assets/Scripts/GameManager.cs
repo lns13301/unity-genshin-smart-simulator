@@ -115,12 +115,12 @@ public class GameManager : MonoBehaviour
         {
             detailContent.GetChild(0).GetComponent<Text>().text = "확률 정보입니다.";
             detailContent.GetChild(1).GetComponent<Text>().text =
-                GetColorText("심비의 숨결 이벤트 기원", "9958b3") + " : " + GetColorText("74회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
+                GetColorText("덧없는 인생 이벤트 기원", "9958b3") + " : " + GetColorText("74회차", RED_COLOR) + "까지 " + GetColorText("0.6%", RED_COLOR)
                 + "이후부터 " + GetColorText("32.323%", RED_COLOR) + "확률로 " + GetColorText("5성", ORANGE_COLOR) + "이 등장합니다.\n"
                 + "(기본 " + GetColorText("0.6%", RED_COLOR) + "에서 최대 " + GetColorText("1.6%", RED_COLOR)
                 + "로 최대 " + GetColorText("90", RED_COLOR) + "회차에 확정적으로 " + GetColorText("5성 획득", ORANGE_COLOR) + "이 가능합니다.)";
             detailContent.GetChild(2).GetComponent<Text>().text =
-                GetColorText("심비의 숨결 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", "
+                GetColorText("덧없는 인생 이벤트 기원", "9958b3") + " : 기본 " + GetColorText("5.1%", RED_COLOR) + ", "
                 + GetColorText("4회차", RED_COLOR) + " 이후부터 " + GetColorText("1회", RED_COLOR) + "당 " + GetColorText("1.58%", RED_COLOR) + "씩 증가\n" +
                 "(최대 " + GetColorText("13%", RED_COLOR) + " 로 최대 " + GetColorText("10회차", RED_COLOR) + "에 확정적으로 "
                 + GetColorText("4성 획득", ORANGE_COLOR) + "이 가능합니다.)";
@@ -165,13 +165,13 @@ public class GameManager : MonoBehaviour
         {
             detailContent.GetChild(0).GetComponent<Text>().text = "Probability Information";
             detailContent.GetChild(1).GetComponent<Text>().text =
-                GetColorText("Event Wish \"Secretum Secretorum\"", "9958b3") + " : " + "It has a " + GetColorText("0.6%", RED_COLOR) + " probability up to " + GetColorText("74 times", RED_COLOR) + "."
+                GetColorText("Event Wish \"Adrift in the Harbor\"", "9958b3") + " : " + "It has a " + GetColorText("0.6%", RED_COLOR) + " probability up to " + GetColorText("74 times", RED_COLOR) + "."
                 + "Since then, " + GetColorText("5-star", ORANGE_COLOR) + " appear with a " + GetColorText("32.323%", RED_COLOR) + " probability" + ".\n"
                 + "(Base probability of winning " + GetColorText("5-star item", ORANGE_COLOR) + " = " + GetColorText("0.6%", RED_COLOR) + ", consolidated probability of winning " 
                 + GetColorText("5-star item", ORANGE_COLOR) + " = " + GetColorText("1.6%", RED_COLOR)
                 + "guaranteed to win " + GetColorText("5-star item", ORANGE_COLOR) + "at least once per " + GetColorText("90", RED_COLOR) + " attempts";
             detailContent.GetChild(2).GetComponent<Text>().text =
-            GetColorText("Event Wish \"Secretum Secretorum\"", "9958b3") + " : " + "It has a " + GetColorText("5.1%", RED_COLOR) + " probability up to " + GetColorText("4 times", RED_COLOR) + "."
+            GetColorText("Event Wish \"Adrift in the Harbor\"", "9958b3") + " : " + "It has a " + GetColorText("5.1%", RED_COLOR) + " probability up to " + GetColorText("4 times", RED_COLOR) + "."
                 + "Since then, " + GetColorText("4-star", ORANGE_COLOR) + " increases by " + GetColorText("1.58%", RED_COLOR) + " each time." + ".\n"
                 + "(Base probability of winning " + GetColorText("4-star item", ORANGE_COLOR) + " = " + GetColorText("5.1%", RED_COLOR) + ", consolidated probability of winning "
                 + GetColorText("4-star item", ORANGE_COLOR) + " = " + GetColorText("13%", RED_COLOR)
@@ -311,10 +311,10 @@ public class GameManager : MonoBehaviour
 
             if (isTestVersion)
             {
-                playerData.acquantFateCount = 1500;
-                playerData.intertwinedFateCount = 1500;
-                playerData.starDustCount = 1000;
-                playerData.starLightCount = 100;
+                playerData.acquantFateCount = 100;
+                playerData.intertwinedFateCount = 100;
+                playerData.starDustCount = 0;
+                playerData.starLightCount = 0;
             }
             else
             {
@@ -591,10 +591,10 @@ public class GameManager : MonoBehaviour
 
         if (isTestVersion)
         {
-            playerData.acquantFateCount = 1500;
-            playerData.intertwinedFateCount = 1500;
-            playerData.starDustCount = 1000;
-            playerData.starLightCount = 100;
+            playerData.acquantFateCount = 100;
+            playerData.intertwinedFateCount = 100;
+            playerData.starDustCount = 0;
+            playerData.starLightCount = 0;
         }
         else
         {

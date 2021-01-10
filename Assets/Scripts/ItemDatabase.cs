@@ -130,8 +130,8 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(702, "Tartaglia", "타르탈리아", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Tartaglia", new Character(702, Element.HYDRO, Grade.LEGEND, 1126, 10414, 10330, 10000, 10707)));
         itemDataFile.itemDatas.Add(new Item(703, "Zhongli", "종려", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Zhongli", new Character(703, Element.GEO, Grade.LEGEND, 1144, 10402, 10315, 10020, 10708)));
         itemDataFile.itemDatas.Add(new Item(704, "Albedo", "알베도", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Albedo", new Character(704, Element.GEO, Grade.LEGEND, 1150, 10401, 10305, 10008, 10708)));
-        //itemDataFile.itemDatas.Add(new Item(705, "Ganyu", "감우", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Ganyu", new Character(705, Element.Cryo, Grade.LEGEND, 1156, 10415, 10320, 10016, 10706)));
-        //itemDataFile.itemDatas.Add(new Item(706, "Xiao", "소", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Xiao", new Character(706, Element.ANEMO, Grade.LEGEND, 1162, 10415, 10310, 10012, 10706)));
+        itemDataFile.itemDatas.Add(new Item(705, "Ganyu", "감우", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Ganyu", new Character(705, Element.CRYO, Grade.LEGEND, 1156, 10415, 10320, 10016, 10706)));
+        itemDataFile.itemDatas.Add(new Item(706, "Xiao", "소", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Xiao", new Character(706, Element.ANEMO, Grade.LEGEND, 1162, 10415, 10310, 10012, 10706)));
 
         itemDataFile.itemDatas.Add(new Item(1000, "Cool Steel", "차가운 칼날", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Cool Steel", null, new Weapon(10500, 10620, 10310)));
         itemDataFile.itemDatas.Add(new Item(1001, "Dark Iron Sword", "암철검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Dark Iron Sword", null, new Weapon(10512, 10608, 10300)));
@@ -216,7 +216,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(3001, "Skyward Blade", "천공의 검", 1, ItemType.SWORD, Grade.LEGEND, spritePathWeapon + "Skyward Blade", null, new Weapon(10504, 10600, 10315)));
 
         itemDataFile.itemDatas.Add(new Item(3100, "Wolf's Gravestone", "늑대의 말로", 1, ItemType.CLAYMORE, Grade.LEGEND, spritePathWeapon + "Wolf's Gravestone", null, new Weapon(10508, 10616, 10305)));
-        itemDataFile.itemDatas.Add(new Item(3101, "Skyward Pride", "천공의 대검", 1, ItemType.CLAYMORE, Grade.LEGEND, spritePathWeapon + "Skyward Pride", null, new Weapon(10504, 10600, 10315)));
+        itemDataFile.itemDatas.Add(new Item(3101, "Skyward Pride", "천공의 긍지", 1, ItemType.CLAYMORE, Grade.LEGEND, spritePathWeapon + "Skyward Pride", null, new Weapon(10504, 10600, 10315)));
 
         itemDataFile.itemDatas.Add(new Item(3200, "Primordial Jade Winged Spear", "화박연", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Primordial Jade Winged Spear", null, new Weapon(10512, 10608, 10330)));
         itemDataFile.itemDatas.Add(new Item(3201, "Skyward Spine", "천공의 마루", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Skyward Spine", null, new Weapon(10508, 10616, 10305)));

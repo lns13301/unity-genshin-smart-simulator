@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 159696731}
   - component: {fileID: 159696730}
   m_Layer: 5
-  m_Name: Particle System
+  m_Name: BackgroundDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5383,7 +5383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a08b91ad0d9a62439d4ec34ca82eaa0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bdd32c77db54f944b8958157a1406268, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6525,7 +6525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ef772f85e4ef6345bd60304fdb15aa2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a247b44949c9bd04aaed2c821ab1267c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7643,7 +7643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 803b46b7bb54dac45aa599031db0dab7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0fb7c0a955823944ca9cd8838d9a9b69, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
