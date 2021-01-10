@@ -10,6 +10,8 @@
 
 <img src="img/zhongli_pickup.gif">
 
+<img src="img/ganyu_pickup.gif">
+
 - 캐릭터 조회
 
 <img src="img/skill_page.gif">
@@ -19,6 +21,6 @@
 <img src="img/map_page.gif">
 
 Download Link
-PC : https://drive.google.com/file/d/1FyQ2_yeqEuzRNWYStPlLFnSMRXjaOq8j/view?usp=sharing
+PC : https://drive.google.com/file/d/1baYWPngyzHBWJPxKP23WEBmXx2Vk13WS/view?usp=sharing
 
 Android : https://play.google.com/store/apps/details?id=com.EnotSCompany.GenshinGachaSimulator
