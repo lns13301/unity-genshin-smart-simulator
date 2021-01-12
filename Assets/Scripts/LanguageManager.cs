@@ -50,6 +50,15 @@ public class LanguageManager : MonoBehaviour
         {
             ChangeMainLanguage();
         }
+
+        try
+        {
+            MainPage.instance.SetLanguage();
+        }
+        catch
+        {
+
+        }
     }
 
     // Update is called once per frame

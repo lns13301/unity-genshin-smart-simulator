@@ -9,6 +9,8 @@ public class MainPage : MonoBehaviour
     public static MainPage instance;
 
     public GameObject exitNotice;
+    public GameObject creditButton;
+    public GameObject information;
 
     // Start is called before the first frame update
     void Start()
@@ -52,5 +54,37 @@ public class MainPage : MonoBehaviour
     {
         SoundManager.instance.PlayOneShotEffectSound(3);
         exitNotice.SetActive(false);
+    }
+
+    public void SetLanguage()
+    {
+        if (LanguageManager.instance.language == Language.KOREAN)
+        {
+            creditButton.SetActive(false);
+            creditButton.transform.GetChild(0).GetComponent<Text>().text = "크레딧";
+            //information.transform.GetChild(3).GetComponent<Text>().text = "커뮤니티 정보입니다."
+        }
+        else
+        {
+            creditButton.SetActive(true);
+            creditButton.transform.GetChild(0).GetComponent<Text>().text = "Credit";
+        }
+    }
+
+    public void OnCredit()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(1);
+        information.SetActive(true);
+    }
+    
+    public void OffCredit()
+    {
+        SoundManager.instance.PlayOneShotEffectSound(3);
+        information.SetActive(false);
+    }
+
+    public void OpenLink()
+    {
+        Application.OpenURL("https://taimienphi.vn");
     }
 }
