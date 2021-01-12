@@ -357,7 +357,7 @@ public class PickUpManager : MonoBehaviour
         videos[0].Play();
 
         Invoke("OnSkipButton", 1.0f);
-        Invoke("OffPanel", 7.0f);
+        Invoke("OffPanel", 6.7f);
     }
 
     public void SortResultItems(int itemCount)
@@ -1295,6 +1295,10 @@ public class PickUpManager : MonoBehaviour
                     gachaIllustSet.SetActive(true);
 
                     break;
+                case "행추":
+                    videos[0].clip = videos[48].clip;
+                    isFiveStar = true;
+                    break;
                 default:
                     gachaIllust.GetComponent<RectTransform>().sizeDelta = DEFAULT_ILLUST_SIZE;
                     isPlayVideo = false;
@@ -1320,7 +1324,7 @@ public class PickUpManager : MonoBehaviour
                 }
                 else
                 {
-                    yield return new WaitForSeconds(3.6f);
+                    yield return new WaitForSeconds(3.7f);
                 }
 
                 isFiveStar = false;
@@ -1329,7 +1333,7 @@ public class PickUpManager : MonoBehaviour
             }
             else if (result[i].type == ItemType.CHARACTER)
             {
-                yield return new WaitForSeconds(3.5f);
+                yield return new WaitForSeconds(4.0f);
                 gachaIllustSet.SetActive(false);
             }
         }

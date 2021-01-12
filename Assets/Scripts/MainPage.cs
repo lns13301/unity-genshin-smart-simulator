@@ -66,7 +66,7 @@ public class MainPage : MonoBehaviour
         }
         else
         {
-            creditButton.SetActive(true);
+            creditButton.SetActive(false);
             creditButton.transform.GetChild(0).GetComponent<Text>().text = "Credit";
         }
     }
