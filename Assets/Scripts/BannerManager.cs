@@ -30,6 +30,8 @@ public class BannerManager : MonoBehaviour
 
     public BannerButtonCharacter bannerButtonCharacter;
 
+    public GameObject lastPickUpBannerChangeText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,8 @@ public class BannerManager : MonoBehaviour
         {
             extraBannerButtonImage[i] = bannerButtonImageParent.transform.GetChild(i).GetComponent<Image>();
         }
+
+        lastPickUpBannerChangeText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -107,6 +111,7 @@ public class BannerManager : MonoBehaviour
         OffAllBannerButton();
         pickupButtonOne.gameObject.SetActive(true);
         pickupButtonOneText.gameObject.SetActive(true);
+        lastPickUpBannerChangeText.SetActive(false);
 
         switch (bannerIndex)
         {
@@ -143,6 +148,8 @@ public class BannerManager : MonoBehaviour
             case 4:
                 bannerButton[4].SetActive(false);
                 bannerButton[9].SetActive(true);
+                lastPickUpBannerChangeText.SetActive(true);
+
                 SetPickUPButtonImage();
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, buttonSize2.x);
                 pickupButton.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, buttonSize2.y);

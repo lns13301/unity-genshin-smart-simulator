@@ -1297,6 +1297,13 @@ public class PickUpManager : MonoBehaviour
                     break;
                 case "행추":
                     videos[0].clip = videos[48].clip;
+                    break;
+                case "치치":
+                    videos[0].clip = videos[49].clip;
+                    isFiveStar = true;
+                    break;
+                case "화박연":
+                    videos[0].clip = videos[50].clip;
                     isFiveStar = true;
                     break;
                 default:
