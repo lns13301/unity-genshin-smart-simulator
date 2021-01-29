@@ -303,6 +303,8 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.ZHONGLI:
                 return BannerButtonCharacter.ALBEDO;
             case BannerButtonCharacter.ALBEDO:
+                return BannerButtonCharacter.GANYU;
+            case BannerButtonCharacter.GANYU:
                 return BannerButtonCharacter.VENTI;
         }
 
@@ -323,6 +325,8 @@ public class BannerManager : MonoBehaviour
                 return 6;
             case BannerButtonCharacter.ALBEDO:
                 return 8;
+            case BannerButtonCharacter.GANYU:
+                return 10;
             default:
                 return 0;
         }

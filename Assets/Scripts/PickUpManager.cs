@@ -917,7 +917,7 @@ public class PickUpManager : MonoBehaviour
                 // 현재 픽업중인 캐릭터
                 if (BannerManager.instance.onBannerIndex == 1)
                 {
-                    return GetPickUpResultLegendGrade("감우", isPickUpAlways);
+                    return GetPickUpResultLegendGrade("소", isPickUpAlways);
                 }
 
                 if (BannerManager.instance.onBannerIndex == 4)
@@ -1011,9 +1011,9 @@ public class PickUpManager : MonoBehaviour
                 {
                     if (BannerManager.instance.onBannerIndex == 1)
                     {
-                        names[0] = "노엘";
-                        names[1] = "행추";
-                        names[2] = "향릉";
+                        names[0] = "북두";
+                        names[1] = "바바라";
+                        names[2] = "디오나";
                         return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                     }
                     else if(BannerManager.instance.onBannerIndex == 4)
@@ -1044,6 +1044,11 @@ public class PickUpManager : MonoBehaviour
                                 names[0] = "피슬";
                                 names[1] = "설탕";
                                 names[2] = "베넷";
+                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                            case BannerButtonCharacter.GANYU:
+                                names[0] = "노엘";
+                                names[1] = "향릉";
+                                names[2] = "행추";
                                 return GetPickUpResultUniqueGrade(names, isPickUpAlways);
                         }
                     }
@@ -1327,11 +1332,11 @@ public class PickUpManager : MonoBehaviour
 
                 if (isFiveStar)
                 {
-                    yield return new WaitForSeconds(4.0f);
+                    yield return new WaitForSeconds(4.2f);
                 }
                 else
                 {
-                    yield return new WaitForSeconds(3.7f);
+                    yield return new WaitForSeconds(3.9f);
                 }
 
                 isFiveStar = false;
@@ -1340,7 +1345,7 @@ public class PickUpManager : MonoBehaviour
             }
             else if (result[i].type == ItemType.CHARACTER)
             {
-                yield return new WaitForSeconds(4.0f);
+                yield return new WaitForSeconds(4.2f);
                 gachaIllustSet.SetActive(false);
             }
         }
