@@ -1012,7 +1012,7 @@ public class PickUpManager : MonoBehaviour
                     if (BannerManager.instance.onBannerIndex == 1)
                     {
                         names[0] = "북두";
-                        names[1] = "바바라";
+                        names[1] = "신염";
                         names[2] = "디오나";
                         return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                     }
