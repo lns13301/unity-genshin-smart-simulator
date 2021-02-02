@@ -1200,7 +1200,7 @@ public class PickUpManager : MonoBehaviour
                 case "용의 포효":
                     videos[0].clip = videos[22].clip;
                     break;
-                case "빗물베기":
+                case "빗물 베기":
                     videos[0].clip = videos[23].clip;
                     break;
                 case "제례의 악장":
@@ -1287,18 +1287,22 @@ public class PickUpManager : MonoBehaviour
                     gachaIllustSet.SetActive(true);
 
                     break;
+                /*                case "감우":
+                                    gachaIllust.GetComponent<RectTransform>().sizeDelta = GANYU_ILLUST_SIZE;
+                                    isPlayVideo = false;
+
+                                    if (result[i].type != ItemType.CHARACTER)
+                                    {
+                                        break;
+                                    }
+
+                                    SetCachaIllust(result[i]);
+                                    gachaIllustSet.SetActive(true);
+
+                                    break;*/
                 case "감우":
-                    gachaIllust.GetComponent<RectTransform>().sizeDelta = GANYU_ILLUST_SIZE;
-                    isPlayVideo = false;
-
-                    if (result[i].type != ItemType.CHARACTER)
-                    {
-                        break;
-                    }
-
-                    SetCachaIllust(result[i]);
-                    gachaIllustSet.SetActive(true);
-
+                    videos[0].clip = videos[52].clip;
+                    isFiveStar = true;
                     break;
                 case "행추":
                     videos[0].clip = videos[48].clip;
@@ -1310,6 +1314,9 @@ public class PickUpManager : MonoBehaviour
                 case "화박연":
                     videos[0].clip = videos[50].clip;
                     isFiveStar = true;
+                    break;
+                case "녹슨 활":
+                    videos[0].clip = videos[51].clip;
                     break;
                 default:
                     gachaIllust.GetComponent<RectTransform>().sizeDelta = DEFAULT_ILLUST_SIZE;
