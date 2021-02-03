@@ -305,6 +305,18 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.ALBEDO:
                 return BannerButtonCharacter.GANYU;
             case BannerButtonCharacter.GANYU:
+                PickUpManager.instance.lastPickUpBannerType = PickUpType.WEAPON;
+                return BannerButtonCharacter.KLEE_WEAPON;
+            case BannerButtonCharacter.KLEE_WEAPON:
+                return BannerButtonCharacter.TARTAGLIA_WEAPON;
+            case BannerButtonCharacter.TARTAGLIA_WEAPON:
+                return BannerButtonCharacter.ZHONGLI_WEAPON;
+            case BannerButtonCharacter.ZHONGLI_WEAPON:
+                return BannerButtonCharacter.ALBEDO_WEAPON;
+            case BannerButtonCharacter.ALBEDO_WEAPON:
+                return BannerButtonCharacter.GANYU_WEAPON;
+            case BannerButtonCharacter.GANYU_WEAPON:
+                PickUpManager.instance.lastPickUpBannerType = PickUpType.CHARACTER;
                 return BannerButtonCharacter.VENTI;
         }
 
@@ -327,6 +339,16 @@ public class BannerManager : MonoBehaviour
                 return 8;
             case BannerButtonCharacter.GANYU:
                 return 10;
+            case BannerButtonCharacter.KLEE_WEAPON:
+                return 12;
+            case BannerButtonCharacter.TARTAGLIA_WEAPON:
+                return 14;
+            case BannerButtonCharacter.ZHONGLI_WEAPON:
+                return 16;
+            case BannerButtonCharacter.ALBEDO_WEAPON:
+                return 18;
+            case BannerButtonCharacter.GANYU_WEAPON:
+                return 20;
             default:
                 return 0;
         }
@@ -342,5 +364,13 @@ public enum BannerButtonCharacter
     ALBEDO,
     GANYU,
     XIAO,
-    HUTAO
+    HUTAO,
+    VENTI_WEAPON,
+    KLEE_WEAPON,
+    TARTAGLIA_WEAPON,
+    ZHONGLI_WEAPON,
+    ALBEDO_WEAPON,
+    GANYU_WEAPON,
+    XIAO_WEAPON,
+    HUTAO_WEAPON,
 }

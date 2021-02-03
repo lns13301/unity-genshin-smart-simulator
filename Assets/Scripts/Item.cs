@@ -227,11 +227,14 @@ public class Item
                 return 10116;
             case Element.GEO:
                 return 10120;
+            case Element.DENDRO:
+                return 10124;
             default:
                 return 10124;
         }
     }
 
+    // 속성 진화 재료 아이템
     public int GetElementAscensionItemCode()
     {
         switch (character.element)
@@ -248,8 +251,21 @@ public class Item
                 return 10204;
             case Element.GEO:
                 return 10205;
+            case Element.DENDRO:
+                return 10206;
             default:
-                return -1;
+                return 10200;
+        }
+    }
+
+    public int GetAscensionItemCode()
+    {
+        switch (character.ascensionType)
+        {
+            case AscensionType.JUVENILE_JADE:
+                return 10207;
+            default:
+                return 10200;
         }
     }
 
@@ -316,6 +332,13 @@ public enum ItemType
     MATERIAL_LIYUE,
     ARTIFACT,
     TALENTMATERIAL
+}
+
+[System.Serializable]
+public enum AscensionType
+{
+    NONE,
+    JUVENILE_JADE
 }
 
 [System.Serializable]

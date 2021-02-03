@@ -19,7 +19,7 @@ public class PickUpManager : MonoBehaviour
     private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
     private static int MAX_UNIQUE_WEAPON = 67 + 1;
     private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
-    private static int MAX_LEGEND_WEAPON = 78 + 1;
+    private static int MAX_LEGEND_WEAPON = 79 + 1;
 
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
@@ -54,6 +54,8 @@ public class PickUpManager : MonoBehaviour
     public VideoClip whiteVideoClip;
     public GameObject whitePanel;
 
+    public PickUpType lastPickUpBannerType;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +74,8 @@ public class PickUpManager : MonoBehaviour
         gachaIllustSet.SetActive(false);
 
         result = new Item[10];
+
+        lastPickUpBannerType = PickUpType.CHARACTER;
     }
 
     // Update is called once per frame
@@ -103,7 +107,7 @@ public class PickUpManager : MonoBehaviour
 
         SoundManager.instance.PlayOneShotEffectSound(1);
 
-        if (buttonType == 1 || buttonType == 4) // 픽업, 지나간 픽업 처리
+        if (buttonType == 1 || (buttonType == 4 && lastPickUpBannerType == PickUpType.CHARACTER)) // 픽업, 지나간 픽업 처리
         {
             if (playerData.intertwinedFateCount > 9)
             {
@@ -124,7 +128,7 @@ public class PickUpManager : MonoBehaviour
             }
 
         }
-        if (buttonType == 2)
+        if (buttonType == 2 || (buttonType == 4 && lastPickUpBannerType == PickUpType.WEAPON)) // 픽업, 지나간 픽업 처리
         {
             if (playerData.intertwinedFateCount > 9)
             {
@@ -237,7 +241,7 @@ public class PickUpManager : MonoBehaviour
 
         SoundManager.instance.PlayOneShotEffectSound(1);
 
-        if (buttonType == 1 || buttonType == 4) // 픽업, 지나간 픽업 처리
+        if (buttonType == 1 || (buttonType == 4 && lastPickUpBannerType == PickUpType.CHARACTER)) // 픽업, 지나간 픽업 처리
         {
             if (playerData.intertwinedFateCount > 0)
             {
@@ -258,7 +262,7 @@ public class PickUpManager : MonoBehaviour
             }
 
         }
-        if (buttonType == 2)
+        if (buttonType == 2 || (buttonType == 4 && lastPickUpBannerType == PickUpType.WEAPON)) // 픽업, 지나간 픽업 처리
         {
             if (playerData.intertwinedFateCount > 0)
             {
@@ -831,7 +835,7 @@ public class PickUpManager : MonoBehaviour
         {
             playerData.intertwinedFateCount -= removeCount;
 
-            if (BannerManager.instance.onBannerIndex == 1 || BannerManager.instance.onBannerIndex == 4)
+            if (BannerManager.instance.onBannerIndex == 1 || (BannerManager.instance.onBannerIndex == 4 && lastPickUpBannerType == PickUpType.CHARACTER))
             {
                 for (int i = 0; i < repeatTime; i++)
                 {
@@ -891,25 +895,30 @@ public class PickUpManager : MonoBehaviour
             }
             if (pickUpType == PickUpType.WEAPON)
             {
-                int r = Random.Range(0, 75);
-
-                if (r < 75 || isPickUpAlways)
+                // 현재 픽업중인 캐릭터
+                if (BannerManager.instance.onBannerIndex == 2)
                 {
-                    playerData.isPickUpWeaponAlways = false;
-
-                    if (Random.Range(0, 2) == 0)
-                    {
-                        return ItemDatabase.instance.findItemByName("아모스의 활");
-                    }
-                    else
-                    {
-                        return ItemDatabase.instance.findItemByName("천공의 긍지");
-                    }
+                    return GetPickUpWeaponResultLegendGrade("화박연", "반암결록", isPickUpAlways);
                 }
-                else
+
+                if (BannerManager.instance.onBannerIndex == 4)
                 {
-                    playerData.isPickUpWeaponAlways = true;
-                    return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_WEAPON, MAX_LEGEND_WEAPON)];
+                    // 지나간 픽업 무기
+                    switch (BannerManager.instance.bannerButtonCharacter)
+                    {
+                        case BannerButtonCharacter.VENTI_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("매의 검", "아모스의 활", isPickUpAlways);
+                        case BannerButtonCharacter.KLEE_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("늑대의 말로", "사풍 원서", isPickUpAlways);
+                        case BannerButtonCharacter.TARTAGLIA_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("천공의 날개", "속세의 자물쇠", isPickUpAlways);
+                        case BannerButtonCharacter.ZHONGLI_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("무공의 검", "관홍의 창", isPickUpAlways);
+                        case BannerButtonCharacter.ALBEDO_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("참봉의 칼날", "천공의 두루마리", isPickUpAlways);
+                        case BannerButtonCharacter.GANYU_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("아모스의 활", "천공의 긍지", isPickUpAlways);
+                    }
                 }
             }
             if (pickUpType == PickUpType.CHARACTER)
@@ -966,38 +975,79 @@ public class PickUpManager : MonoBehaviour
             if (pickUpType == PickUpType.WEAPON)
             {
                 int r = Random.Range(0, 2);
+                string[] names = new string[5];
 
                 if (r == 0 || isPickUp4Always)
                 {
-                    playerData.isPickUpWeapon4Always = false;
-
-                    int value = Random.Range(0, 5);
-
-                    switch (value)
+                    if (BannerManager.instance.onBannerIndex == 2)
                     {
-                        case 0:
-                            return ItemDatabase.instance.findItemByName("제례검");
-                        case 1:
-                            return ItemDatabase.instance.findItemByName("시간의 검");
-                        case 2:
-                            return ItemDatabase.instance.findItemByName("용학살창");
-                        case 3:
-                            return ItemDatabase.instance.findItemByName("페보니우스 활");
-                        case 4:
-                            return ItemDatabase.instance.findItemByName("소심");
+                        names[0] = "녹슨 활";
+                        names[1] = "피리검";
+                        names[2] = "페보니우스 장창";
+                        names[3] = "소심";
+                        names[4] = "제례 대검";
+                        return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                    }
+                    else if (BannerManager.instance.onBannerIndex == 4)
+                    {
+                        switch (BannerManager.instance.bannerButtonCharacter) // 4번 배너 버튼을 뜻함
+                        {
+                            case BannerButtonCharacter.VENTI_WEAPON:
+                                names[0] = "녹슨 활";
+                                names[1] = "피리검";
+                                names[2] = "페보니우스 장창";
+                                names[3] = "소심";
+                                names[4] = "빗물 베기";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.KLEE_WEAPON:
+                                names[0] = "제례활";
+                                names[1] = "제례검";
+                                names[2] = "제례의 악장";
+                                names[3] = "용학살창";
+                                names[4] = "제례 대검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.TARTAGLIA_WEAPON:
+                                names[0] = "녹슨 활";
+                                names[1] = "피리검";
+                                names[2] = "페보니우스 장창";
+                                names[3] = "소심";
+                                names[4] = "빗물 베기";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.ZHONGLI_WEAPON:
+                                names[0] = "페보니우스 활";
+                                names[1] = "용의 포효";
+                                names[2] = "페보니우스 비전";
+                                names[3] = "용학살창";
+                                names[4] = "시간의 검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.ALBEDO_WEAPON:
+                                names[0] = "절현";
+                                names[1] = "페보니우스 검";
+                                names[2] = "제례의 악장";
+                                names[3] = "페보니우스 장창";
+                                names[4] = "페보니우스 대검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.GANYU_WEAPON:
+                                names[0] = "페보니우스 활";
+                                names[1] = "제례검";
+                                names[2] = "소심";
+                                names[3] = "용학살창";
+                                names[4] = "시간의 검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                        }
                     }
                 }
                 else
                 {
-                    int range = Random.Range(0, CHARACTER_COUNT_FOUR_STAR + WEAPON_COUNT_UNDER_FOUR_STAR + 1); // 무기 + 캐릭터 개수
+                    int range = Random.Range(0, CHARACTER_AND_WEAPON_FOUR_STAR_TOTAL); // 무기 + 캐릭터 개수
 
-                    if (range < CHARACTER_COUNT_FOUR_STAR + 1) // 캐릭터 개수
+                    if (range < MAX_UNIQUE_CHARACTER) // 캐릭터 개수
                     {
-                        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
+                        playerData.isPickUpWeapon4Always = true;
+                        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_WEAPON, MAX_UNIQUE_WEAPON)];
                     }
                     else
                     {
-                        playerData.isPickUpWeapon4Always = true;
                         return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_WEAPON, MAX_UNIQUE_WEAPON)];
                     }
                 }
@@ -1024,32 +1074,32 @@ public class PickUpManager : MonoBehaviour
                                 names[0] = "향릉";
                                 names[1] = "피슬";
                                 names[2] = "바바라";
-                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                             case BannerButtonCharacter.KLEE:
                                 names[0] = "행추";
                                 names[1] = "설탕";
                                 names[2] = "노엘";
-                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                             case BannerButtonCharacter.TARTAGLIA:
                                 names[0] = "응광";
                                 names[1] = "북두";
                                 names[2] = "디오나";
-                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                             case BannerButtonCharacter.ZHONGLI:
                                 names[0] = "신염";
                                 names[1] = "중운";
                                 names[2] = "레이저";
-                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                             case BannerButtonCharacter.ALBEDO:
                                 names[0] = "피슬";
                                 names[1] = "설탕";
                                 names[2] = "베넷";
-                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                             case BannerButtonCharacter.GANYU:
                                 names[0] = "노엘";
                                 names[1] = "향릉";
                                 names[2] = "행추";
-                                return GetPickUpResultUniqueGrade(names, isPickUpAlways);
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                         }
                     }
                 }
@@ -1096,6 +1146,32 @@ public class PickUpManager : MonoBehaviour
         }
     }
 
+    private Item GetPickUpWeaponResultLegendGrade(string pickUpWeaponKoNameA, string pickUpWeaponKoNameB, bool isPickUpAlways)
+    {
+        int r = Random.Range(0, 4);
+
+        if (r < 3 || isPickUpAlways)
+        {
+            playerData.isPickUpWeaponAlways = false;
+
+            int r2 = Random.Range(0, 1);
+
+            if (r2 == 0)
+            {
+                return ItemDatabase.instance.findItemByName(pickUpWeaponKoNameA);
+            }
+            else
+            {
+                return ItemDatabase.instance.findItemByName(pickUpWeaponKoNameB);
+            }
+        }
+        else
+        {
+            playerData.isPickUpWeaponAlways = true;
+            return ItemDatabase.instance.itemDB[Random.Range(MIN_LEGEND_WEAPON, MAX_LEGEND_WEAPON)];
+        }
+    }
+
     private Item GetPickUpResultUniqueGrade(string[] pickUpCharacterKoNames, bool isPickUpAlways)
     {
         playerData.isPickUpCharacter4Always = false;
@@ -1113,6 +1189,29 @@ public class PickUpManager : MonoBehaviour
         }
 
         return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_CHARACTER, MAX_UNIQUE_CHARACTER)];
+    }
+
+    private Item GetPickUpWeaponResultUniqueGrade(string[] pickUpWeaponKoNames, bool isPickUpAlways)
+    {
+        playerData.isPickUpCharacter4Always = false;
+
+        int value = Random.Range(0, 5);
+
+        switch (value)
+        {
+            case 0:
+                return ItemDatabase.instance.findItemByName(pickUpWeaponKoNames[0]);
+            case 1:
+                return ItemDatabase.instance.findItemByName(pickUpWeaponKoNames[1]);
+            case 2:
+                return ItemDatabase.instance.findItemByName(pickUpWeaponKoNames[2]);
+            case 3:
+                return ItemDatabase.instance.findItemByName(pickUpWeaponKoNames[3]);
+            case 4:
+                return ItemDatabase.instance.findItemByName(pickUpWeaponKoNames[4]);
+        }
+
+        return ItemDatabase.instance.itemDB[Random.Range(MIN_UNIQUE_WEAPON, MAX_UNIQUE_WEAPON)];
     }
 
     private void InitializeVideo()
@@ -1275,17 +1374,8 @@ public class PickUpManager : MonoBehaviour
                     break;
                 // index 45, 46, 47 은 단일 기원뽑기임 48 부터 ㄱㄱ
                 case "소":
-                    gachaIllust.GetComponent<RectTransform>().sizeDelta = XIAO_ILLUST_SIZE;
-                    isPlayVideo = false;
-
-                    if (result[i].type != ItemType.CHARACTER)
-                    {
-                        break;
-                    }
-
-                    SetCachaIllust(result[i]);
-                    gachaIllustSet.SetActive(true);
-
+                    videos[0].clip = videos[53].clip;
+                    isFiveStar = true;
                     break;
                 /*                case "감우":
                                     gachaIllust.GetComponent<RectTransform>().sizeDelta = GANYU_ILLUST_SIZE;
@@ -1403,5 +1493,6 @@ public enum PickUpType
 {
     NORMAL,
     CHARACTER,
-    WEAPON
+    WEAPON,
+    BOTH
 }

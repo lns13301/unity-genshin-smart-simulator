@@ -33,6 +33,7 @@ public class AscensionFrame : MonoBehaviour
         
     }
 
+    // 돌파 재료 등록, item == character
     public void SetAscensionData(Item item)
     {
         this.item = item;
@@ -173,22 +174,50 @@ public class AscensionFrame : MonoBehaviour
                 break;
         }
 
-        transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
-            ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).LoadSprite();
+        // 돌파 속성 부재료
+        if (item.character.ascensionType == AscensionType.NONE)
+        {
+            transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
+                ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).LoadSprite();
+        }
+        else
+        {
+            transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
+                ItemDatabase.instance.findItemByIndex(item.GetAscensionItemCode()).LoadSprite();
+        }
+
         transform.GetChild(3).GetChild(0).GetComponent<Image>().sprite =
             ItemDatabase.instance.findItemByIndex(item.character.ascensionItemCode).LoadSprite();
 
         if (LanguageManager.instance.language == Language.KOREAN)
         {
-            transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).koName + " x " + ascensionMaterialCount[1][frameIndex];
+            if (item.character.ascensionType == AscensionType.NONE)
+            {
+                transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).koName + " x " + ascensionMaterialCount[1][frameIndex];
+            }
+            else
+            {
+                transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
+                    ItemDatabase.instance.findItemByIndex(item.GetAscensionItemCode()).koName + " x " + ascensionMaterialCount[1][frameIndex];
+            }
+
             transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
                 ItemDatabase.instance.findItemByIndex(item.character.ascensionItemCode).koName + " x " + ascensionMaterialCount[2][frameIndex];
         }
         else
         {
-            transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
-                ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).enName + " x " + ascensionMaterialCount[1][frameIndex];
+            if (item.character.ascensionType == AscensionType.NONE)
+            {
+                transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
+                    ItemDatabase.instance.findItemByIndex(item.GetElementAscensionItemCode()).enName + " x " + ascensionMaterialCount[1][frameIndex];
+            }
+            else
+            {
+                transform.GetChild(2).GetChild(1).GetComponent<Text>().text =
+                    ItemDatabase.instance.findItemByIndex(item.GetAscensionItemCode()).enName + " x " + ascensionMaterialCount[1][frameIndex];
+            }
+
             transform.GetChild(3).GetChild(1).GetComponent<Text>().text =
                 ItemDatabase.instance.findItemByIndex(item.character.ascensionItemCode).enName + " x " + ascensionMaterialCount[2][frameIndex];
         }
