@@ -305,6 +305,8 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.ALBEDO:
                 return BannerButtonCharacter.GANYU;
             case BannerButtonCharacter.GANYU:
+                return BannerButtonCharacter.XIAO;
+            case BannerButtonCharacter.XIAO:
                 PickUpManager.instance.lastPickUpBannerType = PickUpType.WEAPON;
                 return BannerButtonCharacter.KLEE_WEAPON;
             case BannerButtonCharacter.KLEE_WEAPON:
@@ -339,16 +341,18 @@ public class BannerManager : MonoBehaviour
                 return 8;
             case BannerButtonCharacter.GANYU:
                 return 10;
-            case BannerButtonCharacter.KLEE_WEAPON:
+            case BannerButtonCharacter.XIAO:
                 return 12;
-            case BannerButtonCharacter.TARTAGLIA_WEAPON:
+            case BannerButtonCharacter.KLEE_WEAPON:
                 return 14;
-            case BannerButtonCharacter.ZHONGLI_WEAPON:
+            case BannerButtonCharacter.TARTAGLIA_WEAPON:
                 return 16;
-            case BannerButtonCharacter.ALBEDO_WEAPON:
+            case BannerButtonCharacter.ZHONGLI_WEAPON:
                 return 18;
-            case BannerButtonCharacter.GANYU_WEAPON:
+            case BannerButtonCharacter.ALBEDO_WEAPON:
                 return 20;
+            case BannerButtonCharacter.GANYU_WEAPON:
+                return 22;
             default:
                 return 0;
         }

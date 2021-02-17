@@ -9,6 +9,9 @@ public class PickUpManager : MonoBehaviour
     private static Vector2 DEFAULT_ILLUST_SIZE = new Vector2(1638.4f, 1004);
     private static Vector2 XIAO_ILLUST_SIZE = new Vector2(1583.4f, 1326); // 1218, 1020
     private static Vector2 GANYU_ILLUST_SIZE = new Vector2(1586.2f, 1330); // 1133, 950
+    private static Vector2 KEQING_ILLUST_SIZE = new Vector2(1536f, 1394); // 768, 697
+    private static Vector2 MONA_ILLUST_SIZE = new Vector2(1536f, 1452f); // 768, 726
+    private static Vector2 KLEE_ILLUST_SIZE = new Vector2(936f, 1081.6f); // 720, 832
 
     private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
     private static int CHARACTER_COUNT_FOUR_STAR = 13; // 픽업 4성은 제외 했음
@@ -926,7 +929,7 @@ public class PickUpManager : MonoBehaviour
                 // 현재 픽업중인 캐릭터
                 if (BannerManager.instance.onBannerIndex == 1)
                 {
-                    return GetPickUpResultLegendGrade("소", isPickUpAlways);
+                    return GetPickUpResultLegendGrade("각청", isPickUpAlways);
                 }
 
                 if (BannerManager.instance.onBannerIndex == 4)
@@ -1061,9 +1064,9 @@ public class PickUpManager : MonoBehaviour
                 {
                     if (BannerManager.instance.onBannerIndex == 1)
                     {
-                        names[0] = "북두";
-                        names[1] = "신염";
-                        names[2] = "디오나";
+                        names[0] = "응광";
+                        names[1] = "바바라";
+                        names[2] = "베넷";
                         return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                     }
                     else if(BannerManager.instance.onBannerIndex == 4)
@@ -1099,6 +1102,11 @@ public class PickUpManager : MonoBehaviour
                                 names[0] = "노엘";
                                 names[1] = "향릉";
                                 names[2] = "행추";
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.XIAO:
+                                names[0] = "북두";
+                                names[1] = "신염";
+                                names[2] = "디오나";
                                 return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                         }
                     }
@@ -1408,6 +1416,45 @@ public class PickUpManager : MonoBehaviour
                 case "녹슨 활":
                     videos[0].clip = videos[51].clip;
                     break;
+                case "각청":
+                gachaIllust.GetComponent<RectTransform>().sizeDelta = KEQING_ILLUST_SIZE;
+                isPlayVideo = false;
+
+                if (result[i].type != ItemType.CHARACTER)
+                {
+                    break;
+                }
+
+                SetCachaIllust(result[i]);
+                gachaIllustSet.SetActive(true);
+
+                break;
+                case "모나":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = MONA_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
+                case "클레":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = KLEE_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
                 default:
                     gachaIllust.GetComponent<RectTransform>().sizeDelta = DEFAULT_ILLUST_SIZE;
                     isPlayVideo = false;
@@ -1422,6 +1469,7 @@ public class PickUpManager : MonoBehaviour
 
                     break;
             }
+
 
             if (isPlayVideo)
             {
