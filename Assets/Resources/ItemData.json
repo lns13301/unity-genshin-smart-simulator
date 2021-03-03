@@ -9,7 +9,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Amber",
             "sprite": {
-                "instanceID": 27040
+                "instanceID": 27058
             },
             "character": {
                 "code": 0,
@@ -261,7 +261,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Kaeya",
             "sprite": {
-                "instanceID": 27088
+                "instanceID": 27076
             },
             "character": {
                 "code": 1,
@@ -513,7 +513,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Lisa",
             "sprite": {
-                "instanceID": 27092
+                "instanceID": 27078
             },
             "character": {
                 "code": 2,
@@ -765,7 +765,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Barbara",
             "sprite": {
-                "instanceID": 27042
+                "instanceID": 15816
             },
             "character": {
                 "code": 3,
@@ -1017,7 +1017,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Xiangling",
             "sprite": {
-                "instanceID": 27198
+                "instanceID": 27094
             },
             "character": {
                 "code": 4,
@@ -1269,7 +1269,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Razor",
             "sprite": {
-                "instanceID": 27102
+                "instanceID": 27086
             },
             "character": {
                 "code": 5,
@@ -1521,7 +1521,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Bennett",
             "sprite": {
-                "instanceID": 27044
+                "instanceID": 27062
             },
             "character": {
                 "code": 6,
@@ -1773,7 +1773,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Xingqiu",
             "sprite": {
-                "instanceID": 27200
+                "instanceID": 27098
             },
             "character": {
                 "code": 7,
@@ -2025,7 +2025,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Beidou",
             "sprite": {
-                "instanceID": 15810
+                "instanceID": 27060
             },
             "character": {
                 "code": 8,
@@ -2277,7 +2277,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Sucrose",
             "sprite": {
-                "instanceID": 27104
+                "instanceID": 27088
             },
             "character": {
                 "code": 9,
@@ -2529,7 +2529,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Ningguang",
             "sprite": {
-                "instanceID": 27096
+                "instanceID": 15788
             },
             "character": {
                 "code": 10,
@@ -2781,7 +2781,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Noelle",
             "sprite": {
-                "instanceID": 27098
+                "instanceID": 27082
             },
             "character": {
                 "code": 11,
@@ -3033,7 +3033,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Fischl",
             "sprite": {
-                "instanceID": 27050
+                "instanceID": 27070
             },
             "character": {
                 "code": 12,
@@ -3285,7 +3285,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Chongyun",
             "sprite": {
-                "instanceID": 27046
+                "instanceID": 27064
             },
             "character": {
                 "code": 13,
@@ -3537,7 +3537,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Diona",
             "sprite": {
-                "instanceID": 15782
+                "instanceID": 27068
             },
             "character": {
                 "code": 14,
@@ -3789,7 +3789,7 @@
             "grade": 3,
             "spritePath": "Images/Character/Xinyan",
             "sprite": {
-                "instanceID": 27202
+                "instanceID": 27100
             },
             "character": {
                 "code": 15,
@@ -4041,7 +4041,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Diluc",
             "sprite": {
-                "instanceID": 27048
+                "instanceID": 27066
             },
             "character": {
                 "code": 500,
@@ -4293,7 +4293,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Mona",
             "sprite": {
-                "instanceID": 27094
+                "instanceID": 27080
             },
             "character": {
                 "code": 501,
@@ -4545,7 +4545,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Keqing",
             "sprite": {
-                "instanceID": 27090
+                "instanceID": 15800
             },
             "character": {
                 "code": 502,
@@ -4797,7 +4797,7 @@
             "grade": 4,
             "spritePath": "Images/Character/QiQi",
             "sprite": {
-                "instanceID": 27100
+                "instanceID": 27084
             },
             "character": {
                 "code": 503,
@@ -5049,7 +5049,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Jean",
             "sprite": {
-                "instanceID": 27086
+                "instanceID": 27074
             },
             "character": {
                 "code": 504,
@@ -5301,7 +5301,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Venti",
             "sprite": {
-                "instanceID": 27196
+                "instanceID": 27092
             },
             "character": {
                 "code": 700,
@@ -5553,7 +5553,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Klee",
             "sprite": {
-                "instanceID": 25026
+                "instanceID": 25296
             },
             "character": {
                 "code": 701,
@@ -5805,7 +5805,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Tartaglia",
             "sprite": {
-                "instanceID": 27106
+                "instanceID": 27090
             },
             "character": {
                 "code": 702,
@@ -6057,7 +6057,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Zhongli",
             "sprite": {
-                "instanceID": 27204
+                "instanceID": 27102
             },
             "character": {
                 "code": 703,
@@ -6309,7 +6309,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Albedo",
             "sprite": {
-                "instanceID": 27038
+                "instanceID": 27056
             },
             "character": {
                 "code": 704,
@@ -6561,7 +6561,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Ganyu",
             "sprite": {
-                "instanceID": 27052
+                "instanceID": 27072
             },
             "character": {
                 "code": 705,
@@ -6813,7 +6813,7 @@
             "grade": 4,
             "spritePath": "Images/Character/Xiao",
             "sprite": {
-                "instanceID": 15794
+                "instanceID": 27096
             },
             "character": {
                 "code": 706,
@@ -7057,6 +7057,258 @@
             }
         },
         {
+            "code": 707,
+            "enName": "Hu-Tao",
+            "koName": "호두",
+            "count": 1,
+            "type": 1,
+            "grade": 4,
+            "spritePath": "Images/Character/Hutao",
+            "sprite": {
+                "instanceID": 27464
+            },
+            "character": {
+                "code": 707,
+                "element": 0,
+                "grade": 4,
+                "skillStartCode": 1168,
+                "enName": "",
+                "koName": "",
+                "phase": 0,
+                "ascensionMaterial": {},
+                "level": 1,
+                "levelLimit": 20,
+                "exp": 0,
+                "nextExp": 0,
+                "friendship": 0,
+                "attribute": {
+                    "hp": 0.0,
+                    "maxHp": 0.0,
+                    "atk": 0.0,
+                    "def": 0.0,
+                    "elementalMastery": 0.0,
+                    "maxStamina": 0.0,
+                    "critRate": 0.0,
+                    "critDmg": 0.0,
+                    "healingBonus": 0.0,
+                    "incomingHealingBonus": 0.0,
+                    "energyRecharge": 0.0,
+                    "reduceCd": 0.0,
+                    "powerfulShield": 0.0,
+                    "pyroDmgBonus": 0.0,
+                    "pyroRes": 0.0,
+                    "hydroDmgBonus": 0.0,
+                    "hydroRes": 0.0,
+                    "dendroDmgBonus": 0.0,
+                    "dendroRes": 0.0,
+                    "electroDmgBonus": 0.0,
+                    "electroRes": 0.0,
+                    "anemoDmgBonus": 0.0,
+                    "anemoRes": 0.0,
+                    "cryoDmgBonus": 0.0,
+                    "cryoRes": 0.0,
+                    "geoDmgBonus": 0.0,
+                    "geoRes": 0.0,
+                    "physicalDmgBonus": 0.0,
+                    "physicalRes": 0.0
+                },
+                "equipedWeapon": {
+                    "code": 0,
+                    "enName": "",
+                    "koName": "",
+                    "count": 0,
+                    "type": 0,
+                    "grade": 0,
+                    "spritePath": "",
+                    "sprite": {
+                        "instanceID": 0
+                    },
+                    "character": {
+                        "code": 0,
+                        "element": 0,
+                        "grade": 0,
+                        "skillStartCode": 0,
+                        "enName": "",
+                        "koName": "",
+                        "phase": 0,
+                        "ascensionMaterial": {},
+                        "level": 0,
+                        "levelLimit": 0,
+                        "exp": 0,
+                        "nextExp": 0,
+                        "friendship": 0,
+                        "attribute": {
+                            "hp": 0.0,
+                            "maxHp": 0.0,
+                            "atk": 0.0,
+                            "def": 0.0,
+                            "elementalMastery": 0.0,
+                            "maxStamina": 0.0,
+                            "critRate": 0.0,
+                            "critDmg": 0.0,
+                            "healingBonus": 0.0,
+                            "incomingHealingBonus": 0.0,
+                            "energyRecharge": 0.0,
+                            "reduceCd": 0.0,
+                            "powerfulShield": 0.0,
+                            "pyroDmgBonus": 0.0,
+                            "pyroRes": 0.0,
+                            "hydroDmgBonus": 0.0,
+                            "hydroRes": 0.0,
+                            "dendroDmgBonus": 0.0,
+                            "dendroRes": 0.0,
+                            "electroDmgBonus": 0.0,
+                            "electroRes": 0.0,
+                            "anemoDmgBonus": 0.0,
+                            "anemoRes": 0.0,
+                            "cryoDmgBonus": 0.0,
+                            "cryoRes": 0.0,
+                            "geoDmgBonus": 0.0,
+                            "geoRes": 0.0,
+                            "physicalDmgBonus": 0.0,
+                            "physicalRes": 0.0
+                        },
+                        "equipedWeapon": {
+                            "code": 0,
+                            "enName": "",
+                            "koName": "",
+                            "count": 0,
+                            "type": 0,
+                            "grade": 0,
+                            "spritePath": "",
+                            "sprite": {
+                                "instanceID": 0
+                            },
+                            "character": {
+                                "code": 0,
+                                "element": 0,
+                                "grade": 0,
+                                "skillStartCode": 0,
+                                "enName": "",
+                                "koName": "",
+                                "phase": 0,
+                                "ascensionMaterial": {},
+                                "level": 0,
+                                "levelLimit": 0,
+                                "exp": 0,
+                                "nextExp": 0,
+                                "friendship": 0,
+                                "attribute": {
+                                    "hp": 0.0,
+                                    "maxHp": 0.0,
+                                    "atk": 0.0,
+                                    "def": 0.0,
+                                    "elementalMastery": 0.0,
+                                    "maxStamina": 0.0,
+                                    "critRate": 0.0,
+                                    "critDmg": 0.0,
+                                    "healingBonus": 0.0,
+                                    "incomingHealingBonus": 0.0,
+                                    "energyRecharge": 0.0,
+                                    "reduceCd": 0.0,
+                                    "powerfulShield": 0.0,
+                                    "pyroDmgBonus": 0.0,
+                                    "pyroRes": 0.0,
+                                    "hydroDmgBonus": 0.0,
+                                    "hydroRes": 0.0,
+                                    "dendroDmgBonus": 0.0,
+                                    "dendroRes": 0.0,
+                                    "electroDmgBonus": 0.0,
+                                    "electroRes": 0.0,
+                                    "anemoDmgBonus": 0.0,
+                                    "anemoRes": 0.0,
+                                    "cryoDmgBonus": 0.0,
+                                    "cryoRes": 0.0,
+                                    "geoDmgBonus": 0.0,
+                                    "geoRes": 0.0,
+                                    "physicalDmgBonus": 0.0,
+                                    "physicalRes": 0.0
+                                },
+                                "equipedWeapon": {
+                                    "code": 0,
+                                    "enName": "",
+                                    "koName": "",
+                                    "count": 0,
+                                    "type": 0,
+                                    "grade": 0,
+                                    "spritePath": "",
+                                    "sprite": {
+                                        "instanceID": 0
+                                    },
+                                    "character": {
+                                        "code": 0,
+                                        "element": 0,
+                                        "grade": 0,
+                                        "skillStartCode": 0,
+                                        "enName": "",
+                                        "koName": "",
+                                        "phase": 0,
+                                        "level": 0,
+                                        "levelLimit": 0,
+                                        "exp": 0,
+                                        "nextExp": 0,
+                                        "friendship": 0,
+                                        "ascensionItemCode": 0,
+                                        "ascensionMobItemCode": 0,
+                                        "skillBookItemCode": 0,
+                                        "skillLegendItemCode": 0,
+                                        "ascensionType": 0
+                                    },
+                                    "weapon": {
+                                        "ascensionItemCode": 0,
+                                        "ascensionEliteMobItemCode": 0,
+                                        "ascensionMobItemCode": 0
+                                    }
+                                },
+                                "artifacts": [],
+                                "constellation": {},
+                                "talent": {},
+                                "profile": {},
+                                "ascensionItemCode": 0,
+                                "ascensionMobItemCode": 0,
+                                "skillBookItemCode": 0,
+                                "skillLegendItemCode": 0,
+                                "ascensionType": 0
+                            },
+                            "weapon": {
+                                "ascensionItemCode": 0,
+                                "ascensionEliteMobItemCode": 0,
+                                "ascensionMobItemCode": 0
+                            }
+                        },
+                        "artifacts": [],
+                        "constellation": {},
+                        "talent": {},
+                        "profile": {},
+                        "ascensionItemCode": 0,
+                        "ascensionMobItemCode": 0,
+                        "skillBookItemCode": 0,
+                        "skillLegendItemCode": 0,
+                        "ascensionType": 0
+                    },
+                    "weapon": {
+                        "ascensionItemCode": 0,
+                        "ascensionEliteMobItemCode": 0,
+                        "ascensionMobItemCode": 0
+                    }
+                },
+                "artifacts": [],
+                "constellation": {},
+                "talent": {},
+                "profile": {},
+                "ascensionItemCode": 10407,
+                "ascensionMobItemCode": 10320,
+                "skillBookItemCode": 10016,
+                "skillLegendItemCode": 10707,
+                "ascensionType": 1
+            },
+            "weapon": {
+                "ascensionItemCode": 0,
+                "ascensionEliteMobItemCode": 0,
+                "ascensionMobItemCode": 0
+            }
+        },
+        {
             "code": 1000,
             "enName": "Cool Steel",
             "koName": "차가운 칼날",
@@ -7065,7 +7317,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Cool Steel",
             "sprite": {
-                "instanceID": 25956
+                "instanceID": 26666
             },
             "character": {
                 "code": 0,
@@ -7317,7 +7569,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Dark Iron Sword",
             "sprite": {
-                "instanceID": 25964
+                "instanceID": 26674
             },
             "character": {
                 "code": 0,
@@ -7569,7 +7821,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Fillet Blade",
             "sprite": {
-                "instanceID": 26020
+                "instanceID": 26730
             },
             "character": {
                 "code": 0,
@@ -7821,7 +8073,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Harbinger of Dawn",
             "sprite": {
-                "instanceID": 26028
+                "instanceID": 26738
             },
             "character": {
                 "code": 0,
@@ -8073,7 +8325,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Skyrider Sword",
             "sprite": {
-                "instanceID": 26196
+                "instanceID": 26910
             },
             "character": {
                 "code": 0,
@@ -8325,7 +8577,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Bloodtainted Greatsword",
             "sprite": {
-                "instanceID": 25948
+                "instanceID": 26658
             },
             "character": {
                 "code": 0,
@@ -8577,7 +8829,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Debate Club",
             "sprite": {
-                "instanceID": 25972
+                "instanceID": 26682
             },
             "character": {
                 "code": 0,
@@ -8829,7 +9081,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Ferrous Shadow",
             "sprite": {
-                "instanceID": 26016
+                "instanceID": 26726
             },
             "character": {
                 "code": 0,
@@ -9081,7 +9333,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/White Iron Greatsword",
             "sprite": {
-                "instanceID": 26288
+                "instanceID": 27006
             },
             "character": {
                 "code": 0,
@@ -9333,7 +9585,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Black Tassel",
             "sprite": {
-                "instanceID": 25924
+                "instanceID": 26634
             },
             "character": {
                 "code": 0,
@@ -9585,7 +9837,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Halberd",
             "sprite": {
-                "instanceID": 26024
+                "instanceID": 26734
             },
             "character": {
                 "code": 0,
@@ -9837,7 +10089,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/White Tassel",
             "sprite": {
-                "instanceID": 26292
+                "instanceID": 27010
             },
             "character": {
                 "code": 0,
@@ -10089,7 +10341,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Emerald Orb",
             "sprite": {
-                "instanceID": 25988
+                "instanceID": 26698
             },
             "character": {
                 "code": 0,
@@ -10341,7 +10593,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Magic Guide",
             "sprite": {
-                "instanceID": 26072
+                "instanceID": 26782
             },
             "character": {
                 "code": 0,
@@ -10593,7 +10845,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Otherworldly Story",
             "sprite": {
-                "instanceID": 26092
+                "instanceID": 26802
             },
             "character": {
                 "code": 0,
@@ -10845,7 +11097,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Thrilling Tales of Dragon Slayers",
             "sprite": {
-                "instanceID": 26268
+                "instanceID": 26986
             },
             "character": {
                 "code": 0,
@@ -11097,7 +11349,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Twin Nephrite",
             "sprite": {
-                "instanceID": 26276
+                "instanceID": 26994
             },
             "character": {
                 "code": 0,
@@ -11349,7 +11601,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Messenger",
             "sprite": {
-                "instanceID": 26084
+                "instanceID": 26794
             },
             "character": {
                 "code": 0,
@@ -11601,7 +11853,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Raven Bow",
             "sprite": {
-                "instanceID": 26132
+                "instanceID": 26846
             },
             "character": {
                 "code": 0,
@@ -11853,7 +12105,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Recurve Bow",
             "sprite": {
-                "instanceID": 26136
+                "instanceID": 26850
             },
             "character": {
                 "code": 0,
@@ -12105,7 +12357,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Sharpshooter's Oath",
             "sprite": {
-                "instanceID": 26184
+                "instanceID": 26898
             },
             "character": {
                 "code": 0,
@@ -12357,7 +12609,7 @@
             "grade": 2,
             "spritePath": "Images/Weapon/Slingshot",
             "sprite": {
-                "instanceID": 26220
+                "instanceID": 26934
             },
             "character": {
                 "code": 0,
@@ -12609,7 +12861,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Sword",
             "sprite": {
-                "instanceID": 26008
+                "instanceID": 26718
             },
             "character": {
                 "code": 0,
@@ -12861,7 +13113,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Sword",
             "sprite": {
-                "instanceID": 26172
+                "instanceID": 26886
             },
             "character": {
                 "code": 0,
@@ -13113,7 +13365,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Lion's Roar",
             "sprite": {
-                "instanceID": 26052
+                "instanceID": 26762
             },
             "character": {
                 "code": 0,
@@ -13365,7 +13617,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Flute",
             "sprite": {
-                "instanceID": 26248
+                "instanceID": 26966
             },
             "character": {
                 "code": 0,
@@ -13617,7 +13869,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Greatsword",
             "sprite": {
-                "instanceID": 26000
+                "instanceID": 26710
             },
             "character": {
                 "code": 0,
@@ -13869,7 +14121,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Greatsword",
             "sprite": {
-                "instanceID": 26168
+                "instanceID": 26882
             },
             "character": {
                 "code": 0,
@@ -14121,7 +14373,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Rainslasher",
             "sprite": {
-                "instanceID": 26128
+                "instanceID": 26842
             },
             "character": {
                 "code": 0,
@@ -14373,7 +14625,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Bell",
             "sprite": {
-                "instanceID": 26240
+                "instanceID": 26958
             },
             "character": {
                 "code": 0,
@@ -14617,6 +14869,258 @@
             }
         },
         {
+            "code": 2104,
+            "enName": "Lithic Blade",
+            "koName": "천암고검",
+            "count": 1,
+            "type": 3,
+            "grade": 3,
+            "spritePath": "Images/Weapon/Lithic Blade",
+            "sprite": {
+                "instanceID": 26770
+            },
+            "character": {
+                "code": 0,
+                "element": 0,
+                "grade": 0,
+                "skillStartCode": 0,
+                "enName": "",
+                "koName": "",
+                "phase": 0,
+                "ascensionMaterial": {},
+                "level": 0,
+                "levelLimit": 0,
+                "exp": 0,
+                "nextExp": 0,
+                "friendship": 0,
+                "attribute": {
+                    "hp": 0.0,
+                    "maxHp": 0.0,
+                    "atk": 0.0,
+                    "def": 0.0,
+                    "elementalMastery": 0.0,
+                    "maxStamina": 0.0,
+                    "critRate": 0.0,
+                    "critDmg": 0.0,
+                    "healingBonus": 0.0,
+                    "incomingHealingBonus": 0.0,
+                    "energyRecharge": 0.0,
+                    "reduceCd": 0.0,
+                    "powerfulShield": 0.0,
+                    "pyroDmgBonus": 0.0,
+                    "pyroRes": 0.0,
+                    "hydroDmgBonus": 0.0,
+                    "hydroRes": 0.0,
+                    "dendroDmgBonus": 0.0,
+                    "dendroRes": 0.0,
+                    "electroDmgBonus": 0.0,
+                    "electroRes": 0.0,
+                    "anemoDmgBonus": 0.0,
+                    "anemoRes": 0.0,
+                    "cryoDmgBonus": 0.0,
+                    "cryoRes": 0.0,
+                    "geoDmgBonus": 0.0,
+                    "geoRes": 0.0,
+                    "physicalDmgBonus": 0.0,
+                    "physicalRes": 0.0
+                },
+                "equipedWeapon": {
+                    "code": 0,
+                    "enName": "",
+                    "koName": "",
+                    "count": 0,
+                    "type": 0,
+                    "grade": 0,
+                    "spritePath": "",
+                    "sprite": {
+                        "instanceID": 0
+                    },
+                    "character": {
+                        "code": 0,
+                        "element": 0,
+                        "grade": 0,
+                        "skillStartCode": 0,
+                        "enName": "",
+                        "koName": "",
+                        "phase": 0,
+                        "ascensionMaterial": {},
+                        "level": 0,
+                        "levelLimit": 0,
+                        "exp": 0,
+                        "nextExp": 0,
+                        "friendship": 0,
+                        "attribute": {
+                            "hp": 0.0,
+                            "maxHp": 0.0,
+                            "atk": 0.0,
+                            "def": 0.0,
+                            "elementalMastery": 0.0,
+                            "maxStamina": 0.0,
+                            "critRate": 0.0,
+                            "critDmg": 0.0,
+                            "healingBonus": 0.0,
+                            "incomingHealingBonus": 0.0,
+                            "energyRecharge": 0.0,
+                            "reduceCd": 0.0,
+                            "powerfulShield": 0.0,
+                            "pyroDmgBonus": 0.0,
+                            "pyroRes": 0.0,
+                            "hydroDmgBonus": 0.0,
+                            "hydroRes": 0.0,
+                            "dendroDmgBonus": 0.0,
+                            "dendroRes": 0.0,
+                            "electroDmgBonus": 0.0,
+                            "electroRes": 0.0,
+                            "anemoDmgBonus": 0.0,
+                            "anemoRes": 0.0,
+                            "cryoDmgBonus": 0.0,
+                            "cryoRes": 0.0,
+                            "geoDmgBonus": 0.0,
+                            "geoRes": 0.0,
+                            "physicalDmgBonus": 0.0,
+                            "physicalRes": 0.0
+                        },
+                        "equipedWeapon": {
+                            "code": 0,
+                            "enName": "",
+                            "koName": "",
+                            "count": 0,
+                            "type": 0,
+                            "grade": 0,
+                            "spritePath": "",
+                            "sprite": {
+                                "instanceID": 0
+                            },
+                            "character": {
+                                "code": 0,
+                                "element": 0,
+                                "grade": 0,
+                                "skillStartCode": 0,
+                                "enName": "",
+                                "koName": "",
+                                "phase": 0,
+                                "ascensionMaterial": {},
+                                "level": 0,
+                                "levelLimit": 0,
+                                "exp": 0,
+                                "nextExp": 0,
+                                "friendship": 0,
+                                "attribute": {
+                                    "hp": 0.0,
+                                    "maxHp": 0.0,
+                                    "atk": 0.0,
+                                    "def": 0.0,
+                                    "elementalMastery": 0.0,
+                                    "maxStamina": 0.0,
+                                    "critRate": 0.0,
+                                    "critDmg": 0.0,
+                                    "healingBonus": 0.0,
+                                    "incomingHealingBonus": 0.0,
+                                    "energyRecharge": 0.0,
+                                    "reduceCd": 0.0,
+                                    "powerfulShield": 0.0,
+                                    "pyroDmgBonus": 0.0,
+                                    "pyroRes": 0.0,
+                                    "hydroDmgBonus": 0.0,
+                                    "hydroRes": 0.0,
+                                    "dendroDmgBonus": 0.0,
+                                    "dendroRes": 0.0,
+                                    "electroDmgBonus": 0.0,
+                                    "electroRes": 0.0,
+                                    "anemoDmgBonus": 0.0,
+                                    "anemoRes": 0.0,
+                                    "cryoDmgBonus": 0.0,
+                                    "cryoRes": 0.0,
+                                    "geoDmgBonus": 0.0,
+                                    "geoRes": 0.0,
+                                    "physicalDmgBonus": 0.0,
+                                    "physicalRes": 0.0
+                                },
+                                "equipedWeapon": {
+                                    "code": 0,
+                                    "enName": "",
+                                    "koName": "",
+                                    "count": 0,
+                                    "type": 0,
+                                    "grade": 0,
+                                    "spritePath": "",
+                                    "sprite": {
+                                        "instanceID": 0
+                                    },
+                                    "character": {
+                                        "code": 0,
+                                        "element": 0,
+                                        "grade": 0,
+                                        "skillStartCode": 0,
+                                        "enName": "",
+                                        "koName": "",
+                                        "phase": 0,
+                                        "level": 0,
+                                        "levelLimit": 0,
+                                        "exp": 0,
+                                        "nextExp": 0,
+                                        "friendship": 0,
+                                        "ascensionItemCode": 0,
+                                        "ascensionMobItemCode": 0,
+                                        "skillBookItemCode": 0,
+                                        "skillLegendItemCode": 0,
+                                        "ascensionType": 0
+                                    },
+                                    "weapon": {
+                                        "ascensionItemCode": 0,
+                                        "ascensionEliteMobItemCode": 0,
+                                        "ascensionMobItemCode": 0
+                                    }
+                                },
+                                "artifacts": [],
+                                "constellation": {},
+                                "talent": {},
+                                "profile": {},
+                                "ascensionItemCode": 0,
+                                "ascensionMobItemCode": 0,
+                                "skillBookItemCode": 0,
+                                "skillLegendItemCode": 0,
+                                "ascensionType": 0
+                            },
+                            "weapon": {
+                                "ascensionItemCode": 0,
+                                "ascensionEliteMobItemCode": 0,
+                                "ascensionMobItemCode": 0
+                            }
+                        },
+                        "artifacts": [],
+                        "constellation": {},
+                        "talent": {},
+                        "profile": {},
+                        "ascensionItemCode": 0,
+                        "ascensionMobItemCode": 0,
+                        "skillBookItemCode": 0,
+                        "skillLegendItemCode": 0,
+                        "ascensionType": 0
+                    },
+                    "weapon": {
+                        "ascensionItemCode": 0,
+                        "ascensionEliteMobItemCode": 0,
+                        "ascensionMobItemCode": 0
+                    }
+                },
+                "artifacts": [],
+                "constellation": {},
+                "talent": {},
+                "profile": {},
+                "ascensionItemCode": 0,
+                "ascensionMobItemCode": 0,
+                "skillBookItemCode": 0,
+                "skillLegendItemCode": 0,
+                "ascensionType": 0
+            },
+            "weapon": {
+                "ascensionItemCode": 10512,
+                "ascensionEliteMobItemCode": 10608,
+                "ascensionMobItemCode": 10310
+            }
+        },
+        {
             "code": 2200,
             "enName": "Favonius Lance",
             "koName": "페보니우스 장창",
@@ -14625,7 +15129,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Lance",
             "sprite": {
-                "instanceID": 26004
+                "instanceID": 26714
             },
             "character": {
                 "code": 0,
@@ -14877,7 +15381,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Dragon's Bane",
             "sprite": {
-                "instanceID": 25976
+                "instanceID": 26686
             },
             "character": {
                 "code": 0,
@@ -15121,6 +15625,258 @@
             }
         },
         {
+            "code": 2202,
+            "enName": "Lithic Spear",
+            "koName": "천암장창",
+            "count": 1,
+            "type": 6,
+            "grade": 3,
+            "spritePath": "Images/Weapon/Lithic Spear",
+            "sprite": {
+                "instanceID": 26774
+            },
+            "character": {
+                "code": 0,
+                "element": 0,
+                "grade": 0,
+                "skillStartCode": 0,
+                "enName": "",
+                "koName": "",
+                "phase": 0,
+                "ascensionMaterial": {},
+                "level": 0,
+                "levelLimit": 0,
+                "exp": 0,
+                "nextExp": 0,
+                "friendship": 0,
+                "attribute": {
+                    "hp": 0.0,
+                    "maxHp": 0.0,
+                    "atk": 0.0,
+                    "def": 0.0,
+                    "elementalMastery": 0.0,
+                    "maxStamina": 0.0,
+                    "critRate": 0.0,
+                    "critDmg": 0.0,
+                    "healingBonus": 0.0,
+                    "incomingHealingBonus": 0.0,
+                    "energyRecharge": 0.0,
+                    "reduceCd": 0.0,
+                    "powerfulShield": 0.0,
+                    "pyroDmgBonus": 0.0,
+                    "pyroRes": 0.0,
+                    "hydroDmgBonus": 0.0,
+                    "hydroRes": 0.0,
+                    "dendroDmgBonus": 0.0,
+                    "dendroRes": 0.0,
+                    "electroDmgBonus": 0.0,
+                    "electroRes": 0.0,
+                    "anemoDmgBonus": 0.0,
+                    "anemoRes": 0.0,
+                    "cryoDmgBonus": 0.0,
+                    "cryoRes": 0.0,
+                    "geoDmgBonus": 0.0,
+                    "geoRes": 0.0,
+                    "physicalDmgBonus": 0.0,
+                    "physicalRes": 0.0
+                },
+                "equipedWeapon": {
+                    "code": 0,
+                    "enName": "",
+                    "koName": "",
+                    "count": 0,
+                    "type": 0,
+                    "grade": 0,
+                    "spritePath": "",
+                    "sprite": {
+                        "instanceID": 0
+                    },
+                    "character": {
+                        "code": 0,
+                        "element": 0,
+                        "grade": 0,
+                        "skillStartCode": 0,
+                        "enName": "",
+                        "koName": "",
+                        "phase": 0,
+                        "ascensionMaterial": {},
+                        "level": 0,
+                        "levelLimit": 0,
+                        "exp": 0,
+                        "nextExp": 0,
+                        "friendship": 0,
+                        "attribute": {
+                            "hp": 0.0,
+                            "maxHp": 0.0,
+                            "atk": 0.0,
+                            "def": 0.0,
+                            "elementalMastery": 0.0,
+                            "maxStamina": 0.0,
+                            "critRate": 0.0,
+                            "critDmg": 0.0,
+                            "healingBonus": 0.0,
+                            "incomingHealingBonus": 0.0,
+                            "energyRecharge": 0.0,
+                            "reduceCd": 0.0,
+                            "powerfulShield": 0.0,
+                            "pyroDmgBonus": 0.0,
+                            "pyroRes": 0.0,
+                            "hydroDmgBonus": 0.0,
+                            "hydroRes": 0.0,
+                            "dendroDmgBonus": 0.0,
+                            "dendroRes": 0.0,
+                            "electroDmgBonus": 0.0,
+                            "electroRes": 0.0,
+                            "anemoDmgBonus": 0.0,
+                            "anemoRes": 0.0,
+                            "cryoDmgBonus": 0.0,
+                            "cryoRes": 0.0,
+                            "geoDmgBonus": 0.0,
+                            "geoRes": 0.0,
+                            "physicalDmgBonus": 0.0,
+                            "physicalRes": 0.0
+                        },
+                        "equipedWeapon": {
+                            "code": 0,
+                            "enName": "",
+                            "koName": "",
+                            "count": 0,
+                            "type": 0,
+                            "grade": 0,
+                            "spritePath": "",
+                            "sprite": {
+                                "instanceID": 0
+                            },
+                            "character": {
+                                "code": 0,
+                                "element": 0,
+                                "grade": 0,
+                                "skillStartCode": 0,
+                                "enName": "",
+                                "koName": "",
+                                "phase": 0,
+                                "ascensionMaterial": {},
+                                "level": 0,
+                                "levelLimit": 0,
+                                "exp": 0,
+                                "nextExp": 0,
+                                "friendship": 0,
+                                "attribute": {
+                                    "hp": 0.0,
+                                    "maxHp": 0.0,
+                                    "atk": 0.0,
+                                    "def": 0.0,
+                                    "elementalMastery": 0.0,
+                                    "maxStamina": 0.0,
+                                    "critRate": 0.0,
+                                    "critDmg": 0.0,
+                                    "healingBonus": 0.0,
+                                    "incomingHealingBonus": 0.0,
+                                    "energyRecharge": 0.0,
+                                    "reduceCd": 0.0,
+                                    "powerfulShield": 0.0,
+                                    "pyroDmgBonus": 0.0,
+                                    "pyroRes": 0.0,
+                                    "hydroDmgBonus": 0.0,
+                                    "hydroRes": 0.0,
+                                    "dendroDmgBonus": 0.0,
+                                    "dendroRes": 0.0,
+                                    "electroDmgBonus": 0.0,
+                                    "electroRes": 0.0,
+                                    "anemoDmgBonus": 0.0,
+                                    "anemoRes": 0.0,
+                                    "cryoDmgBonus": 0.0,
+                                    "cryoRes": 0.0,
+                                    "geoDmgBonus": 0.0,
+                                    "geoRes": 0.0,
+                                    "physicalDmgBonus": 0.0,
+                                    "physicalRes": 0.0
+                                },
+                                "equipedWeapon": {
+                                    "code": 0,
+                                    "enName": "",
+                                    "koName": "",
+                                    "count": 0,
+                                    "type": 0,
+                                    "grade": 0,
+                                    "spritePath": "",
+                                    "sprite": {
+                                        "instanceID": 0
+                                    },
+                                    "character": {
+                                        "code": 0,
+                                        "element": 0,
+                                        "grade": 0,
+                                        "skillStartCode": 0,
+                                        "enName": "",
+                                        "koName": "",
+                                        "phase": 0,
+                                        "level": 0,
+                                        "levelLimit": 0,
+                                        "exp": 0,
+                                        "nextExp": 0,
+                                        "friendship": 0,
+                                        "ascensionItemCode": 0,
+                                        "ascensionMobItemCode": 0,
+                                        "skillBookItemCode": 0,
+                                        "skillLegendItemCode": 0,
+                                        "ascensionType": 0
+                                    },
+                                    "weapon": {
+                                        "ascensionItemCode": 0,
+                                        "ascensionEliteMobItemCode": 0,
+                                        "ascensionMobItemCode": 0
+                                    }
+                                },
+                                "artifacts": [],
+                                "constellation": {},
+                                "talent": {},
+                                "profile": {},
+                                "ascensionItemCode": 0,
+                                "ascensionMobItemCode": 0,
+                                "skillBookItemCode": 0,
+                                "skillLegendItemCode": 0,
+                                "ascensionType": 0
+                            },
+                            "weapon": {
+                                "ascensionItemCode": 0,
+                                "ascensionEliteMobItemCode": 0,
+                                "ascensionMobItemCode": 0
+                            }
+                        },
+                        "artifacts": [],
+                        "constellation": {},
+                        "talent": {},
+                        "profile": {},
+                        "ascensionItemCode": 0,
+                        "ascensionMobItemCode": 0,
+                        "skillBookItemCode": 0,
+                        "skillLegendItemCode": 0,
+                        "ascensionType": 0
+                    },
+                    "weapon": {
+                        "ascensionItemCode": 0,
+                        "ascensionEliteMobItemCode": 0,
+                        "ascensionMobItemCode": 0
+                    }
+                },
+                "artifacts": [],
+                "constellation": {},
+                "talent": {},
+                "profile": {},
+                "ascensionItemCode": 0,
+                "ascensionMobItemCode": 0,
+                "skillBookItemCode": 0,
+                "skillLegendItemCode": 0,
+                "ascensionType": 0
+            },
+            "weapon": {
+                "ascensionItemCode": 10520,
+                "ascensionEliteMobItemCode": 10604,
+                "ascensionMobItemCode": 10310
+            }
+        },
+        {
             "code": 2300,
             "enName": "Favonius Codex",
             "koName": "페보니우스 비전",
@@ -15129,7 +15885,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Codex",
             "sprite": {
-                "instanceID": 25996
+                "instanceID": 26706
             },
             "character": {
                 "code": 0,
@@ -15381,7 +16137,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Fragments",
             "sprite": {
-                "instanceID": 26164
+                "instanceID": 26878
             },
             "character": {
                 "code": 0,
@@ -15633,7 +16389,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Eye of Perception",
             "sprite": {
-                "instanceID": 25992
+                "instanceID": 26702
             },
             "character": {
                 "code": 0,
@@ -15885,7 +16641,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Widsith",
             "sprite": {
-                "instanceID": 26264
+                "instanceID": 26982
             },
             "character": {
                 "code": 0,
@@ -16137,7 +16893,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Favonius Warbow",
             "sprite": {
-                "instanceID": 26012
+                "instanceID": 26722
             },
             "character": {
                 "code": 0,
@@ -16389,7 +17145,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Sacrificial Bow",
             "sprite": {
-                "instanceID": 26160
+                "instanceID": 26874
             },
             "character": {
                 "code": 0,
@@ -16641,7 +17397,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/Rust",
             "sprite": {
-                "instanceID": 26156
+                "instanceID": 26870
             },
             "character": {
                 "code": 0,
@@ -16893,7 +17649,7 @@
             "grade": 3,
             "spritePath": "Images/Weapon/The Stringless",
             "sprite": {
-                "instanceID": 26252
+                "instanceID": 26970
             },
             "character": {
                 "code": 0,
@@ -17145,7 +17901,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Aquila Favonia",
             "sprite": {
-                "instanceID": 25916
+                "instanceID": 26626
             },
             "character": {
                 "code": 0,
@@ -17397,7 +18153,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Blade",
             "sprite": {
-                "instanceID": 26204
+                "instanceID": 26918
             },
             "character": {
                 "code": 0,
@@ -17649,7 +18405,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Wolf's Gravestone",
             "sprite": {
-                "instanceID": 26304
+                "instanceID": 27022
             },
             "character": {
                 "code": 0,
@@ -17901,7 +18657,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Pride",
             "sprite": {
-                "instanceID": 26212
+                "instanceID": 26926
             },
             "character": {
                 "code": 0,
@@ -18153,7 +18909,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Primordial Jade Winged Spear",
             "sprite": {
-                "instanceID": 26100
+                "instanceID": 26814
             },
             "character": {
                 "code": 0,
@@ -18405,7 +19161,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Spine",
             "sprite": {
-                "instanceID": 26216
+                "instanceID": 26930
             },
             "character": {
                 "code": 0,
@@ -18657,7 +19413,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Lost Prayer to the Sacred Winds",
             "sprite": {
-                "instanceID": 26068
+                "instanceID": 26778
             },
             "character": {
                 "code": 0,
@@ -18909,7 +19665,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Atlas",
             "sprite": {
-                "instanceID": 26200
+                "instanceID": 26914
             },
             "character": {
                 "code": 0,
@@ -19161,7 +19917,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Amos's Bow",
             "sprite": {
-                "instanceID": 25908
+                "instanceID": 26618
             },
             "character": {
                 "code": 0,
@@ -19413,7 +20169,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Skyward Harp",
             "sprite": {
-                "instanceID": 26208
+                "instanceID": 26922
             },
             "character": {
                 "code": 0,
@@ -19665,7 +20421,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Memory of Dust",
             "sprite": {
-                "instanceID": 26080
+                "instanceID": 26790
             },
             "character": {
                 "code": 0,
@@ -19917,7 +20673,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/The Unforged",
             "sprite": {
-                "instanceID": 26256
+                "instanceID": 26974
             },
             "character": {
                 "code": 0,
@@ -20169,7 +20925,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Vortex Vanquisher",
             "sprite": {
-                "instanceID": 26280
+                "instanceID": 26998
             },
             "character": {
                 "code": 0,
@@ -20421,7 +21177,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Summit Shaper",
             "sprite": {
-                "instanceID": 26228
+                "instanceID": 26946
             },
             "character": {
                 "code": 0,
@@ -20673,7 +21429,7 @@
             "grade": 4,
             "spritePath": "Images/Weapon/Primordia lJade Cutter",
             "sprite": {
-                "instanceID": 29664
+                "instanceID": 26810
             },
             "character": {
                 "code": 0,
@@ -20917,6 +21673,258 @@
             }
         },
         {
+            "code": 4201,
+            "enName": "Staff Of Homa",
+            "koName": "호마의 지팡이",
+            "count": 1,
+            "type": 6,
+            "grade": 4,
+            "spritePath": "Images/Weapon/Staff Of Homa",
+            "sprite": {
+                "instanceID": 26942
+            },
+            "character": {
+                "code": 0,
+                "element": 0,
+                "grade": 0,
+                "skillStartCode": 0,
+                "enName": "",
+                "koName": "",
+                "phase": 0,
+                "ascensionMaterial": {},
+                "level": 0,
+                "levelLimit": 0,
+                "exp": 0,
+                "nextExp": 0,
+                "friendship": 0,
+                "attribute": {
+                    "hp": 0.0,
+                    "maxHp": 0.0,
+                    "atk": 0.0,
+                    "def": 0.0,
+                    "elementalMastery": 0.0,
+                    "maxStamina": 0.0,
+                    "critRate": 0.0,
+                    "critDmg": 0.0,
+                    "healingBonus": 0.0,
+                    "incomingHealingBonus": 0.0,
+                    "energyRecharge": 0.0,
+                    "reduceCd": 0.0,
+                    "powerfulShield": 0.0,
+                    "pyroDmgBonus": 0.0,
+                    "pyroRes": 0.0,
+                    "hydroDmgBonus": 0.0,
+                    "hydroRes": 0.0,
+                    "dendroDmgBonus": 0.0,
+                    "dendroRes": 0.0,
+                    "electroDmgBonus": 0.0,
+                    "electroRes": 0.0,
+                    "anemoDmgBonus": 0.0,
+                    "anemoRes": 0.0,
+                    "cryoDmgBonus": 0.0,
+                    "cryoRes": 0.0,
+                    "geoDmgBonus": 0.0,
+                    "geoRes": 0.0,
+                    "physicalDmgBonus": 0.0,
+                    "physicalRes": 0.0
+                },
+                "equipedWeapon": {
+                    "code": 0,
+                    "enName": "",
+                    "koName": "",
+                    "count": 0,
+                    "type": 0,
+                    "grade": 0,
+                    "spritePath": "",
+                    "sprite": {
+                        "instanceID": 0
+                    },
+                    "character": {
+                        "code": 0,
+                        "element": 0,
+                        "grade": 0,
+                        "skillStartCode": 0,
+                        "enName": "",
+                        "koName": "",
+                        "phase": 0,
+                        "ascensionMaterial": {},
+                        "level": 0,
+                        "levelLimit": 0,
+                        "exp": 0,
+                        "nextExp": 0,
+                        "friendship": 0,
+                        "attribute": {
+                            "hp": 0.0,
+                            "maxHp": 0.0,
+                            "atk": 0.0,
+                            "def": 0.0,
+                            "elementalMastery": 0.0,
+                            "maxStamina": 0.0,
+                            "critRate": 0.0,
+                            "critDmg": 0.0,
+                            "healingBonus": 0.0,
+                            "incomingHealingBonus": 0.0,
+                            "energyRecharge": 0.0,
+                            "reduceCd": 0.0,
+                            "powerfulShield": 0.0,
+                            "pyroDmgBonus": 0.0,
+                            "pyroRes": 0.0,
+                            "hydroDmgBonus": 0.0,
+                            "hydroRes": 0.0,
+                            "dendroDmgBonus": 0.0,
+                            "dendroRes": 0.0,
+                            "electroDmgBonus": 0.0,
+                            "electroRes": 0.0,
+                            "anemoDmgBonus": 0.0,
+                            "anemoRes": 0.0,
+                            "cryoDmgBonus": 0.0,
+                            "cryoRes": 0.0,
+                            "geoDmgBonus": 0.0,
+                            "geoRes": 0.0,
+                            "physicalDmgBonus": 0.0,
+                            "physicalRes": 0.0
+                        },
+                        "equipedWeapon": {
+                            "code": 0,
+                            "enName": "",
+                            "koName": "",
+                            "count": 0,
+                            "type": 0,
+                            "grade": 0,
+                            "spritePath": "",
+                            "sprite": {
+                                "instanceID": 0
+                            },
+                            "character": {
+                                "code": 0,
+                                "element": 0,
+                                "grade": 0,
+                                "skillStartCode": 0,
+                                "enName": "",
+                                "koName": "",
+                                "phase": 0,
+                                "ascensionMaterial": {},
+                                "level": 0,
+                                "levelLimit": 0,
+                                "exp": 0,
+                                "nextExp": 0,
+                                "friendship": 0,
+                                "attribute": {
+                                    "hp": 0.0,
+                                    "maxHp": 0.0,
+                                    "atk": 0.0,
+                                    "def": 0.0,
+                                    "elementalMastery": 0.0,
+                                    "maxStamina": 0.0,
+                                    "critRate": 0.0,
+                                    "critDmg": 0.0,
+                                    "healingBonus": 0.0,
+                                    "incomingHealingBonus": 0.0,
+                                    "energyRecharge": 0.0,
+                                    "reduceCd": 0.0,
+                                    "powerfulShield": 0.0,
+                                    "pyroDmgBonus": 0.0,
+                                    "pyroRes": 0.0,
+                                    "hydroDmgBonus": 0.0,
+                                    "hydroRes": 0.0,
+                                    "dendroDmgBonus": 0.0,
+                                    "dendroRes": 0.0,
+                                    "electroDmgBonus": 0.0,
+                                    "electroRes": 0.0,
+                                    "anemoDmgBonus": 0.0,
+                                    "anemoRes": 0.0,
+                                    "cryoDmgBonus": 0.0,
+                                    "cryoRes": 0.0,
+                                    "geoDmgBonus": 0.0,
+                                    "geoRes": 0.0,
+                                    "physicalDmgBonus": 0.0,
+                                    "physicalRes": 0.0
+                                },
+                                "equipedWeapon": {
+                                    "code": 0,
+                                    "enName": "",
+                                    "koName": "",
+                                    "count": 0,
+                                    "type": 0,
+                                    "grade": 0,
+                                    "spritePath": "",
+                                    "sprite": {
+                                        "instanceID": 0
+                                    },
+                                    "character": {
+                                        "code": 0,
+                                        "element": 0,
+                                        "grade": 0,
+                                        "skillStartCode": 0,
+                                        "enName": "",
+                                        "koName": "",
+                                        "phase": 0,
+                                        "level": 0,
+                                        "levelLimit": 0,
+                                        "exp": 0,
+                                        "nextExp": 0,
+                                        "friendship": 0,
+                                        "ascensionItemCode": 0,
+                                        "ascensionMobItemCode": 0,
+                                        "skillBookItemCode": 0,
+                                        "skillLegendItemCode": 0,
+                                        "ascensionType": 0
+                                    },
+                                    "weapon": {
+                                        "ascensionItemCode": 0,
+                                        "ascensionEliteMobItemCode": 0,
+                                        "ascensionMobItemCode": 0
+                                    }
+                                },
+                                "artifacts": [],
+                                "constellation": {},
+                                "talent": {},
+                                "profile": {},
+                                "ascensionItemCode": 0,
+                                "ascensionMobItemCode": 0,
+                                "skillBookItemCode": 0,
+                                "skillLegendItemCode": 0,
+                                "ascensionType": 0
+                            },
+                            "weapon": {
+                                "ascensionItemCode": 0,
+                                "ascensionEliteMobItemCode": 0,
+                                "ascensionMobItemCode": 0
+                            }
+                        },
+                        "artifacts": [],
+                        "constellation": {},
+                        "talent": {},
+                        "profile": {},
+                        "ascensionItemCode": 0,
+                        "ascensionMobItemCode": 0,
+                        "skillBookItemCode": 0,
+                        "skillLegendItemCode": 0,
+                        "ascensionType": 0
+                    },
+                    "weapon": {
+                        "ascensionItemCode": 0,
+                        "ascensionEliteMobItemCode": 0,
+                        "ascensionMobItemCode": 0
+                    }
+                },
+                "artifacts": [],
+                "constellation": {},
+                "talent": {},
+                "profile": {},
+                "ascensionItemCode": 0,
+                "ascensionMobItemCode": 0,
+                "skillBookItemCode": 0,
+                "skillLegendItemCode": 0,
+                "ascensionType": 0
+            },
+            "weapon": {
+                "ascensionItemCode": 10520,
+                "ascensionEliteMobItemCode": 10600,
+                "ascensionMobItemCode": 10315
+            }
+        },
+        {
             "code": 10000,
             "enName": "Teachings of \"Freedom\"",
             "koName": "\"자유\"의 가르침",
@@ -20925,7 +21933,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_freedom",
             "sprite": {
-                "instanceID": 28540
+                "instanceID": 27814
             },
             "character": {
                 "code": 0,
@@ -21177,7 +22185,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_freedom",
             "sprite": {
-                "instanceID": 28388
+                "instanceID": 27910
             },
             "character": {
                 "code": 0,
@@ -21429,7 +22437,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_freedom",
             "sprite": {
-                "instanceID": 28440
+                "instanceID": 29304
             },
             "character": {
                 "code": 0,
@@ -21681,7 +22689,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_resistance",
             "sprite": {
-                "instanceID": 28552
+                "instanceID": 28222
             },
             "character": {
                 "code": 0,
@@ -21933,7 +22941,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_resistance",
             "sprite": {
-                "instanceID": 28400
+                "instanceID": 28990
             },
             "character": {
                 "code": 0,
@@ -22185,7 +23193,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_resistance",
             "sprite": {
-                "instanceID": 28452
+                "instanceID": 27874
             },
             "character": {
                 "code": 0,
@@ -22437,7 +23445,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_ballad",
             "sprite": {
-                "instanceID": 28532
+                "instanceID": 29332
             },
             "character": {
                 "code": 0,
@@ -22689,7 +23697,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_ballad",
             "sprite": {
-                "instanceID": 28380
+                "instanceID": 29540
             },
             "character": {
                 "code": 0,
@@ -22941,7 +23949,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_ballad",
             "sprite": {
-                "instanceID": 25060
+                "instanceID": 25338
             },
             "character": {
                 "code": 0,
@@ -23193,7 +24201,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_prosperity",
             "sprite": {
-                "instanceID": 28548
+                "instanceID": 27810
             },
             "character": {
                 "code": 0,
@@ -23445,7 +24453,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_prosperity",
             "sprite": {
-                "instanceID": 28396
+                "instanceID": 28694
             },
             "character": {
                 "code": 0,
@@ -23697,7 +24705,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_prosperity",
             "sprite": {
-                "instanceID": 28448
+                "instanceID": 28974
             },
             "character": {
                 "code": 0,
@@ -23949,7 +24957,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_diligence",
             "sprite": {
-                "instanceID": 28536
+                "instanceID": 28954
             },
             "character": {
                 "code": 0,
@@ -24201,7 +25209,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_diligence",
             "sprite": {
-                "instanceID": 28384
+                "instanceID": 28854
             },
             "character": {
                 "code": 0,
@@ -24453,7 +25461,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_diligence",
             "sprite": {
-                "instanceID": 28436
+                "instanceID": 28734
             },
             "character": {
                 "code": 0,
@@ -24705,7 +25713,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/teaching_of_gold",
             "sprite": {
-                "instanceID": 28544
+                "instanceID": 27946
             },
             "character": {
                 "code": 0,
@@ -24957,7 +25965,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/guide_to_gold",
             "sprite": {
-                "instanceID": 28392
+                "instanceID": 28034
             },
             "character": {
                 "code": 0,
@@ -25209,7 +26217,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/philosophies_of_gold",
             "sprite": {
-                "instanceID": 28444
+                "instanceID": 27986
             },
             "character": {
                 "code": 0,
@@ -25461,7 +26469,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_sliver",
             "sprite": {
-                "instanceID": 28296
+                "instanceID": 27758
             },
             "character": {
                 "code": 0,
@@ -25713,7 +26721,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_fragment",
             "sprite": {
-                "instanceID": 28288
+                "instanceID": 27782
             },
             "character": {
                 "code": 0,
@@ -25965,7 +26973,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_chunk",
             "sprite": {
-                "instanceID": 28284
+                "instanceID": 28206
             },
             "character": {
                 "code": 0,
@@ -26217,7 +27225,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/agnidus_agate_gemstone",
             "sprite": {
-                "instanceID": 28292
+                "instanceID": 28566
             },
             "character": {
                 "code": 0,
@@ -26469,7 +27477,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_sliver",
             "sprite": {
-                "instanceID": 28596
+                "instanceID": 29456
             },
             "character": {
                 "code": 0,
@@ -26721,7 +27729,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_fragment",
             "sprite": {
-                "instanceID": 28588
+                "instanceID": 28710
             },
             "character": {
                 "code": 0,
@@ -26973,7 +27981,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_chunk",
             "sprite": {
-                "instanceID": 28584
+                "instanceID": 28658
             },
             "character": {
                 "code": 0,
@@ -27225,7 +28233,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/varunada_lazurite_gemstone",
             "sprite": {
-                "instanceID": 28592
+                "instanceID": 28746
             },
             "character": {
                 "code": 0,
@@ -27477,7 +28485,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_sliver",
             "sprite": {
-                "instanceID": 28576
+                "instanceID": 28930
             },
             "character": {
                 "code": 0,
@@ -27729,7 +28737,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_fragment",
             "sprite": {
-                "instanceID": 28568
+                "instanceID": 28410
             },
             "character": {
                 "code": 0,
@@ -27981,7 +28989,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_chunk",
             "sprite": {
-                "instanceID": 28564
+                "instanceID": 28142
             },
             "character": {
                 "code": 0,
@@ -28233,7 +29241,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/vajrada_amethyst_gemstone",
             "sprite": {
-                "instanceID": 28572
+                "instanceID": 28470
             },
             "character": {
                 "code": 0,
@@ -28485,7 +29493,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_sliver",
             "sprite": {
-                "instanceID": 28612
+                "instanceID": 27794
             },
             "character": {
                 "code": 0,
@@ -28737,7 +29745,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_fragment",
             "sprite": {
-                "instanceID": 28604
+                "instanceID": 29464
             },
             "character": {
                 "code": 0,
@@ -28989,7 +29997,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_chunk",
             "sprite": {
-                "instanceID": 28600
+                "instanceID": 28318
             },
             "character": {
                 "code": 0,
@@ -29241,7 +30249,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/vayuda_turquoise_gemstone",
             "sprite": {
-                "instanceID": 28608
+                "instanceID": 29352
             },
             "character": {
                 "code": 0,
@@ -29493,7 +30501,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_sliver",
             "sprite": {
-                "instanceID": 28504
+                "instanceID": 27862
             },
             "character": {
                 "code": 0,
@@ -29745,7 +30753,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_fragment",
             "sprite": {
-                "instanceID": 28496
+                "instanceID": 28494
             },
             "character": {
                 "code": 0,
@@ -29997,7 +31005,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_chunk",
             "sprite": {
-                "instanceID": 28492
+                "instanceID": 28162
             },
             "character": {
                 "code": 0,
@@ -30249,7 +31257,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/shivada_jade_gemstone",
             "sprite": {
-                "instanceID": 28500
+                "instanceID": 28706
             },
             "character": {
                 "code": 0,
@@ -30501,7 +31509,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_sliver",
             "sprite": {
-                "instanceID": 25152
+                "instanceID": 25456
             },
             "character": {
                 "code": 0,
@@ -30753,7 +31761,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_fragment",
             "sprite": {
-                "instanceID": 24898
+                "instanceID": 25150
             },
             "character": {
                 "code": 0,
@@ -31005,7 +32013,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_chunk",
             "sprite": {
-                "instanceID": 24962
+                "instanceID": 25224
             },
             "character": {
                 "code": 0,
@@ -31257,7 +32265,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/prithiva_topaz_gemstone",
             "sprite": {
-                "instanceID": 24980
+                "instanceID": 25240
             },
             "character": {
                 "code": 0,
@@ -31509,7 +32517,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_sliver",
             "sprite": {
-                "instanceID": 28312
+                "instanceID": 28406
             },
             "character": {
                 "code": 0,
@@ -31761,7 +32769,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_fragment",
             "sprite": {
-                "instanceID": 28304
+                "instanceID": 28362
             },
             "character": {
                 "code": 0,
@@ -32013,7 +33021,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_chunk",
             "sprite": {
-                "instanceID": 28300
+                "instanceID": 28330
             },
             "character": {
                 "code": 0,
@@ -32265,7 +33273,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/brilliant_diamond_gemstone",
             "sprite": {
-                "instanceID": 28308
+                "instanceID": 29328
             },
             "character": {
                 "code": 0,
@@ -32517,7 +33525,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/everflame_seed",
             "sprite": {
-                "instanceID": 28360
+                "instanceID": 29128
             },
             "character": {
                 "code": 0,
@@ -32769,7 +33777,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/cleansing_heart",
             "sprite": {
-                "instanceID": 28324
+                "instanceID": 28334
             },
             "character": {
                 "code": 0,
@@ -33021,7 +34029,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/lightning_prism",
             "sprite": {
-                "instanceID": 28420
+                "instanceID": 27802
             },
             "character": {
                 "code": 0,
@@ -33273,7 +34281,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/hurricane_seed",
             "sprite": {
-                "instanceID": 28408
+                "instanceID": 28950
             },
             "character": {
                 "code": 0,
@@ -33525,7 +34533,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/hoarfrost_core",
             "sprite": {
-                "instanceID": 28404
+                "instanceID": 29528
             },
             "character": {
                 "code": 0,
@@ -33777,7 +34785,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/basalt_pillar",
             "sprite": {
-                "instanceID": 24904
+                "instanceID": 25156
             },
             "character": {
                 "code": 0,
@@ -34029,7 +35037,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/TalentItem/juvenile_jade",
             "sprite": {
-                "instanceID": 0
+                "instanceID": 27774
             },
             "character": {
                 "code": 0,
@@ -34281,7 +35289,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/damaged_mask",
             "sprite": {
-                "instanceID": 28332
+                "instanceID": 28266
             },
             "character": {
                 "code": 0,
@@ -34533,7 +35541,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/stained_mask",
             "sprite": {
-                "instanceID": 28524
+                "instanceID": 27922
             },
             "character": {
                 "code": 0,
@@ -34785,7 +35793,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/ominous_mask",
             "sprite": {
-                "instanceID": 28428
+                "instanceID": 28946
             },
             "character": {
                 "code": 0,
@@ -35037,7 +36045,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/divining_scroll",
             "sprite": {
-                "instanceID": 28340
+                "instanceID": 27806
             },
             "character": {
                 "code": 0,
@@ -35289,7 +36297,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/sealed_scroll",
             "sprite": {
-                "instanceID": 28468
+                "instanceID": 28526
             },
             "character": {
                 "code": 0,
@@ -35541,7 +36549,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/forbidden_curse_scroll",
             "sprite": {
-                "instanceID": 28368
+                "instanceID": 29268
             },
             "character": {
                 "code": 0,
@@ -35793,7 +36801,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/firm_arrowhead",
             "sprite": {
-                "instanceID": 28364
+                "instanceID": 28498
             },
             "character": {
                 "code": 0,
@@ -36045,7 +37053,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/sharp_arrowhead",
             "sprite": {
-                "instanceID": 28484
+                "instanceID": 28278
             },
             "character": {
                 "code": 0,
@@ -36297,7 +37305,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/weathered_arrowhead",
             "sprite": {
-                "instanceID": 28620
+                "instanceID": 28026
             },
             "character": {
                 "code": 0,
@@ -36549,7 +37557,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/slime_condensate",
             "sprite": {
-                "instanceID": 25066
+                "instanceID": 25344
             },
             "character": {
                 "code": 0,
@@ -36801,7 +37809,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/slime_secretions",
             "sprite": {
-                "instanceID": 24918
+                "instanceID": 25170
             },
             "character": {
                 "code": 0,
@@ -37053,7 +38061,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/slime_concentrate",
             "sprite": {
-                "instanceID": 25008
+                "instanceID": 25274
             },
             "character": {
                 "code": 0,
@@ -37305,7 +38313,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/whopperflower_nectar",
             "sprite": {
-                "instanceID": 28624
+                "instanceID": 27894
             },
             "character": {
                 "code": 0,
@@ -37557,7 +38565,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/shimmering_nectar",
             "sprite": {
-                "instanceID": 28488
+                "instanceID": 28674
             },
             "character": {
                 "code": 0,
@@ -37809,7 +38817,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/energy_nectar",
             "sprite": {
-                "instanceID": 28356
+                "instanceID": 28450
             },
             "character": {
                 "code": 0,
@@ -38061,7 +39069,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/treasure_hoarder_insignia",
             "sprite": {
-                "instanceID": 28556
+                "instanceID": 27754
             },
             "character": {
                 "code": 0,
@@ -38313,7 +39321,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/silver_raven_insignia",
             "sprite": {
-                "instanceID": 28512
+                "instanceID": 28742
             },
             "character": {
                 "code": 0,
@@ -38565,7 +39573,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/golden_raven_insignia",
             "sprite": {
-                "instanceID": 28376
+                "instanceID": 28290
             },
             "character": {
                 "code": 0,
@@ -38817,7 +39825,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/recruits_insignia",
             "sprite": {
-                "instanceID": 28460
+                "instanceID": 28338
             },
             "character": {
                 "code": 0,
@@ -39069,7 +40077,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/TalentItem/sergeants_insignia",
             "sprite": {
-                "instanceID": 28472
+                "instanceID": 29088
             },
             "character": {
                 "code": 0,
@@ -39321,7 +40329,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/TalentItem/lieutenants_insignia",
             "sprite": {
-                "instanceID": 28416
+                "instanceID": 28902
             },
             "character": {
                 "code": 0,
@@ -39573,7 +40581,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/calla_lily",
             "sprite": {
-                "instanceID": 28316
+                "instanceID": 28574
             },
             "character": {
                 "code": 0,
@@ -39825,7 +40833,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/cecilia",
             "sprite": {
-                "instanceID": 28320
+                "instanceID": 29092
             },
             "character": {
                 "code": 0,
@@ -40077,7 +41085,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/cor_lapis",
             "sprite": {
-                "instanceID": 24932
+                "instanceID": 25190
             },
             "character": {
                 "code": 0,
@@ -40329,7 +41337,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/glaze_lily",
             "sprite": {
-                "instanceID": 28372
+                "instanceID": 29140
             },
             "character": {
                 "code": 0,
@@ -40581,7 +41589,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/jueyun_chili",
             "sprite": {
-                "instanceID": 28412
+                "instanceID": 28994
             },
             "character": {
                 "code": 0,
@@ -40833,7 +41841,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/noctilous_jade",
             "sprite": {
-                "instanceID": 28424
+                "instanceID": 28110
             },
             "character": {
                 "code": 0,
@@ -41085,7 +42093,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/philanemo_mushroom",
             "sprite": {
-                "instanceID": 28432
+                "instanceID": 29060
             },
             "character": {
                 "code": 0,
@@ -41337,7 +42345,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/silk_flower",
             "sprite": {
-                "instanceID": 28508
+                "instanceID": 27906
             },
             "character": {
                 "code": 0,
@@ -41589,7 +42597,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/small_lamp_grass",
             "sprite": {
-                "instanceID": 28516
+                "instanceID": 29384
             },
             "character": {
                 "code": 0,
@@ -41841,7 +42849,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/valberry",
             "sprite": {
-                "instanceID": 28580
+                "instanceID": 27842
             },
             "character": {
                 "code": 0,
@@ -42093,7 +43101,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/violetgrass",
             "sprite": {
-                "instanceID": 28616
+                "instanceID": 28970
             },
             "character": {
                 "code": 0,
@@ -42345,7 +43353,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/windwheel_aster",
             "sprite": {
-                "instanceID": 28628
+                "instanceID": 27770
             },
             "character": {
                 "code": 0,
@@ -42597,7 +43605,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/wolfhook",
             "sprite": {
-                "instanceID": 28632
+                "instanceID": 28610
             },
             "character": {
                 "code": 0,
@@ -42849,7 +43857,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/dandelion_seed",
             "sprite": {
-                "instanceID": 28336
+                "instanceID": 28858
             },
             "character": {
                 "code": 0,
@@ -43101,7 +44109,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/starconch",
             "sprite": {
-                "instanceID": 28528
+                "instanceID": 28826
             },
             "character": {
                 "code": 0,
@@ -43353,7 +44361,7 @@
             "grade": 0,
             "spritePath": "Images/UI/Stat/TalentItem/qingxin",
             "sprite": {
-                "instanceID": 28456
+                "instanceID": 29236
             },
             "character": {
                 "code": 0,
@@ -43605,7 +44613,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/tile_of_decarabians_tower",
             "sprite": {
-                "instanceID": 28984
+                "instanceID": 27926
             },
             "character": {
                 "code": 0,
@@ -43857,7 +44865,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/debris_of_decarabians_city",
             "sprite": {
-                "instanceID": 28880
+                "instanceID": 27706
             },
             "character": {
                 "code": 0,
@@ -44109,7 +45117,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/fragment_of_decarabians_epic",
             "sprite": {
-                "instanceID": 28904
+                "instanceID": 27750
             },
             "character": {
                 "code": 0,
@@ -44361,7 +45369,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/scattered_piece_of_decarabianss_dream",
             "sprite": {
-                "instanceID": 28972
+                "instanceID": 28558
             },
             "character": {
                 "code": 0,
@@ -44613,7 +45621,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_milk_tooth",
             "sprite": {
-                "instanceID": 28844
+                "instanceID": 29220
             },
             "character": {
                 "code": 0,
@@ -44865,7 +45873,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_cracked_tooth",
             "sprite": {
-                "instanceID": 28840
+                "instanceID": 29336
             },
             "character": {
                 "code": 0,
@@ -45117,7 +46125,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_broken_fang",
             "sprite": {
-                "instanceID": 28836
+                "instanceID": 27790
             },
             "character": {
                 "code": 0,
@@ -45369,7 +46377,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/boreal_wolfs_nostalgia",
             "sprite": {
-                "instanceID": 28848
+                "instanceID": 29436
             },
             "character": {
                 "code": 0,
@@ -45621,7 +46629,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/fetters_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 28892
+                "instanceID": 28398
             },
             "character": {
                 "code": 0,
@@ -45873,7 +46881,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/chains_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 28852
+                "instanceID": 29228
             },
             "character": {
                 "code": 0,
@@ -46125,7 +47133,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/shackles_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 28976
+                "instanceID": 27762
             },
             "character": {
                 "code": 0,
@@ -46377,7 +47385,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/dream_of_the_dandelion_gladiator",
             "sprite": {
-                "instanceID": 28888
+                "instanceID": 28314
             },
             "character": {
                 "code": 0,
@@ -46629,7 +47637,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/luminous_sands_from_guyun",
             "sprite": {
-                "instanceID": 28928
+                "instanceID": 28662
             },
             "character": {
                 "code": 0,
@@ -46881,7 +47889,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/lustrous_stone_from_guyun",
             "sprite": {
-                "instanceID": 28932
+                "instanceID": 29148
             },
             "character": {
                 "code": 0,
@@ -47133,7 +48141,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/relic_from_guyun",
             "sprite": {
-                "instanceID": 28968
+                "instanceID": 28122
             },
             "character": {
                 "code": 0,
@@ -47385,7 +48393,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/divine_body_from_guyun",
             "sprite": {
-                "instanceID": 28884
+                "instanceID": 27726
             },
             "character": {
                 "code": 0,
@@ -47637,7 +48645,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_lead_elixir",
             "sprite": {
-                "instanceID": 28952
+                "instanceID": 29160
             },
             "character": {
                 "code": 0,
@@ -47889,7 +48897,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_mercury_elixir",
             "sprite": {
-                "instanceID": 28956
+                "instanceID": 27982
             },
             "character": {
                 "code": 0,
@@ -48141,7 +49149,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_gold_elixir",
             "sprite": {
-                "instanceID": 28948
+                "instanceID": 28874
             },
             "character": {
                 "code": 0,
@@ -48393,7 +49401,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_veiled_primo_elixir",
             "sprite": {
-                "instanceID": 28960
+                "instanceID": 28762
             },
             "character": {
                 "code": 0,
@@ -48645,7 +49653,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/grain_of_aerosiderite",
             "sprite": {
-                "instanceID": 28908
+                "instanceID": 27994
             },
             "character": {
                 "code": 0,
@@ -48897,7 +49905,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/piece_of_aerosiderite",
             "sprite": {
-                "instanceID": 28964
+                "instanceID": 28510
             },
             "character": {
                 "code": 0,
@@ -49149,7 +50157,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/bit_of_aerosiderite",
             "sprite": {
-                "instanceID": 28824
+                "instanceID": 29176
             },
             "character": {
                 "code": 0,
@@ -49401,7 +50409,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/WeaponItem/chunk_of_aerosiderite",
             "sprite": {
-                "instanceID": 28868
+                "instanceID": 28214
             },
             "character": {
                 "code": 0,
@@ -49653,7 +50661,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/dead_ley_line_branch",
             "sprite": {
-                "instanceID": 28872
+                "instanceID": 28166
             },
             "character": {
                 "code": 0,
@@ -49905,7 +50913,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/dead_ley_line_leaves",
             "sprite": {
-                "instanceID": 28876
+                "instanceID": 28642
             },
             "character": {
                 "code": 0,
@@ -50157,7 +51165,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/ley_line_sprout",
             "sprite": {
-                "instanceID": 28924
+                "instanceID": 29084
             },
             "character": {
                 "code": 0,
@@ -50409,7 +51417,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/fragile_bone_shard",
             "sprite": {
-                "instanceID": 28900
+                "instanceID": 27866
             },
             "character": {
                 "code": 0,
@@ -50661,7 +51669,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/sturdy_bone_shard",
             "sprite": {
-                "instanceID": 28980
+                "instanceID": 29288
             },
             "character": {
                 "code": 0,
@@ -50913,7 +51921,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/fossilized_bone_shard",
             "sprite": {
-                "instanceID": 28896
+                "instanceID": 29364
             },
             "character": {
                 "code": 0,
@@ -51165,7 +52173,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/hunters_sacrificial_knife",
             "sprite": {
-                "instanceID": 28916
+                "instanceID": 27766
             },
             "character": {
                 "code": 0,
@@ -51417,7 +52425,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/agents_sacrificial_knife",
             "sprite": {
-                "instanceID": 28820
+                "instanceID": 27830
             },
             "character": {
                 "code": 0,
@@ -51669,7 +52677,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/inspectors_sacrificial_knife",
             "sprite": {
-                "instanceID": 28920
+                "instanceID": 29020
             },
             "character": {
                 "code": 0,
@@ -51921,7 +52929,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_grass_pollen",
             "sprite": {
-                "instanceID": 28940
+                "instanceID": 28046
             },
             "character": {
                 "code": 0,
@@ -52173,7 +53181,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_grass",
             "sprite": {
-                "instanceID": 28936
+                "instanceID": 28538
             },
             "character": {
                 "code": 0,
@@ -52425,7 +53433,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/mist_grass_wick",
             "sprite": {
-                "instanceID": 28944
+                "instanceID": 28730
             },
             "character": {
                 "code": 0,
@@ -52677,7 +53685,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/chaos_device",
             "sprite": {
-                "instanceID": 28864
+                "instanceID": 28570
             },
             "character": {
                 "code": 0,
@@ -52929,7 +53937,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/chaos_circuit",
             "sprite": {
-                "instanceID": 28856
+                "instanceID": 28834
             },
             "character": {
                 "code": 0,
@@ -53181,7 +54189,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/chaos_core",
             "sprite": {
-                "instanceID": 28860
+                "instanceID": 29324
             },
             "character": {
                 "code": 0,
@@ -53433,7 +54441,7 @@
             "grade": 1,
             "spritePath": "Images/UI/Stat/WeaponItem/heavy_horn",
             "sprite": {
-                "instanceID": 28912
+                "instanceID": 28078
             },
             "character": {
                 "code": 0,
@@ -53685,7 +54693,7 @@
             "grade": 2,
             "spritePath": "Images/UI/Stat/WeaponItem/black_bronze_horn",
             "sprite": {
-                "instanceID": 28828
+                "instanceID": 28978
             },
             "character": {
                 "code": 0,
@@ -53937,7 +54945,7 @@
             "grade": 3,
             "spritePath": "Images/UI/Stat/WeaponItem/black_crystal_horn",
             "sprite": {
-                "instanceID": 28832
+                "instanceID": 28886
             },
             "character": {
                 "code": 0,
@@ -54189,7 +55197,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/dvalins_claw",
             "sprite": {
-                "instanceID": 28344
+                "instanceID": 27826
             },
             "character": {
                 "code": 0,
@@ -54441,7 +55449,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/dvalins_plume",
             "sprite": {
-                "instanceID": 28348
+                "instanceID": 28218
             },
             "character": {
                 "code": 0,
@@ -54693,7 +55701,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/dvalins_sigh",
             "sprite": {
-                "instanceID": 28352
+                "instanceID": 29412
             },
             "character": {
                 "code": 0,
@@ -54945,7 +55953,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/ring_of_boreas",
             "sprite": {
-                "instanceID": 28464
+                "instanceID": 28618
             },
             "character": {
                 "code": 0,
@@ -55197,7 +56205,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/spirit_locket_of_boreas",
             "sprite": {
-                "instanceID": 28520
+                "instanceID": 28066
             },
             "character": {
                 "code": 0,
@@ -55449,7 +56457,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/tail_of_boreas",
             "sprite": {
-                "instanceID": 25010
+                "instanceID": 25278
             },
             "character": {
                 "code": 0,
@@ -55701,7 +56709,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/shadow_of_the_warrior",
             "sprite": {
-                "instanceID": 28476
+                "instanceID": 28958
             },
             "character": {
                 "code": 0,
@@ -55953,7 +56961,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/shard_of_foul_legacy",
             "sprite": {
-                "instanceID": 28480
+                "instanceID": 28822
             },
             "character": {
                 "code": 0,
@@ -56205,7 +57213,7 @@
             "grade": 4,
             "spritePath": "Images/UI/Stat/TalentItem/tusk_of_monoceros_caeli",
             "sprite": {
-                "instanceID": 28560
+                "instanceID": 29548
             },
             "character": {
                 "code": 0,

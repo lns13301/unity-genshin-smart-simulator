@@ -23,7 +23,8 @@ public class AdMobReward : MonoBehaviour
 
         //Test ID : "ca-app-pub-3940256099942544/5224354917";
         //광고 ID : "ca-app-pub-5596979448837149/3283466862";
-        videoID = "ca-app-pub-5596979448837149/3283466862";
+        // videoID = "ca-app-pub-5596979448837149/3283466862"; 정지
+        videoID = "ca-app-pub-5596979448837149/1249398064";
         videoAd = new RewardedAd(videoID);
         Handle(videoAd);
         Load();

@@ -132,6 +132,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(704, "Albedo", "알베도", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Albedo", new Character(704, Element.GEO, Grade.LEGEND, 1150, 10401, 10305, 10008, 10708)));
         itemDataFile.itemDatas.Add(new Item(705, "Ganyu", "감우", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Ganyu", new Character(705, Element.CRYO, Grade.LEGEND, 1156, 10415, 10320, 10016, 10706)));
         itemDataFile.itemDatas.Add(new Item(706, "Xiao", "소", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Xiao", new Character(706, Element.ANEMO, Grade.LEGEND, 1162, 10415, 10310, 10012, 10706, AscensionType.JUVENILE_JADE)));
+        itemDataFile.itemDatas.Add(new Item(707, "Hu-Tao", "호두", 1, ItemType.CHARACTER, Grade.LEGEND, spritePathHero + "Hutao", new Character(707, Element.PYRO, Grade.LEGEND, 1168, 10407, 10320, 10016, 10707, AscensionType.JUVENILE_JADE)));
 
         itemDataFile.itemDatas.Add(new Item(1000, "Cool Steel", "차가운 칼날", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Cool Steel", null, new Weapon(10500, 10620, 10310)));
         itemDataFile.itemDatas.Add(new Item(1001, "Dark Iron Sword", "암철검", 1, ItemType.SWORD, Grade.EPIC, spritePathWeapon + "Dark Iron Sword", null, new Weapon(10512, 10608, 10300)));
@@ -177,6 +178,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(2101, "Sacrificial Greatsword", "제례 대검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Sacrificial Greatsword", null, new Weapon(10504, 10600, 10310)));
         itemDataFile.itemDatas.Add(new Item(2102, "Rainslasher", "빗물 베기", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Rainslasher", null, new Weapon(10516, 10612, 10306)));
         itemDataFile.itemDatas.Add(new Item(2103, "The Bell", "시간의 검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "The Bell", null, new Weapon(10500, 10620, 10320)));
+        itemDataFile.itemDatas.Add(new Item(2104, "Lithic Blade", "천암고검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Lithic Blade", null, new Weapon(10512, 10608, 10310)));
         //itemDataFile.itemDatas.Add(new Item(2104, "Serpent Spine", "이무기 검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Serpent Spine"));
         //itemDataFile.itemDatas.Add(new Item(2105, "Whiteblind", "백영검", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Whiteblind"));
         //itemDataFile.itemDatas.Add(new Item(2106, "Blackcliff Slasher", "흑암참도", 1, ItemType.CLAYMORE, Grade.UNIQUE, spritePathWeapon + "Bloodtainted Greatsword"));
@@ -185,6 +187,7 @@ public class ItemDatabase : MonoBehaviour
 
         itemDataFile.itemDatas.Add(new Item(2200, "Favonius Lance", "페보니우스 장창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Favonius Lance", null, new Weapon(10508, 10616, 10315)));
         itemDataFile.itemDatas.Add(new Item(2201, "Dragon's Bane", "용학살창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Dragon's Bane", null, new Weapon(10516, 10612, 10305)));
+        itemDataFile.itemDatas.Add(new Item(2202, "Lithic Spear", "천암장창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Lithic Spear", null, new Weapon(10520, 10604, 10310)));
         //itemDataFile.itemDatas.Add(new Item(2202, "Deathmatch", "결투의 창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Deathmatch"));
         //itemDataFile.itemDatas.Add(new Item(2203, "Crescent Pike", "유월창", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Crescent Pike"));
         //itemDataFile.itemDatas.Add(new Item(2204, "Prototype Grudge", "별의 낫 프로토타입", 1, ItemType.POLEARM, Grade.UNIQUE, spritePathWeapon + "Prototype Grudge"));
@@ -234,6 +237,7 @@ public class ItemDatabase : MonoBehaviour
         itemDataFile.itemDatas.Add(new Item(4200, "Vortex Vanquisher", "관홍의 창", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Vortex Vanquisher", null, new Weapon(10520, 10604, 10330)));
         itemDataFile.itemDatas.Add(new Item(4000, "Summit Shaper", "참봉의 칼날", 1, ItemType.SWORD, Grade.LEGEND, spritePathWeapon + "Summit Shaper", null, new Weapon(10512, 10608, 10300)));
         itemDataFile.itemDatas.Add(new Item(4001, "Primordia lJade Cutter", "반암결록", 1, ItemType.SWORD, Grade.LEGEND, spritePathWeapon + "Primordia lJade Cutter", null, new Weapon(10516, 10612, 10325)));
+        itemDataFile.itemDatas.Add(new Item(4201, "Staff Of Homa", "호마의 지팡이", 1, ItemType.POLEARM, Grade.LEGEND, spritePathWeapon + "Staff Of Homa", null, new Weapon(10520, 10600, 10315)));
 
         /////////////////////////////////////////////////////////////////////////////////////////////
 

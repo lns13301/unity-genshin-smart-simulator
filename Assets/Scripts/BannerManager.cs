@@ -307,6 +307,8 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.GANYU:
                 return BannerButtonCharacter.XIAO;
             case BannerButtonCharacter.XIAO:
+                return BannerButtonCharacter.KEQING;
+            case BannerButtonCharacter.KEQING:
                 PickUpManager.instance.lastPickUpBannerType = PickUpType.WEAPON;
                 return BannerButtonCharacter.KLEE_WEAPON;
             case BannerButtonCharacter.KLEE_WEAPON:
@@ -318,6 +320,8 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.ALBEDO_WEAPON:
                 return BannerButtonCharacter.GANYU_WEAPON;
             case BannerButtonCharacter.GANYU_WEAPON:
+                return BannerButtonCharacter.XIAO_WEAPON;
+            case BannerButtonCharacter.XIAO_WEAPON:
                 PickUpManager.instance.lastPickUpBannerType = PickUpType.CHARACTER;
                 return BannerButtonCharacter.VENTI;
         }
@@ -343,16 +347,20 @@ public class BannerManager : MonoBehaviour
                 return 10;
             case BannerButtonCharacter.XIAO:
                 return 12;
-            case BannerButtonCharacter.KLEE_WEAPON:
+            case BannerButtonCharacter.KEQING:
                 return 14;
-            case BannerButtonCharacter.TARTAGLIA_WEAPON:
+            case BannerButtonCharacter.KLEE_WEAPON:
                 return 16;
-            case BannerButtonCharacter.ZHONGLI_WEAPON:
+            case BannerButtonCharacter.TARTAGLIA_WEAPON:
                 return 18;
-            case BannerButtonCharacter.ALBEDO_WEAPON:
+            case BannerButtonCharacter.ZHONGLI_WEAPON:
                 return 20;
-            case BannerButtonCharacter.GANYU_WEAPON:
+            case BannerButtonCharacter.ALBEDO_WEAPON:
                 return 22;
+            case BannerButtonCharacter.GANYU_WEAPON:
+                return 24;
+            case BannerButtonCharacter.XIAO_WEAPON:
+                return 26;
             default:
                 return 0;
         }
@@ -368,6 +376,7 @@ public enum BannerButtonCharacter
     ALBEDO,
     GANYU,
     XIAO,
+    KEQING,
     HUTAO,
     VENTI_WEAPON,
     KLEE_WEAPON,
@@ -376,5 +385,6 @@ public enum BannerButtonCharacter
     ALBEDO_WEAPON,
     GANYU_WEAPON,
     XIAO_WEAPON,
+    KEQING_WEAPON,
     HUTAO_WEAPON,
 }

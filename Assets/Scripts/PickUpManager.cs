@@ -13,16 +13,16 @@ public class PickUpManager : MonoBehaviour
     private static Vector2 MONA_ILLUST_SIZE = new Vector2(1536f, 1452f); // 768, 726
     private static Vector2 KLEE_ILLUST_SIZE = new Vector2(936f, 1081.6f); // 720, 832
 
-    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 41;
+    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 43;
     private static int CHARACTER_COUNT_FOUR_STAR = 13; // 픽업 4성은 제외 했음
 
     // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private static int MIN_EPIC_WEAPON = 28;
-    private static int MAX_EPIC_WEAPON = 49 + 1;
+    private static int MIN_EPIC_WEAPON = 29;
+    private static int MAX_EPIC_WEAPON = 50 + 1;
     private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
-    private static int MAX_UNIQUE_WEAPON = 67 + 1;
+    private static int MAX_UNIQUE_WEAPON = 70 + 1;
     private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
-    private static int MAX_LEGEND_WEAPON = 79 + 1;
+    private static int MAX_LEGEND_WEAPON = 86 + 1;
 
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
@@ -901,7 +901,7 @@ public class PickUpManager : MonoBehaviour
                 // 현재 픽업중인 캐릭터
                 if (BannerManager.instance.onBannerIndex == 2)
                 {
-                    return GetPickUpWeaponResultLegendGrade("화박연", "반암결록", isPickUpAlways);
+                    return GetPickUpWeaponResultLegendGrade("호마의 지팡이", "늑대의 말로", isPickUpAlways);
                 }
 
                 if (BannerManager.instance.onBannerIndex == 4)
@@ -921,6 +921,8 @@ public class PickUpManager : MonoBehaviour
                             return GetPickUpWeaponResultLegendGrade("참봉의 칼날", "천공의 두루마리", isPickUpAlways);
                         case BannerButtonCharacter.GANYU_WEAPON:
                             return GetPickUpWeaponResultLegendGrade("아모스의 활", "천공의 긍지", isPickUpAlways);
+                        case BannerButtonCharacter.XIAO_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("화박연", "반암결록", isPickUpAlways);
                     }
                 }
             }
@@ -929,7 +931,7 @@ public class PickUpManager : MonoBehaviour
                 // 현재 픽업중인 캐릭터
                 if (BannerManager.instance.onBannerIndex == 1)
                 {
-                    return GetPickUpResultLegendGrade("각청", isPickUpAlways);
+                    return GetPickUpResultLegendGrade("호두", isPickUpAlways);
                 }
 
                 if (BannerManager.instance.onBannerIndex == 4)
@@ -951,6 +953,8 @@ public class PickUpManager : MonoBehaviour
                             return GetPickUpResultLegendGrade("감우", isPickUpAlways);
                         case BannerButtonCharacter.XIAO:
                             return GetPickUpResultLegendGrade("소", isPickUpAlways);
+                        case BannerButtonCharacter.KEQING:
+                            return GetPickUpResultLegendGrade("각청", isPickUpAlways);
                         case BannerButtonCharacter.HUTAO:
                             return GetPickUpResultLegendGrade("호두", isPickUpAlways);
                     }
@@ -984,11 +988,11 @@ public class PickUpManager : MonoBehaviour
                 {
                     if (BannerManager.instance.onBannerIndex == 2)
                     {
-                        names[0] = "녹슨 활";
-                        names[1] = "피리검";
-                        names[2] = "페보니우스 장창";
-                        names[3] = "소심";
-                        names[4] = "제례 대검";
+                        names[0] = "제례활";
+                        names[1] = "용의 포효";
+                        names[2] = "천암장창";
+                        names[3] = "제례의 악장";
+                        names[4] = "천암고검";
                         return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
                     }
                     else if (BannerManager.instance.onBannerIndex == 4)
@@ -1037,6 +1041,13 @@ public class PickUpManager : MonoBehaviour
                                 names[3] = "용학살창";
                                 names[4] = "시간의 검";
                                 return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.XIAO_WEAPON:
+                                names[0] = "녹슨 활";
+                                names[1] = "피리검";
+                                names[2] = "페보니우스 장창";
+                                names[3] = "소심";
+                                names[4] = "제례 대검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
                         }
                     }
                 }
@@ -1064,9 +1075,9 @@ public class PickUpManager : MonoBehaviour
                 {
                     if (BannerManager.instance.onBannerIndex == 1)
                     {
-                        names[0] = "응광";
-                        names[1] = "바바라";
-                        names[2] = "베넷";
+                        names[0] = "행추";
+                        names[1] = "중운";
+                        names[2] = "향릉";
                         return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                     }
                     else if(BannerManager.instance.onBannerIndex == 4)
@@ -1107,6 +1118,11 @@ public class PickUpManager : MonoBehaviour
                                 names[0] = "북두";
                                 names[1] = "신염";
                                 names[2] = "디오나";
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.KEQING:
+                                names[0] = "바바라";
+                                names[1] = "응광";
+                                names[2] = "베넷";
                                 return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                         }
                     }
@@ -1415,6 +1431,10 @@ public class PickUpManager : MonoBehaviour
                     break;
                 case "녹슨 활":
                     videos[0].clip = videos[51].clip;
+                    break;
+                case "호두":
+                    videos[0].clip = videos[54].clip;
+                    isFiveStar = true;
                     break;
                 case "각청":
                 gachaIllust.GetComponent<RectTransform>().sizeDelta = KEQING_ILLUST_SIZE;
