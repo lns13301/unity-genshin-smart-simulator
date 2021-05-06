@@ -23,4 +23,4 @@
 Download Link
 PC : https://drive.google.com/file/d/1baYWPngyzHBWJPxKP23WEBmXx2Vk13WS/view?usp=sharing
 
-Android : https://play.google.com/store/apps/details?id=com.EnotSCompany.GenshinGachaSimulator
+Android : https://play.google.com/store/apps/details?id=com.enotscompany.genshinsmartsimulator

@@ -598,10 +598,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            playerData.acquantFateCount = 100;
-            playerData.intertwinedFateCount = 100;
-            playerData.starDustCount = 300;
-            playerData.starLightCount = 10;
+            playerData.acquantFateCount = 500;
+            playerData.intertwinedFateCount = 500;
+            playerData.starDustCount = 100;
+            playerData.starLightCount = 5;
         }
 
         playerData.language = previousLanguage;
