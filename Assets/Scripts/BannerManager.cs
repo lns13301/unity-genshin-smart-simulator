@@ -309,6 +309,12 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.XIAO:
                 return BannerButtonCharacter.KEQING;
             case BannerButtonCharacter.KEQING:
+                return BannerButtonCharacter.VENTI_RETURN;
+            case BannerButtonCharacter.VENTI_RETURN:
+                return BannerButtonCharacter.ZHONGLI_RETURN;
+            case BannerButtonCharacter.ZHONGLI_RETURN:
+                return BannerButtonCharacter.TARTAGLIA_RETURN;
+            case BannerButtonCharacter.TARTAGLIA_RETURN:
                 PickUpManager.instance.lastPickUpBannerType = PickUpType.WEAPON;
                 return BannerButtonCharacter.KLEE_WEAPON;
             case BannerButtonCharacter.KLEE_WEAPON:
@@ -322,6 +328,14 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.GANYU_WEAPON:
                 return BannerButtonCharacter.XIAO_WEAPON;
             case BannerButtonCharacter.XIAO_WEAPON:
+                return BannerButtonCharacter.HUTAO_WEAPON;
+            case BannerButtonCharacter.HUTAO_WEAPON:
+                return BannerButtonCharacter.VENTI_RETURN_WEAPON;
+            case BannerButtonCharacter.VENTI_RETURN_WEAPON:
+                return BannerButtonCharacter.ZHONGLI_RETURN_WEAPON;
+            case BannerButtonCharacter.ZHONGLI_RETURN_WEAPON:
+                return BannerButtonCharacter.TARTAGLIA_RETURN_WEAPON;
+            case BannerButtonCharacter.TARTAGLIA_RETURN_WEAPON:
                 PickUpManager.instance.lastPickUpBannerType = PickUpType.CHARACTER;
                 return BannerButtonCharacter.VENTI;
         }
@@ -349,18 +363,34 @@ public class BannerManager : MonoBehaviour
                 return 12;
             case BannerButtonCharacter.KEQING:
                 return 14;
-            case BannerButtonCharacter.KLEE_WEAPON:
+            case BannerButtonCharacter.HUTAO:
                 return 16;
-            case BannerButtonCharacter.TARTAGLIA_WEAPON:
+            case BannerButtonCharacter.VENTI_RETURN:
                 return 18;
-            case BannerButtonCharacter.ZHONGLI_WEAPON:
+            case BannerButtonCharacter.ZHONGLI_RETURN:
                 return 20;
-            case BannerButtonCharacter.ALBEDO_WEAPON:
+            case BannerButtonCharacter.TARTAGLIA_RETURN:
                 return 22;
-            case BannerButtonCharacter.GANYU_WEAPON:
+            case BannerButtonCharacter.KLEE_WEAPON:
                 return 24;
-            case BannerButtonCharacter.XIAO_WEAPON:
+            case BannerButtonCharacter.TARTAGLIA_WEAPON:
                 return 26;
+            case BannerButtonCharacter.ZHONGLI_WEAPON:
+                return 28;
+            case BannerButtonCharacter.ALBEDO_WEAPON:
+                return 30;
+            case BannerButtonCharacter.GANYU_WEAPON:
+                return 32;
+            case BannerButtonCharacter.XIAO_WEAPON:
+                return 34;
+            case BannerButtonCharacter.HUTAO_WEAPON:
+                return 36;
+            case BannerButtonCharacter.VENTI_RETURN_WEAPON:
+                return 38;
+            case BannerButtonCharacter.ZHONGLI_RETURN_WEAPON:
+                return 40;
+            case BannerButtonCharacter.TARTAGLIA_RETURN_WEAPON:
+                return 42;
             default:
                 return 0;
         }
@@ -378,6 +408,10 @@ public enum BannerButtonCharacter
     XIAO,
     KEQING,
     HUTAO,
+    VENTI_RETURN,
+    ZHONGLI_RETURN,
+    TARTAGLIA_RETURN,
+    EULA,
     VENTI_WEAPON,
     KLEE_WEAPON,
     TARTAGLIA_WEAPON,
@@ -387,4 +421,8 @@ public enum BannerButtonCharacter
     XIAO_WEAPON,
     KEQING_WEAPON,
     HUTAO_WEAPON,
+    VENTI_RETURN_WEAPON,
+    ZHONGLI_RETURN_WEAPON,
+    TARTAGLIA_RETURN_WEAPON,
+    EULA_WEAPON
 }

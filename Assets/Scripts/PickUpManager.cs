@@ -901,7 +901,7 @@ public class PickUpManager : MonoBehaviour
                 // 현재 픽업중인 캐릭터
                 if (BannerManager.instance.onBannerIndex == 2)
                 {
-                    return GetPickUpWeaponResultLegendGrade("호마의 지팡이", "늑대의 말로", isPickUpAlways);
+                    return GetPickUpWeaponResultLegendGrade("매의 검", "송뢰가 울릴 무렵", isPickUpAlways);
                 }
 
                 if (BannerManager.instance.onBannerIndex == 4)
@@ -923,6 +923,14 @@ public class PickUpManager : MonoBehaviour
                             return GetPickUpWeaponResultLegendGrade("아모스의 활", "천공의 긍지", isPickUpAlways);
                         case BannerButtonCharacter.XIAO_WEAPON:
                             return GetPickUpWeaponResultLegendGrade("화박연", "반암결록", isPickUpAlways);
+                        case BannerButtonCharacter.HUTAO:
+                            return GetPickUpWeaponResultLegendGrade("호마의 지팡이", "늑대의 말로", isPickUpAlways);
+                        case BannerButtonCharacter.VENTI_RETURN_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("종말 탄식의 노래", "천공의 검", isPickUpAlways);
+                        case BannerButtonCharacter.ZHONGLI_RETURN_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("참봉의 칼날", "속세의 자물쇠", isPickUpAlways);
+                        case BannerButtonCharacter.TARTAGLIA_RETURN_WEAPON:
+                            return GetPickUpWeaponResultLegendGrade("천공의 날개", "사풍 원서", isPickUpAlways);
                     }
                 }
             }
@@ -931,7 +939,7 @@ public class PickUpManager : MonoBehaviour
                 // 현재 픽업중인 캐릭터
                 if (BannerManager.instance.onBannerIndex == 1)
                 {
-                    return GetPickUpResultLegendGrade("호두", isPickUpAlways);
+                    return GetPickUpResultLegendGrade("유라", isPickUpAlways);
                 }
 
                 if (BannerManager.instance.onBannerIndex == 4)
@@ -957,6 +965,12 @@ public class PickUpManager : MonoBehaviour
                             return GetPickUpResultLegendGrade("각청", isPickUpAlways);
                         case BannerButtonCharacter.HUTAO:
                             return GetPickUpResultLegendGrade("호두", isPickUpAlways);
+                        case BannerButtonCharacter.VENTI_RETURN:
+                            return GetPickUpResultLegendGrade("벤티", isPickUpAlways);
+                        case BannerButtonCharacter.ZHONGLI_RETURN:
+                            return GetPickUpResultLegendGrade("종려", isPickUpAlways);
+                        case BannerButtonCharacter.TARTAGLIA_RETURN:
+                            return GetPickUpResultLegendGrade("타르탈리아", isPickUpAlways);
                     }
                 }
             }
@@ -988,11 +1002,11 @@ public class PickUpManager : MonoBehaviour
                 {
                     if (BannerManager.instance.onBannerIndex == 2)
                     {
-                        names[0] = "제례활";
-                        names[1] = "용의 포효";
-                        names[2] = "천암장창";
+                        names[0] = "녹슨 활";
+                        names[1] = "제례검";
+                        names[2] = "용학살창";
                         names[3] = "제례의 악장";
-                        names[4] = "천암고검";
+                        names[4] = "빗물 베기";
                         return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
                     }
                     else if (BannerManager.instance.onBannerIndex == 4)
@@ -1048,6 +1062,34 @@ public class PickUpManager : MonoBehaviour
                                 names[3] = "소심";
                                 names[4] = "제례 대검";
                                 return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.HUTAO_WEAPON:
+                                names[0] = "제례활";
+                                names[1] = "용의 포효";
+                                names[2] = "천암장창";
+                                names[3] = "제례의 악장";
+                                names[4] = "천암고검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.VENTI_RETURN_WEAPON:
+                                names[0] = "녹슨 활";
+                                names[1] = "피리검";
+                                names[2] = "페보니우스 장창";
+                                names[3] = "소심";
+                                names[4] = "제례 대검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.ZHONGLI_RETURN_WEAPON:
+                                names[0] = "페보니우스 활";
+                                names[1] = "뒷골목의 섬광";
+                                names[2] = "용학살창";
+                                names[3] = "소심";
+                                names[4] = "페보니우스 대검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.TARTAGLIA_RETURN_WEAPON:
+                                names[0] = "뒷골목 사냥꾼";
+                                names[1] = "페보니우스 검";
+                                names[2] = "페보니우스 장창";
+                                names[3] = "페보니우스 비전";
+                                names[4] = "제례 대검";
+                                return GetPickUpWeaponResultUniqueGrade(names, isPickUp4Always);
                         }
                     }
                 }
@@ -1075,9 +1117,9 @@ public class PickUpManager : MonoBehaviour
                 {
                     if (BannerManager.instance.onBannerIndex == 1)
                     {
-                        names[0] = "행추";
-                        names[1] = "중운";
-                        names[2] = "향릉";
+                        names[0] = "신염";
+                        names[1] = "북두";
+                        names[2] = "행추";
                         return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                     }
                     else if(BannerManager.instance.onBannerIndex == 4)
@@ -1123,6 +1165,26 @@ public class PickUpManager : MonoBehaviour
                                 names[0] = "바바라";
                                 names[1] = "응광";
                                 names[2] = "베넷";
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.HUTAO:
+                                names[0] = "행추";
+                                names[1] = "중운";
+                                names[2] = "향릉";
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.VENTI_RETURN:
+                                names[0] = "레이저";
+                                names[1] = "설탕";
+                                names[2] = "노엘";
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.ZHONGLI_RETURN:
+                                names[0] = "디오나";
+                                names[1] = "연비";
+                                names[2] = "노엘";
+                                return GetPickUpResultUniqueGrade(names, isPickUp4Always);
+                            case BannerButtonCharacter.TARTAGLIA_RETURN:
+                                names[0] = "바바라";
+                                names[1] = "피슬";
+                                names[2] = "로자리아";
                                 return GetPickUpResultUniqueGrade(names, isPickUp4Always);
                         }
                     }
