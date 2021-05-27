@@ -83,8 +83,6 @@ public class AscensionWeaponFrame : MonoBehaviour
 
     public void SetImage(int itemIndex = 0, int eliteItemIndex = 0, int mobItemIndex = 0)
     {
-        Debug.Log(item.weapon.ascensionItemCode);
-
         transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite =
             ItemDatabase.instance.findItemByIndex(item.weapon.ascensionItemCode + itemIndex).LoadSprite();
         transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite =
