@@ -12,22 +12,50 @@ public class PickUpManager : MonoBehaviour
     private static Vector2 KEQING_ILLUST_SIZE = new Vector2(1536f, 1394); // 768, 697
     private static Vector2 MONA_ILLUST_SIZE = new Vector2(1536f, 1452f); // 768, 726
     private static Vector2 KLEE_ILLUST_SIZE = new Vector2(936f, 1081.6f); // 720, 832
+    private static Vector2 VENTI_ILLUST_SIZE = new Vector2(1510.6f, 1416.8f); // 1079, 1012
+    private static Vector2 ROSARIA_ILLUST_SIZE = new Vector2(1539, 1369.5f); // 1026, 913
+    private static Vector2 YANFEI_ILLUST_SIZE = new Vector2(1569.4f, 1121.4f); // 1121, 801
+    private static Vector2 EULA_ILLUST_SIZE = new Vector2(1593.9f, 1126.4f); // 1449, 1024
 
-    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 43;
-    private static int CHARACTER_COUNT_FOUR_STAR = 13; // 픽업 4성은 제외 했음
+    /*    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 43;
+        private static int CHARACTER_COUNT_FOUR_STAR = 17 + 1; // 픽업 4성은 제외 했음
+        private static int PICKUP_CHARACTER_COUNT_FIVE_STAR = 9; // 픽업 5성 개수
+        private static int WEAPON_COUNT_THREE_STAR = 22; // 무기 3성 개수
+        private static int WEAPON_COUNT_FOUR_STAR = 23; // 무기 4성 개수
+        private static int WEAPON_COUNT_FIVE_STAR = 18; // 무기 5성 개수
 
-    // MAX 값들은 실제 인덱스에 + 1 해주었음
-    private static int MIN_EPIC_WEAPON = 29;
-    private static int MAX_EPIC_WEAPON = 50 + 1;
+        // MAX 값들은 실제 인덱스에 + 1 해주었음
+        private static int MIN_EPIC_WEAPON = MAX_PICKUP_CHARACTER;
+        private static int MAX_EPIC_WEAPON = MAX_PICKUP_CHARACTER + WEAPON_COUNT_THREE_STAR;
+        private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
+        private static int MAX_UNIQUE_WEAPON = MIN_UNIQUE_WEAPON + WEAPON_COUNT_FOUR_STAR;
+        private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
+        private static int MAX_LEGEND_WEAPON = MIN_LEGEND_WEAPON + WEAPON_COUNT_FIVE_STAR;
+
+        private static int MIN_UNIQUE_CHARACTER = 0;
+        private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR;
+        private static int MIN_LEGEND_CHARACTER = CHARACTER_COUNT_FOUR_STAR; // 다이루크 시작 코드
+        private static int MAX_LEGEND_CHARACTER = MIN_LEGEND_CHARACTER + 5;
+        private static int MIN_PICKUP_CHARACTER = MAX_LEGEND_CHARACTER;
+        private static int MAX_PICKUP_CHARACTER = MIN_PICKUP_CHARACTER + PICKUP_CHARACTER_COUNT_FIVE_STAR;
+
+        private static int CHARACTER_AND_WEAPON_FOUR_STAR_TOTAL = CHARACTER_COUNT_FOUR_STAR + MAX_EPIC_WEAPON - MIN_EPIC_WEAPON;*/
+
+    private static int WEAPON_COUNT_UNDER_FOUR_STAR = 46;
+    private static int CHARACTER_COUNT_FOUR_STAR = 18;
+
+    // MAX 값들은 실제 인덱스에 + 1 해주었음, MIN_EPIC_WEAPON 시작 인덱스는 캐릭터 인덱스 끝난 후부터임, 즉 신캐마다 인덱스 추가해줘야 함
+    private static int MIN_EPIC_WEAPON = 32;
+    private static int MAX_EPIC_WEAPON = 53 + 1;
     private static int MIN_UNIQUE_WEAPON = MAX_EPIC_WEAPON;
-    private static int MAX_UNIQUE_WEAPON = 70 + 1;
+    private static int MAX_UNIQUE_WEAPON = 76 + 1;
     private static int MIN_LEGEND_WEAPON = MAX_UNIQUE_WEAPON;
-    private static int MAX_LEGEND_WEAPON = 86 + 1;
+    private static int MAX_LEGEND_WEAPON = 94 + 1;
 
     private static int MIN_UNIQUE_CHARACTER = 0;
     private static int MAX_UNIQUE_CHARACTER = CHARACTER_COUNT_FOUR_STAR + 1;
-    private static int MIN_LEGEND_CHARACTER = 16; // 다이루크 시작 코드
-    private static int MAX_LEGEND_CHARACTER = 20 + 1;
+    private static int MIN_LEGEND_CHARACTER = CHARACTER_COUNT_FOUR_STAR; // 다이루크 시작 코드
+    private static int MAX_LEGEND_CHARACTER = MIN_LEGEND_CHARACTER + 5 + 1;
 
     private static int CHARACTER_AND_WEAPON_FOUR_STAR_TOTAL = CHARACTER_COUNT_FOUR_STAR + MAX_EPIC_WEAPON - MIN_EPIC_WEAPON;
 
@@ -1240,7 +1268,7 @@ public class PickUpManager : MonoBehaviour
         {
             playerData.isPickUpWeaponAlways = false;
 
-            int r2 = Random.Range(0, 1);
+            int r2 = Random.Range(0, 2);
 
             if (r2 == 0)
             {
@@ -1526,6 +1554,58 @@ public class PickUpManager : MonoBehaviour
                     break;
                 case "클레":
                     gachaIllust.GetComponent<RectTransform>().sizeDelta = KLEE_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
+                case "벤티":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = VENTI_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
+                case "로자리아":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = ROSARIA_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
+                case "연비":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = YANFEI_ILLUST_SIZE;
+                    isPlayVideo = false;
+
+                    if (result[i].type != ItemType.CHARACTER)
+                    {
+                        break;
+                    }
+
+                    SetCachaIllust(result[i]);
+                    gachaIllustSet.SetActive(true);
+
+                    break;
+                case "유라":
+                    gachaIllust.GetComponent<RectTransform>().sizeDelta = EULA_ILLUST_SIZE;
                     isPlayVideo = false;
 
                     if (result[i].type != ItemType.CHARACTER)

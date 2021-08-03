@@ -309,6 +309,8 @@ public class BannerManager : MonoBehaviour
             case BannerButtonCharacter.XIAO:
                 return BannerButtonCharacter.KEQING;
             case BannerButtonCharacter.KEQING:
+                return BannerButtonCharacter.HUTAO;
+            case BannerButtonCharacter.HUTAO:
                 return BannerButtonCharacter.VENTI_RETURN;
             case BannerButtonCharacter.VENTI_RETURN:
                 return BannerButtonCharacter.ZHONGLI_RETURN;
