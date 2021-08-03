@@ -264,6 +264,8 @@ public class Item
         {
             case AscensionType.JUVENILE_JADE:
                 return 10207;
+            case AscensionType.CRYSTALLINE_BLOOM:
+                return 10208;
             default:
                 return 10200;
         }
@@ -338,7 +340,8 @@ public enum ItemType
 public enum AscensionType
 {
     NONE,
-    JUVENILE_JADE
+    JUVENILE_JADE,
+    CRYSTALLINE_BLOOM
 }
 
 [System.Serializable]
