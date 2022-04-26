@@ -8,25 +8,26 @@
 
 ## Information
 
-<img src="img/simulator6.jpg">
-
 - 자원 체킹 맵
 
 <img src="img/map_page.gif">
-<img src="img/simulator1.jpg">
-<img src="img/simulator2.jpg">
 
 - 캐릭터 조회
 
 <img src="img/skill_page.gif">
-<img src="img/simulator3.jpg">
-<img src="img/simulator4.jpg">
-<img src="img/simulator5.jpg">
 
 - 기원
 
-<img src="img/zhongli_pickup.gif">
 <img src="img/ganyu_pickup.gif">
+
+- 인게임 이미지
+
+<img src="img/simulator1.jpg">
+<img src="img/simulator2.jpg">
+<img src="img/simulator3.jpg">
+<img src="img/simulator4.jpg">
+<img src="img/simulator5.jpg">
+<img src="img/simulator6.jpg">
 <img src="img/simulator7.jpg">
 
 ## Support Link
