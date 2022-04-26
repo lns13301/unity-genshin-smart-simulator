@@ -1,8 +1,10 @@
 # unity-genshin-smart-simulator
 - 원신 스마트 시뮬레이터를 관리하기 위한 저장소
+  - 자원 & 보물상자 & 눈동자 지도, 타이머
+  - 캐릭터 레벨별 스킬, 캐릭터 및 무기 돌파 재료 
   - 기원 체험
-  - 자원 지도
-  - 캐릭터 스킬, 돌파 재료 
+  - 성유물 점수 계산기(예정)
+  - 성유물 추천, 공략(예정)
 
 ## Information
 
@@ -20,7 +22,5 @@
 
 <img src="img/map_page.gif">
 
-Download Link
-PC : https://drive.google.com/file/d/1baYWPngyzHBWJPxKP23WEBmXx2Vk13WS/view?usp=sharing
-
-Android : https://play.google.com/store/apps/details?id=com.enotscompany.genshinsmartsimulator
+Support Link
+PC, Android, IOS(예정)
